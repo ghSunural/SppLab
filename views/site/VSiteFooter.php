@@ -15,12 +15,12 @@
 <style>
     .Footer {
         /*background: linear-gradient(to right bottom, #ffffff 10%, #3c7839) ;*/
-        bottom: 0;
-        position: fixed;
-        width: 100vw;
-        height: 20px;
+
+
+        height: 30px;
         justify-content: space-between;
         border-top: 2px #99173C solid;
+        width: 95vw;
     }
 
     .left {
@@ -32,23 +32,22 @@
     }
 
     .left_top {
-
-        font: 1rem 'Arial', serif;
+        display: flex;
+        font-size: 1rem;
         font-weight: bold;
-
         align-items: center;
-        padding: 2px;
+        padding-left: 10px;
 
     }
 
     .right_top {
-        font: 1rem 'Arial', serif;
+        font-size: 1rem;
         font-weight: bold;
-
         text-align: center;
         font-style: italic;
         display: flex;
         align-items: center;
+        padding: 10px;
     }
 
     .animated {

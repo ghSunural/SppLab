@@ -39,55 +39,27 @@ $head_as_html = V\Html::getView_Head("Отчет климатология", $sty
     </div>
 </nav>
 
-<header class="Header block block_wrap fl fl-w main_bkg_color-1">
-
-    <div class="logo block block_inline"></div>
-
-
-    <div class="logo__title-site block block_inline main_text_color-2">SPP-Lab</div>
-
-
-    <div class="contact-info block block_inline">
-        <div class="block">
-
-        </div>
-    </div>
-</header>
 <main class="Main block block_wrap fl fl_nw">
-
     <section class="content block block_wrap">
-
-
-        <nav class="block">
+        <nav class="block block_wrap fl fl_w">
 
             <?php
-
             echo <<<EOL
             <div class="block text_header_bar">
                 <span class="ymaps-geolink"> {$town->locality} ({$town->region})</span>
             </div>
 EOL;
-
             echo "</br>";
             require A\config::SITE_ROOT() . "views/climate/VTable_3_1_coldSeason.php";
             echo "</br>";
             require A\config::SITE_ROOT() . "views/climate/VTable_4_1_warmSeason.php";
             echo "</br>";
             require A\config::SITE_ROOT() . "views/climate/VTable_5_1_temperature.php";
-
             ?>
 
         </nav>
-
-
     </section>
-
-
 </main>
-
-
-
-
 </body>
 </html>
 

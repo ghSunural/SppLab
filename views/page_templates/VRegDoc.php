@@ -25,7 +25,7 @@ $head_as_html = V\Html::getView_Head("Spp-Lab", $styles);
 
 <nav class="block">
 
-    <div class="H1 main_text_color-5">СП 131.13330.2018 "СНиП 23-01-99* Строительная климатология"</div>
+    <div class="H1 main_text_color-5">FFFFFFFFF</div>
 
     <?php
     foreach ($regions as $region) {

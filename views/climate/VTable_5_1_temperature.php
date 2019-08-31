@@ -39,7 +39,7 @@ $temperature_year = $this->models['tempYear'];
 */
 
 echo <<< EOL
-           
+     <div class="block block_wrap report-layout">     
      <table border="1" bordercolor="black" cellspacing="-1" cellpadding="3" width="10cm">
      <caption>Таблица - Средняя месячная и средняя годовая температура воздуха, °С  
     {$town->locality} ({$town->region})</caption>       
@@ -150,9 +150,8 @@ echo "</br>";
 
 echo <<< EOL
 
-     СП 22.13330.2016 Основания зданий и сооружений. Актуализированная редакция СНиП 2.02.01-83* (с Изменениями N 1, 2)
-           
-     <table border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="17cm">
+     
+    <table border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="17cm">
     <caption>Таблица – Нормативная глубина промерзания</caption>
     <tr>
         <th>
@@ -211,12 +210,8 @@ echo <<< EOL
             {$freezingDepth034}
         </td>
     </tr>
-
-
-
-</table>     
-     
 </table>  
+</div> 
 EOL;
 
 

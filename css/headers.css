@@ -22,22 +22,38 @@
     font-style: italic;
     text-transform: uppercase;
     letter-spacing: 1px;
-
 }
 
 .H2 {
-
+    font-size: 2em;
     font-weight: bold;
-    text-decoration: underline;
-    text-decoration-style: revert;
-    font-style: italic;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    text-align: center;
+}
+
+.H3 {
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+}
+
+.H4 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.H5 {
+    font-size:  1.2em;
+    font-weight: bold;
 
 }
 
+
+
+
 .H_hint{
-    font: 16px "Times New Roman", SansSerif;
+    font: 16px  sansSerif;
     font-style: italic;
 
 

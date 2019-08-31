@@ -1,10 +1,7 @@
 <?php
-
 namespace climate\views;
 
-
 $warmSeasonData = $this->models['warmSeasonData'];
-
 $town = $this->models['town'];
 
 $barometricPressure = $warmSeasonData->barometricPressure;
@@ -20,8 +17,8 @@ $maxDayPrecipitation = $warmSeasonData->maxDayPrecipitation;
 $wind = $warmSeasonData->wind;
 $minAvrWindSpeed = $warmSeasonData->minAvrWindSpeed;
 
-
 echo <<< EOL
+<div class="block block_wrap report-layout">
 <table width="" border="1" bordercolor="black" cellspacing="-1" cellpadding="4">
     <caption>Таблица – Климатические параметры теплого периода года</caption>
     <tr>
@@ -131,6 +128,6 @@ echo <<< EOL
     </tr>
 
 </table>
+</div>
 EOL;
-
 ?>

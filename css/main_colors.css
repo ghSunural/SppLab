@@ -1,56 +1,53 @@
-.text_header_bar{
-    color: #ff1c36;
-    text-transform: uppercase;
 
-}
 
-.main_text_color-1{
+.main_text_color-1 {
     color: #DCE9BE;
 }
 
-.main_text_color-2{
+.main_text_color-2 {
     color: #555152;
 }
 
-.main_text_color-3{
+.main_text_color-3 {
     color: #ff1c36;
 }
 
-.main_text_color-4{
+.main_text_color-4 {
     color: #ff1c36;
 }
 
-.main_text_color-5{
+.main_text_color-5 {
     color: #ff1c36;
 }
 
 
-.main_bkg_color-1{
+.main_bkg_color-1 {
 
-    background-color:  #555152;
+    background-color: #555152;
 }
 
-.main_bkg_color-2{
+.main_bkg_color-2 {
 
-    background-color:  #DCE9BE;
+    background-color: #DCE9BE;
 }
 
-.main_bkg_color-3{
+.main_bkg_color-3 {
 
-  background-color:  #2E2633;
+    background-color: #2E2633;
 }
 
-.main_bkg_color-4{
+.main_bkg_color-4 {
 
-    background-color: #eefffa;
+    background-color: #FFFFE0;
+
 }
 
-.main_bkg_color-5{
+.main_bkg_color-5 {
 
-    background-color:  #99173C;
+    background-color: #99173C;
 }
 
-.bkg_color_report{
+.bkg_color_report {
 
     background-color: transparent;
 }

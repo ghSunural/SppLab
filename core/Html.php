@@ -49,6 +49,7 @@ class Html
              <title>{$title}</title>
              {$styles_as_html}
              {$scripts_as_html}  
+              <link rel="shortcut icon" href="resource/site/logo/favicon.ico" type="image/x-icon">
         </head>
 EOL;
 

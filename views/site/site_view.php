@@ -17,8 +17,6 @@ $head_as_html = V\Html::getView_Head("Spp-Lab", $styles);
 <html lang="ru">
 <?php
 
-
-
 echo $head_as_html;
 echo <<<EOL
 <!--
@@ -27,18 +25,18 @@ echo <<<EOL
   </script> -->
 <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink"
  type="text/javascript"></script>
+
 EOL;
 ?>
 
 <body class="block block_wrap">
 <?php require "views/site/VMainToolbar.php"?>
 <?php require "views/site/VSiteHeader.php"?>
-<main class="block block_wrap fl fl_nw">
+<main class="Main block block_wrap fl fl_nw">
 
     <section class="content block block_wrap fl fl_w main_bkg_color-4">
 
         <div class="block tablet main_bkg_color-2">
-
             <div class="H1 main_text_color-5">Для технического отчета</div>
             <hr>
             <p align="justify" class="H_hint">
@@ -71,10 +69,7 @@ EOL;
             </p>
         </div>
 
-
-
     </section>
-
 </main>
 <?php require "views/site/VSiteFooter.php"?>
 </body>

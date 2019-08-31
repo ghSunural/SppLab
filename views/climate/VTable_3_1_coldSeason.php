@@ -33,7 +33,9 @@ $avrWindSpeed_l8= $coldSeasonData->avrWindSpeed_l8;
 
 
 echo <<< EOL
-<table class="bkg_color_report" border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="10cm">
+<div class="block block_wrap report-layout">
+
+<table class="bkg_color_report" border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="600">
     <caption><span text-align="left" >Таблица   – Климатические параметры холодного периода года</span></caption>
     <tr>
         <td colspan="3">
@@ -220,6 +222,8 @@ echo <<< EOL
     </tr>
 
 </table>
+
+</div>
 EOL;
 
 ?>

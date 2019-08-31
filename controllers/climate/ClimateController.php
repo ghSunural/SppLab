@@ -18,7 +18,7 @@ class ClimateController extends BaseController
     {
         $regions = M\MTowns::getRegions();
         $this->models['regions'] = $regions;
-        $this->render("views/site/VRegDoc.php");
+        $this->render("views/climate/#VClimate.php");
     }
 
     public function actionView($ID){

@@ -26,6 +26,7 @@
         justify-content: space-between;
         min-width: 600px;
         border-bottom: 2px #99173C solid;
+        width: 95vw;
 
 
     }
@@ -40,7 +41,7 @@
 
     .Header_left_top {
         text-align: right;
-        font: 120px 'Arial', serif;
+        font: 120px 'Arial', sans-serif;
         font-weight: bold;
         height: 70%;
         display: flex;
@@ -53,10 +54,10 @@
         font-weight: bold;
         font-style: italic;
         height: 30%;
+
         display: flex;
         align-items: center;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
+        justify-content: center;
         padding: 0 10px 0 10px;
     }
 
@@ -67,9 +68,10 @@
 
         font-style: italic;
         display: flex;
-
-        flex-wrap: nowrap;
+        align-items: center;
         justify-content: center;
+        flex-wrap: nowrap;
+
         padding: 0 10px 0 10px;
     }
 
