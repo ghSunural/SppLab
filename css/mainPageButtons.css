@@ -1,0 +1,35 @@
+/*buttons*/
+
+.createNewObjectButton {
+    background-image: url("../resource/ico/add.png");
+    width: 90px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+    border-radius: 5px;
+    border: 4px #00008b;
+    box-shadow: 5px 5px 5px 5px #808080;
+
+}
+
+.openObjectFileButton {
+    background-image: url("../resource/ico/folder.png");
+    width: 600px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 20px;
+    border-radius: 5px;
+    border: 4px #00008b;
+    box-shadow: 5px 5px 5px 5px #808080;
+
+}
+
+
+
+
+
+
+
+

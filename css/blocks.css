@@ -1,0 +1,48 @@
+.block {
+    /*  display: block;*/
+    position: relative;
+    box-sizing: border-box;
+   /* border: 2px solid #30ff12;*/
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+
+}
+
+.block_inline {
+    display: inline-block;
+}
+
+.block_wrap {
+    margin: 0;
+    padding: 0;
+}
+
+.block3d {
+    transform-style: preserve-3d;
+    border: 2px solid green;
+    text-align: center;
+    vertical-align: sub;
+    width: 250px;
+    height: 70px;
+
+    transform: translateX(50px) perspective(30px) translateZ(0px) rotateY(10deg);
+
+    margin: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.block3d:hover {
+    transform-style: preserve-3d;
+    transform: translateX(0px) perspective(500px) translateZ(0px) rotateY(0deg);
+    transition: .5s;
+}
+
+
+
+
+
+
+
+

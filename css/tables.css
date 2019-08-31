@@ -1,0 +1,61 @@
+.table__caption{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.table__reference{
+    text-align: left;
+    font-size: 0.8em;
+    font-style: italic;
+    text-indent: 5mm;
+}
+
+.header-cell{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    padding: 1px 1px;
+    margin-left: -1px;
+
+}
+
+.label-cell{
+    text-align: left;
+    font-weight: bold;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    padding: 1px 1px;
+    margin-left: -1px;
+}
+
+.data-cell{
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 1px 1px;
+    margin-left: -1px;
+    box-sizing: border-box;
+}
+
+.input-cell{
+    font-size: 1.1em;
+    border: 1px solid #000000;
+    font-style: italic;
+    font-weight: bold;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+
+}
+
+.input-cell:focus{
+    transform: scale(1.2);
+    transform-origin: top right;
+    transition: .5s;
+}
+
+.input-cell:not(:focus){
+    transition: .5s ;
+}

@@ -1,0 +1,178 @@
+/*!
+ *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+
+/* z-index: >300 для header */
+
+/* <@-правила шрифты> */
+
+
+.panel_mini {
+    border: #00d9ff;
+    max-width: 50%;
+    padding: 10px;
+    margin: 3px;
+    word-wrap: break-word;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fonts/fontawesome-webfont.eot?v=4.6.3');
+url('fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('/fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* <позиционирование> */
+[class*='input'] {
+    z-index: 301;
+}
+
+[type="range"] {
+    display: block;
+    margin: 0;
+    /*position: absolute;*/
+}
+
+input[type="range"]:at-level(3) ~ .product__ratio .img-star {
+    background-color: #1f1dff;
+    color: #854fe1;
+}
+
+/* </позиционирование> */
+
+
+.site-header__b-controls {
+    box-sizing: border-box;
+    border-left: 2px solid #ff0000;
+    width: 150px;
+    height: 110px;
+}
+
+.logo__label {
+    display: block;
+    position: relative;
+    top: 65px;
+    text-shadow: #ff6928 4px 4px 5px;
+    font: 30px 'Arial Narrow';
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin: 0;
+    vertical-align: bottom;
+}
+
+.logo__title:first-letter,
+.item_site-title:first-letter {
+    font-weight: bold;
+}
+
+/* </Заголовок сайта> */
+
+/* <Единица товара> */
+.goodsViewer {
+    box-sizing: border-box;
+    border: 2px solid crimson;
+    position: relative;
+    text-align: justify;
+
+    margin: 4px;
+    font-size: 12px;
+    background: white;
+}
+
+.product:hover {
+    box-shadow: -4px -4px green;
+    border: 1px solid crimson;
+}
+
+.description__section {
+    box-sizing: border-box;
+    position: relative;
+}
+
+.product__face-img {
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0;
+}
+
+.description__section_img:hover {
+    /*text-align: center;*/
+    z-index: 1000;
+}
+
+
+.product__face-img:not(:hover) {
+    transition: 1s;
+}
+
+
+.product__price_new-price {
+    display: inline-block;
+    font: 2em 'Times New Roman', serif;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.product__price_old-price {
+    display: inline-block;
+    font: 1.5em 'Times New Roman', serif;
+    text-decoration: line-through;
+}
+
+.product__price_rub:after {
+    /*content: ' р.';*/
+}
+
+.product__price_dol:before {
+    content: '$';
+}
+
+.label-features {
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product__features {
+    white-space: pre-line;
+}
+
+.product__href {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1em;
+    /* text-decoration: underline;*/
+}
+
+.img_container {
+    overflow: hidden;
+}
+
+/* </Единица товара> */
+
+
+/* <> */
+
+.ratio-input {
+    position: relative;
+    display: none;
+    overflow: hidden;
+}
+
+
+.product__ratio {
+    position: relative;
+    direction: rtl;
+    text-align: left;
+    white-space: nowrap;
+    unicode-bidi: bidi-override;
+}
+
+
+
+
+
+

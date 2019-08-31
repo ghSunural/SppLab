@@ -1,0 +1,566 @@
+﻿<?php
+
+
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<br>
+
+
+namespace Views\climate;
+
+
+$town = "\$town";
+$barometricPressure = "\$barometricPressure";
+$temperature095 = "\$temperature095";
+$temperature098 = "\$temperature098";
+$avrTemperatureMax = "\$avrTemperatureMax";
+$absTemperatureMax = "\$absTemperatureMax";
+$avrRange = "\$avrRange";
+$relativeHumidityWarmestMonth= "\$relativeHumidityWarmestMonth";
+$relativeHumidityWarmestMonth15= "\$relativeHumidityWarmestMonth15";
+$precipitation = "\$precipitation";
+$maxDayPrecipitation = "\$maxDayPrecipitation";
+$wind = "\$wind";
+$minAvrWindSpeed = "\$minAvrWindSpeed";
+
+
+
+Вид грунта	Модуль суммы отрицательных температур	Коэффициент 	Нормативная глубина сезонного промерзания
+|Mt|	do	dfn
+Щебеночный балласт	43,7	0,34	2,25
+Асбестовый балласт		0,32
+
+
+
+
+
+
+
+
+
+
+<table border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="17cm">
+    <caption>Таблица – Климатические параметры теплого периода года</caption>
+
+     <tr>
+        <td>
+            Суглинки и глины
+        </td>
+        <td>
+            0.23 м
+        </td>
+        <td align="center" nowrap>
+            {0.23*}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Супеси, пески мелкие и пылеватые
+        </td>
+        <td>
+            0,28 м
+        </td>
+        <td align="center" nowrap>
+            {0.28*}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Пески гравелистые, крупные и средней крупности
+        </td>
+        <td>
+            0,30 м
+        </td>
+        <td align="center" nowrap>
+            {0.30*}
+        </td>
+    </tr>
+
+    <tr>
+        <td>Крупнообломочные грунты
+        </td>
+        <td>
+            0,34 м
+        </td>
+        <td align="center" nowrap>
+            {0.34*}
+        </td>
+    </tr>
+
+
+
+</table>
+
+
+<br>
+<br><br><br>
+
+
+
+
+
+
+
+<table border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="17cm">
+    <caption>Таблица – Климатические параметры теплого периода года</caption>
+    <tr>
+        <td>
+            Метеостанция
+        </td>
+        <td align="center" nowrap>
+            {$town}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Барометрическое давление, КПа
+        </td>
+        <td align="center">
+            {$barometricPressure}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Температура воздуха, ºС, обеспеченностью 0.95
+        </td>
+        <td align="center">
+            {$temperature095}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Температура воздуха, ºС, обеспеченностью 0.98
+        </td>
+        <td align="center">
+            {$temperature098}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Средняя максимальная температура воздуха наиболее теплого месяца, ºС
+        </td>
+        <td align="center">
+            {$avrTemperatureMax}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Абсолютная максимальная температура воздуха, ºС
+        </td>
+        <td align="center">
+            {$absTemperatureMax}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Средняя суточная амплитуда температуры воздуха наиболее теплого месяца, ºС
+        </td>
+        <td align="center">
+            {$avrRange}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Средняя месячная относительная влажность воздуха наиболее теплого месяца, %
+        </td>
+        <td align="center">
+            {$relativeHumidityWarmestMonth}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            Средняя месячная относительная влажность воздуха в 15 ч наиболее теплого месяца, %
+        </td>
+        <td align="center">
+            {$relativeHumidityWarmestMonth15}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Количество осадков за апрель – октябрь, мм
+        </td>
+        <td align="center">
+            {$precipitation}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Суточный максимум осадков, мм
+        </td>
+        <td align="center">
+            {$maxDayPrecipitation}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Преобладающее направление ветра за июнь – август
+        </td>
+        <td align="center">
+            {$wind}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Минимальная из средних скоростей ветра по румбам за июль, м/с
+        </td>
+        <td align="center">
+            {$minAvrWindSpeed}
+        </td>
+    </tr>
+
+</table>
+
+
+<br>
+<br><br><br>
+
+
+<table border="1" bordercolor="black" cellspacing="-1" cellpadding="4" width="10cm">
+    <caption>Таблица – Климатические параметры холодного периода года</caption>
+    <tr>
+        <td colspan="3">
+            Метеостанция
+        </td>
+        <td align="center" nowrap>
+            {town}
+        </td>
+
+    </tr>
+
+    <tr>
+        <td rowspan="2" colspan="2">
+            Температура воздуха наиболее холодных суток, <sup>0</sup>С, обеспеченностью
+        </td>
+        <td align="center" nowrap>
+            0.98
+        </td>
+        <td align="center">
+            {theColdestDay098}
+        </td>
+    </tr>
+    <tr>
+        <td align="center" nowrap>
+            0.92
+        </td>
+        <td align="center">
+            {theColdestDay092}
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="2" colspan="2">
+            Температура воздуха наиболее холодной пятидневки, <sup>0</sup>С, обеспеченностью
+        </td>
+        <td align="center" nowrap>
+            0.98
+        </td>
+        <td align="center">
+            {theColdestFiveDays098}
+        </td>
+    </tr>
+    <tr>
+        <td align="center" nowrap>
+            0.92
+        </td>
+        <td align="center">
+            {theColdestFiveDay092}
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3">
+            Температура воздуха, ºС, обеспеченностью 0,94
+        </td>
+        <td align="center">
+            {temperature094}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            Абсолютная минимальная температура воздуха , ºС
+        </td>
+        <td align="center">
+            {absTemperatureMin}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            Средняя суточная амплитуда температуры воздуха наиболее холодного месяца, ºС
+        </td>
+        <td align="center">
+            {avrRange}
+        </td>
+    </tr>
+    <tr>
+        <td rowspan="6">
+            Продолжительность, сут. и средняя температура воздуха, ºС, периода со средней температурой воздуха
+        </td>
+        <td rowspan="2" nowrap>
+            ≤ 0 ºС
+        </td>
+        <td>
+            продолжительность
+        </td>
+        <td align="center">
+            {продолжительность}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            средняя температура
+        </td>
+        <td align="center">
+            {средняя температура}
+        </td>
+    </tr>
+    <tr>
+
+        <td rowspan="2" nowrap>
+            ≤ 8 ºС
+        </td>
+        <td>
+            продолжительность
+        </td>
+        <td align="center">
+            {продолжительность}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            средняя температура
+        </td>
+        <td align="center">
+            {средняя температура}
+        </td>
+    </tr>
+
+    <tr>
+
+        <td rowspan="2" nowrap>
+            ≤ 10 ºС
+        </td>
+        <td>
+            продолжительность
+        </td>
+        <td align="center">
+            {продолжительность}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            средняя температура
+        </td>
+        <td align="center">
+            {средняя температура}
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3">
+            Средняя месячная относительная влажность воздуха наиболее холодного месяца, %
+        </td>
+        <td align="center">
+            {}
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="3">
+            Средняя месячная относительная влажность воздуха в 15 ч наиболее холодного месяца, %
+        </td>
+        <td align="center">
+            {}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            Количество осадков за ноябрь-март, мм
+        </td>
+        <td align="center">
+            {}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            Преобладающее направление ветра за декабрь - февраль
+        </td>
+        <td align="center">
+            {}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            Максимальная из средних скоростей ветра по румбам за январь, м/с
+        </td>
+        <td align="center">
+            {}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            Средняя скорость ветра, м/с, за период со средней суточной температурой воздуха ≤ 8 ºС
+        </td>
+        <td align="center">
+            {}
+        </td>
+    </tr>
+
+</table>
+
+
+</br>
+</br>
+
+
+<table border="1" bordercolor="black" cellspacing="-1" cellpadding="1" width="10cm">
+    <tr>
+        <td colspan="17" align="center">
+            Температура воздуха , t<sup>0</sup>С
+        </td>
+
+    </tr>
+    <tr>
+        <td colspan="12" align="center" width="80%" valign="top">
+            Средняя по месяцам
+        </td>
+        <td align="center" rowspan="2" width="20" valign="top">
+            Среднегодовая
+        </td>
+        <td align="center" rowspan="2" valign="top">
+            Минимальная
+        </td>
+        <td align="center" rowspan="2" valign="top">
+            Максимальная
+        </td>
+        <td colspan="12" align="center" rowspan="2" valign="top">
+            Сумма отрицательных температур
+        </td>
+
+
+    </tr>
+    <tr>
+
+        <td nowrap width="60" align="center">
+            I
+        </td>
+        <td nowrap width="60" align="center">
+            II
+        </td>
+
+        <td nowrap width="60" align="center">
+            III
+        </td>
+
+        <td nowrap width="60" align="center">
+            IV
+        </td>
+
+        <td nowrap width="60" align="center">
+            V
+        </td>
+
+        <td nowrap width="60" align="center">
+            VI
+        </td>
+        <td nowrap width="60" align="center">
+            VII
+        </td>
+        <td nowrap width="60" align="center">
+            VIII
+        </td>
+
+        <td nowrap width="60" align="center" size="5">
+            IX
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            X
+        </td>
+        <td nowrap width="60" align="center">
+            XI
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <span font=16>XII</span>
+        </td>
+    </tr>
+
+    <tr>
+
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+
+        <td nowrap width="60" align="center" size="5">
+            <?= $; ?>
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <?= $; ?>
+        </td>
+        <td nowrap width="60" align="center">
+            <?= $; ?>
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <span font=16>
+                <?= $; ?>
+            </span>
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <span font=16>
+                <?= $; ?>
+            </span>
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <span font=16>
+                <?= $; ?>
+            </span>
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <span font=16>
+                <?= $; ?>
+            </span>
+        </td>
+        <td nowrap width="60" align="center" size="5">
+            <span font=16>
+                <?= $; ?>
+            </span>
+        </td>
+
+
+    </tr>
+</table>
+
+
+</body>
+</html>
+

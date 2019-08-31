@@ -1,0 +1,29 @@
+
+
+.block3d {
+
+    text-align: center;
+    vertical-align: sub;
+    width: 250px;
+    height: 70px;
+    transform-style: preserve-3d;
+    transform: translateX(50px) perspective(30px) translateZ(0px) rotateY(10deg);
+
+    margin: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.block3d:hover {
+    transform-style: preserve-3d;
+    transform: translateX(0px) perspective(500px) translateZ(0px) rotateY(0deg);
+    transition: .5s;
+}
+
+
+
+
+
+
+
+
