@@ -13,8 +13,10 @@ return array(
     // '/climate/([0-9]+)' => 'ClimateController/actionIndex/$1',
     'climate/([0-9]+)' => 'ClimateController/actionView/$1',
     'climate' => 'ClimateController/actionIndex',
-    // 'calculators/num2str)' => 'Num2strController/actionIndex',
-    // 'calculators/num2str/([0-9]+)' => 'Num2strController/actionIndex/$1',
+    'calculators/num2str' => 'CalculatorController/actionNum2str',
+    'calculators' => 'CalculatorController/actionIndex',
+
+    //'calculators/num2str/([0-9]+)' => 'Num2strController/actionIndex/$1',
     '' => 'SiteController/actionIndex' // actionIndex в SiteController
     //silver-hoof
 );

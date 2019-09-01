@@ -3,8 +3,6 @@ html {
     /*sans-serif - без засечек
     serif - с засечками
     */
-
-
     /*font: 12px 'site-font' , serif;*/
     /*letter-spacing: 2px;*/
     /*font: 12px 'Rubik One', sans-serif;*/
@@ -14,29 +12,15 @@ html {
 
 }
 
-.Header2 {
-    margin-top: 40px;
-    /*background: linear-gradient(to right bottom, #ffffff 10%, #3c7839) ;*/
-    height: 50vh;
-    background: linear-gradient(to right, #555152, #EFFFCD);
-    justify-content: space-between;
-
-}
-
 .Main {
-    /*height: 80vh;*/
 
-    /* #F5F0F0*/
 }
 
 .content {
-
     width: 100vw;
     justify-content: center;
     min-height: 60vh;
     align-items: center;
-
-
 }
 
 .content_width_sideBar {
@@ -53,13 +37,11 @@ html {
     max-width: 400px;
     width: 20vw;
     /* padding-right: 0;*/
-
 }
 
 .reclame {
     margin-right: 40px;
 }
-
 
 .transparent-text {
     font-family: 'Rubik One', sans-serif;
@@ -89,7 +71,7 @@ html {
     border: 2px #99173C solid;
     border-radius: 25px;
     padding: 15px;
-    margin: 0 0 0 20px;
+    margin: 20px;
     /* margin: 15px;
    margin-left: 5px;
     margin-top: 5px;*/

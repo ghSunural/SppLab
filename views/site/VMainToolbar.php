@@ -6,18 +6,20 @@
         <div class="block block_inline">
             <a href="/" class="t-botton">ГЛАВНАЯ</a>
         </div>
-        <div class="block block_inline">
-            <a href="" class="t-botton">ЗАГРУЗКИ</a>
-        </div>
+
 
     </div>
     <div class="tb__center">
-        <div class="block block_inline main_text_color-1 H4">
+
+        <div class="block block_inline main_text_color-1">
             Информационно-вычислительный портал
         </div>
 
     </div>
     <div class="tb__right">
+        <div class="block block_inline">
+            <a href="" class="t-botton">ЗАГРУЗКИ</a>
+        </div>
         <div class="block block_inline">
             <a href="" class="t-botton">ВОЙТИ</a>
         </div>

@@ -12,6 +12,8 @@ function autoload($className)
         "config",
         "controllers",
         "controllers/climate",
+        "controllers/calculators",
+
         "core",
         "models",
         "models/climate",

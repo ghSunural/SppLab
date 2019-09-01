@@ -1,54 +1,52 @@
 <?php
 
-
 use Application as A;
-use Application\Views as V;
-use Application\Models as M;
-
-
-//$regions = $this->models['climateTown'];
 
 $town = $this->models['town'];
-
-
-//Debug::print_array($regions);
-
-$styles[0] = A\config::SITE_URL() . "css/styles.css";
-$head_as_html = V\Html::getView_Head("Отчет климатология", $styles);
-
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="ru">
-<?= $head_as_html ?>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink"
-        type="text/javascript"></script>
+<?php
+$title = "SL-Отчет";
+$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
+$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
+require "views/site/VHead.php";
+?>
 
 <body class="block block_wrap">
+<?php require "views/site/VMainToolbar.php" ?>
+<?php
+$Header_leftContent = "Отчет. Климатология";
+$Header_rightContent =  <<<EOL
+     <div class="">
+         <span class="ymaps-geolink"> {$town->locality} ({$town->region})</span>
+     </div>
+EOL;
 
-<nav class="Main_toolbar block block_wrap fl fl-w">
-
-    Главная страница
-    <div class="block block_inline">
-        <!-- <label for="search">Найти</label> -->
-        <a href=""><span class="fa fa-search fa-2x"></span></a>
-        <input id="search" name="search" type="search">
-
-    </div>
-</nav>
+require "views/page_templates/VMinorHeader.php";
+?>
 
 <main class="Main block block_wrap fl fl_nw">
-    <section class="content block block_wrap">
-        <nav class="block block_wrap fl fl_w">
+
+    <aside class="side-bar block block_wrap main_bkg_color-2 main_text_color-2">
+
+        <nav class="catalog block">
+            <ul>
+                Выкопировки из документов
+                <li>Строительная климатология</li>
+                <li>СП 14.13330.2018 Строительство в сейсмических районах. Актуализированная редакция СНиП II-7-81*</li>
+            </ul>
+        </nav>
+
+
+    </aside>
+
+    <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+
+        <nav class="">
 
             <?php
-            echo <<<EOL
-            <div class="block text_header_bar">
-                <span class="ymaps-geolink"> {$town->locality} ({$town->region})</span>
-            </div>
-EOL;
             echo "</br>";
             require A\config::SITE_ROOT() . "views/climate/VTable_3_1_coldSeason.php";
             echo "</br>";
@@ -58,8 +56,21 @@ EOL;
             ?>
 
         </nav>
+
     </section>
 </main>
+<?php require "views/site/VSiteFooter.php" ?>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
