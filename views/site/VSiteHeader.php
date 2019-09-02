@@ -50,7 +50,7 @@
     }
 
     .Header_left_bottom {
-        font: 20px 'Arial', serif;
+        font-size: 20px;
         font-weight: bold;
         font-style: italic;
         height: 30%;
@@ -62,7 +62,7 @@
     }
 
     .Header_right_top {
-        font: 20px 'Arial', serif;
+        font-size: 20px;
         font-weight: bold;
         height: 30%;
 

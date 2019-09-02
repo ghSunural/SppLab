@@ -5,16 +5,16 @@
 $title = "SPP-Lab";
 $styles['main-css'] = "/css/styles.css";
 $scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
-    require "views/site/VHead.php";
+require "views/site/VHead.php";
 ?>
 
 <body class="block block_wrap">
 
 <?php
-    require "views/site/VMainToolbar.php"
+require "views/site/VMainToolbar.php"
 ?>
 <?php
-    require "views/site/VSiteHeader.php"
+require "views/site/VSiteHeader.php"
 ?>
 
 <main class="Main block block_wrap fl fl_nw">
@@ -35,8 +35,9 @@ $scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ
             </p>
         </div>
         <div class="block tablet main_bkg_color-2">
-
-            <div class="H1 main_text_color-5">Обработка геофизических данных</div>
+            <div class="H1 main_text_color-5">
+                <a href="geophysics" target="_blank">Обработка геофизических данных</a>
+            </div>
             <hr>
             <p align="justify" class="H_hint">
                 Построение геологического разреза по заданной цифровой модели
@@ -61,7 +62,7 @@ $scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ
     </section>
 </main>
 <?php
-    require "views/site/VSiteFooter.php"
+require "views/site/VSiteFooter.php"
 ?>
 </body>
 </html>

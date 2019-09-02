@@ -40,7 +40,7 @@ $temperature_year = $this->models['tempYear'];
 
 echo <<< EOL
      <div class="block block_wrap report-layout">     
-     <table border="1" bordercolor="black" cellspacing="-1" cellpadding="3" width="10cm">
+     <table border="1" bordercolor="black" cellspacing="-1" cellpadding="3" width="170mm">
      <caption>Таблица - Средняя месячная и средняя годовая температура воздуха, °С  
     {$town->locality} ({$town->region})</caption>       
      <tr>
@@ -161,7 +161,7 @@ echo <<< EOL
             Коэффициент
         </th>
         <th>
-            Глубина промеразания
+            Глубина промерзания
         </th>
     </tr>
      <tr>

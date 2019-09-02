@@ -1,28 +1,23 @@
 <?php
-
-
 //echo "<br>";
 spl_autoload_register('autoload');
-
 
 function autoload($className)
 {
     $folders = array(
 
         "config",
-        "controllers",
-        "controllers/climate",
-        "controllers/calculators",
-
         "core",
+        "controllers",
         "models",
+
         "models/climate",
+
         "models/calculators",
+
+        "models/geophysics",
+
         "models/users",
-       // "views",
-      //  "views/bars",
-       // "views/elements",
-        //"views/layouts"
 
     );
 

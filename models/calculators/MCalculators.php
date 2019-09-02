@@ -1,10 +1,9 @@
 <?php
 
-namespace Application\calculators;
+namespace calculators\models;
 
 class MCalculators
 {
-
 
     public static function num2str($num)
     {

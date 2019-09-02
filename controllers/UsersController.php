@@ -9,7 +9,7 @@
 namespace Application\Controllers;
 
 
-class users_ctrl
+class UsersController
 {
 
     public function actionShow()

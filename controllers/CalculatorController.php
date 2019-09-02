@@ -2,6 +2,8 @@
 
 namespace Application\Controllers;
 
+use calculators\models as M;
+
 class CalculatorController extends BaseController
 {
 
@@ -17,7 +19,10 @@ class CalculatorController extends BaseController
     }
 
     public function actionNum2strNum($num)
+
     {
+        $rusult = M\MCalculators::num2str($num);
+        $this->models['$rusult'] = $rusult;
         $this->render("views/calculators/VCalculatorsNum2str.php");
     }
 

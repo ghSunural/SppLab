@@ -14,6 +14,10 @@ return array(
     'climate/([0-9]+)' => 'ClimateController/actionView/$1',
     'climate' => 'ClimateController/actionIndex',
     'calculators/num2str' => 'CalculatorController/actionNum2str',
+
+    'geophysics' => 'GeophysicsController/actionIndex',
+
+    'calculators/num2str/([0-9]+)' => 'CalculatorController/actionNum2strNum',
     'calculators' => 'CalculatorController/actionIndex',
 
     //'calculators/num2str/([0-9]+)' => 'Num2strController/actionIndex/$1',

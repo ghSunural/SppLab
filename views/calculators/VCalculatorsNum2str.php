@@ -1,5 +1,8 @@
 <?php
 use Application as A;
+
+
+$rusult = $this->models['$rusult'];
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +37,11 @@ require "views/page_templates/VMinorHeader.php";
     </aside>
 
     <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+
+        <form action="">
+            <p><input name="login"> <input type="password" name="pass"></p>
+            <p><input type="submit"></p>
+        </form>
 
         <nav class="">
             <?php

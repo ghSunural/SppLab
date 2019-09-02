@@ -4,12 +4,7 @@
 //use Application\Controllers as C;
 namespace Application\Controllers;
 
-use Application as A;
 use climate\models as M;
-use Application\Views as V;
-
-use Application\Models\Databases as DB;
-
 
 class ClimateController extends BaseController
 {
