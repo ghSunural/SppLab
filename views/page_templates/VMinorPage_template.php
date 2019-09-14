@@ -34,7 +34,8 @@ EOL;
 
 <body class="block block_wrap">
 <?php require "views/site/VMainToolbar.php"?>
-<?php require "views/site/VMinorHeader.php"?>
+<div class="page block block_wrap">
+
 <main class="block block_wrap fl fl_nw">
 
     <section class="content block block_wrap fl fl_w main_bkg_color-4">
@@ -46,6 +47,7 @@ EOL;
     </section>
 </main>
 <?php require "views/site/VSiteFooter.php"?>
+</div>
 </body>
 </html>
 

@@ -1,87 +1,96 @@
 <?php
 ?>
-<header class="Header block block_wrap fl fl-nw">
-    <div class="Header_left block block_inline main_bkg_color-1 main_text_color-1">
-        <div class="Header_left_top block animated">
+<header class="block block_wrap Main_header">
+    <div class="block block_inline main_bkg_color-1 main_text_color-1 Main_header_left">
+        <div class="block Main_header_left_top ">
             SPP&nbsp;
         </div>
-        <div class="Header_left_bottom block">
-            Инженерные изыскания для строительства&nbsp; <br>
+        <div class="block Main_header_left_bottom ">
+            Инженерные изыскания для строительства
         </div>
     </div>
-    <div class="Header_right block block_inline main_bkg_color-2 main_text_color-2">
-        <div class="Header_right_top block">
-            OOO &#171;СпецПроектПуть&#187;
+
+    <div class="Main_header_right block block_inline main_bkg_color-2 ">
+        <div class="block Main_header_right_top">
+            <a class="block_box main_text_color-2" href="http://sppural.ru/">
+                <img class="" src="../../resource/site/logo/logo-SPP.png"
+                     title="title" alt="фото" width=40px height="">
+                &nbsp;
+                <div class="block block_inline">
+                OOO &#171;СпецПроектПуть&#187;
+                </div>
+            </a>
+            &nbsp;
         </div>
-        <div class="Header_right_bottom block">
+        <div class="block Main_header_right_bottom">
             &nbsp;LAB
         </div>
     </div>
 </header>
 <style>
-    .Header {
-        margin-top: 60px;
+    .Main_header {
+        display: flex;
+        top: 8vh;
         /*background: linear-gradient(to right bottom, #ffffff 10%, #3c7839) ;*/
-        height: 200px;
-        justify-content: space-between;
-        min-width: 600px;
+        height: 30vh;
+        justify-content: center;
         border-bottom: 2px #99173C solid;
-        width: 95vw;
+        width: 96vw;
 
 
     }
 
-    .Header_left {
-        width: 50%;
+    .Main_header_left {
+        width: 48vw;
     }
 
-    .Header_right {
-        width: 50%;
+    .Main_header_right {
+        width: 48vw;
     }
 
-    .Header_left_top {
-        text-align: right;
-        font: 120px 'Arial', sans-serif;
-        font-weight: bold;
-        height: 70%;
+    .Main_header_left_top {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        height: 10vh;
+        font: 5vh 'Arial', sans-serif;
+        font-weight: bold;
+
     }
 
-    .Header_left_bottom {
-        font-size: 20px;
+    .Main_header_left_bottom {
+        font-size: 2vh;
         font-weight: bold;
         font-style: italic;
-        height: 30%;
 
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 10px 0 10px;
+        padding: 0 auto;
     }
 
-    .Header_right_top {
-        font-size: 20px;
+    .Main_header_right_top {
+        font-size: 2vh;
         font-weight: bold;
         height: 30%;
-
         font-style: italic;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
 
-        padding: 0 10px 0 10px;
+
     }
 
-    .Header_right_bottom {
-        text-align: left;
-        font: 120px 'Arial', serif;
-        font-weight: bold;
-        height: 70%;
+    .Main_header_right_bottom {
+
         display: flex;
-        align-items: center
+        align-items: center;
+        justify-content: flex-start;
+        font: 5vh 'Arial', sans-serif;
+        font-weight: bold;
+        height: 10vh;
+
     }
 
     .animated {

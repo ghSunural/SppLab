@@ -30,7 +30,7 @@ class Router
         // Получить строку запроса
         $uri = $this->getURI();
 
-        // Проверить наличие такого запроса в routes.php
+        // Проверить наличие такого запроса в routesList.php
         foreach ($this->routes as $uriPattern => $path) {
 
             // Сравниваем $uriPattern и $uri
@@ -50,13 +50,7 @@ class Router
 
                 $parameters = $segments;
 
-                // Подключить файл класса-контроллера
-                $controllerFile = A\config::SITE_ROOT() . 'controllers/' .
-                    $controllerName . '.php';
 
-                if (file_exists($controllerFile)) {
-                    include($controllerFile);
-                }
 
                 // Создать объект, вызвать метод (т.е. action)
                 $controllerObject = new $controllerName;

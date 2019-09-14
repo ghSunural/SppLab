@@ -22,7 +22,7 @@ class Debug
             echo "<br>";
         }
 
-        debug_print_backtrace();
+        //debug_print_backtrace();
     }
 
 

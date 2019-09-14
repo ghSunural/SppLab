@@ -1,6 +1,6 @@
 <?php
 ?>
-<nav class=" block block_wrap fl fl-nw main_bkg_color-3 main_text_color-1 Main_toolbar">
+<nav class=" block block_wrap fl fl-w main_bkg_color-3 main_text_color-1 Main_toolbar">
 
     <div class="tb__left">
         <div class="block block_inline">
@@ -11,17 +11,17 @@
     </div>
     <div class="tb__center">
 
-        <div class="block block_inline main_text_color-1">
+        <div class="info-bl block block_inline main_text_color-1">
             Информационно-вычислительный портал
         </div>
 
     </div>
     <div class="tb__right">
         <div class="block block_inline">
-            <a href="" class="t-botton">ЗАГРУЗКИ</a>
+            <a href="/downloads" class="t-botton" title="Загрузить файлы">ЗАГРУЗКИ</a>
         </div>
-        <div class="block block_inline">
-            <a href="" class="t-botton">ВОЙТИ</a>
+        <div class="block block_inline" title="Вход для зарегистрированных пользователей">
+            <a href="/signin" class="t-botton">ВОЙТИ</a>
         </div>
 
     </div>
@@ -37,10 +37,12 @@
     .Main_toolbar {
         top: 0;
         position: fixed;
-        height: 60px;
-        width: 95vw;
+        height: 8vh;
+        min-height: 4vw;
+        width: 96vw;
         z-index: 100;
-        opacity: 0.9;
+
+        opacity: 0.85;
         justify-content: space-between;
         align-items: center;
         border-bottom: 5px solid #99173C;
@@ -51,6 +53,8 @@
 
         color: #DCE9BE;
         font-weight: bold;
+        font-size: 3vw;
+        max-font-size: 3vh;
         margin-left: 15px;
     }
 
@@ -73,6 +77,12 @@
         align-items: center;
         justify-content: flex-end;
         padding-right: 20px;
+    }
+
+    .info-bl{
+        font-size: 1vw;
+        max-font-size: 2vh;
+
     }
 
 

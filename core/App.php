@@ -5,7 +5,7 @@ namespace Application;
 require_once "Util.php";
 //SITE_ROOT.
 require_once "db_connect.php";
-//RewriteRule ^(.*)$ adminPanel_view.php?route=$1 [L,QSA]
+
 //echo 'application';
 //echo "<br>";
 

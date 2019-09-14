@@ -28,8 +28,8 @@ App::db_connect();
 
 //Вызов роутера
 $router = new Router();
+//(new Router())->run();
 $router->run();
-
 ?>
 
 

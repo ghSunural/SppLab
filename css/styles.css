@@ -6,14 +6,16 @@
 @import url("tabs.css");
 
 @import url("font-awesome.min.css");
-
+@import url("inputs.css");
 @import url("wrapper.css");
 @import url("blocks.css");
 @import url("buttons.css");
 @import url("tables.css");
 @import url("util.css");
+@import url("transform.css");
 
 @import url("modalDialog.css");
+@import url("tests.css");
 
 @import url("index.css");
 @import url("specific.css");

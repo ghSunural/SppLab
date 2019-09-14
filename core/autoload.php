@@ -8,16 +8,34 @@ function autoload($className)
 
         "config",
         "core",
-        "controllers",
         "models",
 
-        "models/climate",
+        "pages/admin/models",
+        "pages/admin/controllers",
 
-        "models/calculators",
+        "pages/signin/models",
+        "pages/signin/controllers",
 
-        "models/geophysics",
+        "pages/climate/models",
+        "pages/climate/controllers",
 
-        "models/users",
+        "pages/calculators/models",
+        "pages/calculators/controllers",
+
+        "pages/downloads/models",
+        "pages/downloads/controllers",
+
+        "pages/geophysics/models",
+        "pages/geophysics/controllers",
+
+        "pages/seismic/models",
+        "pages/seismic/controllers",
+
+        "pages/users/models",
+        "pages/users/controllers",
+
+        "pages/tests/models",
+        "pages/tests/controllers"
 
     );
 

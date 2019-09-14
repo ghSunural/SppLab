@@ -8,6 +8,33 @@ use Application\Models as M;
 class ORM
 {
 
+//select * from tDepartments  order by tDepartments.fullTitle;
+//select fullTitle as 'Наименование отдела' from tDepartments where acronym = 'ОИЗ';
+//update tPrice set price = 250000 where tPrice.surObjectID = 4 AND tPrice.workKindID = 3;
+
+
+    static function sqlQuery($sql)
+    {
+
+        $rows = array();
+
+        $link = A\App::$db_connection->getLink();
+        $queryResult = mysqli_query($link, $sql);
+
+        while ($row = mysqli_fetch_row($queryResult)) {
+
+            array_push($rows, $row);
+        }
+
+        //echo $jRow, "\n";
+      // echo json_encode($rows), "\n";
+        //echo json_encode($rows, JSON_PRETTY_PRINT);
+        //echo  JSON.stringify($jRow, null, '\t');
+        // array_push($rowsArray, $row);
+        return $rows;
+
+    }
+
     static function findRows($table, $statement = null)
     {
         $rows = array();
@@ -24,11 +51,18 @@ class ORM
 
             array_push($rows, $row);
         }
-
-
         // array_push($rowsArray, $row);
         return $rows;
     }
+
+
+    static function deleteEntry($table, $key, $value)
+    {
+
+        $link = A\App::$db_connection->getLink();
+        mysqli_query($link, "delete from $table where $key = $value");
+    }
+
 
     static function getTablesList($link)
     {

@@ -28,7 +28,7 @@ require "views/site/VSiteHeader.php"
 
             <ul>
                 <li><a href="climate" target="_blank">Строительная климатология</a></li>
-                <li>Сейсмичность</li>
+                <li><a href="seismic" target="_blank">Сейсмичность</a></li>
             </ul>
             <hr>
             Генерация отчетных таблиц по действующей нормативной документации в инженерных изысканиях

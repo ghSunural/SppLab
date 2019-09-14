@@ -1,0 +1,24 @@
+.resizable_2:hover{
+
+    transform: scale(3) ;
+    transition: all 1s ease-out;
+    z-index: 100;
+
+}
+
+
+.resizable_2:not(:hover){
+    transition: .5s ;
+}
+
+.resize-tl{
+    transform-origin: top left;
+}
+
+.resize-lc{
+    transform-origin:  left center;
+}
+
+.resize-bl{
+    transform-origin: bottom left;
+}

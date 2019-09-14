@@ -7,7 +7,7 @@ html {
     /*letter-spacing: 2px;*/
     /*font: 12px 'Rubik One', sans-serif;*/
     font: 16px 'site-font', serif;
-    width: 95vw;
+    width: 96vw;
     margin: 0 auto;
 
 }
@@ -16,11 +16,29 @@ html {
 
 }
 
+
+
+@page {
+    size: A4;
+    margin: 0 /* change the margins as you want them to be. */
+}
+
+.z-top{
+
+    z-index: 200;
+}
+
+.page{
+    top: 8vh;
+}
+
 .content {
-    width: 100vw;
+    width: 96vw;
     justify-content: center;
-    min-height: 60vh;
-    align-items: center;
+    align-items: baseline;
+
+    min-height: 90vh;
+
 }
 
 .content_width_sideBar {
@@ -54,15 +72,6 @@ html {
     border-radius: 5px;
     mix-blend-mode: multiply;
     padding: 5px 10px;
-}
-
-.logo__title-site {
-    vert-align: middle;
-    font: 40px 'Brush Script MT', serif;
-    /*color: linear-gradient(to right, #EFFFCD, #555152);*/
-    font-weight: 900;
-    /*text-shadow: #ffd700 2px 2px;*/
-    letter-spacing: 6px;
 }
 
 .tablet {

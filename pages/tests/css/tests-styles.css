@@ -1,0 +1,39 @@
+
+
+.reportEditable[contenteditable="true"] td {
+    border: 1px solid #000000;
+
+}
+
+.reportEditable {
+    padding: 5mm 5mm 5mm 25mm;
+    margin: 0 auto;
+    width: 21cm;
+    border: 1px solid red;
+}
+
+@media print { /* Стиль для печати */
+    .reportEditable1 {
+        font-family: Times, 'Times New Roman', serif; /* Шрифт с засечками */
+    }
+    h1, h2, p {
+        color: #000; /* Черный цвет текста */
+    }
+}
+
+@page {
+    size: 21cm 29.7cm;
+    margin: 30mm 45mm 30mm 45mm; /* change the margins as you want them to be. */
+}
+
+@page :first {
+    margin: 1cm; /* Отступы для первой страницы */
+}
+@page :left {
+    margin: 1cm 3cm 1cm 1.5cm; /* Отступы для всех левых страниц */
+}
+@page :right {
+    margin: 1cm 3cm 1cm 1.5cm; /* Отступы для всех правых страниц */
+}
+
+

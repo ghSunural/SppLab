@@ -40,14 +40,13 @@
 }
 
 .input-cell{
-    font-size: 1.1em;
-    border: 1px solid #000000;
-    font-style: italic;
-    font-weight: bold;
+    font-size: 1em;
+   border: 1px solid #000000;
+    /* font-style: italic;
+    font-weight: bold;*/
     box-sizing: border-box;
-    width: 100%;
+    width: 400px;
     text-align: center;
-
 }
 
 .input-cell:focus{
@@ -58,4 +57,17 @@
 
 .input-cell:not(:focus){
     transition: .5s ;
+}
+
+
+.report-table{
+    table-layout: fixed;
+    width: 17cm;
+    box-sizing: border-box;
+
+}
+
+th {
+    justify-content: left;
+
 }
