@@ -19,6 +19,7 @@ define("HOST", "localhost");
 define("DATABASE", "id10552045_spp_database");
 define("USER", "id10552045_malakhovav");
 define("PASSWORD", "Malakhov6503");
+define("charset", "utf8");
 
 
 /*

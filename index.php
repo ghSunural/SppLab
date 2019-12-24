@@ -22,8 +22,8 @@ function debug_print($message)
 
 //require $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR."core/tests.php";
 
-
-require_once $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR."core/autoload.php";
+//$_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR.
+require_once "core/autoload.php";
 App::db_connect();
 
 //Вызов роутера
