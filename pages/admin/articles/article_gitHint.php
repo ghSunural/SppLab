@@ -44,6 +44,8 @@ $ git branch branchName
 //перейти на ветку
 $ git checkout branchName
 
+    Перед переключением нужно закоммитить!!!
+
 
 
 

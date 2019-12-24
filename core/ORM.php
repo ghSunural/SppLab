@@ -18,7 +18,7 @@ class ORM
 
         $rows = array();
 
-        $link = A\App::$db_connection->getLink();
+        $link = A\App::$link_1;
         $queryResult = mysqli_query($link, $sql_body);
 
         while ($row = mysqli_fetch_row($queryResult)) {
@@ -39,19 +39,23 @@ class ORM
         $rows = array();
 
         //$rowsArray = array();
-        $link = A\App::$db_connection->getLink();
 
-        $queryResult = is_null($statement)
-            ? mysqli_query($link, "select * from $table")
-            : mysqli_query($link, "select * from $table where $statement");
+        $link = A\App::$link_1;
 
-
-        while ($row = mysqli_fetch_row($queryResult)) {
-
+        $stmt = $link->query('select * from $table');
+        while ($row = $stmt->fetch())
+        {
             array_push($rows, $row);
         }
-        // array_push($rowsArray, $row);
         return $rows;
+
+     /*   $queryResult = is_null($statement)
+            ? mysqli_query($link, "select * from $table")
+            : mysqli_query($link, "select * from $table where $statement");*/
+
+
+
+
     }
 
     public static function getColumnHeaders($tableName){
