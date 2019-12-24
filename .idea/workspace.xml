@@ -2,100 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350574e8-43df-4855-8905-d11e941d8252" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/core/MVC_templates/TemplateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/inputs.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/tests.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/transform.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/controllers/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/admin/scripts/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/calculators/controllers/CalculatorController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/calculators/views/VCalculatorsNum2str.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/climate/scripts/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/climate/views/VClimateReport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/downloads/controllers/DownloadController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/downloads/views/#VDownloads.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/controllers/SeismicController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/models/MSeismic_MSK64.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/models/MTowns.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/models/TTable_seismicMSK.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/models/TTown.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/views/#VSeismic.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/views/VTable_seismicMSK.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/seismic/views/VTowns_by_regions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/signin/controllers/SigninController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/signin/models/MSignin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/signin/views/#VSignin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/tests/controllers/TestsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/tests/views/#VTests.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/tests/views/EmptyPage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/users/TUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/content/download/SNIPS/СП131.13330.2018_СтроительнаяКлиматология.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/content/download/SNIPS/СП4.13330.2018_Сейсмичность.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/content/download/SNIPS/Технические условия на работы по реконструкции.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/content/download/blanks/Расчет_командировочных.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/content/download/books/vvedenirdgor.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resource/content/download/books/Введение в георадиолокацию.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/JQuery_example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/jsUtil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/base_controllers/downloadsList.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/base_views/ModalDialog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/base_views/Slider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/articles/Avesome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/articles/article_MySqlHint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/articles/article_gitHint.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/articles/inDevelop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/articles/useful_ref.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/resource/downloads/AllEarthquakes.kml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/geophysics/articles/Report.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/geophysics/articles/synchronization_systems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/geophysics/resource/downloads/base_PD-DP_5m_2784_157.erisch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/railways/controllers/RailwaysController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/railways/views/#VRailways.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/seismic/models/MEarthquakes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/seismic/resource/site/earthquaqe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/seismic/views/VAllEarthquakes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/KML.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/kml_file.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/downloads/models/MDownloads.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/CalculatorController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ClimateController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/controllers/ClimateController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/GeophysicsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geophysics/controllers/GeophysicsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/users/controllers/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Debug.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Debug.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_controllers/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/BaseControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_controllers/BaseControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/MVC_templates/#VTempalate.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/MVC_templates/#VTempalate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/SiteController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_controllers/SiteController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/Util.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Util.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db_connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/db_consts.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db_consts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/routesList.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routesList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/blocks.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/blocks.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/font-awesome.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main_colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main_colors.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/specific.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/specific.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/tables.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/tables.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/util.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/util.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js_base/Новый текстовый документ.txt" beforeDir="false" afterPath="$PROJECT_DIR$/js_base/JQuery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ORM.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/ORM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/calculators/MCalculators.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/calculators/models/MCalculators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/MTable_3_1_coldSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/MTable_3_1_coldSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/MTable_4_1_warmSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/MTable_4_1_warmSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/MTable_5_1_temperature.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/MTable_5_1_temperature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/MTable_5_1_temperatureTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/MTable_5_1_temperatureTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/MTowns.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/MTowns.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/TTable_3_1_coldSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/TTable_3_1_coldSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/TTable_4_1_warmSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/TTable_4_1_warmSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/TTable_5_1_temperature.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/TTable_5_1_temperature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/climate/TTown.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/models/TTown.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/users/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/GeoSemDem_v2_E.exe" beforeDir="false" afterPath="$PROJECT_DIR$/resource/content/download/programs/GeoSemDem_v2_E.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/adminPanel_view — копия.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/adminPanel_view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/calculators/#VCalculators.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/MVC_templates/#VTempalate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/calculators/VCalculatorsNum2str.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/calculators/views/#VCalculators.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/#VClimate.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/#VClimate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/VClimateReport.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/VTable_3_1_coldSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/VTable_3_1_coldSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/VTable_4_1_warmSeason.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/VTable_4_1_warmSeason.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/VTable_5_1_temperature.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/VTable_5_1_temperature.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/VTowns_by_regions.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/VTowns_by_regions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/climate/report_tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/report_tables.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/geophysics/#VGeophysics.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geophysics/views/#VGeophysics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/page_templates/VMinorHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page_templates/VMinorHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/transform.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/transform.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ORM.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/ORM.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/views/#VAdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/views/#VAdminPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/calculators/views/#VCalculators.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/calculators/views/#VCalculators.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/calculators/views/VCalculatorsNum2str.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/calculators/views/VCalculatorsNum2str.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/climate/views/#VClimate.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/#VClimate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/climate/views/VClimateReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/VClimateReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/climate/views/report_tables.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/report_tables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/downloads/MDownloads.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/models/MAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/downloads/controllers/DownloadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_controllers/DownloadController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/downloads/models/MDownloads.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/downloads/models/MDownloads.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/downloads/views/#VDownloads.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/downloads/views/#VDownloads.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/geophysics/views/#VGeophysics.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geophysics/views/#VGeophysics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/controllers/SeismicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/controllers/SeismicController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/models/MSeismic_MSK64.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/models/MSeismic_MSK64.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/models/MTowns.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/models/MTowns.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/views/#VSeismic.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/#VSeismic.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/views/VTable_seismicMSK.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/VTable_seismicMSK.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/views/VTowns_by_regions.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/VTowns_by_regions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/signin/views/#VSignin.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/signin/views/#VSignin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/tests/views/#VTests.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tests/views/#VTests.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/download/blanks/Акт на списание1.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/download/programs/GeoSemDem_v2_E.exe" beforeDir="false" afterPath="$PROJECT_DIR$/pages/geophysics/resource/downloads/GeoSemDem_v2_E.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2015-A.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2015-A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2015-B.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2015-B.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2015-C.png" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2015-C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2016-A.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2016-A.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2016-B.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2016-B.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2016-C.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2016-C.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/OSR-2016-D.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/resource/content/OSR-2016-D.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/pages/Схема Челябинской железной дороги 1 января 2007.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resource/content/images/pages/map_SURW.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/site/default.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/site/folder021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/content/images/site/seism.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/page_templates/VMinorPage_template.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page_templates/VMinorPage_template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/VHead.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/VHead.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/VMainToolbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/VMainToolbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/VSiteFooter.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/VSiteFooter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/VSiteHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/VSiteHeader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/icon.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/site_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/site/site_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/site/view_template.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/VHead.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/VHead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/VMainToolbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/VMainToolbar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/VSiteFooter.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/VSiteFooter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/VSiteHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/VSiteHeader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/show_error.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/show_error.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/site/site_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/site_view.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,25 +114,9 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>temp</find>
-      <find>;</find>
-      <find>int,</find>
-      <find>&quot;;</find>
-      <find>col</find>
-      <find>colo</find>
-      <find>&lt;a href=&quot;tests&quot; target=&quot;_blank&quot;&gt;ТЕСТЫ&lt;/a&gt;</find>
-      <find>color</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>temperature</replace>
-      <replace>= $row[];</replace>
-      <replace>;</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -191,11 +158,12 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pages/admin/scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -204,18 +172,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\scripts" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\views" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\models" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\signin\models" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\resource\site" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\new_page" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\climate\views" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\railways\controllers" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\climate\scripts" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\tests\scripts" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\tests\css" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\tests\views" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\users\models" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\views" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\core" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\core\MVC_templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -319,6 +287,46 @@
       <workItem from="1568308477437" duration="635000" />
       <workItem from="1568349381876" duration="14181000" />
       <workItem from="1568379846205" duration="14221000" />
+      <workItem from="1568477083852" duration="6405000" />
+      <workItem from="1569591939030" duration="15000" />
+      <workItem from="1569591954903" duration="134000" />
+      <workItem from="1570531685564" duration="597000" />
+      <workItem from="1573892978471" duration="29000" />
+      <workItem from="1573893054190" duration="5115000" />
+      <workItem from="1573904343364" duration="69000" />
+      <workItem from="1573904607113" duration="3371000" />
+      <workItem from="1573908103438" duration="623000" />
+      <workItem from="1574508501222" duration="4793000" />
+      <workItem from="1574517734884" duration="5334000" />
+      <workItem from="1574526605073" duration="4722000" />
+      <workItem from="1574572382761" duration="5505000" />
+      <workItem from="1574591439051" duration="2401000" />
+      <workItem from="1574604767254" duration="6857000" />
+      <workItem from="1574778545263" duration="2821000" />
+      <workItem from="1574784225820" duration="1275000" />
+      <workItem from="1574954560349" duration="1627000" />
+      <workItem from="1575535661946" duration="688000" />
+      <workItem from="1575603268516" duration="3785000" />
+      <workItem from="1575711703878" duration="2777000" />
+      <workItem from="1575789086457" duration="1819000" />
+      <workItem from="1575909134140" duration="5660000" />
+      <workItem from="1575948743504" duration="2772000" />
+      <workItem from="1575986499259" duration="4399000" />
+      <workItem from="1576032038999" duration="26070000" />
+      <workItem from="1576072356029" duration="4989000" />
+      <workItem from="1576082307384" duration="2403000" />
+      <workItem from="1576127651921" duration="226000" />
+      <workItem from="1576157557606" duration="11349000" />
+      <workItem from="1576253878965" duration="5618000" />
+      <workItem from="1576487464511" duration="2072000" />
+      <workItem from="1576669288042" duration="119000" />
+      <workItem from="1576838964036" duration="502000" />
+      <workItem from="1576938306976" duration="708000" />
+      <workItem from="1577020945248" duration="2761000" />
+      <workItem from="1577100791623" duration="887000" />
+      <workItem from="1577111448961" duration="1520000" />
+      <workItem from="1577187010364" duration="1667000" />
+      <workItem from="1577194540407" duration="6025000" />
     </task>
     <servers />
   </component>

@@ -12,13 +12,23 @@ define("HOST", "localhost");
 define("DATABASE", "dbshop");
 define("USER", "root");
 define("PASSWORD", "");
-
 */
+
 
 define("HOST", "localhost");
 define("DATABASE", "id10552045_spp_database");
 define("USER", "id10552045_malakhovav");
 define("PASSWORD", "Malakhov6503");
+
+
+/*
+
+define("HOST", "db-02.sppural.ru");
+define("DATABASE", "staff");
+define("USER", "admin");
+define("PASSWORD", "_cX&#99A3iTvAZ*pI9LS");
+*/
+
 
 
 ?>

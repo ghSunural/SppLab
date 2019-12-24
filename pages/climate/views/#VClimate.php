@@ -11,11 +11,11 @@ $regions = $this->models['regions'];
 $title = "SL-Климат";
 $styles['main-css'] = "css/styles.css";
 $scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
-require "views/site/VHead.php";
+require "core/base_views/VHead.php";
 ?>
 
 <body class="block block_wrap">
-<?php require "views/site/VMainToolbar.php" ?>
+<?php require "core/base_views/VMainToolbar.php" ?>
 
 <div class="page block block_wrap">
 <?php
@@ -41,7 +41,7 @@ require "views/page_templates/VMinorHeader.php";
 
     </aside>
 
-    <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+    <section class="content content_with_sideBar block block_wrap fl fl_w main_bkg_color-4">
 
         <nav class="">
             <?php
@@ -54,7 +54,7 @@ require "views/page_templates/VMinorHeader.php";
 
     </section>
 </main>
-<?php require "views/site/VSiteFooter.php" ?>
+<?php require "core/base_views/VSiteFooter.php" ?>
 
 </div>
 </body>

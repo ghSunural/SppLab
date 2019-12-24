@@ -10,11 +10,11 @@ use Application as A;
 $title = "SL-Регистрация";
 $styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
 $scripts[] = '';
-require "views/site/VHead.php";
+require "core/base_views/VHead.php";
 ?>
 
 <body class="block block_wrap">
-<?php require "views/site/VMainToolbar.php" ?>
+<?php require "core/base_views/VMainToolbar.php" ?>
 <div class="page block block_wrap">
     <?php
     $Header_leftContent = "Аудентификация / авторизация";
@@ -36,7 +36,7 @@ require "views/site/VHead.php";
 
         </aside>
 
-        <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+        <section class="content content_with_sideBar block block_wrap fl fl_w main_bkg_color-4">
 
             <div class="form form-signin">
                 <form action="/signin" method="post">
@@ -94,7 +94,7 @@ require "views/site/VHead.php";
             ?>
         </section>
     </main>
-    <?php require "views/site/VSiteFooter.php" ?>
+    <?php require "core/base_views/VSiteFooter.php" ?>
 </div>
 </body>
 </html>

@@ -11,7 +11,7 @@ class SiteController extends BaseController
     //$this - этот экземпляр контроллера
     public function actionIndex()
     {
-        $this->render("views/site/site_view.php");
+        $this->render("core/base_views/site_view.php");
     }
 
 }

@@ -26,6 +26,8 @@ EOL;
 echo <<<EOL
 </div>
 </article>
+<br>
+<br>
 EOL;
 
 ?>

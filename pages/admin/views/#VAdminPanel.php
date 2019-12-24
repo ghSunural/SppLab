@@ -15,6 +15,9 @@ if (is_uploaded_file()) {
 
 //'image' name поля
 
+$db_response = $this->models['db_response'];
+$sql_body = $this->models['sql_body'];
+
 ?>
 
 <!DOCTYPE html>
@@ -25,11 +28,11 @@ $title = "SL-Админ";
 $styles['main-css'] = "/css/styles.css";
 //$scripts['thisJS'] = A\config::SITE_URL() . "pages/admin/scripts/scripts.js";
 //$scripts['thisJS'] = "/pages/admin/scripts/scripts.js";
-require "views/site/VHead.php";
+require "core/base_views/VHead.php";
 ?>
 
 <body class="block block_wrap">
-<?php require "views/site/VMainToolbar.php" ?>
+<?php require "core/base_views/VMainToolbar.php" ?>
 <div class="page block block_wrap">
     <?php
     $Header_leftContent = "Админ";
@@ -43,8 +46,6 @@ require "views/site/VHead.php";
 
             <nav class="block">
                 <ul>
-
-
                     <li><a href="/"><span class="fa fa-globe fa-fw fa-1x"></span> На сайт</a></li>
                     <li><a href="https://ru.000webhost.com/vhod-v-cpanel"><span class="fa fa-globe fa-fw fa-1x"></span>управление
                             сайтом</a></li>
@@ -55,45 +56,31 @@ require "views/site/VHead.php";
 
                     <li><a href="/my-tests" target="_blank" title="Различные тесты"><span
                                     class="fa fa-table fa-fw fa-2x"></span>ТЕСТЫ</a></li>
-
-                    <li>ПОЛЕЗНЫЕ ССЫЛКИ</li>
+                    <br>
+                    ПОЛЕЗНЫЕ ССЫЛКИ
                     <li><a href="https://codepen.io/topics/" target="_blank">codepen</a></li>
                     <li><a href="http://w2ui.com/web/demos/#!popup/popup-8" target="_blank">таблицы и панели</a></li>
                     <li><a href="http://archive-ipq-co.narod.ru/l1/regexp.html" target="_blank">Регулярные выражения</a>
-                    <li><a href="https://myrusakov.ru/javascript-post.html" target="_blank">PostJavaScript</a>
+                    <li><a href="https://myrusakov.ru/javascript-post.html" target="_blank">Post-запрос JavaScript</a>
 
+                    <li><a href="http://phpfaq.ru/pdo" target="_blank">PDO</a>
                     </li>
-
-
+                    <br>
+                    ШПАРГАЛКИ
+                    <!-- такая ссылка уязвима - раскрывает структуру папок на сервере-->
+                    <li><a href="pages/admin/articles/article_gitHint.php" target="_blank">шпаргалка GitHub</a></li>
+                    <li><a href="pages/admin/articles/article_MySqlHint.php" target="_blank">шпаргалка MySql</a></li>
+                    <br>
+                    <li><a href="pages/admin/articles/inDevelop.php" target="_blank">В разработке</a></li>
                 </ul>
             </nav>
 
 
         </aside>
 
-        <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+        <section class="content content_with_sideBar block block_wrap  main_bkg_color-4">
 
-            <div class="block block_wrap fl fl_w bb">
-                <a href=""><span class="fa fa-database fa-2x"></span> База данных</a>
-                <a href=""><span class="fa fa-book fa-2x"></span> Каталог</a>
-                <a href=""><span class="fa fa-eye fa-2x"></span> Глаз</a>
-                <a href=""><span class="fa fa-eye-slash fa-2x"></span> Зачеркнутый глаз</a>
-                <a href=""><span class="fa fa-phone fa-2x"></span> Телефон</a>
-                <a href=""><span class="fa fa-folder-open fa-2x"></span> Открыть</a>
-                <a href=""><span class="fa fa-ruble fa-2x"></span> Рубль</a>
-                <a href=""><span class="fa fa-plus fa-2x"></span> Добавить</a>
-                <a href=""><span class="fa fa-remove fa-2x"></span> Удалить</a>
-                <a href=""><span class="fa fa fa-spinner fa-spin fa-2x"></span> Крутить</a>
-                <a href=""><span class="fa fa fa-refresh fa-spin fa-2x"></span> Крутить</a>
-                <a href=""><span class="fa fa-save fa-2x"></span> Сохранить</a>
-                <a href=""><span class="fa fa-image fa-2x"></span> Картинка</a>
-                <a href=""><span class="fa fa-diamond fa-2x"></span> Минералы</a>
-                <a href=""><span class="fa fa-search fa-2x"></span> Искать</a>
-                <a href=""><span class="fa fa-download fa-2x main_text_color-5"></span>Загрузка</a>
-                <a href="https://material.io/tools/icons/?style=baseline"><span class="fa fa-edit fa-2x"></span>
-                    Редактировать</a>
-                <a href=""><span class="fa fa-shopping-cart fa-2x"></span> Купить</a>
-            </div>
+    >
 
             <br>
 
@@ -123,13 +110,23 @@ require "views/site/VHead.php";
                     ?>
                 </div>
                 <br>
+
+
                 <?php
-                $resultSql = $this->models['resultSql'];
-                $sql = $this->models['sql'];
+
+                echo "IP сервера: ".$_SERVER['SERVER_ADDR'];
+                echo '<br>';
+                echo "Мой IP: ".$_SERVER['REMOTE_ADDR'];
+
+
+
                 ?>
 
+                https://db-02.sppural.ru
+                пользователь:	admin
+                пароль:	_cX&#99A3iTvAZ*pI9LS
 
-                <div class="block block_wrap fl fl_nw bb ">
+                <div class="block block_wrap bb fl fl_w">
                     <div class="block block_box bb">
                         <label for="sql-query">SQL-запрос</label><br>
                         <form action="/admin/sql" method="post" enctype="multipart/form-data">
@@ -140,164 +137,57 @@ require "views/site/VHead.php";
                                    height: 200px;
                                    font-size: 1.3em;
                                    justify-content: left;">
-                            <?= $sql ?>
+                            <?= $sql_body ?>
                          </textarea>
                             <br>
                             <input type="submit" value="Отправить запрос"><br>
                         </form>
                         <br>
-
-                        <?php
-                        A\Debug::print_array($resultSql, "Ответ");
-                        ?>
-                        <br>
                     </div>
-
-                    <div id="cont">
-                        контент
-                    </div>
-
 
                     <div class="block block_box bb contenteditable">
                         <input type="button" class="" value="Сохранить" onclick="save()">
                         <div>
                         <pre>
-select * from tDepartments;
-select * from tDepartments  order by tDepartments.fullTitle;
-select * from tDepartments  where acronym = 'ОИЗ';
-select
-	fullTitle as 'Наименование отдела'
-from tDepartments where acronym = 'ОИЗ';
-
-select
-	fullTitle as 'Полное наименование отдела',
-	acronym as 'Аббревиатура'
-from tDepartments
-	 order by fullTitle;
-
-select distinct
-	ID as 'ID должности',
-	postName as 'Наименование должности'
-from tPostList;
-
-delete
-from tWorkKindsList
-where workKind = 'инженерно-гидрологические работы';
-
-select * from tWorkerList
-order by ID desc;
-
-select *
-from tWorkerList
-where
-	postId in
-	(
-	  1,
-	  2
-	)
-
- --вызов скалярной функции
- --почему то для скалярных функций указание схемы обязательно
- select [dbo].[GetNextMedCheck](1001)
-
---удаление записи
-delete from tWorkerList where surname = 'Основин';
-
-select count(surname) as 'кол-во'
-from tWorkerList
-where postId = 4;
---group by ID, postId;
-
-select top 4 * from vWorkerList;
-
---выбор значений из коллекции
-select *
-from vWorkerList
-where
-	Должность in
-	(
-	  'геофизик',
-	  'геолог'
-	)
-
-select *
-from vWorkerList
-where
-	Должность not in
-	(
-	  'геофизик',
-	  'геолог'
-	)
-
---alter table WorkerList drop column vaccination;
---alter table WorkerList add vaccination datetime;
-
--- измененеие ячейки
-update tPrice
-set price = 250000 where tPrice.surObjectID = 4 AND tPrice.workKindID = 3;
-
---удаление функции
-drop function if exists GetNextMedCheck;
---или
-if object_ID('GetNextMedCheck', 'f') is not null
-drop function GetNextMedCheck;
-
- /*--ограничение целостности в контексте alter table
- --не выходит на существующие столбцы
-alter table tWorksImplementation ADD constraint surObjectID_FK
-foreign key(surObjectID) references tSurObjects(ID);
-
-alter table tWorksImplementation ADD constraint workKindID_FK
-foreign key(workKindID) references tWorkKindsList(ID);
-
-alter table tWorksImplementation ADD constraint workerID_FK
-foreign key(workerID) references tWorkerList(ID);
-*/
-
---alter table tWorksImplementation add bonus money;
---except
---intersect
---catch
---try
---throw
---одностроччный комментарий--
---create database #EnterpriseDB
---drop - сбрасывать
---drop database #EnterpriseDB
---alter database #EnterpriseDB
---create type MyType;
---insert into
---truncate -остается только поисание
---delete from [dbo].[Workers] where personnelNumber = 1;
---integer
---asc - по возрастанию
---desc - по убыванию
---alter table изменяет структуру таблицы
---while
---break
---continue
+Редактируемый текст
+select * from TAllEarthquakes limit 30;
+describe TAllEarthquakes;
                         </pre>
                         </div>
                     </div>
                 </div>
             </section>
+            <hr>
 
-            <div class="block block_box">
-                REST
-                <br>
-                Поиск
-                <br>
-                Пользователи
-                <br>
-                Загрузки
-                <br>
+            <div class="block block_box bb contenteditable">
+                <?php
+                // $sql_body = "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE()  AND TABLE_NAME = 'TAllEarthquakes'";
+                //  $fields = DB\ORM::sqlQuery($sql_body);
 
+
+                // A\Util::printTable($fields);
+                //A\Util::printTable($TTableName);
+                A\Util::printArrayAsTable($db_response);
+                ?>
             </div>
+            <hr>
+            <div class="block block_box bb">
 
+
+                <?php
+                A\Util::exportKML('pages/admin/resource/downloads/AllEarthquakes.kml');
+
+                ?>
+                <a href="/pages/admin/resource/downloads/AllEarthquakes.kml" download>Скачать kml</a>
+            <br>
+                <a href="download/NaryadDopusk_doc" >Наряд-допуск</a>
+               <br>
+                <a href="/resource/content/download/books/Введение в георадиолокацию.pdf" download>Скачать рус</a>
+            </div>
 
         </section>
     </main>
-    <?php require "views/site/VSiteFooter.php" ?>
+    <?php require "core/base_views/VSiteFooter.php" ?>
 </div>
 </body>
 <script type="text/javascript" src="/pages/admin/scripts/scripts.js"></script>

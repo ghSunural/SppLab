@@ -1,4 +1,5 @@
-<?php ?>
+<?php
+?>
 <header class="Footer block block_wrap fl fl-nw">
     <div class="left block block_inline main_bkg_color-2 main_text_color-2">
         <div class="left_top block">

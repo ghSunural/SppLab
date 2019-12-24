@@ -33,7 +33,7 @@ EOL;
 ?>
 
 <body class="block block_wrap">
-<?php require "views/site/VMainToolbar.php"?>
+<?php require "core/base_views/VMainToolbar.php"?>
 <div class="page block block_wrap">
 
 <main class="block block_wrap fl fl_nw">
@@ -46,7 +46,7 @@ EOL;
 
     </section>
 </main>
-<?php require "views/site/VSiteFooter.php"?>
+<?php require "core/base_views/VSiteFooter.php"?>
 </div>
 </body>
 </html>

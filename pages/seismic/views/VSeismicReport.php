@@ -11,11 +11,11 @@ $town = $this->models['town'];
 $title = "SL-Отчет";
 $styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
 $scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
-require "views/site/VHead.php";
+require "core/base_views/VHead.php";
 ?>
 
 <body class="block block_wrap">
-<?php require "views/site/VMainToolbar.php" ?>
+<?php require "core/base_views/VMainToolbar.php" ?>
 <div class="page block block_wrap">
     <?php
     $Header_leftContent = "Отчет. Сейсмичность";
@@ -45,7 +45,7 @@ EOL;
 
 
         </aside>
-        <section class="content content_width_sideBar block block_wrap main_bkg_color-4">
+        <section class="content content_with_sideBar block block_wrap main_bkg_color-4">
             <section class="block block_wrap  main_bkg_color-4">
 
                 <div class="block block_box">
@@ -61,7 +61,7 @@ EOL;
         </section>
     </main>
 
-    <?php require "views/site/VSiteFooter.php" ?>
+    <?php require "core/base_views/VSiteFooter.php" ?>
 </div>
 
 <script type="text/javascript">

@@ -3,6 +3,8 @@
 
 namespace Application\Controllers;
 
+use admin\models as M;
+use Application\Debug;
 use Application\Models\Databases as DB;
 
 //CRUD
@@ -10,7 +12,7 @@ use Application\Models\Databases as DB;
 class AdminController extends BaseController
 {
 
-    private $layout = "pages/admin/views/#VAdminPanel.php";
+    private $view = "pages/admin/views/#VAdminPanel.php";
 
 
     public function actionIndex()
@@ -18,7 +20,14 @@ class AdminController extends BaseController
 
         // self::checkAdmin();
 
-        $this->render($this->layout);
+        $this->render($this->view);
+    }
+
+    public function actionHeaders()
+    {
+        // self::checkAdmin();
+        $this->models['http_headers'] = M\MAdmin::getHttpHeaders();
+        $this->render($this->view);
     }
 
 
@@ -26,25 +35,23 @@ class AdminController extends BaseController
     {
 
         if (isset($_POST["sql-query"])) {
-            $sql = $_POST["sql-query"];
+            $sql_body = $_POST["sql-query"];
         } else {
-            $sql = '';
+            $sql_body = '';
         }
 
+        if ($sql_body != '') {
+            $db_response = DB\ORM::sqlQuery($sql_body);
+            $this->models['sql_body'] = $sql_body;
+            $this->models['db_response'] = $db_response;
 
-        if ($sql != '') {
-            $resultSql = DB\ORM::sqlQuery($sql);
-            $this->models['resultSql'] = $resultSql;
-            $this->models['sql'] =  $sql;
+
         } else {
-            $this->models['sql'] = '';
+            $this->models['sql_body'] = '';
         }
 
-        $this->render("pages/admin/views/#VAdminPanel.php");
-
-
+        $this->render($this->view);
     }
-
 
 }
 

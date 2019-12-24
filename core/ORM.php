@@ -13,13 +13,13 @@ class ORM
 //update tPrice set price = 250000 where tPrice.surObjectID = 4 AND tPrice.workKindID = 3;
 
 
-    static function sqlQuery($sql)
+    public static function sqlQuery($sql_body)
     {
 
         $rows = array();
 
         $link = A\App::$db_connection->getLink();
-        $queryResult = mysqli_query($link, $sql);
+        $queryResult = mysqli_query($link, $sql_body);
 
         while ($row = mysqli_fetch_row($queryResult)) {
 
@@ -27,12 +27,11 @@ class ORM
         }
 
         //echo $jRow, "\n";
-      // echo json_encode($rows), "\n";
+        // echo json_encode($rows), "\n";
         //echo json_encode($rows, JSON_PRETTY_PRINT);
         //echo  JSON.stringify($jRow, null, '\t');
         // array_push($rowsArray, $row);
         return $rows;
-
     }
 
     static function findRows($table, $statement = null)
@@ -55,6 +54,19 @@ class ORM
         return $rows;
     }
 
+    public static function getColumnHeaders($tableName){
+
+        $columnHeaders = array();
+        $fields = DB\ORM::sqlQuery('describe ' . $tableName);
+        $i = 0;
+        foreach ($fields as $f) {
+            array_push($columnHeaders, $f[0]);
+            $i++;
+        }
+
+        return $columnHeaders;
+    }
+
 
     static function deleteEntry($table, $key, $value)
     {
@@ -68,6 +80,38 @@ class ORM
     {
 
         return mysqli_query($link, "SHOW TABLES;");
+    }
+
+    static function VAllEarthquakesQuery()
+    {
+
+
+        $sql_body = " 
+ select
+    ID as '№ п/п',
+    _year as 'Год',
+    _month	as 'Месяц',
+    _day as 'День',
+    _hour as 'Час',
+    _min as 'Мин',
+    sec	as 'Сек.',
+    latitude as 'Широта, N',
+    longitude as 'Долгота, E',
+    DEPTH as 'Глубина гипоцентра, км',
+    MLH	as 'Магнитуда по поверхностным волнам MLH с шагом 0.1',
+    Ms05 as 'Магнитуда по поверхностным волнам MLH с шагом 0.5',
+    polarAngle as 'Азимут',
+    note as 'Примечание'
+from TAllEarthquakes
+where 
+                        latitude > 49 
+                        and latitude < 53 
+                        and longitude > 110 
+                        and longitude < 120;";
+
+        $table =  self::sqlQuery($sql_body);
+        return $table;
+
     }
 
 

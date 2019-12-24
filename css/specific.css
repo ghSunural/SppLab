@@ -17,22 +17,28 @@
 
 .panel_mini_sub {
 
+    list-style: none;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    column-fill: balance;
+
+    /*
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     padding: 5px;
-    max-height: 40vh;
+    max-height: 100vh;
+    */
+
 }
 
 .item {
-    margin: 2px 50px 0 0;
+    margin: 2px 70px 0 0;
+    contain: content;
 }
 
 
-/* <позиционирование> */
-[class*='input'] {
-    z-index: 301;
-}
 
 [type="range"] {
     display: block;
@@ -58,25 +64,8 @@ input[type="range"]:at-level(3) ~ .product__ratio .img-star {
      vertical-align: bottom;
  }
 
-.logo__title:first-letter,
-.item_site-title:first-letter {
-    font-weight: bold;
-}
 
-.product:hover {
-    box-shadow: -4px -4px green;
-    border: 1px solid crimson;
-}
 
-.description__section {
-    box-sizing: border-box;
-    position: relative;
-}
-
-.description__section_img:hover {
-    /*text-align: center;*/
-    z-index: 1000;
-}
 
 .product__face-img:not(:hover) {
     transition: 1s;

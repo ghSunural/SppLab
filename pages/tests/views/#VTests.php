@@ -11,7 +11,7 @@ use Application as A;
 $title = "SL-ТЕСТ";
 $styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
 $scripts[] = '';
-require "views/site/VHead.php";
+require "core/base_views/VHead.php";
 ?>
 <!--ПОДКЛЮЧЕНИЕ ДОПОЛНИТЕЛЬНЫХ СКРИПТОВ-->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -37,7 +37,7 @@ require "views/site/VHead.php";
 
 <body class="block block_wrap">
 
-<?php require "views/site/VMainToolbar.php" ?>
+<?php require "core/base_views/VMainToolbar.php" ?>
 
 
 <div class="page block block_wrap">
@@ -62,7 +62,7 @@ require "views/site/VHead.php";
             </nav>
         </aside>
 
-        <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+        <section class="content content_with_sideBar block block_wrap fl fl_w main_bkg_color-4">
 
             <div id="draggable" class="test-b1">
                 <p>Drag me around</p>
@@ -99,7 +99,7 @@ require "views/site/VHead.php";
 
         </section>
     </main>
-    <?php require "views/site/VSiteFooter.php" ?>
+    <?php require "core/base_views/VSiteFooter.php" ?>
 </div>
 </body>
 </html>

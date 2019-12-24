@@ -27,7 +27,7 @@
         </div>
     </div>
 </header>
-<style>
+<style type="text/css">
     .Main_header {
         display: flex;
         top: 8vh;

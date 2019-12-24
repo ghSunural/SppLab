@@ -17,11 +17,11 @@ $subfolders = $this->models['files'];
 $title = "SL-загрузки";
 $styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
 $scripts[] = '';
-require "views/site/VHead.php";
+require "core/base_views/VHead.php";
 ?>
 
 <body class="block block_wrap">
-<?php require "views/site/VMainToolbar.php" ?>
+<?php require "core/base_views/VMainToolbar.php" ?>
 <div class="page block block_wrap">
     <?php
     $Header_leftContent = "Загрузки";
@@ -48,7 +48,7 @@ require "views/site/VHead.php";
 
         </aside>
 
-        <section class="content content_width_sideBar block block_wrap fl fl_w main_bkg_color-4">
+        <section class="content content_with_sideBar block block_wrap fl fl_w main_bkg_color-4">
 
 
             <nav class="">
@@ -59,7 +59,7 @@ require "views/site/VHead.php";
 
                     <div class="block block_wrap fl fl_w  block_box download-row">
                         <div class="block block_inline block_box">
-                            <a href= "/downloads/{$ID}"><span class="fa fa-download fa-1x main_text_color-5"></span></a>
+                            <a href= "downloads/{$ID}"><span class="fa fa-download fa-1x main_text_color-5"></span></a>
                         </div>
                         <div class="block block_inline block_box">
                             {name}
@@ -88,7 +88,7 @@ require "views/site/VHead.php";
 
         </section>
     </main>
-    <?php require "views/site/VSiteFooter.php" ?>
+    <?php require "core/base_views/VSiteFooter.php" ?>
 </div>
 </body>
 </html>

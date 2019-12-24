@@ -8,7 +8,11 @@ function autoload($className)
 
         "config",
         "core",
+        "core",
+        "core/base_controllers",
+        "core/base_views",
         "models",
+        "util",
 
         "pages/admin/models",
         "pages/admin/controllers",
@@ -18,6 +22,9 @@ function autoload($className)
 
         "pages/climate/models",
         "pages/climate/controllers",
+
+        "pages/railways/models",
+        "pages/railways/controllers",
 
         "pages/calculators/models",
         "pages/calculators/controllers",
@@ -37,6 +44,9 @@ function autoload($className)
         "pages/tests/models",
         "pages/tests/controllers"
 
+
+
+
     );
 
 
@@ -46,14 +56,14 @@ function autoload($className)
 
         $parts = explode('\\', $className); //DIRECTORY_SEPARATOR
 
-        $file_name = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR  . $path . DIRECTORY_SEPARATOR . end($parts) . '.php';
+        $file_name = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $path . DIRECTORY_SEPARATOR . end($parts) . '.php';
         //echo $file_name. "<br>";
         // $file_name =  . $value . DIRECTORY_SEPARATOR . end($parts) . '.php';
         if (is_file($file_name)) {
             require_once $file_name;
-          //  A\Debug();
+            //  A\Debug();
 
-         //  echo "<br>"."Подключен: " . $file_name;
+            //  echo "<br>"."Подключен: " . $file_name;
         }
     }
 

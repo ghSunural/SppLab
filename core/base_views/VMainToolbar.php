@@ -17,9 +17,6 @@
 
     </div>
     <div class="tb__right">
-        <div class="block block_inline">
-            <a href="/downloads" class="t-botton" title="Загрузить файлы">ЗАГРУЗКИ</a>
-        </div>
         <div class="block block_inline" title="Вход для зарегистрированных пользователей">
             <a href="/signin" class="t-botton">ВОЙТИ</a>
         </div>
@@ -42,7 +39,7 @@
         width: 96vw;
         z-index: 100;
 
-        opacity: 0.85;
+        opacity: 0.4;
         justify-content: space-between;
         align-items: center;
         border-bottom: 5px solid #99173C;

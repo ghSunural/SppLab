@@ -13,7 +13,7 @@ namespace Application;
 
 </head>
 <body>
-<main class="Main block block_wrap" width="100px">
+<main class="Main block block_wrap bb" width="100px">
     <h1>Ошибочка вышла...</h1>
     <h2>Сообщение</h2>
 

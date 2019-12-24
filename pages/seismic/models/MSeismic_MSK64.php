@@ -25,8 +25,6 @@ class MSeismic_MSK64 extends M\Model_base
         $data->OSR2015_C = $row[4];
 
 
-        // A\Debug::print_array("ColdSeasonData", $data);
-
         return $data;
     }
 
@@ -34,3 +32,5 @@ class MSeismic_MSK64 extends M\Model_base
 
 
 }
+
+?>

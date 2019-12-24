@@ -9,7 +9,8 @@ return array(
     'my-tests/empty' => 'TestsController/actionShowEmpty',
     'my-tests' => 'TestsController/actionIndex',
 
-    'downloads/([0-9]+)' => 'DownloadController/actionGetFile/$1',
+    //(.*) - любые символы
+    'download/(.*)' => 'DownloadController/actionGetFile/$1',
     'downloads' => 'DownloadController/actionIndex',
 
     'signin/reg' => 'signinController/actionRegister',
@@ -24,6 +25,8 @@ return array(
     'climate' => 'ClimateController/actionIndex',
 
     'seismic/([0-9]+)' => 'SeismicController/actionView/$1',
+    'seismic/allEarthquakes' => 'SeismicController/actionVAllEarthquakes',
+    'seismic/getAllEarthquakes' => 'SeismicController/actionGetAllEarthquakes',
     'seismic' => 'SeismicController/actionIndex',
     // 'calculators/num2str' => 'CalculatorController/actionNum2str',
 
@@ -32,6 +35,9 @@ return array(
     //'calculators/num2str?number=([0-9]+)' => 'CalculatorController/actionNum2strNum',
     'calculators' => 'CalculatorController/actionIndex',
 
+    'railways' => 'RailwaysController/actionIndex',
+
+    'admin/httpheaders' => 'AdminController/actionHeaders',
     'admin/sql' => 'AdminController/actionSql',
     'admin' => 'AdminController/actionIndex',
 

@@ -4,6 +4,8 @@
 namespace Application;
 
 //Singleton
+
+ini_set('max_execution_time', 900);
 class config
 {
     public static function SITE_ROOT()

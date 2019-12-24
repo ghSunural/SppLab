@@ -40,8 +40,7 @@ echo <<< EOL
         </td>
          <td  align="center" nowrap>
              Карта C
-        </td>  
-           
+        </td>            
     </tr>
     <tr>
         <td align="center" nowrap>
