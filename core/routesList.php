@@ -27,6 +27,8 @@ return array(
     'seismic/([0-9]+)' => 'SeismicController/actionView/$1',
     'seismic/allEarthquakes' => 'SeismicController/actionVAllEarthquakes',
     'seismic/getAllEarthquakes' => 'SeismicController/actionGetAllEarthquakes',
+    'seismic/getEarthquakes' => 'SeismicController/switchAction',
+
     'seismic/export2Kml' => 'SeismicController/actionExportEarthquakes2Kml',
 
     'seismic' => 'SeismicController/actionIndex',

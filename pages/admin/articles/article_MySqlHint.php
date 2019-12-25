@@ -43,9 +43,32 @@ where ID in(1, 2);
 
 
 
+
 -- измененеие ячейки
 update TAllEarthquakes
-set note = "Балейское землетрясение" where ID = 27410;
+set note = "Муйское" where ID = 3530;
+
+
+update TAllEarthquakes
+set note = "Спитакское" where ID = 20563;
+20563
+
+select * from TAllEarthquakes
+where note !=""
+
+27410
+
+update TAllEarthquakes
+set note = "Балейское" where ID = 27410;
+
+update TAllEarthquakes
+set note = "Великое Восточно-Сибирское" where ID = 409;
+
+update TAllEarthquakes
+set note = "Чуйское" where ID = 26365;
+
+select * from TAllEarthquakes
+where MLH  > 7 and  latitude >45 and   longitude >100 and  longitude <150
 
 
 --удаление записи

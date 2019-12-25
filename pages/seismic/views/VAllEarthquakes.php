@@ -56,9 +56,10 @@ require "core/base_views/VHead.php";
                          width="50px">
 
 
-                    <form action="/seismic/getAllEarthquakes" method="post">
+                    <form id="limits" action="/seismic/getEarthquakes" method="post" class="bb">
                         <p>
                             <input name="params[minLat]"
+                                   title="Минимальная широта"
                                    type="number"
                                    class="_input"
                                    step="0.01"
@@ -78,6 +79,7 @@ require "core/base_views/VHead.php";
                         </p>
                         <p>
                             <input name="params[minLong]"
+                                   title="Минимальная долгота"
                                    type="number"
                                    class="_input"
                                    step="0.01"
@@ -87,6 +89,7 @@ require "core/base_views/VHead.php";
                         </p>
                         <p>
                             <input name="params[maxLong]"
+                                   title="Максимальная долгота"
                                    type="number"
                                    class="_input"
                                    step="0.01"
@@ -125,12 +128,14 @@ require "core/base_views/VHead.php";
                                    value="">
                         </p>
 
-                        <p>
-                            <input type="submit" title="Список землетрясений в диапазоне указанных координат"
-                                   value="Ок">
-                        </p>
-                    </form>
 
+                    </form>
+                    <p>
+                        <input type="submit" name="list"   title="Список землетрясений в диапазоне указанных координат"
+                               value="Список" form="limits">
+                        <input type="submit" name="export" title="Экспорт геоданных в kml"
+                               value="Экспорт в kml" form="limits">
+                    </p>
 
                 </div>
 
@@ -139,7 +144,7 @@ require "core/base_views/VHead.php";
                     A\Util::printArrayAsTable($db_response);
                     ?>
                 </div>
-                <input action="/seismic/export2Kml" type="submit" value="Экспорт в KML">
+
                 <br>
                 <a href="/seismic/export2Kml">Экспорт в kml</a>
 

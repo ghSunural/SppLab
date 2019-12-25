@@ -17,7 +17,7 @@ class MEarthquakes extends M\Model_base
     {
 
         $sql_body = "select * from TAllEarthquakes
-                     where latitude > $minLat and latitude < $maxLat and longitude > $minLong and longitude < $maxLong;";
+                     where latitude > $minLat and latitude < $maxLat and longitude > $minLong and longitude < $maxLong and note !=\"\";";
         $Earthquakes_dbResp = DB\ORM::sqlQuery($sql_body);
 
         $earthquakes = array();

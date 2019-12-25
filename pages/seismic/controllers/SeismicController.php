@@ -59,6 +59,7 @@ class SeismicController extends BaseController
         $rangeCoord['minLong'] = "-179";
         $rangeCoord['maxLong'] = "186.14";
 
+        Debug::print_array($params);
 
 
         // $this->models['rangeCoord'] = $rangeCoord;
@@ -68,22 +69,51 @@ class SeismicController extends BaseController
 
         // $sql_body = "select * from TAllEarthquakes";
 
-        $Earthquakes = DB\ORM::sqlQuery($sql_body);
 
-        $db_response = DB\ORM::VAllEarthquakesQuery();
-       // $columnHeaders = A\Util::getColumnHeaders("VAllEarthquakes");
-
-
-        $this->render("pages/seismic/views/VAllEarthquakes.php");
     }
 
     public function actionExportEarthquakes2Kml()
     {
-        $fileName = "pages/admin/resource/downloads/AllEarthquakes.kml";
-        M\MEarthquakes::exportEarthquakes2Kml($fileName, 48, 55, 100, 130);
-        A\Util::downloadFile($fileName);
+
     }
 
+    public function switchAction()
+    {
+
+        if (isset($_POST['list'])) {
+
+            /*
+            $Earthquakes = DB\ORM::sqlQuery($sql_body);
+            $db_response = DB\ORM::VAllEarthquakesQuery();
+            // $columnHeaders = A\Util::getColumnHeaders("VAllEarthquakes");
+            $this->render("pages/seismic/views/VAllEarthquakes.php");
+*/
+
+
+        } else if (isset($_POST['export'])) {
+            $fileName = "pages/admin/resource/downloads/AllEarthquakes.kml";
+            $params = $_POST["params"];
+
+            $minLat = (!empty($params['minLat'])) ? $params['minLat'] : "34.06";
+            $maxLat = (!empty($params['maxLat'])) ? $params['maxLat'] : '87.5';
+            $minLong = (!empty($params['minLong'])) ? $params['minLat'] : '-179';
+            $maxLong = (!empty($params['maxLong'])) ? $params['maxLong'] : '186.14';
+            /*
+                        echo $minLat;
+                        echo '<br>';
+                        echo $maxLat;
+                        echo '<br>';
+                        echo $minLong;
+                        echo '<br>';
+                        echo $maxLong;
+                        echo '<br>';
+            */
+
+            M\MEarthquakes::exportEarthquakes2Kml($fileName, $minLat, $maxLat, $minLong, $maxLong);
+            A\Util::downloadFile($fileName);
+        }
+
+    }
 
 }
 

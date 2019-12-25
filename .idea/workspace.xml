@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350574e8-43df-4855-8905-d11e941d8252" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/util/geo/TGeoLine.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/geo/TGeoPoint.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/Util.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Util.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/base_controllers/DownloadController.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_controllers/DownloadController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db_connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/db_consts.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db_consts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/routesList.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routesList.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/views/#VAdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/views/#VAdminPanel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/articles/article_MySqlHint.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/articles/article_MySqlHint.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/seismic/controllers/SeismicController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/controllers/SeismicController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/seismic/models/MEarthquakes.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/models/MEarthquakes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/seismic/views/VAllEarthquakes.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/VAllEarthquakes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/SNIPS/СП131.13330.2018_СтроительнаяКлиматология.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/resource/content/download/SNIPS/SP131.13330.2018_climate.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/SNIPS/СП4.13330.2018_Сейсмичность.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/resource/content/download/SNIPS/SP4.13330.2018_seismic.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/blanks/Отчет о командировке_ФИО.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/blanks/Расчет_командировочных.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/blanks/ФирменныйБланк.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/blanks/авансовый отчет_ФИО.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resource/content/download/books/Введение в георадиолокацию.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/KML.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/geo/KML.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/kml_file.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/geo/kml_file.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -275,6 +258,7 @@
       <workItem from="1577194540407" duration="6025000" />
       <workItem from="1577243912662" duration="4392000" />
       <workItem from="1577261775601" duration="10808000" />
+      <workItem from="1577280967220" duration="10274000" />
     </task>
     <servers />
   </component>
