@@ -14,11 +14,6 @@ class DownloadController extends BaseController
         $user_error_message = "";
         $system_error_message = "";
         A\Util::handle_error($user_error_message, $system_error_message);
-
-
-
-
-
       //  $this->render("pages/downloads/views/#VDownloads.php");
     }
 

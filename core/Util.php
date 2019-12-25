@@ -11,10 +11,8 @@ class Util
 //перенаправление на страницу ошибки
     public static function handle_error($user_error_message, $system_error_message)
     {
-        header("Location: /core/base_views/show_error.php");
-
-
-
+       echo "ОШИБКА";
+        //header("Location: /core/base_views/show_error.php");
     }
 
     /* user_error_message
@@ -115,12 +113,6 @@ class Util
     public static function printArrayAsTable($array, $columnHeaders = NULL)
     {
 
-
-        // $thead = ;
-        //$tbody = ORM::sqlQuery($sqlQuery);
-        // Debug::print_array($db_response);
-
-
         echo <<< EOL
 
          <table class="report-table" border="1" bordercolor="black" 
@@ -130,16 +122,15 @@ class Util
            ">
          <caption></caption>       
 EOL;
+
         if (isset($columnHeaders)) {
             echo "<tr>";
             foreach ($columnHeaders as $cell) {
                 echo "<th style='word-wrap: break-word;'>" . $cell . "</th>";
             }
             echo "</tr>";
-
-
-
         }
+
         foreach ($array as $row) {
             echo "<tr>";
 

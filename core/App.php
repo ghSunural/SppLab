@@ -15,19 +15,15 @@ use Application\Controllers as C;
 class App
 {
     public static $db_connection;
-    public static $site_controller;
-
-    //public static $SiteModel;
 
     public static function db_connect()
     {
-
 
         self::$db_connection =
             new DB\db_connect(HOST, USER, PASSWORD, DATABASE);
 
 
-        mysqli_query(( self::$db_connection)->getLink(), "SET NAMES utf8");
+        mysqli_query((self::$db_connection)->getLink(), "SET NAMES utf8");
 
     }
 

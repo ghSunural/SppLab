@@ -180,10 +180,16 @@ describe TAllEarthquakes;
                 ?>
                 <a href="/pages/admin/resource/downloads/AllEarthquakes.kml" download>Скачать kml</a>
             <br>
-                <a href="download/NaryadDopusk_doc" >Наряд-допуск</a>
+                <a href="download/NaryadDopusk_doc">Наряд-допуск</a>
                <br>
                 <a href="/resource/content/download/books/Введение в георадиолокацию.pdf" download>Скачать рус</a>
             </div>
+
+
+            <br> ССылка на битость
+            if (filter_var($url, FILTER_VALIDATE_URL) === FALSE) {
+            die('Not a valid URL');
+            }
 
         </section>
     </main>

@@ -6,7 +6,6 @@ use Application\Models\Databases as DB;
 $rangeCoord = $this->models['rangeCoord'];
 A\Debug::print_array($rangeCoord);
 
-
 ?>
 
 <!DOCTYPE html>
@@ -137,18 +136,12 @@ require "core/base_views/VHead.php";
 
                 <div class="block block_box bb contenteditable">
                     <?php
-                    A\Util::printArrayAsTable($db_response, $columnHeaders);
+                    A\Util::printArrayAsTable($db_response);
                     ?>
                 </div>
-
-                <input type="submit" value="Экспорт в KML">
+                <input action="/seismic/export2Kml" type="submit" value="Экспорт в KML">
                 <br>
-                <div class="block block_wrap">
-                    <?php
-
-                    ?>
-                </div>
-
+                <a href="/seismic/export2Kml">Экспорт в kml</a>
 
             </section>
         </section>
@@ -157,6 +150,8 @@ require "core/base_views/VHead.php";
 </div>
 </body>
 </html>
+
+
 
 <style>
 

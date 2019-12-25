@@ -13,6 +13,7 @@ function autoload($className)
         "core/base_views",
         "models",
         "util",
+        "util/geo",
 
         "pages/admin/models",
         "pages/admin/controllers",
