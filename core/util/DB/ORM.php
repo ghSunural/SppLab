@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Models\Databases;
+namespace Application\Databases;
 
 use Application as A;
 use Application\Models as M;
@@ -8,22 +8,17 @@ use Application\Models as M;
 class ORM
 {
 
-//select * from tDepartments  order by tDepartments.fullTitle;
-//select fullTitle as 'Наименование отдела' from tDepartments where acronym = 'ОИЗ';
-//update tPrice set price = 250000 where tPrice.surObjectID = 4 AND tPrice.workKindID = 3;
-
-
     public static function sqlQuery($sql_body)
     {
 
-        $rows = array();
+        $rowsArray = array();
 
         $link = A\App::$db_connection->getLink();
         $queryResult = mysqli_query($link, $sql_body);
 
         while ($row = mysqli_fetch_row($queryResult)) {
 
-            array_push($rows, $row);
+            array_push($rowsArray, $row);
         }
 
         //echo $jRow, "\n";
@@ -31,7 +26,7 @@ class ORM
         //echo json_encode($rows, JSON_PRETTY_PRINT);
         //echo  JSON.stringify($jRow, null, '\t');
         // array_push($rowsArray, $row);
-        return $rows;
+        return $rowsArray;
     }
 
     static function findRows($table, $statement = null)
@@ -54,10 +49,11 @@ class ORM
         return $rows;
     }
 
-    public static function getColumnHeaders($tableName){
+    public static function getColumnHeaders($tableName)
+    {
 
         $columnHeaders = array();
-        $fields = DB\ORM::sqlQuery('describe ' . $tableName);
+        $fields = self::sqlQuery('describe ' . $tableName);
         $i = 0;
         foreach ($fields as $f) {
             array_push($columnHeaders, $f[0]);
@@ -85,7 +81,6 @@ class ORM
     static function VAllEarthquakesQuery()
     {
 
-
         $sql_body = " 
  select
     ID as '№ п/п',
@@ -109,7 +104,7 @@ where
                         and longitude > 110 
                         and longitude < 120;";
 
-        $table =  self::sqlQuery($sql_body);
+        $table = self::sqlQuery($sql_body);
         return $table;
 
     }

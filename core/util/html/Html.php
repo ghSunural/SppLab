@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Views;
+namespace Application;
 
 class Html
 {
@@ -14,6 +14,44 @@ class Html
     protected $content;
     protected $footer;
     protected $sidebar;
+
+    public static function convertRowsArray2HtmlTable($rowsArray, $columnHeaders = NULL)
+    {
+        $tableAsHtml = "";
+
+        $tableAsHtml = <<< EOL
+
+         <table class="report-table" border="1" bordercolor="black" 
+           style="
+           width: 100%;                    
+           border-collapse: collapse;
+           ">
+         <caption></caption>       
+EOL;
+
+        if (isset($columnHeaders)) {
+
+            $tableAsHtml .= "<tr>";
+            foreach ($columnHeaders as $cell) {
+                $tableAsHtml .="<th style='word-wrap: break-word;'>" . $cell . "</th>";
+            }
+            $tableAsHtml .= "</tr>";
+        }
+
+        foreach ($rowsArray as $row) {
+            $tableAsHtml .= "<tr>";
+            foreach ($row as $cell) {
+
+                $tableAsHtml .= <<< EOL
+ <td  width=auto align="center" style='word-wrap: break-word;'>{$cell} </td>  
+EOL;
+            }
+            $tableAsHtml .="</tr> ";
+        }
+        $tableAsHtml .= "</table> <br>";
+        return $tableAsHtml;
+    }
+
 
 
     public function getView_UTF($UTF_code)

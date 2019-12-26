@@ -5,7 +5,7 @@ namespace Application\Controllers;
 
 use admin\models as M;
 use Application\Debug;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 //CRUD
 

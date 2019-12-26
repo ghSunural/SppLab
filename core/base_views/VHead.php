@@ -15,7 +15,7 @@ $favicon_as_html = <<< EOL
 EOL;
 
 $styles_as_html = "";
-if ($styles) {
+if (isset($styles)) {
     foreach ($styles as $row) {
         $html_string = "<link href=\"{$row}\" rel=\"stylesheet\">";
         $styles_as_html = $styles_as_html.$html_string . "\n";
@@ -23,25 +23,20 @@ if ($styles) {
 }
 
 $scripts_as_html = "";
-if ($scripts) {
+if (isset($scripts)) {
     foreach ($scripts as $row) {
         $html_string = "<script type=\"text/javascript\" src=\"{$row}\" defer></script>";
         $scripts_as_html = $scripts_as_html.$html_string . "\n";
     }
 }
-
 ?>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title><?= $title ?></title>
-
     <?= $favicon_as_html ?>
-
     <?= $styles_as_html ?>
-
     <script src="/js_base/JQuery.js"></script>
     <script src="/scripts/jsUtil.js"></script>
     <?= $scripts_as_html ?>

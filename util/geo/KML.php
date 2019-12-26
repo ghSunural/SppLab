@@ -31,7 +31,7 @@ EOL;
             $kml = $kml . (self::getPointAsKml($geoPoint));
         }
 
-        $kml = $kml . (self::getCloseTagKml());
+        $kml .= (self::getCloseTagKml());
 
         return $kml;
     }

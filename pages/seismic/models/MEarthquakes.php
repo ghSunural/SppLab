@@ -5,23 +5,28 @@ namespace seismic\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 use Util\geo as G;
 use Util\geo\TGeoPoint;
 
 class MEarthquakes extends M\Model_base
 {
-
-
-    public static function exportEarthquakes2Kml($outFileName, $minLat, $maxLat, $minLong, $maxLong)
+    public static function getEarthquakesAsRowsArray($minLat, $maxLat, $minLong, $maxLong, $Mmin = NULL)
     {
 
         $sql_body = "select * from TAllEarthquakes
-                     where latitude > $minLat and latitude < $maxLat and longitude > $minLong and longitude < $maxLong and note !=\"\";";
-        $Earthquakes_dbResp = DB\ORM::sqlQuery($sql_body);
+                     where latitude > $minLat 
+                     and latitude < $maxLat 
+                     and longitude > $minLong 
+                     and longitude < $maxLong 
+                    ";
+        // and note !="";
+        return DB\ORM::sqlQuery($sql_body);
+    }
 
+    public static function exportEarthquakes2Kml($outFileName, $Earthquakes_dbResp)
+    {
         $earthquakes = array();
-
         foreach ($Earthquakes_dbResp as $row) {
 
             $_year = $row[1];
@@ -38,7 +43,6 @@ class MEarthquakes extends M\Model_base
             $_polarAngle = $row[12];
             $_note = $row[13];
 
-
             $name = $_MLH . " " . $_note;
             $description = "MLH = $_MLH 
 $_year.$_month.$_day  $_hour:$_min:$_sec
@@ -46,19 +50,13 @@ $_year.$_month.$_day  $_hour:$_min:$_sec
 $_latitude c.ш.  $_longitude в.д.
 $_note";
 
-
             array_push($earthquakes,
                 new TGeoPoint($_latitude, $_longitude, 0, $name, $description));
-
         }
 
         $kml = G\KML::getKmlBody($earthquakes);
         file_put_contents($outFileName, $kml);
-
     }
-
-
 }
-
 
 ?>

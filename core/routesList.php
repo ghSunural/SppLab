@@ -25,12 +25,8 @@ return array(
     'climate' => 'ClimateController/actionIndex',
 
     'seismic/([0-9]+)' => 'SeismicController/actionView/$1',
-    'seismic/allEarthquakes' => 'SeismicController/actionVAllEarthquakes',
-    'seismic/getAllEarthquakes' => 'SeismicController/actionGetAllEarthquakes',
+    'seismic/allEarthquakes' => 'SeismicController/actionEarthquakes',
     'seismic/getEarthquakes' => 'SeismicController/switchAction',
-
-    'seismic/export2Kml' => 'SeismicController/actionExportEarthquakes2Kml',
-
     'seismic' => 'SeismicController/actionIndex',
     // 'calculators/num2str' => 'CalculatorController/actionNum2str',
 

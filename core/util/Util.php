@@ -103,53 +103,6 @@ class Util
         }
     }
 
-    /**
-     * двумерный массив отобразить в таблице
-     *
-     */
-
-
-
-    public static function printArrayAsTable($array, $columnHeaders = NULL)
-    {
-
-        echo <<< EOL
-
-         <table class="report-table" border="1" bordercolor="black" 
-           style="
-           width: 100%;                    
-           border-collapse: collapse;
-           ">
-         <caption></caption>       
-EOL;
-
-        if (isset($columnHeaders)) {
-            echo "<tr>";
-            foreach ($columnHeaders as $cell) {
-                echo "<th style='word-wrap: break-word;'>" . $cell . "</th>";
-            }
-            echo "</tr>";
-        }
-
-        foreach ($array as $row) {
-            echo "<tr>";
-
-            foreach ($row as $cell) {
-
-                echo <<< EOL
- <td  width=auto align="center" style='word-wrap: break-word;'>{$cell} </td>  
-EOL;
-
-            }
-            echo "</tr> ";
-        }
-        echo "</table> <br>";
-    }
-
-
-
-
-
 }
 
 ?>

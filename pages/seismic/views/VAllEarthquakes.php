@@ -4,7 +4,9 @@ use Application as A;
 use Application\Models\Databases as DB;
 
 $rangeCoord = $this->models['rangeCoord'];
-A\Debug::print_array($rangeCoord);
+$arrEarthquakes = $this->models["arrEarthquakes"];
+$arrColumnHeaders = $this->models["arrColumnHeaders"];
+$tableAsHtml = A\Html::convertRowsArray2HtmlTable($arrEarthquakes, $arrColumnHeaders);
 
 ?>
 
@@ -27,7 +29,6 @@ require "core/base_views/VHead.php";
 Российской Федерации (ред. В.И.Уломов, Н.С.Медведева, Институт физики Земли РАН)";
     require "views/page_templates/VMinorHeader.php";
     ?>
-
     <main class="Main block block_wrap">
 
         <aside class="side-bar block block_wrap main_bkg_color-2 main_text_color-2">
@@ -48,13 +49,10 @@ require "core/base_views/VHead.php";
 
             <section class="block block_wrap main_bkg_color-4">
 
-
                 <div class="block block_box bb">
                     <H3>Фильтры</H3>
-
                     <img class="" src="/pages/seismic/resource/site/earth.webp"
                          width="50px">
-
 
                     <form id="limits" action="/seismic/getEarthquakes" method="post" class="bb">
                         <p>
@@ -75,7 +73,7 @@ require "core/base_views/VHead.php";
                                    step="0.01"
                                    placeholder="87.5"
                                    max="87.5"
-                                   value="<?= $rangeCoord['maxLat'];?>"
+                                   value="<?= $rangeCoord['maxLat']; ?>"
                         </p>
                         <p>
                             <input name="params[minLong]"
@@ -95,7 +93,7 @@ require "core/base_views/VHead.php";
                                    step="0.01"
                                    placeholder="186.14"
                                    max="186.14"
-                                   value="<?= $rangeCoord['maxLong'];?>"
+                                   value="<?= $rangeCoord['maxLong']; ?>"
                         </p>
 
                         <p>
@@ -116,7 +114,6 @@ require "core/base_views/VHead.php";
                                    placeholder="месяц"
                                    value="">
                         </p>
-
                         <p>
                             <input name="day"
                                    type="number"
@@ -128,26 +125,21 @@ require "core/base_views/VHead.php";
                                    value="">
                         </p>
 
-
                     </form>
                     <p>
-                        <input type="submit" name="list"   title="Список землетрясений в диапазоне указанных координат"
+                        <input type="submit" name="list" title="Список землетрясений в диапазоне указанных координат"
                                value="Список" form="limits">
                         <input type="submit" name="export" title="Экспорт геоданных в kml"
                                value="Экспорт в kml" form="limits">
                     </p>
-
                 </div>
 
                 <div class="block block_box bb contenteditable">
                     <?php
-                    A\Util::printArrayAsTable($db_response);
+                   echo $tableAsHtml;
                     ?>
                 </div>
-
                 <br>
-                <a href="/seismic/export2Kml">Экспорт в kml</a>
-
             </section>
         </section>
     </main>
@@ -155,7 +147,6 @@ require "core/base_views/VHead.php";
 </div>
 </body>
 </html>
-
 
 
 <style>

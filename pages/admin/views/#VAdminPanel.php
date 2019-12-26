@@ -1,7 +1,7 @@
 <?php
 
 use Application as A;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 /*
 $_FILES['image'];
@@ -68,8 +68,8 @@ require "core/base_views/VHead.php";
                     <br>
                     ШПАРГАЛКИ
                     <!-- такая ссылка уязвима - раскрывает структуру папок на сервере-->
-                    <li><a href="pages/admin/articles/article_gitHint.php" target="_blank">шпаргалка GitHub</a></li>
-                    <li><a href="pages/admin/articles/article_MySqlHint.php" target="_blank">шпаргалка MySql</a></li>
+                    <li><a href="/pages/admin/articles/article_gitHint.php" target="_blank">шпаргалка GitHub</a></li>
+                    <li><a href="/pages/admin/articles/article_MySqlHint.php" target="_blank">шпаргалка MySql</a></li>
                     <br>
                     <li><a href="pages/admin/articles/inDevelop.php" target="_blank">В разработке</a></li>
                 </ul>
@@ -79,9 +79,6 @@ require "core/base_views/VHead.php";
         </aside>
 
         <section class="content content_with_sideBar block block_wrap  main_bkg_color-4">
-
-    >
-
             <br>
 
             <section name="database">
@@ -91,40 +88,37 @@ require "core/base_views/VHead.php";
                     <?php
 
                     $tables = DB\ORM::sqlQuery('show tables');
-                    foreach ($tables as $row) {
-                        echo "<div class='block block_wrap fl fl_w' style='justify-content: flex-start'>";
-                        $tableName = $row[0];
-                        echo "<div class='block block_inline'><B>" . $tableName . "</B></div>";
-                        $fields = DB\ORM::sqlQuery('describe ' . $tableName);
-                        $i = 0;
-                        foreach ($fields as $f) {
-                            echo "<div class='block block_inline' style='margin-left: 2px;'> &nbsp|| &nbsp;[" . $i . "] " . $f[0] . "&nbsp;</div>";
-                            $i++;
-                        }
 
-                        echo '</div>';
+                    foreach ($tables as $table) {
+                   //    A\Debug::print_array($row);
+
+                        echo A\Html::convertRowsArray2HtmlTable($table);
                         echo '<br>';
+
+                        /*   echo "<div class='block block_wrap fl fl_w' style='justify-content: flex-start'>";
+                           $tableName = $row[0];
+                           echo "<div class='block block_inline'><B>" . $tableName . "</B></div>";
+                           $fields = DB\ORM::sqlQuery('describe ' . $tableName);
+                           $i = 0;
+                           foreach ($fields as $f) {
+                               echo "<div class='block block_inline' style='margin-left: 2px;'> &nbsp|| &nbsp;[" . $i . "] " . $f[0] . "&nbsp;</div>";
+                               $i++;
+                           }
+                           echo '</div>';
+                           echo '<br>';*/
                     }
-                    echo '<br>';
-                    echo '<br>';
                     ?>
                 </div>
                 <br>
-
-
                 <?php
-
-                echo "IP сервера: ".$_SERVER['SERVER_ADDR'];
+                echo "IP сервера: " . $_SERVER['SERVER_ADDR'];
                 echo '<br>';
-                echo "Мой IP: ".$_SERVER['REMOTE_ADDR'];
-
-
-
+                echo "Мой IP: " . $_SERVER['REMOTE_ADDR'];
                 ?>
 
                 https://db-02.sppural.ru
-                пользователь:	admin
-                пароль:	_cX&#99A3iTvAZ*pI9LS
+                пользователь: admin
+                пароль: _cX&#99A3iTvAZ*pI9LS
 
                 <div class="block block_wrap bb fl fl_w">
                     <div class="block block_box bb">
@@ -161,27 +155,13 @@ describe TAllEarthquakes;
 
             <div class="block block_box bb contenteditable">
                 <?php
-                // $sql_body = "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA = DATABASE()  AND TABLE_NAME = 'TAllEarthquakes'";
-                //  $fields = DB\ORM::sqlQuery($sql_body);
-
-
-                // A\Util::printTable($fields);
-                //A\Util::printTable($TTableName);
-                A\Util::printArrayAsTable($db_response);
+                echo A\Html::convertRowsArray2HtmlTable($db_response);
                 ?>
             </div>
             <hr>
             <div class="block block_box bb">
-
-
-                <?php
-                A\Util::exportKML('pages/admin/resource/downloads/AllEarthquakes.kml');
-
-                ?>
-                <a href="/pages/admin/resource/downloads/AllEarthquakes.kml" download>Скачать kml</a>
-            <br>
                 <a href="download/NaryadDopusk_doc">Наряд-допуск</a>
-               <br>
+                <br>
                 <a href="/resource/content/download/books/Введение в георадиолокацию.pdf" download>Скачать рус</a>
             </div>
 
@@ -198,13 +178,3 @@ describe TAllEarthquakes;
 </body>
 <script type="text/javascript" src="/pages/admin/scripts/scripts.js"></script>
 </html>
-
-
-
-
-
-
-
-
-
-
