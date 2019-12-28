@@ -4,6 +4,7 @@
 <H1>Использование SQL-запросов</H1>
         Синтаксис MySQL
 
+<pre>
 //показать базы данных
 SHOW DATABASES
 id10552045_spp_database
@@ -195,7 +196,7 @@ from tPostList;
  --почему то для скалярных функций указание схемы обязательно
  select [dbo].[GetNextMedCheck](1001)
 
-
+</pre>
 
 
 

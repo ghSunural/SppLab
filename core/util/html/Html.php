@@ -2,6 +2,8 @@
 
 namespace Application;
 
+use Util\geo\KML;
+
 class Html
 {
     protected $title;
@@ -15,12 +17,10 @@ class Html
     protected $footer;
     protected $sidebar;
 
+
     public static function convertRowsArray2HtmlTable($rowsArray, $columnHeaders = NULL)
     {
-        $tableAsHtml = "";
-
-        $tableAsHtml = <<< EOL
-
+          $tableAsHtml = <<< EOL
          <table class="report-table" border="1" bordercolor="black" 
            style="
            width: 100%;                    
@@ -31,27 +31,51 @@ EOL;
 
         if (isset($columnHeaders)) {
 
-            $tableAsHtml .= "<tr>";
+            $tableAsHtml .= "<tr> \n";
             foreach ($columnHeaders as $cell) {
-                $tableAsHtml .="<th style='word-wrap: break-word;'>" . $cell . "</th>";
+                $tableAsHtml .= "<th style='word-wrap: break-word;'>" . $cell . "</th> \n";
             }
-            $tableAsHtml .= "</tr>";
+            $tableAsHtml .= "</tr> \n";
         }
 
         foreach ($rowsArray as $row) {
-            $tableAsHtml .= "<tr>";
-            foreach ($row as $cell) {
 
-                $tableAsHtml .= <<< EOL
- <td  width=auto align="center" style='word-wrap: break-word;'>{$cell} </td>  
-EOL;
+            if (is_array($row)) {
+               // $row = Util::convertStr2Arr($row);
+                // Debug::print_array($row);
+                $TR = "";
+                foreach ($row as $cell) {
+
+                    $TR .= self::getTD($cell);
+                }
+
+                $tableAsHtml .= self::getTR($TR);
+            } else {
+                $row = Util::convertStr2Arr($row);
+                // Debug::print_array($row);
+                $TR = "";
+                foreach ($row as $cell) {
+
+                    $TR .= self::getTD($cell);
+                }
+
+                $tableAsHtml .= $TR;
             }
-            $tableAsHtml .="</tr> ";
         }
-        $tableAsHtml .= "</table> <br>";
+
+        $tableAsHtml .= "</table>";
         return $tableAsHtml;
     }
 
+    private static function getTR($TDs)
+    {
+        return "<tr>\n$TDs\n</tr>";
+    }
+
+    private static function getTD($cellContent)
+    {
+        return "\n<td width=auto align=\"center\" style=\"word-wrap: break-word;\">\n$cellContent\n </td>";
+    }
 
 
     public function getView_UTF($UTF_code)
@@ -93,8 +117,6 @@ EOL;
 
         return $head;
     }
-
-
 
 
 }

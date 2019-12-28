@@ -27,8 +27,7 @@ EOL;
         $kml = self::getKmlOpenTags();
 
         foreach ($geoPoints as $geoPoint) {
-
-            $kml = $kml . (self::getPointAsKml($geoPoint));
+            $kml = $kml . ($geoPoint->toKml());
         }
 
         $kml .= (self::getCloseTagKml());
@@ -37,36 +36,8 @@ EOL;
     }
 
 
-    public static function getPointAsKml(TGeoPoint $geoPoint)
-    {
-
-        return $PointAsKml = <<< EOL
-	<Placemark>
-        <name>
-{$geoPoint->getName()}     
-		</name>
-		<IconStyle>
-		<Icon>
-        <href></href>
-        </Icon>
-        </IconStyle>
-        <description>
-{$geoPoint->getDescription()}
-        </description>
-        <Point>
-        <coordinates>{$geoPoint->getLong()}, {$geoPoint->getLat()}, {$geoPoint->getAlt()}</coordinates>
-        </Point>
-    </Placemark>
-EOL;
 
 
-    }
-
-    public static function getLineAsKml(TGeoLine $geoLine)
-    {
-
-
-    }
 
 
 }

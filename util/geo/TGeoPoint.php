@@ -63,5 +63,27 @@ class TGeoPoint
         return $this->alt;
     }
 
+    public  function toKml()
+    {
+        return $PointAsKml = <<< EOL
+	<Placemark>
+        <name>
+{$this->getName()}     
+		</name>
+		<IconStyle>
+		<Icon>
+        <href></href>
+        </Icon>
+        </IconStyle>
+        <description>
+{$this->getDescription()}
+        </description>
+        <Point>
+        <coordinates>{$this->getLong()}, {$this->getLat()}, {$this->getAlt()}</coordinates>
+        </Point>
+    </Placemark>
+EOL;
+    }
+
 
 }

@@ -87,12 +87,18 @@ require "core/base_views/VHead.php";
                     ТАБЛИЦЫ<br>
                     <?php
 
-                    $tables = DB\ORM::sqlQuery('show tables');
+                    $tableNames = DB\ORM::sqlQuery('show tables');
+                    // A\Debug::print_array($tables);
+                    foreach ($tableNames as $tableName) {
+                        // A\Debug::print_array($table);
+                        //A\Debug::print_array($tableName);
+                        $tableName = $tableName[0];
+                        echo $tableName;
 
-                    foreach ($tables as $table) {
-                   //    A\Debug::print_array($row);
-
-                        echo A\Html::convertRowsArray2HtmlTable($table);
+                       $columnHeaders = DB\ORM::getColumnHeaders($tableName);
+                       //A\Debug::print_array($columnHeaders);
+                        // $table = DB\ORM::findRows($tableName);
+                        echo A\Html::convertRowsArray2HtmlTable($columnHeaders);
                         echo '<br>';
 
                         /*   echo "<div class='block block_wrap fl fl_w' style='justify-content: flex-start'>";

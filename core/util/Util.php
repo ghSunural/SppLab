@@ -11,7 +11,7 @@ class Util
 //перенаправление на страницу ошибки
     public static function handle_error($user_error_message, $system_error_message)
     {
-       echo "ОШИБКА";
+        echo "ОШИБКА";
         //header("Location: /core/base_views/show_error.php");
     }
 
@@ -101,6 +101,23 @@ class Util
         } else {
             echo "<br>" . "файл не найден";
         }
+    }
+
+
+    public static function convertStr2Arr($strOrArr)
+    {
+
+        $arr = array();
+
+        if (is_array($strOrArr)) {
+            $arr = $strOrArr;
+        } else {
+            array_push($arr, $strOrArr);
+        }
+
+        return $arr;
+
+
     }
 
 }
