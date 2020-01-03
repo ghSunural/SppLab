@@ -168,7 +168,7 @@ describe TAllEarthquakes;
             <div class="block block_box bb">
                 <a href="download/NaryadDopusk_doc">Наряд-допуск</a>
                 <br>
-                <a href="/resource/content/download/books/Введение в георадиолокацию.pdf" download>Скачать рус</a>
+
             </div>
 
 

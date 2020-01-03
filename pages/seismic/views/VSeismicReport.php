@@ -10,7 +10,9 @@ $town = $this->models['town'];
 <?php
 $title = "SL-Отчет";
 $styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
+
+//$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?lang=ru-RU";
+$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&load=Geolink";
 require "core/base_views/VHead.php";
 ?>
 
@@ -21,7 +23,7 @@ require "core/base_views/VHead.php";
     $Header_leftContent = "Отчет. Сейсмичность";
     $Header_rightContent = <<<EOL
      <div class="">
-         <span class="ymaps-geolink"> {$town->locality} ({$town->region})</span>
+         <span class="ymaps-geolink">{$town->locality}</span>  ({$town->region})
      </div>
 
 EOL;

@@ -23,6 +23,15 @@ class AdminController extends BaseController
         $this->render($this->view);
     }
 
+
+    public function actionIndex2()
+    {
+
+        // self::checkAdmin();
+
+        $this->render( "pages/admin/views/Admin.php");
+    }
+
     public function actionHeaders()
     {
         // self::checkAdmin();

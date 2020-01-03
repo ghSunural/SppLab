@@ -40,6 +40,7 @@ return array(
     'admin/httpheaders' => 'AdminController/actionHeaders',
     'admin/sql' => 'AdminController/actionSql',
     'admin' => 'AdminController/actionIndex',
+    'admin2' => 'AdminController/actionIndex2',
 
 
     //'calculators/num2str/([0-9]+)' => 'Num2strController/actionIndex/$1',

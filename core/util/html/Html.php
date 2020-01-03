@@ -21,9 +21,9 @@ class Html
     public static function convertRowsArray2HtmlTable($rowsArray, $columnHeaders = NULL)
     {
           $tableAsHtml = <<< EOL
-         <table class="report-table" border="1" bordercolor="black" 
+         <table  border="1" bordercolor="black" 
            style="
-           width: 100%;                    
+                          
            border-collapse: collapse;
            ">
          <caption></caption>       
@@ -33,7 +33,7 @@ EOL;
 
             $tableAsHtml .= "<tr> \n";
             foreach ($columnHeaders as $cell) {
-                $tableAsHtml .= "<th style='word-wrap: break-word;'>" . $cell . "</th> \n";
+                $tableAsHtml .= "<th style='word-wrap: break-word; padding: 1px;'>" . $cell . "</th> \n";
             }
             $tableAsHtml .= "</tr> \n";
         }

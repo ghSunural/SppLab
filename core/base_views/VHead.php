@@ -39,5 +39,10 @@ if (isset($scripts)) {
     <?= $styles_as_html ?>
     <script src="/js_base/JQuery.js"></script>
     <script src="/scripts/jsUtil.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
     <?= $scripts_as_html ?>
 </head>

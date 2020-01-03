@@ -17,7 +17,7 @@
         min-width: 600px;
         border-bottom: 2px #99173C solid;
         width: 96vw;
-        overflow: hidden;
+       /* overflow: hidden;*/
         text-overflow: ellipsis;
     }
 

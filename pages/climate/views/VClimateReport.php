@@ -9,7 +9,8 @@ $title = "SL-Отчет";
 $styles = array(
     'main-css' => A\config::SITE_URL() . "css/styles.css"
 );
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
+$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink"
+;
 $scripts['thisJS'] = A\config::SITE_URL() ."pages/climate/scripts/scripts.js";
 
 require "core/base_views/VHead.php";
@@ -22,7 +23,7 @@ require "core/base_views/VHead.php";
     $Header_leftContent = "Отчет. Климатология";
     $Header_rightContent = <<<EOL
      <div class="">
-         <span class="ymaps-geolink"> {$town->locality} ({$town->region})</span>
+         <span class="ymaps-geolink">{$town->locality}</span> ({$town->region})
      </div>
 EOL;
     require "views/page_templates/VMinorHeader.php";

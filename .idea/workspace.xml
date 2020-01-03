@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350574e8-43df-4855-8905-d11e941d8252" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/admin/views/Admin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/admin/views/accordion" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/util/Util.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/util/Util.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/base_views/VHead.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/base_views/VHead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/routesList.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/routesList.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/util/html/Html.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/util/html/Html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/articles/article_MySqlHint.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/articles/article_MySqlHint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/articles/useful_ref.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/articles/useful_ref.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/admin/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/controllers/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/admin/views/#VAdminPanel.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/views/#VAdminPanel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/geo/KML.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/geo/KML.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/geo/TGeoPoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/util/geo/TGeoPoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/climate/views/VClimateReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/climate/views/VClimateReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/page_templates/VMinorHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page_templates/VMinorHeader.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,6 +267,12 @@
       <workItem from="1577280967220" duration="10274000" />
       <workItem from="1577369218860" duration="12718000" />
       <workItem from="1577533921859" duration="14897000" />
+      <workItem from="1577553011281" duration="3012000" />
+      <workItem from="1577607825670" duration="261000" />
+      <workItem from="1577608529123" duration="12347000" />
+      <workItem from="1577624745752" duration="340000" />
+      <workItem from="1577800295745" duration="7063000" />
+      <workItem from="1577871377943" duration="4531000" />
     </task>
     <servers />
   </component>
