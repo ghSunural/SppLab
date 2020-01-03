@@ -3,7 +3,7 @@
 namespace Application;
 
 require_once "Util.php";
-require_once SITE_ROOT."core/config/db_connect.php";
+require_once SITE_ROOT."/core/config/TLink.php";
 //RewriteRule ^(.*)$ index.php?route=$1 [L,QSA]
 //echo 'application';
 //echo "<br>";
@@ -13,6 +13,8 @@ use Application\Controllers as C;
 
 class application
 {
+
+    /*
     public static $db_connection;
     public static $site_controller;
 
@@ -30,6 +32,7 @@ class application
 
 
     }
+    */
 
 
 }

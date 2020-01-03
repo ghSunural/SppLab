@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="350574e8-43df-4855-8905-d11e941d8252" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/core/db_staff_consts.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/App.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/ORM.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/ORM.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin/articles/article_gitHint.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/admin/articles/article_gitHint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/application.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/application.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/db_connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/TLink.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/db_consts.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/db_site_consts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +94,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -98,19 +102,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\resource\site" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\new_page" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\climate\views" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\railways\controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\views" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\core" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\core\MVC_templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YandexDisk\yProgramming\SppLab\core" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\resource\site" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\new_page" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\climate\views" />
     </key>
   </component>
   <component name="RunDashboard">
