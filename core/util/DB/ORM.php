@@ -4,6 +4,7 @@ namespace Application\Databases;
 
 use Application as A;
 use Application\Models as M;
+use PDO;
 
 class ORM
 {
@@ -13,13 +14,15 @@ class ORM
 
         $rowsArray = array();
 
-        $link = A\App::$db_connection->getLink();
+        $link = A\App::$link_1;
+        /*
         $queryResult = mysqli_query($link, $sql_body);
 
         while ($row = mysqli_fetch_row($queryResult)) {
 
             array_push($rowsArray, $row);
         }
+        */
 
         //echo $jRow, "\n";
         // echo json_encode($rows), "\n";
@@ -34,19 +37,32 @@ class ORM
         $rows = array();
 
         //$rowsArray = array();
-        $link = A\App::$db_connection->getLink();
 
-        $queryResult = is_null($statement)
-            ? mysqli_query($link, "select * from $table")
-            : mysqli_query($link, "select * from $table where $statement");
+        $link = A\App::$link_1;
+
+        //  $link->prepare('SELECT name FROM people')->execute();
+
+        $statement = $link->prepare('select * from  :tableN');
+        $statement->setFetchMode(PDO::FETCH_BOTH);
+        //  $db_response = $link->query('select * from ' . $table);
+        //  $db_response->execute();
+
+        $statement->bindValue(':tableN', $table);
+        $statement->execute();
+        // $statement->execute([':tableN'=> $table]);
 
 
-        while ($row = mysqli_fetch_row($queryResult)) {
-
+        while ($row = $statement->fetch()) {
             array_push($rows, $row);
         }
-        // array_push($rowsArray, $row);
+
         return $rows;
+
+        /*   $queryResult = is_null($statement)
+               ? mysqli_query($link, "select * from $table")
+               : mysqli_query($link, "select * from $table where $statement");*/
+
+
     }
 
     public static function getColumnHeaders($tableName)
@@ -67,7 +83,7 @@ class ORM
     static function deleteEntry($table, $key, $value)
     {
 
-        $link = A\App::$db_connection->getLink();
+        $link = A\App::$link_1->getLink();
         mysqli_query($link, "delete from $table where $key = $value");
     }
 

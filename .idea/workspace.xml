@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="350574e8-43df-4855-8905-d11e941d8252" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/pages/admin/views/Admin.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pages/admin/views/accordion" afterDir="false" />
@@ -15,6 +16,9 @@
       <change beforePath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/seismic/views/VSeismicReport.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/page_templates/VMinorHeader.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/page_templates/VMinorHeader.php" afterDir="false" />
     </list>
+=======
+    <list default="true" id="350574e8-43df-4855-8905-d11e941d8252" name="Default Changelist" comment="" />
+>>>>>>> iss_DB_PDO
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +102,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.jetbrains.php.phpunit.codeGeneration.PhpNewTestDialog.defaultLibrary" value="PHPUnit" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/core" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -106,19 +110,19 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\resource\site" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\new_page" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\climate\views" />
-      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\railways\controllers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\YandexDisk\yProgramming\SppLab\core\util\DB" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\core\util\html" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\core\util" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\util\Geo" />
       <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\YandexDisk\yProgramming\SppLab\core" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\seismic\resource\site" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\new_page" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\admin\articles" />
+      <recent name="D:\YandexDisk\yProgramming\SppLab\pages\climate\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -261,6 +265,7 @@
       <workItem from="1577100791623" duration="887000" />
       <workItem from="1577111448961" duration="1520000" />
       <workItem from="1577187010364" duration="1667000" />
+<<<<<<< HEAD
       <workItem from="1577194540407" duration="6025000" />
       <workItem from="1577243912662" duration="4392000" />
       <workItem from="1577261775601" duration="10808000" />
@@ -273,6 +278,9 @@
       <workItem from="1577624745752" duration="340000" />
       <workItem from="1577800295745" duration="7063000" />
       <workItem from="1577871377943" duration="4531000" />
+=======
+      <workItem from="1577194540407" duration="9176000" />
+>>>>>>> iss_DB_PDO
     </task>
     <servers />
   </component>
