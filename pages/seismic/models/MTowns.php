@@ -5,7 +5,7 @@ namespace seismic\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 
 class MTowns extends M\Model_base
@@ -13,7 +13,7 @@ class MTowns extends M\Model_base
     static function getTowns()
     {
         $towns = array();
-        $rows = DB\ORM::findRows("VTowns");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns_seism");
 
         foreach ($rows as $row) {
 
@@ -37,10 +37,9 @@ class MTowns extends M\Model_base
     static function getTownsByID($townID)
     {
       //  $towns = array();
-        $rows = DB\ORM::findRows("VTowns", "ID_города = '{$townID}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns_seism", "ID_города = '{$townID}'");
 
         $town_as_row = $rows[0];
-       // A\Debug::print_array("ППППППП", $town_as_row);
 
         $town = new TTown();
         $town->ID = $town_as_row[0];
@@ -55,7 +54,7 @@ class MTowns extends M\Model_base
     static function getRegions()
     {
         $regions = array();
-        $rows = DB\ORM::findRows("TRegionsRF");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TRegionsRF");
         //  $link = A\App::$db_connection->getLink();
         //  $rows = mysqli_query($link, "select * from TRegionsRF");
 
@@ -74,7 +73,7 @@ class MTowns extends M\Model_base
     public static function getTownsByRegion($region)
     {
         $towns = array();
-        $rows = DB\ORM::findRows("VTowns_seism", "Регион = '{$region}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns_seism", "Регион = '{$region}'");
         // A\Debug::print_array($rows);
         foreach ($rows as $row) {
 

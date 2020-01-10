@@ -11,6 +11,7 @@ function autoload($className)
         "core",
         "core/base_controllers",
         "core/base_views",
+        "core/router",
         "core/util",
         "core/util/DB",
         "core/util/html",
@@ -21,8 +22,8 @@ function autoload($className)
         "pages/admin/models",
         "pages/admin/controllers",
 
-        "pages/signin/models",
-        "pages/signin/controllers",
+        "pages/signUpIn/models",
+        "pages/signUpIn/controllers",
 
         "pages/climate/models",
         "pages/climate/controllers",

@@ -17,7 +17,7 @@ class ClimateController extends BaseController
 
     public function actionView($ID){
 
-        $town = M\MTowns::getTownsByID($ID);
+        $town = M\MTowns::getTownByID($ID);
         $this->models['town'] = $town;
         // A\Debug::print_array($town);
 

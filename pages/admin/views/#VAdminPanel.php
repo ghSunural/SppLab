@@ -30,7 +30,7 @@ $styles['main-css'] = "/css/styles.css";
 //$scripts['thisJS'] = "/pages/admin/scripts/scripts.js";
 require "core/base_views/VHead.php";
 ?>
-
+<meta name="robots" content="noindex, nofollow"/>
 <body class="block block_wrap">
 <?php require "core/base_views/VMainToolbar.php" ?>
 <div class="page block block_wrap">
@@ -87,7 +87,7 @@ require "core/base_views/VHead.php";
                     ТАБЛИЦЫ<br>
                     <?php
 
-                    $tableNames = DB\ORM::sqlQuery('show tables');
+                    $tableNames = DB\ORM::sqlQuery(A\DB_connection::$link_1,'show tables');
                     // A\Debug::print_array($tables);
                     foreach ($tableNames as $tableName) {
                         // A\Debug::print_array($table);
@@ -95,23 +95,12 @@ require "core/base_views/VHead.php";
                         $tableName = $tableName[0];
                         echo $tableName;
 
-                       $columnHeaders = DB\ORM::getColumnHeaders($tableName);
+                       $columnHeaders = DB\ORM::getColumnHeaders(A\DB_connection::$link_1, $tableName);
                        //A\Debug::print_array($columnHeaders);
-                        // $table = DB\ORM::findRows($tableName);
+                        // $table = DB\ORM::findRows(A\DB_connection::$link_1, $tableName);
                         echo A\Html::convertRowsArray2HtmlTable($columnHeaders);
                         echo '<br>';
 
-                        /*   echo "<div class='block block_wrap fl fl_w' style='justify-content: flex-start'>";
-                           $tableName = $row[0];
-                           echo "<div class='block block_inline'><B>" . $tableName . "</B></div>";
-                           $fields = DB\ORM::sqlQuery('describe ' . $tableName);
-                           $i = 0;
-                           foreach ($fields as $f) {
-                               echo "<div class='block block_inline' style='margin-left: 2px;'> &nbsp|| &nbsp;[" . $i . "] " . $f[0] . "&nbsp;</div>";
-                               $i++;
-                           }
-                           echo '</div>';
-                           echo '<br>';*/
                     }
                     ?>
                 </div>
@@ -136,9 +125,7 @@ require "core/base_views/VHead.php";
                                    width:  400px;
                                    height: 200px;
                                    font-size: 1.3em;
-                                   justify-content: left;">
-                            <?= $sql_body ?>
-                         </textarea>
+                                   justify-content: left;"><?= $sql_body ?></textarea>
                             <br>
                             <input type="submit" value="Отправить запрос"><br>
                         </form>
@@ -166,13 +153,14 @@ describe TAllEarthquakes;
             </div>
             <hr>
             <div class="block block_box bb">
-                <a href="download/NaryadDopusk_doc">Наряд-допуск</a>
-                <br>
-
+                <a href="/download/NaryadDopusk_doc">Наряд-допуск</a>
+            </div>
+            <div class="block block_box bb">
+                <a href="/admin/dump">Создать дамп БД</a>
             </div>
 
 
-            <br> ССылка на битость
+            <br> Ссылка на битость
             if (filter_var($url, FILTER_VALIDATE_URL) === FALSE) {
             die('Not a valid URL');
             }

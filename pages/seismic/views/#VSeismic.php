@@ -11,7 +11,7 @@ $regions = $this->models['regions'];
 <?php
 $title = "SL-Сейсмичность";
 $styles['main-css'] = "css/styles.css";
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
+//$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=369c0410-04f2-44bc-8b5e-db38533c045b&lang=ru_RU&load=Geolink";
 require "core/base_views/VHead.php";
 ?>
 
@@ -38,6 +38,8 @@ require "core/base_views/VHead.php";
                     <li><a href="http://eqru.gsras.ru/stations/index.php" target="_blank">Сейсмические станции России</a></li>
                     <li><a href="http://www.gsras.ru/new/ssd_news.htm" target="_blank">Последние землетрясения</a></li>
                     <li><a href="http://www.ceme.gsras.ru/cgi-bin" target="_blank">Землетрясения в радиусе от заданной точки</a></li>
+                    <li><a href="https://earthquake.usgs.gov/earthquakes/search/" target="_blank">Американский каталог</a></li>
+
                     </ul>
             </nav>
         </aside>

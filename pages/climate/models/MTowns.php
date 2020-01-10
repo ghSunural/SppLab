@@ -5,7 +5,7 @@ namespace climate\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 
 class MTowns extends M\Model_base
@@ -13,7 +13,7 @@ class MTowns extends M\Model_base
     static function getTowns()
     {
         $towns = array();
-        $rows = DB\ORM::findRows("VTowns");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns");
 
         foreach ($rows as $row) {
 
@@ -34,10 +34,10 @@ class MTowns extends M\Model_base
 
     }
 
-    static function getTownsByID($townID)
+    static function getTownByID($townID)
     {
-        $towns = array();
-        $rows = DB\ORM::findRows("VTowns", "ID_города = '{$townID}'");
+       // $towns = array();
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns", "ID_города = '{$townID}'");
         $town_as_row = $rows[0];
 
         $town = new TTown();
@@ -51,14 +51,12 @@ class MTowns extends M\Model_base
     static function getRegions()
     {
         $regions = array();
-        $rows = DB\ORM::findRows("TRegionsRF");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TRegionsRF");
         //  $link = A\App::$db_connection->getLink();
         //  $rows = mysqli_query($link, "select * from TRegionsRF");
 
-
-        //A\Debug::print_array($rows);
+      // A\Debug::print_array($rows);
         foreach ($rows as $row) {
-
 
             $region = $row[1];
             array_push($regions, $region);
@@ -71,7 +69,7 @@ class MTowns extends M\Model_base
     public static function getTownsByRegion($region)
     {
         $towns = array();
-        $rows = DB\ORM::findRows("VTowns", "Регион = '{$region}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns", "Регион = '$region'");
         // A\Debug::print_array($rows);
         foreach ($rows as $row) {
 

@@ -10,7 +10,7 @@ $regions = $this->models['regions'];
 <?php
 $title = "SL-Климат";
 $styles['main-css'] = "css/styles.css";
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
+
 require "core/base_views/VHead.php";
 ?>
 

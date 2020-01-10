@@ -4,7 +4,7 @@ namespace climate\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 
 class MTable_5_1_temperature extends M\Model_base
@@ -15,7 +15,7 @@ class MTable_5_1_temperature extends M\Model_base
     {
 
         $data = new TTable_5_1_temperature();
-        $rows = DB\ORM::findRows("VTemperature", "ID_города = '{$townID}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTemperature", "ID_города = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];

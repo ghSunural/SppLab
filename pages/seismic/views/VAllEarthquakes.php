@@ -127,10 +127,10 @@ require "core/base_views/VHead.php";
 
                     </form>
                     <p>
-                        <input type="submit" name="list" title="Список землетрясений в диапазоне указанных координат"
-                               value="Список" form="limits">
-                        <input type="submit" name="export" title="Экспорт геоданных в kml"
-                               value="Экспорт в kml" form="limits">
+                        <input type="submit" name="list" form="limits" title="Список землетрясений в диапазоне указанных координат"
+                               value="Список">
+                        <input type="submit" name="export" form="limits" title="Экспорт геоданных в kml"
+                               value="Экспорт в kml">
                     </p>
                 </div>
 

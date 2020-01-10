@@ -21,15 +21,15 @@ class MEarthquakes extends M\Model_base
                      and longitude < $maxLong 
                     ";
         // and note !="";
-        return DB\ORM::sqlQuery($sql_body);
+        return DB\ORM::sqlQuery(A\App::$link_1, $sql_body, 2);
     }
 
     public static function exportEarthquakes2Kml($outFileName, $Earthquakes_dbResp)
     {
         $earthquakes = array();
-        foreach ($Earthquakes_dbResp as $row) {
+        foreach ($Earthquakes_dbResp as $eq) {
 
-            $_year = $row[1];
+          /*  $_year = $row[1];
             $_month = $row[2];
             $_day = $row[3];
             $_hour = $row[4];
@@ -42,16 +42,16 @@ class MEarthquakes extends M\Model_base
             $_Ms05 = $row[11];
             $_polarAngle = $row[12];
             $_note = $row[13];
-
-            $name = $_MLH . " " . $_note;
-            $description = "MLH = $_MLH 
-$_year.$_month.$_day  $_hour:$_min:$_sec
-Глубина = $_DEPTH км
-$_latitude c.ш.  $_longitude в.д.
-$_note";
+*/
+            $name = $eq['MLH'] . " " . $eq['note'];
+            $description = "MLH = {$eq['MLH']}
+{$eq['_year']}.{$eq['_month']}.{$eq['_day']}  {$eq['_hour']}:{$eq['_min']}:{$eq['sec']}
+Глубина = {$eq['DEPTH']} км
+{$eq['latitude']} c.ш.  {$eq['longitude']} в.д.
+{$eq['note']}";
 
             array_push($earthquakes,
-                new TGeoPoint($_latitude, $_longitude, 0, $name, $description));
+                new TGeoPoint($eq['latitude'], $eq['longitude'], 0, $name, $description));
         }
 
         $kml = G\KML::getKmlBody($earthquakes);

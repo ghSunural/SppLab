@@ -11,8 +11,6 @@ $town = $this->models['town'];
 $title = "SL-Отчет";
 $styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
 
-//$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?lang=ru-RU";
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU&load=Geolink";
 require "core/base_views/VHead.php";
 ?>
 
@@ -23,7 +21,7 @@ require "core/base_views/VHead.php";
     $Header_leftContent = "Отчет. Сейсмичность";
     $Header_rightContent = <<<EOL
      <div class="">
-         <span class="ymaps-geolink">{$town->locality}</span>  ({$town->region})
+         <span class="ymaps-geolink">г {$town->locality} ({$town->region})</span>
      </div>
 
 EOL;
@@ -32,26 +30,12 @@ EOL;
 
     <main class="Main block block_wrap fl fl_nw">
 
-        <aside class="side-bar block block_wrap main_bkg_color-2 main_text_color-2">
 
-            <nav class="">
-                <ul>
-                    Выкопировки из документов
-                    <li>Строительная климатология</li>
-                    <li>СП 14.13330.2018 Строительство в сейсмических районах. Актуализированная редакция СНиП
-                        II-7-81*
-                    </li>
-
-                </ul>
-            </nav>
-
-
-        </aside>
-        <section class="content content_with_sideBar block block_wrap main_bkg_color-4">
-            <section class="block block_wrap  main_bkg_color-4">
+        <section class="content block block_wrap main_bkg_color-4">
+            <section class="block block_wrap main_bkg_color-4">
 
                 <div class="block block_box">
-                    <span class="ymaps-geolink"> <?php echo $town->locality . "  (" . $town->region . ")" ?></span>
+                    <a href="/save">"Экспорт в rtf"</a>
                 </div>
                 <nav class="">
                     <?php

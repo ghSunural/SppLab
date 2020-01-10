@@ -4,7 +4,7 @@ namespace seismic\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 class MSeismic_MSK64 extends M\Model_base
 {
@@ -14,7 +14,7 @@ class MSeismic_MSK64 extends M\Model_base
     {
 
         $data = new TTable_seismicMSK();
-        $rows = DB\ORM::findRows("TSeicmic", "ID = '{$townID}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TSeicmic", "ID = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];

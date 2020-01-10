@@ -12,14 +12,11 @@
 
     <div class="Main_header_right block block_inline main_bkg_color-2 ">
         <div class="block Main_header_right_top">
-            <a class="block_box main_text_color-2" href="http://sppural.ru/">
-                <img class="" src="../../resource/site/logo/logo-SPP.png"
-                     title="title" alt="фото" width=40px height="">
-                &nbsp;
+                  &nbsp;
                 <div class="block block_inline">
                 OOO &#171;СпецПроектПуть&#187;
                 </div>
-            </a>
+
             &nbsp;
         </div>
         <div class="block Main_header_right_bottom">

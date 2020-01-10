@@ -29,12 +29,17 @@ class Html
          <caption></caption>       
 EOL;
 
+
         if (isset($columnHeaders)) {
 
             $tableAsHtml .= "<tr> \n";
+           // array_keys();
+
             foreach ($columnHeaders as $cell) {
                 $tableAsHtml .= "<th style='word-wrap: break-word; padding: 1px;'>" . $cell . "</th> \n";
             }
+
+
             $tableAsHtml .= "</tr> \n";
         }
 
@@ -51,7 +56,8 @@ EOL;
 
                 $tableAsHtml .= self::getTR($TR);
             } else {
-                $row = Util::convertStr2Arr($row);
+                //$row = Util::convertStr2Arr($row);
+                $row = (array) $row;
                 // Debug::print_array($row);
                 $TR = "";
                 foreach ($row as $cell) {

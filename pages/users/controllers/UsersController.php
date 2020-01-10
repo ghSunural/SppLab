@@ -8,27 +8,32 @@
 
 namespace Application\Controllers;
 
+//(англ. create), чтение (read), модификация (update), удаление (delete).
 
 class UsersController
 {
 
-
-
-    public function actionShow()
+    public function actionCreate()
     {
+
     }
 
-    public function actionEdit()
+    public function actionRead()
     {
+
+    }
+
+    public function actionUpdate()
+    {
+
     }
 
     public function actionDelete()
     {
+
     }
 
-    public function actionMove()
-    {
-    }
+
 
 
 }

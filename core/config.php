@@ -6,6 +6,7 @@ namespace Application;
 //Singleton
 
 ini_set('max_execution_time', 900);
+
 class config
 {
     public static function SITE_ROOT()
@@ -26,9 +27,10 @@ class config
         //return "http://localhost/silver-hoof/resource/images/photo/";
     }
 
-    public static function DEBUG_MODE(){
+    public static function DEBUG_MODE()
+    {
 
-        return true;
+        return false;
     }
 
 }

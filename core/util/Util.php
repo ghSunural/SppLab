@@ -103,7 +103,13 @@ class Util
         }
     }
 
+    public static function saveAsRtf(){
 
+
+
+    }
+
+/*
     public static function convertStr2Arr($strOrArr)
     {
 
@@ -119,6 +125,7 @@ class Util
 
 
     }
+*/
 
 }
 

@@ -4,7 +4,7 @@ namespace climate\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 
 class MTable_4_1_warmSeason extends M\Model_base
@@ -15,7 +15,7 @@ class MTable_4_1_warmSeason extends M\Model_base
 
         $data = new TTable_4_1_warmSeason();
 
-        $rows = DB\ORM::findRows("TWarmSeason", "ID = '{$townID}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TWarmSeason", "ID = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];

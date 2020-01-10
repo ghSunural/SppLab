@@ -9,67 +9,67 @@ use PDO;
 class ORM
 {
 
-    public static function sqlQuery($sql_body)
+    public static function sqlQuery($linkedDB, $sql_body, $fetchMode = NULL)
     {
+
+        //только имена PDO::FETCH_ASSOC = 2
+        //только цыфры PDO::FETCH_NUM = 3
+        //и цифры и буквы PDO::FETCH_BOTH = 4
+        if (is_null($fetchMode)) {
+
+            $fetchMode = PDO::FETCH_BOTH;
+        }
 
         $rowsArray = array();
 
-        $link = A\App::$link_1;
-        /*
-        $queryResult = mysqli_query($link, $sql_body);
+        $statement = $linkedDB->query($sql_body);
+        $statement->setFetchMode($fetchMode);
 
-        while ($row = mysqli_fetch_row($queryResult)) {
-
+        while ($row = $statement->fetch()) {
             array_push($rowsArray, $row);
         }
-        */
 
-        //echo $jRow, "\n";
-        // echo json_encode($rows), "\n";
-        //echo json_encode($rows, JSON_PRETTY_PRINT);
-        //echo  JSON.stringify($jRow, null, '\t');
-        // array_push($rowsArray, $row);
         return $rowsArray;
     }
 
-    static function findRows($table, $statement = null)
+    static function findRows($linkedDB, $table, $expression = null)
     {
-        $rows = array();
 
+        $rows = array();
         //$rowsArray = array();
 
-        $link = A\App::$link_1;
 
-        //  $link->prepare('SELECT name FROM people')->execute();
 
-        $statement = $link->prepare('select * from  :tableN');
-        $statement->setFetchMode(PDO::FETCH_BOTH);
+        $sql = is_null($expression)
+            ? "select * from  $table"
+            : "select * from  $table where $expression";
+
+        //echo $sql;
+        //$statement = $link->prepare($sql);
+
         //  $db_response = $link->query('select * from ' . $table);
         //  $db_response->execute();
 
-        $statement->bindValue(':tableN', $table);
-        $statement->execute();
-        // $statement->execute([':tableN'=> $table]);
-
+        //  $statement->bindValue(':tableN', $table);
+        //  $statement->execute();
+        // $statement->execute();
+        $statement = $linkedDB->query($sql);
+        $statement->setFetchMode(PDO::FETCH_BOTH);
 
         while ($row = $statement->fetch()) {
             array_push($rows, $row);
         }
-
+        // A\Debug::print_array($rows);
         return $rows;
-
-        /*   $queryResult = is_null($statement)
-               ? mysqli_query($link, "select * from $table")
-               : mysqli_query($link, "select * from $table where $statement");*/
 
 
     }
 
-    public static function getColumnHeaders($tableName)
+    public static function getColumnHeaders($linkedDB, $tableName)
     {
 
         $columnHeaders = array();
-        $fields = self::sqlQuery('describe ' . $tableName);
+        $fields = self::sqlQuery($linkedDB, 'describe ' . $tableName);
         $i = 0;
         foreach ($fields as $f) {
             array_push($columnHeaders, $f[0]);
@@ -83,16 +83,10 @@ class ORM
     static function deleteEntry($table, $key, $value)
     {
 
-        $link = A\App::$link_1->getLink();
+        $link = A\App::$link_1;
         mysqli_query($link, "delete from $table where $key = $value");
     }
 
-
-    static function getTablesList($link)
-    {
-
-        return mysqli_query($link, "SHOW TABLES;");
-    }
 
     static function VAllEarthquakesQuery()
     {
@@ -120,7 +114,7 @@ where
                         and longitude > 110 
                         and longitude < 120;";
 
-        $table = self::sqlQuery($sql_body);
+        $table = self::sqlQuery(A\App::$link_1, $sql_body);
         return $table;
 
     }

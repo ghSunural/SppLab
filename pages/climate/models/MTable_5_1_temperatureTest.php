@@ -4,7 +4,7 @@ namespace climate\models;
 
 use Application as A;
 use Application\Models as M;
-use Application\Models\Databases as DB;
+use Application\Databases as DB;
 
 use PHPUnit\Framework\TestCase;
 

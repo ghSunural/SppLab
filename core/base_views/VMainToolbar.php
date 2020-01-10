@@ -18,7 +18,7 @@
     </div>
     <div class="tb__right">
         <div class="block block_inline" title="Вход для зарегистрированных пользователей">
-            <a href="/signin" class="t-botton">ВОЙТИ</a>
+            <a href="/logIn" class="t-botton">ВОЙТИ</a>
         </div>
 
     </div>
@@ -38,7 +38,6 @@
         min-height: 4vw;
         width: 96vw;
         z-index: 100;
-
         opacity: 0.4;
         justify-content: space-between;
         align-items: center;

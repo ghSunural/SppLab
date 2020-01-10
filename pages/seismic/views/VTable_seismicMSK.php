@@ -3,13 +3,12 @@
 namespace climate\views;
 
 $seismic = $this->models['seismic'];
-
 $town = $this->models['town'];
-
 
 $OSR2015_A = $seismic->OSR2015_A;
 $OSR2015_B = $seismic->OSR2015_B;
 $OSR2015_C = $seismic->OSR2015_C;
+
 
 
 echo <<< EOL
@@ -18,11 +17,8 @@ echo <<< EOL
 <div  id="printableArea" class="block block_wrap report-layout">
 
 
-{$town->locality} ({$town->region})
+        {$town->locality} ({$town->region})
 <br>
-<br>
-<br>
-
 <table class="bkg_color_report" border="1" 
            style="
            width: 170mm;
@@ -55,15 +51,9 @@ echo <<< EOL
     </tr>   
 
 </table>
-
 </div>
-
-
 EOL;
-
 ?>
-
-
 
 
 
