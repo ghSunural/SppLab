@@ -1,4 +1,5 @@
 .idea
 *.log
 SppLab/core/util/DB/db_site_consts.php
-db_staff_consts.php  
+db_staff_consts.php 
+.gitignore 
