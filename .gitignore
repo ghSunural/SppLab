@@ -1,4 +1,4 @@
 .idea
 *.log
 SppLab/core/util/DB/db_site_consts.php
-SppLab/core/util/DB/db_staff_consts.php  
+db_staff_consts.php  
