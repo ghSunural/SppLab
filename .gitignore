@@ -1,4 +1,2 @@
-.idea
-*.log
 core/util/DB/db_site_consts.php
 core/util/DB/db_staff_consts.php
