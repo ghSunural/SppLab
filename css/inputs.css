@@ -28,22 +28,25 @@
 
 }
 
-.form-signin {
 
 
-    width: 50vw;
-
-
-}
-
+/*
 input[type=submit] {
 
-    width: 200px;
-    height: 50px;
-    font-size: inherit;
-}
+     width: 200px;
+     height: 50px;
+     font-size: inherit;
+ }
+ */
+
 
 .input-text {
 
 
+}
+
+input{
+
+    font-size: 1.2em;
+    padding: 5px;
 }

@@ -12,11 +12,11 @@ return array(
     //(.*) - любые символы
     'download/(.*?)' => 'SiteController/actionGetFile/$1',
    // 'downloads' => 'SiteController/actionDownloadsDef',
-
-    'signUp/reg' => 'SignUpInController/actionRegister',
+    'sign/(reg|login)' => 'SignUpInController/acnSign/$1',
+    'sign/doreg' => 'SignUpInController/actionRegister',
+    'sign/login' => 'SignUpInController/actionRegister',
     'signUp/userAgreement' => 'SignUpInController/actionUserAgreement',
-    'logIn' => 'SignUpInController/actionLogIn',
-    'signUp' => 'SignUpInController/actionSignUp',
+
 
 
     //плюс означает что символ может встертиться любое количество раз, $1 - первая подмаска (распарсит в параметры функции)

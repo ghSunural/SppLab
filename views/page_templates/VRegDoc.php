@@ -3,8 +3,6 @@
 
 use Application as A;
 use Application\Views as V;
-use Application\Models as M;
-use Application\Controllers as C;
 
 $regions = $this->models['regions'];
 $styles[0] = A\config::SITE_URL() . "css/styles.css";

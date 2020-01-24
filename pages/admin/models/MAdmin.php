@@ -3,7 +3,6 @@
 namespace admin\models;
 
 use Application\Models\Model_base;
-use Application as A;
 
 class MAdmin extends Model_base
 {

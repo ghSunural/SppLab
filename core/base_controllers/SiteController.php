@@ -3,7 +3,6 @@
 namespace Application\Controllers;
 
 use Application as A;
-use climate\models as M;
 
 class SiteController extends BaseController
 {

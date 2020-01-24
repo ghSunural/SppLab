@@ -19,7 +19,7 @@ require "core/base_views/VHead.php";
     <?php
     $Header_leftContent = "ЖЕЛЕЗНЫЕ ДОРОГИ";
     $Header_rightContent = "Схемы ж.д. и контактные данные";
-    require "views/page_templates/VMinorHeader.php";
+    require "core/base_views/VMinorHeader.php";
     ?>
 
     <main class="Main block block_wrap fl fl_nw">

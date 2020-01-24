@@ -30,7 +30,7 @@ class config
     public static function DEBUG_MODE()
     {
 
-        return false;
+        return true;
     }
 
 }

@@ -3,8 +3,6 @@
 
 namespace Application\Controllers;
 
-use railways\models as M;
-
 class RailwaysController extends BaseController
 {
 

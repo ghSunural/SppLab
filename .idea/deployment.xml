@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="http://spplab.000webhostapp.com/" showNewOnSourceInSync="false" showNewOnTargetInSync="false">
     <serverData>
+      <paths name="1">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="http://spplab.000webhostapp.com/">
         <serverdata>
           <mappings>

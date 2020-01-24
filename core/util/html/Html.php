@@ -2,8 +2,6 @@
 
 namespace Application;
 
-use Util\geo\KML;
-
 class Html
 {
     protected $title;

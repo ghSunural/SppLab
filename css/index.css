@@ -13,9 +13,9 @@ html {
 }
 
 .Main {
+    min-height: 50vh;
 
 }
-
 
 
 @page {
@@ -23,20 +23,23 @@ html {
     margin: 0 /* change the margins as you want them to be. */
 }
 
-.z-top{
+.z-top {
 
     z-index: 200;
 }
 
-.page{
+.page {
     top: 8vh;
 }
 
 .content {
-    width: 96vw;
+
     justify-content: center;
-    align-items: baseline;
-    min-height: 90vh;
+    align-items: center;
+/* min-height: 90 vh;
+ max-width: 98 vw; */
+    min-width: 96vw;
+    padding: 10px 10px;
 }
 
 .content_with_sideBar {
@@ -46,6 +49,12 @@ html {
     justify-content: flex-start;
 }
 
+.content_with_rightSideBar {
+    width: 80vw;
+    min-width: 320px;
+}
+
+
 .side-bar {
     position: fixed;
     margin-top: 40px;
@@ -53,6 +62,13 @@ html {
     max-width: 400px;
     width: 20vw;
     /* padding-right: 0;*/
+}
+
+.right-side-bar{
+    margin-top: 20vh;
+    /* background: linear-gradient(to right, #555152 90%, #EFFFCD 90%);*/
+    min-width: 320px;
+
 }
 
 .reclame {

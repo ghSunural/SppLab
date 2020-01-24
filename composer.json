@@ -4,6 +4,7 @@
     },
 
     "require": {
-        "components/jquery": "3.4.*"
+        "components/jquery": "3.4.*",
+      "ext-mbstring": "*"
     }
 }

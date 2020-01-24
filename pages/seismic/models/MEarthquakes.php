@@ -4,8 +4,8 @@
 namespace seismic\models;
 
 use Application as A;
-use Application\Models as M;
 use Application\Databases as DB;
+use Application\Models as M;
 use Util\geo as G;
 use Util\geo\TGeoPoint;
 
@@ -21,7 +21,7 @@ class MEarthquakes extends M\Model_base
                      and longitude < $maxLong 
                     ";
         // and note !="";
-        return DB\ORM::sqlQuery(A\App::$link_1, $sql_body, 2);
+        return DB\ORM::sqlQuery(A\DB_connection::$link_1, $sql_body, 2);
     }
 
     public static function exportEarthquakes2Kml($outFileName, $Earthquakes_dbResp)

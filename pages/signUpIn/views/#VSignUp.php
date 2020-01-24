@@ -2,6 +2,8 @@
 
 use Application as A;
 
+$user = $this->models['user'];
+
 ?>
 
 <!DOCTYPE html>
@@ -19,53 +21,54 @@ require "core/base_views/VHead.php";
     <?php
     $Header_leftContent = "Аудентификация / авторизация";
     $Header_rightContent = "регистрация";
-    require "views/page_templates/VMinorHeader.php";
+    require "core/base_views/VMinorHeader.php";
     ?>
 
     <main class="Main block block_wrap fl fl_nw">
 
-          <section class="content content block block_wrap fl fl_w main_bkg_color-4">
+          <section class="content block block_wrap fl fl_w main_bkg_color-4">
 
             <div class="form form-signin">
                 РЕГИСТРАЦИЯ
-                <form action="/signin" method="post">
-                    <span class="red">*</span><input class="input"
+                <form action="/sign/doreg" method="post">
+                   <input class="input"
                            type="text"
                            name="Surname"
                            placeholder="Фамилия"
+                           value="<?= $user['Surname']?>"
                            required/>
                     <br>
                     <input class="input"
                            type="text"
-                           name="Name"
+                           name="firstName"
                            title=""
                            placeholder="Имя"
                            required/>
                     <br>
                     <input class="input"
-                           type="text"
-                           name="SecondName"
-                           title=""
-                           placeholder="Отчество"
-                          />
+                               type="text"
+                               name="login"
+                               title="Будет использоваться в качестве логина"
+                               placeholder="Логин"
+                               required>
                     <br>
                     <input class="input"
                            type="text"
-                           name="login"
-                           title="Будет использоваться в качестве логина"
+                           name="email"
+                           title="Может использоваться в качестве логина"
                            placeholder="Электронная почта"
                            required>
                     <br>
                     <input class="input"
                            type="password"
-                           name=""
+                           name="password_"
                            title=""
                            placeholder="Придумайте пароль"
                            required>
                     <br>
                     <input class="input"
                            type="password"
-                           name=""
+                           name="r-password"
                            title=""
                            placeholder="Повторите пароль"
                            required>
@@ -89,19 +92,19 @@ require "core/base_views/VHead.php";
                                name=""
                                title="Для продолжения необходимо принять пользовательское соглашение"
                                placeholder="Повторите пароль"
+                               checked
                                required>Я принимаю условия
                         <a href="/signUp/userAgreement" class="block_inline" target="_blank">Пользовательского соглашения</a>
-                        и даю своё согласие Яндексу на обработку моей
-                        персональной информации на условиях, определенных
-                        Политикой конфиденциальности.
+                        и даю своё согласие Spp-Lab на обработку моей
+                        персональной информации
+                       <!-- на условиях, определенных Политикой конфиденциальности.-->
 
                     </div>
-                    <input type="submit" value="Регистрация">
-                    <input type="reset" value="Очистить">
+                    <input class='main_bkg_color-1 main_text_color-1' type="submit" value="Регистрация">
+                    <input type="reset" value="Очистить" class='main_bkg_color-1 main_text_color-1'>
                 </form>
             </div>
-            <?php
-            ?>
+
         </section>
     </main>
     <?php require "core/base_views/VSiteFooter.php" ?>

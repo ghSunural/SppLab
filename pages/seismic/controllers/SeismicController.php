@@ -3,11 +3,9 @@
 
 namespace Application\Controllers;
 
-use Application\Databases as DB;
-use Application\Debug;
 use Application as A;
+use Application\Databases as DB;
 use seismic\models as M;
-use Util\geo\KML;
 
 class SeismicController extends BaseController
 {
@@ -22,6 +20,8 @@ class SeismicController extends BaseController
 
     public function actionView($ID)
     {
+        A\Resolver::isAllowedFor(1);
+
         $town = M\MTowns::getTownsByID($ID);
         $this->models['town'] = $town;
         $this->models['seismic'] = M\MSeismic_MSK64::getMSK64($ID);
@@ -45,21 +45,40 @@ class SeismicController extends BaseController
 
         $earthquakesAsRowsArray = M\MEarthquakes::getEarthquakesAsRowsArray(
             $rangeCoord['minLat'], $rangeCoord['maxLat'],
-            $rangeCoord['minLong'], $rangeCoord['maxLong']);
+            $rangeCoord['minLong'], $rangeCoord['maxLong']
+        );
 
-        $arrColumnHeaders = DB\ORM::getColumnHeaders( "TAllEarthquakes");
+        $arrColumnHeaders = DB\ORM::getColumnHeaders(A\DB_connection::$link_1, "VAllEarthquakes");
 
         $this->models['rangeCoord'] = $rangeCoord;
         $this->models["arrColumnHeaders"] = $arrColumnHeaders;
         $this->models["arrEarthquakes"] = $earthquakesAsRowsArray;
 
         if (isset($_POST['list'])) {
+            echo "list";
             $this->render("pages/seismic/views/VAllEarthquakes.php");
         } else if (isset($_POST['export'])) {
             $fileName = "pages/admin/resource/downloads/AllEarthquakes.kml";
+
             M\MEarthquakes::exportEarthquakes2Kml($fileName, $earthquakesAsRowsArray);
             A\Util::downloadFile($fileName);
+        } else if (isset($_POST['on_map'])) {
+            echo "on_map";
+            $fileName = "resource/content/generated/AllEarthquakes.kml";
+
+            M\MEarthquakes::exportEarthquakes2Kml($fileName, $earthquakesAsRowsArray);
+
+              //  echo file_get_contents('pages/admin/resource/downloads/AllEarthquakes.kml');
+                $this->render("pages/seismic/views/VAllEarthquakes.php");
+
+
+            //   A\Util::downloadFile($fileName);
+
+        } else {
+            echo "error";
+
         }
+
     }
 }
 

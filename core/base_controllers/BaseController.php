@@ -3,7 +3,6 @@
 namespace Application\Controllers;
 
 use user\models as M;
-use Application\Views as V;
 
 class BaseController
 {
@@ -23,7 +22,7 @@ class BaseController
         die("Доступ закрыт");
     }
 
-    public function render($view)
+    protected function render($view)
     {
 
         require $view;

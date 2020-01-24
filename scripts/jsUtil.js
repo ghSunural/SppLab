@@ -1,7 +1,6 @@
 'use strict';
 
-;(function (exports) {
-
+(function (exports) {
         exports.pushHtml = function (id, innerText) {
             document.getElementById(id).innerHTML = innerText;
         };
@@ -66,7 +65,7 @@
             for (var i = 0; i < $classes.length; i++) {
                 $classes[i].setAttribute('contenteditable', true);
             }
-        }
+        };
 
         exports.printDiv = function (divName) {
             var printContents = document.getElementById(divName).innerHTML;
@@ -74,7 +73,37 @@
             document.body.innerHTML = printContents;
             window.print();
             document.body.innerHTML = originalContents;
+        };
+
+
+        function doSearch(text) {
+            var sel;
+            if (window.find && window.getSelection) {
+                sel = window.getSelection();
+                if (sel.rangeCount > 0) {
+                    sel.collapseToEnd();
+                }
+                window.find(text);
+            } else if (document.selection && document.body.createTextRange) {
+                sel = document.selection;
+                var textRange;
+                if (sel.type == "Text") {
+                    textRange = sel.createRange();
+                    textRange.collapse(false);
+                } else {
+                    textRange = document.body.createTextRange();
+                    textRange.collapse(true);
+                }
+                if (textRange.findText(text)) {
+                    textRange.select();
+                }
+            }
         }
+
+        exports.searchpage = function () {
+
+            doSearch(document.getElementById("search").value);
+        };
 
 
     }(window.jsUtil = {})

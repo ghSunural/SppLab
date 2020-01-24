@@ -4,8 +4,8 @@
 namespace climate\models;
 
 use Application as A;
-use Application\Models as M;
 use Application\Databases as DB;
+use Application\Models as M;
 
 
 class MTowns extends M\Model_base

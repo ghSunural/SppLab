@@ -10,8 +10,9 @@ git config --list – проверка настроек
 
 //предварительные настройки
 git config --global user.name "ghSunural"
-git config --global user.email your_email@whatever.com
-git config --global core.quotepath off //Для unicode
+git config --global user.email ysunural@yandex.ru
+git config --global core.quotepath off 
+//Для unicode
 
 $ git init //создать репозиторий из существующей папки
 
@@ -29,6 +30,8 @@ git commit -m "first commit можно на русском"
 //создать удаленный репозиторий
 git remote add origin https://github.com/you_repository/you_project
 (git remote add origin https://github.com/ghSunural/Silver-Hoof.git например)
+
+git remote add origin https://github.com/ghSunural/learn_examp.git
 
     // отослать в репозиторий в ветку мастер
 git push -u origin master

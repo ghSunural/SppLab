@@ -4,8 +4,27 @@
 namespace user\models;
 
 
+use Application\Databases\ORM;
+use Application\Debug;
+
 class MUsers implements IUsers
 {
+
+    public function addUser(TUser $user){
+
+        // Текст запроса к БД
+        $sql = 'INSERT INTO TUser 
+                 (surname, firstName, login, passwordHash, email, ref_role_id)  '
+            . 'VALUES (:surname, :firstName, :login,:passwordHash,:email, :ref_role_id)';
+
+
+
+    }
+
+    public function getUserByLogin($login){
+
+
+    }
 
     /**
      * Регистрация пользователя
@@ -23,6 +42,8 @@ class MUsers implements IUsers
         $sql = 'INSERT INTO user (name, email, password) '
             . 'VALUES (:name, :email, :password)';
 
+
+
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
@@ -38,6 +59,14 @@ class MUsers implements IUsers
      * @param string $password <p>Пароль</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
+    public static function getById($id)
+    {
+        $userParam = DB\ORM::findRows(A\DB_connection::$link_1, "TUsers", "ID = '{$id}'");
+        Debug::print_array($userParam, 'Пользователь ' . $id);
+        return $userParam;
+    }
+
+
     public static function edit($id, $name, $password)
     {
         // Соединение с БД

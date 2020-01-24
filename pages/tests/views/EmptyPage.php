@@ -1,7 +1,5 @@
 <?php
 
-use Application as A;
-
 /*
 
 

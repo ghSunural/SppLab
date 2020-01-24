@@ -2,7 +2,6 @@
 
 namespace Application;
 
-use Application\Controllers as C;
 use Application as A;
 
 class Router

@@ -1,7 +1,6 @@
 <?php
 
 namespace Application\Controllers;
-use calculators\models as M;
 
 class GeophysicsController extends BaseController
 {

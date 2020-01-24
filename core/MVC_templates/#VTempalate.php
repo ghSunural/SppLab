@@ -1,7 +1,5 @@
 ﻿<?php
 
-use Application as A;
-
 $regions = $this->models['regions'];
 
 ?>
@@ -22,7 +20,7 @@ require "core/base_views/VHead.php";
     $Header_leftContent = "Сейсмичность";
     $Header_rightContent = "СП 14.13330.2018 Строительство в сейсмических районах.
                               Актуализированная редакция СНиП II-7-81*";
-    require "views/page_templates/VMinorHeader.php";
+    require "core/base_views/VMinorHeader.php";
     ?>
 
     <main class="Main block block_wrap">

@@ -23,6 +23,21 @@ where
 latitude > 50 and latitude < 53
 and longitude > 110 and longitude < 116;
 
+explain select * from TAllEarthquakes limit 30;
+
+
+//индексы
+CREATE INDEX longitude ON TAllEarthquakes(longitude);
+CREATE INDEX latitude ON TAllEarthquakes(latitude);
+CREATE INDEX lat_long ON TAllEarthquakes(latitude, longitude);
+
+CREATE INDEX longitude ON TAllEarthquakes(Долгота, E);
+CREATE INDEX longitude ON TAllEarthquakes("Широта, N");
+
+
+CREATE UNIQUE INDEX email ON users(email)
+
+
 select * from TTowns;
 select * from TTowns order by ID desc;
 

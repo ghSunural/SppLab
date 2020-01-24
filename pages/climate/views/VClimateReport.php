@@ -1,5 +1,7 @@
 <?php
+
 use Application as A;
+
 $town = $this->models['town'];
 ?>
 <!DOCTYPE html>
@@ -25,7 +27,7 @@ require "core/base_views/VHead.php";
          <span class="ymaps-geolink">г {$town->locality} ({$town->region})</span> 
      </div>
 EOL;
-    require "views/page_templates/VMinorHeader.php";
+    require "core/base_views/VMinorHeader.php";
     ?>
 
     <main class="Main block block_wrap fl fl_nw">

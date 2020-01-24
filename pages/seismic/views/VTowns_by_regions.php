@@ -1,5 +1,5 @@
 ﻿<?php
-use Application as A;
+
 use seismic\models as M;
 
 $region = $this->region;

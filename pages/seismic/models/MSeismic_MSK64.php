@@ -3,8 +3,8 @@
 namespace seismic\models;
 
 use Application as A;
-use Application\Models as M;
 use Application\Databases as DB;
+use Application\Models as M;
 
 class MSeismic_MSK64 extends M\Model_base
 {

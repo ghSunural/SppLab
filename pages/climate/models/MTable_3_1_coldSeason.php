@@ -3,8 +3,8 @@
 namespace climate\models;
 
 use Application as A;
-use Application\Models as M;
 use Application\Databases as DB;
+use Application\Models as M;
 
 class MTable_3_1_coldSeason extends M\Model_base
 {

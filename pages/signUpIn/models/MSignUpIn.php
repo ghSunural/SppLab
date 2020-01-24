@@ -3,10 +3,26 @@
 namespace signin\models;
 
 use Application\Models\Model_base;
-use Application as A;
+use user\models as U;
 
 class MSignUpIn extends Model_base
 {
+
+    public static function auth()
+    {
+
+        $user = new U\TUser();
+        /*
+               session_start();
+               // echo session_save_path();
+               // $_SESSION['user'] = 'в сессии';
+               $_SESSION['userId'] = $user->getId();
+               $_SESSION['login'] = $user->getLogin();
+               $_SESSION['role'] = $user->getRole();
+       */
+
+    }
+
 
     function sendMail($to, $subject, $body)
     {

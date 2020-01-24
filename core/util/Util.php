@@ -2,24 +2,10 @@
 
 namespace Application;
 
-use Application\Models\Databases as DB;
-
 class Util
 {
-//" show_error.php?.
-//            SITE_URL . "views/layouts/
-//перенаправление на страницу ошибки
-    public static function handle_error($user_error_message, $system_error_message)
-    {
-        echo "ОШИБКА";
-        //header("Location: /core/base_views/show_error.php");
-    }
 
-    /* user_error_message
-            ={$user_error_message}
-            &system_error_message
-            ={$system_error_message}\");
-        */
+
 
     public static function redirect()
     {

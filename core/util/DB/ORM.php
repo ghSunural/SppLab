@@ -3,7 +3,6 @@
 namespace Application\Databases;
 
 use Application as A;
-use Application\Models as M;
 use PDO;
 
 class ORM

@@ -10,6 +10,14 @@
           <option name="port" value="21" />
         </fileTransfer>
       </webServer>
+      <webServer id="35c5780c-da64-4f33-b2ce-7c64c4344db8" name="1" url="http://lab.sppural.ru">
+        <fileTransfer host="lab.sppural.ru" port="9921" rootFolder="/usr/share/nginx/html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="9921" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

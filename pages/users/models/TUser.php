@@ -4,54 +4,175 @@
 namespace user\models;
 
 
-use Application\Debug;
-use Application\Databases as DB;
+use Application as A;
+
 
 class TUser
 {
-    private $id;
-    private $name;
+    // Alt-insert - быстрые геттеры
+    // Ctrl+Shift+ +-
+    // private $id;
+    private $surname;
+    private $firstName;
     private $login;
     private $passwordHash;
-    private $phone;
-    private $role = array(
-        1 => 'user',
-        2 => 'userExt',
-        3 => 'admin',
-        4 => 'developer',
-    );
-    private $post;
+    private $email;
+    private $role;
+
+    /*
+('BAN', 0, 'пользователь c запрещенным входом'),
+('GST', 1, 'гость'),
+('UR', 3, 'зарегистрированный пользователь'),
+('UEXT', 5, 'пользователь с раширенными правами'),
+('MDR', 7, 'модератор'),
+('ADM', 9, 'администратор'),
+('DEV', 12, 'разработчик');
+
     private $avatarFile;
 
+    */
+    /*
+        public function __construct($login, $password, $role = 1)
+        {
+            try {
+                $this->login = $login;
+                $this->passwordHash = self::passwordCrypt($password);
 
-    public function __construct($name, $email, $password, $role = 1, $post = NULL)
+            } catch (A\TException $e) {
+                echo $e->getMessage();
+            }
+
+
+
+            if (self::checkPassword($password)) {
+
+                $this->passwordHash = self::passwordCrypt($password);
+            }
+
+
+        }
+
+    */
+
+
+    public function __toString()
+    {
+        return
+            'surname: ' . $this->surname . '<br>' .
+            'firstName: ' . $this->firstName . '<br>' .
+            'login: ' . $this->login . '<br>' .
+            'passwordHash: ' . $this->passwordHash . '<br>' .
+            'email: ' . $this->email . '<br>' .
+            'role: ' . $this->role . '<br>';
+
+    }
+
+    public function toArray()
     {
 
-        if (self::checkName($name)) {
 
-            $this->name = $name;
-        }
-
-        if (self::checkEmail($email)) {
-
-            $this->login = $email;
-        }
-
-        if (self::checkPassword($password)) {
-
-            $this->passwordHash = self::passwordCrypt($password);
-        }
-
-        $this->role = $role;
-
-        if (isset($post)) {
-
-            $this->post = $post;
-        }
     }
 
 
-    public static function checkName($name)
+    public function setRole($role)
+    {
+        $this->role = $role;
+    }
+
+    /**
+     * @return mixed
+     */
+    public
+    function getSurname()
+    {
+        return $this->surname;
+    }
+
+    /**
+     * @param mixed $surname
+     */
+    public
+    function setSurname($surname)
+    {
+        $this->surname = htmlspecialchars($surname);
+    }
+
+    /**
+     * @return mixed
+     */
+    public
+    function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * @param mixed $firstName
+     */
+    public
+    function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public
+    function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * @param mixed $login
+     */
+    public
+    function setLogin($login)
+    {
+        $this->login = $login;
+    }
+
+    /**
+     * @return mixed
+     */
+    public
+    function getPasswordHash()
+    {
+        return $this->passwordHash;
+    }
+
+    /**
+     * @param mixed $passwordHash
+     */
+    public
+    function setPassword($password)
+    {
+        $this->passwordHash = self::passwordCrypt($password);
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public
+    function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param mixed $email
+     */
+    public
+    function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+
+    public
+    static function checkName($name)
     {
 
         if (strlen($name) >= 2) {
@@ -61,7 +182,8 @@ class TUser
         return false;
     }
 
-    public static function checkEmail($email)
+    public
+    static function checkEmail($email)
     {
 
         if (preg_match($email, "/@sppural.ru/")) {
@@ -70,72 +192,60 @@ class TUser
         return false;
     }
 
-
-    public static function checkPassword($password)
+    public
+    static function checkPassword($password)
     {
         if (strlen($password) >= 6) {
             return true;
+        } else {
+            throw new TException("Пароль должен составлять более 6-ти символов");
         }
-
-        return false;
     }
 
+    public
+    static function auth($userId)
+    {
+        $_SESSION['userId'] = $userId;
+    }
 
-    public static function auth($userId)
+    public
+    static function isLogged()
     {
 
-        $_SESSION['user'] = $userId;
+        return (isset($_SESSION['user'])) ? true : false;
+        /*
+                if (isset($_SESSION['user'])) {
+                    return $_SESSION['user'];
+                }
+
+                return false;
+        */
     }
 
-    public static function getById($id)
+    public
+    static function isGuest()
     {
-        $userParam = DB\ORM::findRows(A\DB_connection::$link_1,"TUsers", "ID = '{$id}'");
-        Debug::print_array($userParam, 'Пользователь ' . $id);
-        return $userParam;
+        return (isset($_SESSION['user'])) ? false : true;
+        /*
+           if (isset($_SESSION['user'])) {
+               return false;
+           }
+           return true;
+        */
     }
 
-    public static function checkLogged()
-    {
-
-        if (isset($_SESSION['user'])) {
-            return $_SESSION['user'];
-        }
-
-        return "";
-    }
-
-    public static function isGuest()
-    {
-
-        if (isset($_SESSION['user'])) {
-            return false;
-        }
-
-        return true;
-    }
-
-    public static function getAvatar($userId)
-    {
-
-        if (file_exists()) {
-
-        }
-
-        return "";
-    }
-
-
-    private static function passwordCrypt($password)
+    private
+    function passwordCrypt($password)
     {
 
         return password_hash($password, PASSWORD_DEFAULT);
     }
 
-
-    public static function passwordDecryption($password, $hash)
+    public
+    function verifyPassword($password)
     {
         if (isset($password) && isset($hash)) {
-            return password_verify($password, $hash);
+            return password_verify($password, $this->passwordHash);
         }
 
         return false;

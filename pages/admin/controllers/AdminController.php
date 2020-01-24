@@ -2,11 +2,9 @@
 
 
 namespace Application\Controllers;
-use Application as A;
 use admin\models as M;
-use Application\Debug;
+use Application as A;
 use Application\Databases as DB;
-
 use PDO;
 
 //CRUD
@@ -41,15 +39,36 @@ class AdminController extends BaseController
         $this->render($this->view);
     }
 
-    public static function  actionDump(){
+    public static function actionDump(){
 
-        DB\DBManager::getDumpDB();
+       // $dataBase = A\DB_connection::$DBsite;
+        $dataBase = A\DB_connection::$DBEnterprise;
+        $dataBase->getDumpDB();
         A\Util::downloadFile('pages/admin/resource/downloads/dump');
     }
 
 
     public function actionSql()
     {
+
+        $link = '';
+        if(isset($_POST['db']))
+        {
+            switch ($_POST['db']) {
+                case 'dbsite':
+                    $link = A\DB_connection::$link_1;
+                    break;
+                case 'dbenterprise':
+                    $link = A\DB_connection::$link_2;
+                    break;
+                default:
+                    $link = A\DB_connection::$link_1;
+                    break;
+            }
+
+            $db = $_POST['db'];
+            echo $db;
+        }
 
         if (isset($_POST["sql-query"])) {
             $sql_body = $_POST["sql-query"];
@@ -58,7 +77,7 @@ class AdminController extends BaseController
         }
 
         if ($sql_body != '') {
-            $db_response = DB\ORM::sqlQuery(A\DB_connection::$link_1, $sql_body, PDO::FETCH_NUM);
+            $db_response = DB\ORM::sqlQuery($link, $sql_body, PDO::FETCH_NUM);
             $this->models['sql_body'] = $sql_body;
             $this->models['db_response'] = $db_response;
 

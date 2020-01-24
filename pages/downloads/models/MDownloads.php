@@ -2,8 +2,8 @@
 
 namespace downloads\models;
 
-use Application\Models\Model_base;
 use Application as A;
+use Application\Models\Model_base;
 
 class MDownloads extends Model_base
 {

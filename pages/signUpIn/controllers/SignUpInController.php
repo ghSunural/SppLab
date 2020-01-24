@@ -4,50 +4,83 @@
 namespace Application\Controllers;
 
 
+use Application\Debug;
+use signin\models as M;
+use user\models\TUser;
+use user\models\TUserFactory;
+
 class SignUpInController extends BaseController
 {
 
-    public function actionIndex()
+    public function acnSign($acn)
     {
-        //$var = ::get;
-        // $this->models['var'] = $var;
-        $this->render("pages/signUpIn/views/#VSignUp.php");
+        switch ($acn) {
+            case 'login':
+                $this->render("pages/signUpIn/views/#VLogIn.php");
+                break;
+            case 'reg':
+                $this->render("pages/signUpIn/views/#VSignUp.php");
+                break;
+            case 'auth':
+                self::acnAuth();
+                break;
+            default:
+                $this->render("pages/signUpIn/views/#VLogIn.php");
+        }
     }
 
-    public function actionLogIn()
+    private function acnAuth()
     {
-        //$var = ::get;
-        // $this->models['var'] = $var;
-        $this->render("pages/signUpIn/views/#VLogIn.php");
-    }
 
-    public function actionSignUp()
-    {
-        //$var = ::get;
-        // $this->models['var'] = $var;
-        $this->render("pages/signUpIn/views/#VSignUp.php");
+        /*
+        //echo "Авторизация";
+        //Debug::print_array($_REQUEST);
+        $user = TUserFactory::createEmptyUser();
+        $_REQUEST['Surname'];
+        // if(){проверка повторного пароля}
+
+        $user['Surname'] = $_REQUEST['Surname'];
+        // Debug::print_array($user);
+
+        if (isset($user['Surname'])) {
+            $user['Surname'] = $_POST["Surname"];
+        } else {
+            $user['Surname'] = '';
+        }
+
+
+        $this->models['user'] = $user;
+
+
+        M\MSignUpIn::auth();
+        */
     }
 
 
     public static function actionRegister()
     {
-        $name = '';
-        $email = '';
-        $password = '';
-
-        $userAttrib = array(
-            'name' => $name,
-            'email' => $email,
-            'password' => $password
-        );
-
+       /*
+        echo 'reg';
+        Debug::print_array($_POST);
         if (!isset($_POST["submit"])) {
+
             return false;
         }
+        echo 'reg2';
+       */
 
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $password = $_POST["password"];
+        $user = TUserFactory::createEmptyUser();
+       // FormValid()
+
+        $user->setSurname($_POST["Surname"]);
+        $user->setFirstName($_POST["firstName"]);
+        $user->setLogin($_POST["login"]);
+        $user->setEmail($_POST["email"]);
+        $user->setPassword($_POST["password_"]);
+
+        Debug::print_array($_POST);
+        echo $user;
+        Debug::print_array($user);
 
         /*
                 if(isset($name)){
@@ -68,6 +101,12 @@ class SignUpInController extends BaseController
     {
 
         $this->render("pages/signUpIn/articles/userAgreement.html");
+    }
+
+    function actionLogInEnter()
+    {
+
+
     }
 
 }

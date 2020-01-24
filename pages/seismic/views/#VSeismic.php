@@ -1,7 +1,5 @@
 ﻿<?php
 
-use Application as A;
-
 $regions = $this->models['regions'];
 
 ?>
@@ -22,29 +20,13 @@ require "core/base_views/VHead.php";
     $Header_leftContent = "Сейсмичность";
     $Header_rightContent = "СП 14.13330.2018 Строительство в сейсмических районах.
                               Актуализированная редакция СНиП II-7-81*";
-    require "views/page_templates/VMinorHeader.php";
+    require "core/base_views/VMinorHeader.php";
     ?>
 
     <main class="Main block block_wrap">
 
-        <aside class="side-bar block block_wrap main_bkg_color-2 main_text_color-2">
-            <nav class="catalog block">
-                <ul>
-                    <li><a href="#tables">Таблицы</a></li>
-                    <li><a href="#maps">Карты</a></li>
-                    <li><a href="seismic/allEarthquakes">Каталог изветных землятресений</a></li>
-                    Полезные ссылки
-                    <li><a href="http://neotec.ginras.ru/database.html" target="_blank">База данных разломов</a></li>
-                    <li><a href="http://eqru.gsras.ru/stations/index.php" target="_blank">Сейсмические станции России</a></li>
-                    <li><a href="http://www.gsras.ru/new/ssd_news.htm" target="_blank">Последние землетрясения</a></li>
-                    <li><a href="http://www.ceme.gsras.ru/cgi-bin" target="_blank">Землетрясения в радиусе от заданной точки</a></li>
-                    <li><a href="https://earthquake.usgs.gov/earthquakes/search/" target="_blank">Американский каталог</a></li>
-
-                    </ul>
-            </nav>
-        </aside>
-
-        <section class="content content_with_sideBar block block_wrap main_bkg_color-4">
+<div class="block fl fl-w">
+        <section class="block content_with_rightSideBar main_bkg_color-4">
 
         <section class="block block_wrap main_bkg_color-4">
 
@@ -78,6 +60,23 @@ require "core/base_views/VHead.php";
 
         </section>
         </section>
+        <aside class="block right-side-bar main_bkg_color-2 main_text_color-2">
+            <nav class="catalog block">
+                <ul>
+                    <li><a href="#tables">Таблицы</a></li>
+                    <li><a href="#maps">Карты</a></li>
+                    <li><a href="/seismic/allEarthquakes">Каталог известных землятресений</a></li>
+                    Полезные ссылки
+                    <li><a href="http://neotec.ginras.ru/database.html" target="_blank">База данных разломов</a></li>
+                    <li><a href="http://eqru.gsras.ru/stations/index.php" target="_blank">Сейсмические станции России</a></li>
+                    <li><a href="http://www.gsras.ru/new/ssd_news.htm" target="_blank">Последние землетрясения</a></li>
+                    <li><a href="http://www.ceme.gsras.ru/cgi-bin" target="_blank">Землетрясения в радиусе от заданной точки</a></li>
+                    <li><a href="https://earthquake.usgs.gov/earthquakes/search/" target="_blank">Американский каталог</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+</div>
     </main>
     <?php require "core/base_views/VSiteFooter.php" ?>
 </div>

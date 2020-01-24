@@ -2,13 +2,9 @@
 
 namespace climate\models;
 
-use Application as A;
-use Application\Models as M;
-use Application\Databases as DB;
+use PHPUnit_Framework_TestCase;
 
-use PHPUnit\Framework\TestCase;
-
-class MTable_5_1_temperatureTest extends \PHPUnit_Framework_TestCase
+class MTable_5_1_temperatureTest extends PHPUnit_Framework_TestCase
 {
 
     public function testGetAbsSumNegative()

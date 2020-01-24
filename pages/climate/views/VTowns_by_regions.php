@@ -1,5 +1,5 @@
 ﻿<?php
-use Application as A;
+
 use climate\models as M;
 
 $region = $this->region;
