@@ -57,3 +57,4 @@ class Debug
         return $caller;
     }
 }
+
