@@ -10,21 +10,8 @@ use Application\Debug;
 class MUsers implements IUsers
 {
 
-    public function addUser(TUser $user){
-
-        // Текст запроса к БД
-        $sql = 'INSERT INTO TUser 
-                 (surname, firstName, login, passwordHash, email, ref_role_id)  '
-            . 'VALUES (:surname, :firstName, :login,:passwordHash,:email, :ref_role_id)';
 
 
-
-    }
-
-    public function getUserByLogin($login){
-
-
-    }
 
     /**
      * Регистрация пользователя
@@ -59,31 +46,9 @@ class MUsers implements IUsers
      * @param string $password <p>Пароль</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function getById($id)
-    {
-        $userParam = DB\ORM::findRows(A\DB_connection::$link_1, "TUsers", "ID = '{$id}'");
-        Debug::print_array($userParam, 'Пользователь ' . $id);
-        return $userParam;
-    }
 
 
-    public static function edit($id, $name, $password)
-    {
-        // Соединение с БД
-        $db = Db::getConnection();
 
-        // Текст запроса к БД
-        $sql = "UPDATE user 
-            SET name = :name, password = :password 
-            WHERE id = :id";
-
-        // Получение и возврат результатов. Используется подготовленный запрос
-        $result = $db->prepare($sql);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-        $result->bindParam(':name', $name, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-        return $result->execute();
-    }
 
     /**
      * Проверяем существует ли пользователь с заданными $email и $password
@@ -119,10 +84,11 @@ class MUsers implements IUsers
      * Запоминаем пользователя
      * @param integer $userId <p>id пользователя</p>
      */
-    public static function auth($userId)
+    public static function auth($userRole)
     {
         // Записываем идентификатор пользователя в сессию
-        $_SESSION['user'] = $userId;
+      //  $_SESSION['user'] = $userId;
+        $_SESSION['userRole'] = $userRole;
     }
 
     /**
@@ -143,7 +109,7 @@ class MUsers implements IUsers
     /**
      * Проверяет является ли пользователь гостем
      * @return boolean <p>Результат выполнения метода</p>
-     */
+
     public static function isGuest()
     {
         if (isset($_SESSION['user'])) {
@@ -151,6 +117,8 @@ class MUsers implements IUsers
         }
         return true;
     }
+     *
+     *  */
 
     /**
      * Проверяет имя: не меньше, чем 2 символа

@@ -22,8 +22,7 @@ class CalculatorController extends BaseController
     {
         if (isset($_POST["number"])) {
             $num = $_POST["number"];
-        }
-        else{
+        } else {
             $num = '';
         }
 
@@ -41,6 +40,12 @@ class CalculatorController extends BaseController
         }
 
         $this->render("pages/calculators/views/VCalculatorsNum2str.php");
+    }
+
+    public function actionConverterKML()
+    {
+        $this->render("pages/calculators/views/VConverterKML.php");
+
     }
 
 }

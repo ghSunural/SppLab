@@ -19,7 +19,7 @@ interface IUsers
      * @param string $password <p>Пароль</p>
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function edit($id, $name, $password);
+   // public static function edit($id, $name, $password);
 
     /**
      * Проверяем существует ли пользователь с заданными $email и $password
@@ -46,7 +46,7 @@ interface IUsers
      * Проверяет является ли пользователь гостем
      * @return boolean <p>Результат выполнения метода</p>
      */
-    public static function isGuest();
+  //  public static function isGuest();
 
     /**
      * Проверяет имя: не меньше, чем 2 символа

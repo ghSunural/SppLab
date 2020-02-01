@@ -36,6 +36,8 @@ return array(
 
     'geophysics' => 'GeophysicsController/actionIndex',
     'calculators/num2str' => 'CalculatorController/actionNum2strNum',
+    'calculators/converterKML' => 'CalculatorController/actionConverterKML',
+
     //'calculators/num2str?number=([0-9]+)' => 'CalculatorController/actionNum2strNum',
     'calculators' => 'CalculatorController/actionIndex',
 

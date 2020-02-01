@@ -79,6 +79,7 @@ require "core/base_views/VSiteHeader.php"
             <p align="justify" class="H_hint">
                 Сервис вспомогательных вычислений
             <ul>
+                <li><a href="calculators/converterKML" target="">Конвертер KML</a></li>
                 <li><a href="calculators/num2str" target="">Число прописью</a></li>
             </ul>
             </p>

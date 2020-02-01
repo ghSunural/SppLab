@@ -9,7 +9,7 @@ use signin\models as M;
 use user\models\TUser;
 use user\models\TUserFactory;
 
-class SignUpInController extends BaseController
+class  SignUpInController extends BaseController
 {
 
     public function acnSign($acn)

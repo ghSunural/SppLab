@@ -5,6 +5,7 @@
 
     "require": {
         "components/jquery": "3.4.*",
-      "ext-mbstring": "*"
+      "ext-mbstring": "*",
+      "ext-pdo": "*"
     }
 }

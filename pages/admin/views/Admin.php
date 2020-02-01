@@ -1,5 +1,5 @@
 <?php
-
+$users = $this->models["users"];
 /*
 $_FILES['image'];
 
@@ -15,7 +15,8 @@ if (is_uploaded_file()) {
 $db_response = $this->models['db_response'];
 $sql_body = $this->models['sql_body'];
 
-?>
+use Application\DB_connection;
+use Application\Html; ?>
 
 <!DOCTYPE html>
 <html lang="ru">
@@ -88,32 +89,11 @@ require "core/base_views/VHead.php";
         <br>
         <br>
 
-        <div class="tabs">
-            <div><a href="#one">1</a></div>
-            <div><a href="#two">2</a></div>
-            <div><a href="#three">3</a></div>
-            <div><a href="#four">4</a></div>
-            <div><a href="#five">5</a></div>
-        </div>
-        <div class="tabs-content">
-            <div>
-                <div id="one">Содержимое 1-й вкладки</div>
-                <div id="two">Содержимое 2-й вкладки</div>
-                <div id="three">Содержимое 3-й вкладки</div>
-                <div id="four">Содержимое 4-й вкладки</div>
-                <div id="five">Содержимое 5-й вкладки</div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <br>
-
 
         <section class="content block block_wrap  main_bkg_color-4">
             <br>
 
             <section name="database">
-
 
 
                 <div class="block block_wrap bb fl fl_w">
@@ -149,7 +129,15 @@ describe TAllEarthquakes;
             </section>
             <hr>
 
+            <?php
 
+            echo Html::convertRowsArray2HtmlTable($users);
+
+
+            ?>
+
+
+            <hr>
             <ul class="tabs">
                 <li><a href="#one">1</a></li>
                 <li><a href="#two">2</a></li>
@@ -203,8 +191,6 @@ describe TAllEarthquakes;
     });
 </script>
 
-
-//меню- стайл
 
 <style>
     /*

@@ -18,7 +18,7 @@ class Html
 
     public static function convertRowsArray2HtmlTable($rowsArray, $columnHeaders = NULL)
     {
-          $tableAsHtml = <<< EOL
+        $tableAsHtml = <<< EOL
          <table  border="1" bordercolor="black" 
            style="
                           
@@ -26,12 +26,9 @@ class Html
            ">
          <caption></caption>       
 EOL;
-
-
         if (isset($columnHeaders)) {
 
             $tableAsHtml .= "<tr> \n";
-           // array_keys();
 
             foreach ($columnHeaders as $cell) {
                 $tableAsHtml .= "<th style='word-wrap: break-word; padding: 1px;'>" . $cell . "</th> \n";
@@ -44,18 +41,18 @@ EOL;
         foreach ($rowsArray as $row) {
 
             if (is_array($row)) {
-               // $row = Util::convertStr2Arr($row);
+                // $row = Util::convertStr2Arr($row);
                 // Debug::print_array($row);
                 $TR = "";
                 foreach ($row as $cell) {
 
                     $TR .= self::getTD($cell);
                 }
-
                 $tableAsHtml .= self::getTR($TR);
+
             } else {
                 //$row = Util::convertStr2Arr($row);
-                $row = (array) $row;
+                $row = (array)$row;
                 // Debug::print_array($row);
                 $TR = "";
                 foreach ($row as $cell) {
@@ -79,6 +76,21 @@ EOL;
     private static function getTD($cellContent)
     {
         return "\n<td width=auto align=\"center\" style=\"word-wrap: break-word;\">\n$cellContent\n </td>";
+    }
+
+    public static function convertRow2HtmlList($row, $columnHeaders = NULL){
+
+        $listAsHtml = <<< EOL
+         <table  border="1" bordercolor="black" 
+           style="                          
+           border-collapse: collapse;
+           ">
+          
+EOL;
+
+        $listAsHtml .= "</tr> \n";
+
+        return $listAsHtml;
     }
 
 

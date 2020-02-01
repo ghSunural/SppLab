@@ -5,6 +5,8 @@ namespace Application\Controllers;
 use admin\models as M;
 use Application as A;
 use Application\Databases as DB;
+use Application\DB_connection;
+use Application\Html;
 use PDO;
 
 //CRUD
@@ -26,6 +28,9 @@ class AdminController extends BaseController
 
     public function actionIndex2()
     {
+
+        $this->models['users'] = DB\MPUser::readAll(DB_connection::$link_1);
+
 
         // self::checkAdmin();
 

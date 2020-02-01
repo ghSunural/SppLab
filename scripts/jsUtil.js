@@ -40,7 +40,7 @@
             console.log('Сохранено в файле');
         };
 
-        function downloadFile(filename, text) {
+        exports.downloadFile = function(filename, text) {
             var pom = document.createElement('a');
             pom.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
             pom.setAttribute('download', filename);
@@ -52,7 +52,7 @@
             } else {
                 pom.click();
             }
-        }
+        };
 
         exports.pushHtmlToFrame = function (id, innerText) {
             window.frames[0].document.getElementById(id).innerHTML = innerText;
@@ -104,6 +104,22 @@
 
             doSearch(document.getElementById("search").value);
         };
+
+
+
+        var htReq = ('v' === '\v') ? new ActiveXObject ('Microsoft.XMLHTTP') : new XMLHttpRequest ();
+
+        function sendReq ()
+        {
+            htReq.open ('get', 'myfile.txt');
+            htReq.onreadystatechange = getReq;
+            htReq.send (null);
+        }
+
+        function getReq ()
+        {
+            if (htReq.readyState === 4) alert (htReq.responseText); // !!!
+        }
 
 
     }(window.jsUtil = {})

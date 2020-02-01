@@ -11,7 +11,7 @@ class TUser
 {
     // Alt-insert - быстрые геттеры
     // Ctrl+Shift+ +-
-    // private $id;
+    private $id;
     private $surname;
     private $firstName;
     private $login;
@@ -58,6 +58,7 @@ class TUser
     public function __toString()
     {
         return
+            'id: ' . $this->id . '<br>' .
             'surname: ' . $this->surname . '<br>' .
             'firstName: ' . $this->firstName . '<br>' .
             'login: ' . $this->login . '<br>' .
@@ -77,6 +78,14 @@ class TUser
     public function setRole($role)
     {
         $this->role = $role;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRole()
+    {
+        return $this->role;
     }
 
     /**

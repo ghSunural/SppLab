@@ -15,9 +15,9 @@ $tableAsHtml = A\Html::convertRowsArray2HtmlTable($arrEarthquakes, $arrColumnHea
 $title = "Каталог";
 $styles['main-css'] = "/css/styles.css";
 //$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
-$scripts['ymaps2'] = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=369c0410-04f2-44bc-8b5e-db38533c045b";
+//$scripts['ymaps2'] = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=369c0410-04f2-44bc-8b5e-db38533c045b";
 
-$scripts['geoxml'] = "https://yandex.st/jquery/2.2.3/jquery.min.js";
+//$scripts['geoxml'] = "https://yandex.st/jquery/2.2.3/jquery.min.js";
 //$scripts['geoxml2'] = "pages/seismic/scripts/geoxml_display.js";
 
 
@@ -196,7 +196,7 @@ require "core/base_views/VHead.php";
     .inputs {
         padding: 10px;
     }
-</style
+</style>
 
 
 
