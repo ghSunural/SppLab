@@ -6,22 +6,22 @@ $regions = $this->models['regions'];
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "SL-Климат";
-$styles['main-css'] = "css/styles.css";
+$title = 'SL-Климат';
+$styles['main-css'] = 'css/styles.css';
 
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 
 <div class="page block block_wrap">
 <?php
-$Header_leftContent = "Строительная климатология";
-$Header_rightContent = "СП 131.13330.2018 \"СНиП 23-01-99* Строительная климатология\""
-    . "<br>" . "СП 22.13330.2016 Основания зданий и сооружений.
-    Актуализированная редакция СНиП 2.02.01-83* (с Изменениями №1, 2)";
-require "core/base_views/VMinorHeader.php";
+$Header_leftContent = 'Строительная климатология';
+$Header_rightContent = 'СП 131.13330.2018 "СНиП 23-01-99* Строительная климатология"'
+    .'<br>'.'СП 22.13330.2016 Основания зданий и сооружений.
+    Актуализированная редакция СНиП 2.02.01-83* (с Изменениями №1, 2)';
+require 'core/base_views/VMinorHeader.php';
 ?>
 
 <main class="Main block block_wrap fl fl_nw">
@@ -45,14 +45,14 @@ require "core/base_views/VMinorHeader.php";
             <?php
             foreach ($regions as $region) {
                 $this->region = $region;
-                require "VTowns_by_regions.php";
-            };
+                require 'VTowns_by_regions.php';
+            }
             ?>
         </nav>
 
     </section>
 </main>
-<?php require "core/base_views/VSiteFooter.php" ?>
+<?php require 'core/base_views/VSiteFooter.php' ?>
 
 </div>
 </body>

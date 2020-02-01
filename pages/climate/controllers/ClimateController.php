@@ -1,22 +1,20 @@
 <?php
 
-
 namespace Application\Controllers;
 
 use climate\models as M;
 
 class ClimateController extends BaseController
 {
-
     public function actionIndex()
     {
         $regions = M\MTowns::getRegions();
         $this->models['regions'] = $regions;
-        $this->render("pages/climate/views/#VClimate.php");
+        $this->render('pages/climate/views/#VClimate.php');
     }
 
-    public function actionView($ID){
-
+    public function actionView($ID)
+    {
         $town = M\MTowns::getTownByID($ID);
         $this->models['town'] = $town;
         // A\Debug::print_array($town);
@@ -34,10 +32,7 @@ class ClimateController extends BaseController
         $this->models['warmSeasonData'] = $warmSeasonData;
 
         //$this->views['climate'] = "views/climate/VClimateReport.php";
-       // $this->render($this->views['climate']);
-        $this->render("pages/climate/views/VClimateReport.php");
+        // $this->render($this->views['climate']);
+        $this->render('pages/climate/views/VClimateReport.php');
     }
-
 }
-
-?>

@@ -1,22 +1,22 @@
-﻿<?php
+<?php
 ?>
 
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "SL-Калькуляторы";
-$styles['main-css'] = "/css/styles.css";
+$title = 'SL-Калькуляторы';
+$styles['main-css'] = '/css/styles.css';
 $scripts[] = '';
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
 <?php
-$Header_leftContent = "Калькуляторы";
-$Header_rightContent = "";
-require "core/base_views/VMinorHeader.php";
+$Header_leftContent = 'Калькуляторы';
+$Header_rightContent = '';
+require 'core/base_views/VMinorHeader.php';
 ?>
 
 <main class="Main block block_wrap fl fl_nw">
@@ -38,14 +38,12 @@ require "core/base_views/VMinorHeader.php";
         <nav class="">
             <?php
 
-
-
             ?>
         </nav>
 
     </section>
 </main>
-<?php require "core/base_views/VSiteFooter.php" ?>
+<?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 </html>

@@ -36,7 +36,7 @@
 
             <?php
             echo self::$user_error_message;
-            echo "<hr>";
+            echo '<hr>';
             echo self::$system_error_message;
             ?>
         </div>

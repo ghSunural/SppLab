@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: 1
  * Date: 21.02.2019
- * Time: 16:42
+ * Time: 16:42.
  */
 
 namespace Application\Controllers;
@@ -12,7 +12,6 @@ namespace Application\Controllers;
 
 class UsersController
 {
-
     public function actionRegister()
     {
         // Переменные для формы
@@ -54,12 +53,13 @@ class UsersController
         }
 
         // Подключаем вид
-        require_once(ROOT . '/views/user/register.php');
+        require_once ROOT.'/views/user/register.php';
+
         return true;
     }
 
     /**
-     * Action для страницы "Вход на сайт"
+     * Action для страницы "Вход на сайт".
      */
     public function actionLogin()
     {
@@ -96,17 +96,18 @@ class UsersController
                 User::auth($userId);
 
                 // Перенаправляем пользователя в закрытую часть - кабинет
-                header("Location: /cabinet");
+                header('Location: /cabinet');
             }
         }
 
         // Подключаем вид
-        require_once(ROOT . '/views/user/login.php');
+        require_once ROOT.'/views/user/login.php';
+
         return true;
     }
 
     /**
-     * Удаляем данные о пользователе из сессии
+     * Удаляем данные о пользователе из сессии.
      */
     public function actionLogout()
     {
@@ -114,35 +115,25 @@ class UsersController
         session_start();
 
         // Удаляем информацию о пользователе из сессии
-        unset($_SESSION["user"]);
+        unset($_SESSION['user']);
 
         // Перенаправляем пользователя на главную страницу
-        header("Location: /");
+        header('Location: /');
     }
-
-
 
     public function actionCreate()
     {
-
     }
 
     public function actionRead()
     {
-
     }
 
     public function actionUpdate()
     {
-
     }
 
     public function actionDelete()
     {
-
     }
-
-
-
-
 }

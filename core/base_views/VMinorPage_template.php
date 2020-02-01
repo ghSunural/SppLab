@@ -1,7 +1,5 @@
 <?php
 
-
-
 ?>
 
 
@@ -10,8 +8,8 @@
 use Application as A;
 use Application\Views as V;
 
-$styles[0] = A\config::SITE_URL() . "css/styles.css";
-$head_as_html = V\Html::getView_Head("Spp-Lab", $styles);
+$styles[0] = A\config::SITE_URL().'css/styles.css';
+$head_as_html = V\Html::getView_Head('Spp-Lab', $styles);
 ?>
 
 
@@ -19,7 +17,7 @@ $head_as_html = V\Html::getView_Head("Spp-Lab", $styles);
 <html lang="ru">
 <?php
 echo $head_as_html;
-echo <<<EOL
+echo <<<'EOL'
 <!--
   <script src="https://api-maps.yandex.ru/2.1/?apikey=369c0410-04f2-44bc-8b5e-db38533c045b&lang=ru_RU"
   type="text/javascript">
@@ -30,7 +28,7 @@ EOL;
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
 
 <main class="block block_wrap fl fl_nw">
@@ -43,7 +41,7 @@ EOL;
 
     </section>
 </main>
-<?php require "core/base_views/VSiteFooter.php" ?>
+<?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 </html>

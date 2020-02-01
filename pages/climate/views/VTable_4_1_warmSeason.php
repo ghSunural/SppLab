@@ -1,4 +1,5 @@
 <?php
+
 namespace climate\views;
 
 $warmSeasonData = $this->models['warmSeasonData'];
@@ -135,4 +136,3 @@ echo <<< EOL
 </table>
 </div>
 EOL;
-?>

@@ -6,15 +6,13 @@ use Application as A;
 
 class Router
 {
-
-    private $namespace = "Application\\Controllers\\";
+    private $namespace = 'Application\\Controllers\\';
     private $routes;
-
 
     public function __construct()
     {
         //список маршрутов
-        $this->routes = require(A\config::SITE_ROOT() . "core/router/routesList.php");
+        $this->routes = require A\config::SITE_ROOT().'core/router/routesList.php';
     }
 
     private function getURI()
@@ -26,7 +24,6 @@ class Router
 
     public function run()
     {
-
         try {
             // Получить строку запроса
             $uri = $this->getURI();
@@ -45,16 +42,16 @@ class Router
                     $segments = explode('/', $internalRoute);
 
                     $controllerName = array_shift($segments);
-                    $controllerName = ($this->namespace) . ucfirst($controllerName);
+                    $controllerName = ($this->namespace).ucfirst($controllerName);
 
                     $actionName = ucfirst(array_shift($segments));
 
                     $parameters = $segments;
 
                     // Создать объект, вызвать метод (т.е. action)
-                    $controllerObject = new $controllerName;
+                    $controllerObject = new $controllerName();
 
-                    $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
+                    $result = call_user_func_array([$controllerObject, $actionName], $parameters);
 
                     //должен прекратить поиск если $result != null
                     /* if ($result != null) {
@@ -68,18 +65,17 @@ class Router
                     }
                 }
             }
-        } catch(Exception $e) {
-          echo 'екм акарек';
+        } catch (Exception $e) {
+            echo 'екм акарек';
             //  throw $e;
         }
     }
 
-
-
-
     /**
-     * find controller
+     * find controller.
+     *
      * @param string $none
+     *
      * @return void_none
      */
     /*
@@ -181,7 +177,4 @@ class Router
         return $route_as_array;
     }
       */
-
 }
-
-?>

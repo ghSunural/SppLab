@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 use Application as A;
 
@@ -7,19 +7,19 @@ use Application as A;
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "SL-Регистрация";
-$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
+$title = 'SL-Регистрация';
+$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
 $scripts[] = '';
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "Аутентификация / авторизация";
-    $Header_rightContent = "вход";
-    require "core/base_views/VMinorHeader.php";
+    $Header_leftContent = 'Аутентификация / авторизация';
+    $Header_rightContent = 'вход';
+    require 'core/base_views/VMinorHeader.php';
     ?>
 
     <main class="Main block block_wrap fl fl_nw">
@@ -57,7 +57,7 @@ require "core/base_views/VHead.php";
             ?>
         </section>
     </main>
-    <?php require "core/base_views/VSiteFooter.php" ?>
+    <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 </html>

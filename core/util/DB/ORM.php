@@ -7,19 +7,17 @@ use PDO;
 
 class ORM
 {
-
-    public static function sqlQuery($linkedDB, $sql_body, $fetchMode = NULL)
+    public static function sqlQuery($linkedDB, $sql_body, $fetchMode = null)
     {
 
         //только имена PDO::FETCH_ASSOC = 2
         //только цыфры PDO::FETCH_NUM = 3
         //и цифры и буквы PDO::FETCH_BOTH = 4
         if (is_null($fetchMode)) {
-
             $fetchMode = PDO::FETCH_BOTH;
         }
 
-        $rowsArray = array();
+        $rowsArray = [];
 
         $statement = $linkedDB->query($sql_body);
         $statement->setFetchMode($fetchMode);
@@ -31,13 +29,10 @@ class ORM
         return $rowsArray;
     }
 
-    static function findRows($linkedDB, $table, $expression = null)
+    public static function findRows($linkedDB, $table, $expression = null)
     {
-
-        $rows = array();
+        $rows = [];
         //$rowsArray = array();
-
-
 
         $sql = is_null($expression)
             ? "select * from  $table"
@@ -60,15 +55,12 @@ class ORM
         }
         // A\Debug::print_array($rows);
         return $rows;
-
-
     }
 
     public static function getColumnHeaders($linkedDB, $tableName)
     {
-
-        $columnHeaders = array();
-        $fields = self::sqlQuery($linkedDB, 'describe ' . $tableName);
+        $columnHeaders = [];
+        $fields = self::sqlQuery($linkedDB, 'describe '.$tableName);
         $i = 0;
         foreach ($fields as $f) {
             array_push($columnHeaders, $f[0]);
@@ -78,18 +70,14 @@ class ORM
         return $columnHeaders;
     }
 
-
-    static function deleteEntry($table, $key, $value)
+    public static function deleteEntry($table, $key, $value)
     {
-
         $link = A\App::$link_1;
         mysqli_query($link, "delete from $table where $key = $value");
     }
 
-
-    static function VAllEarthquakesQuery()
+    public static function VAllEarthquakesQuery()
     {
-
         $sql_body = " 
  select
     ID as '№ п/п',
@@ -114,10 +102,9 @@ where
                         and longitude < 120;";
 
         $table = self::sqlQuery(A\App::$link_1, $sql_body);
+
         return $table;
-
     }
-
 
     /*
         static function getMainPhoto($link, $article)
@@ -151,7 +138,4 @@ where
         }
 
     */
-
 }
-
-?>

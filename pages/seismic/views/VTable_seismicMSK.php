@@ -9,8 +9,6 @@ $OSR2015_A = $seismic->OSR2015_A;
 $OSR2015_B = $seismic->OSR2015_B;
 $OSR2015_C = $seismic->OSR2015_C;
 
-
-
 echo <<< EOL
 <input type="button" onclick="printDiv('printableArea')" value="Печать"/>
 

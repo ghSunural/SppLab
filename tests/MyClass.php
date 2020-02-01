@@ -1,6 +1,7 @@
 <?php
-class MyClass {
 
+class MyClass
+{
     public function power($x, $y)
     {
         return pow($x, $y);

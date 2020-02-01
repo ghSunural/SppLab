@@ -1,31 +1,27 @@
 <?php
 
-
 namespace Application\Controllers;
-
 
 use Application\Debug;
 use signin\models as M;
-use user\models\TUser;
 use user\models\TUserFactory;
 
-class  SignUpInController extends BaseController
+class SignUpInController extends BaseController
 {
-
     public function acnSign($acn)
     {
         switch ($acn) {
             case 'login':
-                $this->render("pages/signUpIn/views/#VLogIn.php");
+                $this->render('pages/signUpIn/views/#VLogIn.php');
                 break;
             case 'reg':
-                $this->render("pages/signUpIn/views/#VSignUp.php");
+                $this->render('pages/signUpIn/views/#VSignUp.php');
                 break;
             case 'auth':
                 self::acnAuth();
                 break;
             default:
-                $this->render("pages/signUpIn/views/#VLogIn.php");
+                $this->render('pages/signUpIn/views/#VLogIn.php');
         }
     }
 
@@ -56,27 +52,26 @@ class  SignUpInController extends BaseController
         */
     }
 
-
     public static function actionRegister()
     {
-       /*
-        echo 'reg';
-        Debug::print_array($_POST);
-        if (!isset($_POST["submit"])) {
+        /*
+         echo 'reg';
+         Debug::print_array($_POST);
+         if (!isset($_POST["submit"])) {
 
-            return false;
-        }
-        echo 'reg2';
-       */
+             return false;
+         }
+         echo 'reg2';
+        */
 
         $user = TUserFactory::createEmptyUser();
-       // FormValid()
+        // FormValid()
 
-        $user->setSurname($_POST["Surname"]);
-        $user->setFirstName($_POST["firstName"]);
-        $user->setLogin($_POST["login"]);
-        $user->setEmail($_POST["email"]);
-        $user->setPassword($_POST["password_"]);
+        $user->setSurname($_POST['Surname']);
+        $user->setFirstName($_POST['firstName']);
+        $user->setLogin($_POST['login']);
+        $user->setEmail($_POST['email']);
+        $user->setPassword($_POST['password_']);
 
         Debug::print_array($_POST);
         echo $user;
@@ -99,16 +94,10 @@ class  SignUpInController extends BaseController
 
     public function actionUserAgreement()
     {
-
-        $this->render("pages/signUpIn/articles/userAgreement.html");
+        $this->render('pages/signUpIn/articles/userAgreement.html');
     }
 
-    function actionLogInEnter()
+    public function actionLogInEnter()
     {
-
-
     }
-
 }
-
-?>

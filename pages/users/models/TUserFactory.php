@@ -1,18 +1,17 @@
 <?php
 
-
 namespace user\models;
 
 class TUserFactory
 {
-
-    public static function createNullUser(){
+    public static function createNullUser()
+    {
         return new TUser();
     }
 
-    public static function createEmptyUser(){
-
-        $user =  new TUser();
+    public static function createEmptyUser()
+    {
+        $user = new TUser();
 
         $user->setSurname('');
         $user->setFirstName('');
@@ -38,5 +37,4 @@ class TUserFactory
 
         return $user;
     }
-
 }
