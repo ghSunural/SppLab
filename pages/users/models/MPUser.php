@@ -84,6 +84,7 @@ class MPUser
         $sql = "DELETE FROM " . self::$tableName . "WHERE login =  :login";
         $stmt = $link->prepare($sql);
         $stmt->bindParam(':login', $login);
+        
         $stmt->execute();
 
 
