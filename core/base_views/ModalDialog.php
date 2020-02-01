@@ -3,13 +3,13 @@
 if (isset($openDialog_header)) {
     $openDialog_header = $openDialog_header;
 } else {
-    $openDialog_header = "ЗАГОЛОВОК";
+    $openDialog_header = 'ЗАГОЛОВОК';
 }
 
 if (isset($openDialog_htmlContent)) {
     $openDialog_htmlContent = $openDialog_htmlContent;
 } else {
-    $openDialog_htmlContent = "КОНТЕНТ";
+    $openDialog_htmlContent = 'КОНТЕНТ';
 }
 
 ?>

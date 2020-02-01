@@ -8,13 +8,10 @@ use Application\Models as M;
 
 class MTable_3_1_coldSeason extends M\Model_base
 {
-
-
-    static function getColdSeasonData($townID)
+    public static function getColdSeasonData($townID)
     {
-
         $data = new TTable_3_1_coldSeason();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TColdSeason", "ID = '{$townID}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TColdSeason', "ID = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];
@@ -44,8 +41,4 @@ class MTable_3_1_coldSeason extends M\Model_base
 
         return $data;
     }
-
-
-
-
 }

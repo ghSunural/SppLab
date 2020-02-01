@@ -7,15 +7,12 @@ use Application\Models\Model_base;
 
 class MDownloads extends Model_base
 {
-
     public static function getFileNamesArr($root, $subfolders)
     {
-        $fileNamesArr = array();
+        $fileNamesArr = [];
 
         foreach ($subfolders as $subfolder) {
-
-
-            $fileNamesArr[$subfolder] = A\Util::getSimpleFilesListWithAddInfo($root . $subfolder);
+            $fileNamesArr[$subfolder] = A\Util::getSimpleFilesListWithAddInfo($root.$subfolder);
             // array_push($fileNamesArr, $subfolder => A\Util::getSimpleFilesListWithAddInfo($root . $subfolder));
             //   A\Debug::print_array($fileNamesArr);
         }
@@ -23,7 +20,4 @@ class MDownloads extends Model_base
         //A\Debug::print_array($fileNamesArr);
         return $fileNamesArr;
     }
-
-
-
 }

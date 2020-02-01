@@ -1,6 +1,5 @@
 <?php
 
-
 namespace seismic\models;
 
 use Application as A;
@@ -11,9 +10,8 @@ use Util\geo\TGeoPoint;
 
 class MEarthquakes extends M\Model_base
 {
-    public static function getEarthquakesAsRowsArray($minLat, $maxLat, $minLong, $maxLong, $Mmin = NULL)
+    public static function getEarthquakesAsRowsArray($minLat, $maxLat, $minLong, $maxLong, $Mmin = null)
     {
-
         $sql_body = "select * from TAllEarthquakes
                      where latitude > $minLat 
                      and latitude < $maxLat 
@@ -26,7 +24,7 @@ class MEarthquakes extends M\Model_base
 
     public static function exportEarthquakes2Kml($outFileName, $Earthquakes_dbResp)
     {
-        $earthquakes = array();
+        $earthquakes = [];
         foreach ($Earthquakes_dbResp as $eq) {
 
           /*  $_year = $row[1];
@@ -43,7 +41,7 @@ class MEarthquakes extends M\Model_base
             $_polarAngle = $row[12];
             $_note = $row[13];
 */
-            $name = $eq['MLH'] . " " . $eq['note'];
+            $name = $eq['MLH'].' '.$eq['note'];
             $description = "MLH = {$eq['MLH']}
 {$eq['_year']}.{$eq['_month']}.{$eq['_day']}  {$eq['_hour']}:{$eq['_min']}:{$eq['sec']}
 Глубина = {$eq['DEPTH']} км
@@ -58,5 +56,3 @@ class MEarthquakes extends M\Model_base
         file_put_contents($outFileName, $kml);
     }
 }
-
-?>

@@ -1,27 +1,23 @@
 <?php
 
-
 namespace Util\geo;
-
 
 class TGeoPoint
 {
-
     private $name;
     private $description;
     private $lat;
     private $long;
     private $alt;
 
-    public function __construct($lat, $long, $alt = NULL, $name = NULL, $description = NULL)
+    public function __construct($lat, $long, $alt = null, $name = null, $description = null)
     {
         $this->lat = $lat;
         $this->long = $long;
         $this->alt = is_null($alt) ? 0 : $alt;
-        $this->name = is_null($name) ? "" : $name;
-        $this->description = is_null($description) ? "" : $description;
+        $this->name = is_null($name) ? '' : $name;
+        $this->description = is_null($description) ? '' : $description;
     }
-
 
     /**
      * @return mixed
@@ -63,7 +59,7 @@ class TGeoPoint
         return $this->alt;
     }
 
-    public  function toKml()
+    public function toKml()
     {
         return $PointAsKml = <<< EOL
 	<Placemark>
@@ -84,6 +80,4 @@ class TGeoPoint
     </Placemark>
 EOL;
     }
-
-
 }

@@ -4,22 +4,16 @@ namespace Application;
 
 class Resolver
 {
-
-
     public static function isAllowedFor($lowerAccessLevel)
     {
-
-        if  ((isset($_SESSION['role']) && $_SESSION['role'] > $lowerAccessLevel)
+        if ((isset($_SESSION['role']) && $_SESSION['role'] > $lowerAccessLevel)
         || $lowerAccessLevel < 2) {
             return true;
-        }
-        else{
+        } else {
             //  header('Location: /' );
-            die("доступ запрещен");
+            die('доступ запрещен');
             //  return false;
-
         }
-      //  return false;
-
+        //  return false;
     }
 }

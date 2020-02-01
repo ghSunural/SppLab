@@ -18,7 +18,7 @@
     <?php
     $headers = $this->models['http_headers'];
     foreach ($headers as $name => $value) {
-        echo "$name: $value\n" . "<br>";
+        echo "$name: $value\n".'<br>';
     }
     ?>
     <br>
