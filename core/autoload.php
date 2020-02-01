@@ -21,6 +21,7 @@ function autoload($className)
         'models',
         'util',
         'util/geo',
+        'tests',
 
         'pages/admin/models',
         'pages/admin/controllers',
