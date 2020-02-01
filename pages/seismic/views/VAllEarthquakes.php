@@ -1,10 +1,10 @@
-﻿<?php
+<?php
 
 use Application as A;
 
 $rangeCoord = $this->models['rangeCoord'];
-$arrEarthquakes = $this->models["arrEarthquakes"];
-$arrColumnHeaders = $this->models["arrColumnHeaders"];
+$arrEarthquakes = $this->models['arrEarthquakes'];
+$arrColumnHeaders = $this->models['arrColumnHeaders'];
 $tableAsHtml = A\Html::convertRowsArray2HtmlTable($arrEarthquakes, $arrColumnHeaders);
 
 ?>
@@ -12,28 +12,26 @@ $tableAsHtml = A\Html::convertRowsArray2HtmlTable($arrEarthquakes, $arrColumnHea
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "Каталог";
-$styles['main-css'] = "/css/styles.css";
+$title = 'Каталог';
+$styles['main-css'] = '/css/styles.css';
 //$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
 //$scripts['ymaps2'] = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=369c0410-04f2-44bc-8b5e-db38533c045b";
 
 //$scripts['geoxml'] = "https://yandex.st/jquery/2.2.3/jquery.min.js";
 //$scripts['geoxml2'] = "pages/seismic/scripts/geoxml_display.js";
 
-
-
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "КАТАЛОГ ЗЕМЛЕТРЯСЕНИЙ";
-    $Header_rightContent = "Специализированный каталог землетрясений
+    $Header_leftContent = 'КАТАЛОГ ЗЕМЛЕТРЯСЕНИЙ';
+    $Header_rightContent = 'Специализированный каталог землетрясений
 для задач общего сейсмического районирования территории
-Российской Федерации (ред. В.И.Уломов, Н.С.Медведева, Институт физики Земли РАН)";
-    require "core/base_views/VMinorHeader.php";
+Российской Федерации (ред. В.И.Уломов, Н.С.Медведева, Институт физики Земли РАН)';
+    require 'core/base_views/VMinorHeader.php';
 
     ?>
     <script src="/pages/seismic/scripts/geoxml_display.js" type="text/javascript"></script>
@@ -167,7 +165,7 @@ require "core/base_views/VHead.php";
 
 
     </main>
-    <?php require "core/base_views/VSiteFooter.php" ?>
+    <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 </html>

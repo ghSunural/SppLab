@@ -10,12 +10,10 @@ $tempByMonth = $this->models['tempByMonth'];
 
 $sumNegativeTemp = $this->models['sumNegativeTemp'];
 
-
 $freezingDepth023 = M\MTable_5_1_temperature::getFreezingDepth(0.23, $sumNegativeTemp);
 $freezingDepth028 = M\MTable_5_1_temperature::getFreezingDepth(0.28, $sumNegativeTemp);
 $freezingDepth030 = M\MTable_5_1_temperature::getFreezingDepth(0.30, $sumNegativeTemp);
 $freezingDepth034 = M\MTable_5_1_temperature::getFreezingDepth(0.34, $sumNegativeTemp);
-
 
 $temperature_Month_1 = $tempByMonth[0];
 $temperature_Month_2 = $tempByMonth[1];
@@ -145,13 +143,12 @@ echo <<< EOL
 </table>  
 EOL;
 
-echo "</br>";
-echo "</br>";
-echo "Модуль суммы отрицательных температур: " . $sumNegativeTemp;
+echo '</br>';
+echo '</br>';
+echo 'Модуль суммы отрицательных температур: '.$sumNegativeTemp;
 
-echo "</br>";
-echo "</br>";
-
+echo '</br>';
+echo '</br>';
 
 echo <<< EOL
 
@@ -222,6 +219,3 @@ echo <<< EOL
 </table>  
 </div> 
 EOL;
-
-
-?>

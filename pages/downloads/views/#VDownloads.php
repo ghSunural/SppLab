@@ -1,11 +1,9 @@
-﻿<?php
+<?php
 
 use Application as A;
 
-
 $subfolders = $this->models['files'];
 //A\Debug::print_array($subfolders);
-
 
 ?>
 
@@ -14,19 +12,19 @@ $subfolders = $this->models['files'];
 
 <html lang="ru">
 <?php
-$title = "SL-загрузки";
-$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
+$title = 'SL-загрузки';
+$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
 $scripts[] = '';
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "Загрузки";
-    $Header_rightContent = "скачивание файлов";
-    require "core/base_views/VMinorHeader.php";
+    $Header_leftContent = 'Загрузки';
+    $Header_rightContent = 'скачивание файлов';
+    require 'core/base_views/VMinorHeader.php';
     ?>
 
     <main class="Main block block_wrap fl fl_nw">
@@ -74,12 +72,11 @@ require "core/base_views/VHead.php";
                     <?php
 
                     foreach ($subfolders as $path => $subfolder) {
-                        echo $path . '<br>';
+                        echo $path.'<br>';
                         foreach ($subfolder as $file) {
                             //echo $file['name']."    ".$file['size'].'<br>';
 
-                            echo $file['name'] . "    " . $file['size'] . '<br>';
-
+                            echo $file['name'].'    '.$file['size'].'<br>';
                         }
                     }
 
@@ -88,7 +85,7 @@ require "core/base_views/VHead.php";
 
         </section>
     </main>
-    <?php require "core/base_views/VSiteFooter.php" ?>
+    <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 </html>

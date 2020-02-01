@@ -1,12 +1,11 @@
 <?php
 
-
 use Application as A;
 use Application\Views as V;
 
 $regions = $this->models['regions'];
-$styles[0] = A\config::SITE_URL() . "css/styles.css";
-$head_as_html = V\Html::getView_Head("Spp-Lab", $styles);
+$styles[0] = A\config::SITE_URL().'css/styles.css';
+$head_as_html = V\Html::getView_Head('Spp-Lab', $styles);
 ?>
 
 <aside class="side-bar block block_wrap">
@@ -27,12 +26,11 @@ $head_as_html = V\Html::getView_Head("Spp-Lab", $styles);
 
     <?php
     foreach ($regions as $region) {
-
         $this->region = $region;
 
-        require A\config::SITE_ROOT() . "views/climate/VTowns_by_regions.php";
+        require A\config::SITE_ROOT().'views/climate/VTowns_by_regions.php';
         // A\Debug::print_array($townsInRegions);
-    };
+    }
     ?>
 
 </nav>

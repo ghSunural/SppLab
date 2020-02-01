@@ -2,19 +2,19 @@
 <html lang="ru">
 
 <?php
-$title = "SPP-Lab";
-$styles['main-css'] = "/css/styles.css";
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
-require "core/base_views/VHead.php";
+$title = 'SPP-Lab';
+$styles['main-css'] = '/css/styles.css';
+$scripts['ymaps'] = 'https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink';
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
 
 <?php
-require "core/base_views/VMainToolbar.php"
+require 'core/base_views/VMainToolbar.php'
 ?>
 <?php
-require "core/base_views/VSiteHeader.php"
+require 'core/base_views/VSiteHeader.php'
 ?>
 
 <main class="Main block block_wrap fl fl_nw">
@@ -88,7 +88,7 @@ require "core/base_views/VSiteHeader.php"
     </section>
 </main>
 <?php
-require "core/base_views/VSiteFooter.php"
+require 'core/base_views/VSiteFooter.php'
 ?>
 </body>
 </html>

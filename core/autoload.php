@@ -1,69 +1,65 @@
 <?php
+
 //echo "<br>";
 spl_autoload_register('autoload');
 
 function autoload($className)
 {
-    $folders = array(
+    $folders = [
 
-        "config",
-        "core",
-        "core",
-        "core/auth",
-        "core/base_controllers",
-        "core/base_views",
-        "core/router",
-        "core/util",
-        "core/util/DB",
-        "core/util/ErrorHandler",
-        "core/util/html",
-        "models",
-        "util",
-        "util/geo",
+        'config',
+        'core',
+        'core',
+        'core/auth',
+        'core/base_controllers',
+        'core/base_views',
+        'core/router',
+        'core/util',
+        'core/util/DB',
+        'core/util/ErrorHandler',
+        'core/util/html',
+        'models',
+        'util',
+        'util/geo',
 
-        "pages/admin/models",
-        "pages/admin/controllers",
+        'pages/admin/models',
+        'pages/admin/controllers',
 
-        "pages/signUpIn/models",
-        "pages/signUpIn/controllers",
+        'pages/signUpIn/models',
+        'pages/signUpIn/controllers',
 
-        "pages/climate/models",
-        "pages/climate/controllers",
+        'pages/climate/models',
+        'pages/climate/controllers',
 
-        "pages/railways/models",
-        "pages/railways/controllers",
+        'pages/railways/models',
+        'pages/railways/controllers',
 
-        "pages/calculators/models",
-        "pages/calculators/controllers",
+        'pages/calculators/models',
+        'pages/calculators/controllers',
 
-        "pages/downloads/models",
-        "pages/downloads/controllers",
+        'pages/downloads/models',
+        'pages/downloads/controllers',
 
-        "pages/geophysics/models",
-        "pages/geophysics/controllers",
+        'pages/geophysics/models',
+        'pages/geophysics/controllers',
 
-        "pages/seismic/models",
-        "pages/seismic/controllers",
+        'pages/seismic/models',
+        'pages/seismic/controllers',
 
-        "pages/users/models",
-        "pages/users/controllers",
+        'pages/users/models',
+        'pages/users/controllers',
 
-        "pages/tests/models",
-        "pages/tests/controllers"
+        'pages/tests/models',
+        'pages/tests/controllers',
 
-
-
-
-    );
-
+    ];
 
     //  require end($parts) . ".php";
     //echo "<br>" . "Автолоад " . "<br>";
     foreach ($folders as $path) {
-
         $parts = explode('\\', $className); //DIRECTORY_SEPARATOR
 
-        $file_name = $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR . $path . DIRECTORY_SEPARATOR . end($parts) . '.php';
+        $file_name = $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR.$path.DIRECTORY_SEPARATOR.end($parts).'.php';
         //echo $file_name. "<br>";
         // $file_name =  . $value . DIRECTORY_SEPARATOR . end($parts) . '.php';
         if (is_file($file_name)) {
@@ -74,7 +70,6 @@ function autoload($className)
         }
     }
 
-
     /*
         $file_name = __DIR__ . DIRECTORY_SEPARATOR . $value . DIRECTORY_SEPARATOR . end($parts) . '.php';
 
@@ -83,7 +78,4 @@ function autoload($className)
             //   echo "Подключен: " . $file_name . "<br>";
         }
     */
-
 }
-
-?>

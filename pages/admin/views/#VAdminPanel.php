@@ -12,7 +12,6 @@ if (is_uploaded_file()) {
 }
 */
 
-
 //'image' name поля
 
 $db_response = $this->models['db_response'];
@@ -23,20 +22,20 @@ $sql_body = $this->models['sql_body'];
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "SL-Админ";
+$title = 'SL-Админ';
 //$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
-$styles['main-css'] = "/css/styles.css";
+$styles['main-css'] = '/css/styles.css';
 //$scripts['thisJS'] = A\config::SITE_URL() . "pages/admin/scripts/scripts.js";
 //$scripts['thisJS'] = "/pages/admin/scripts/scripts.js";
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 <meta name="robots" content="noindex, nofollow"/>
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "Админ";
-    $Header_rightContent = "администрирование сайта";
+    $Header_leftContent = 'Админ';
+    $Header_rightContent = 'администрирование сайта';
     //require "core/base_views/VMinorHeader.php";
     ?>
 
@@ -65,16 +64,15 @@ require "core/base_views/VHead.php";
                     // $table = DB\ORM::findRows(A\DB_connection::$link_1, $tableName);
                     echo A\Html::convertRowsArray2HtmlTable($columnHeaders);
                     echo '<br>';
-
                 }
                 ?>
 
 </div>
 <br>
 <?php
-echo "IP сервера: " . $_SERVER['SERVER_ADDR'];
+echo 'IP сервера: '.$_SERVER['SERVER_ADDR'];
 echo '<br>';
-echo "Мой IP: " . $_SERVER['REMOTE_ADDR'];
+echo 'Мой IP: '.$_SERVER['REMOTE_ADDR'];
 ?>
 
 https://db-02.sppural.ru
@@ -127,7 +125,7 @@ describe TAllEarthquakes;
 $a = null;
 echo $a;
 echo '</br>';
-echo (double) $a;
+echo (float) $a;
 
 ?>
 
@@ -197,7 +195,7 @@ die('Not a valid URL');
 
 
 </main>
-<?php require "core/base_views/VSiteFooter.php" ?>
+<?php require 'core/base_views/VSiteFooter.php' ?>
 
 </body>
 <script type="text/javascript" src="/pages/admin/scripts/scripts.js"></script>

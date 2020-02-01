@@ -4,12 +4,11 @@ namespace Application\Controllers;
 
 class TestsController extends BaseController
 {
-
     public function actionIndex()
     {
         //$var = ::get;
         // $this->models['var'] = $var;
-        $this->render("pages/tests/views/#VTests.php");
+        $this->render('pages/tests/views/#VTests.php');
     }
 
     public function actionView($ID)
@@ -17,7 +16,7 @@ class TestsController extends BaseController
         //$var = ::getBy($ID);
         //$this->models['var'] = $var;
 
-        $this->render("pages/tests/views/.php");
+        $this->render('pages/tests/views/.php');
     }
 
     public function actionShowEmpty()
@@ -25,10 +24,6 @@ class TestsController extends BaseController
         //$var = ::getBy($ID);
         //$this->models['var'] = $var;
 
-        $this->render("pages/tests/views/EmptyPage.php");
+        $this->render('pages/tests/views/EmptyPage.php');
     }
-
-
 }
-
-?>
