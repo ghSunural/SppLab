@@ -24,7 +24,7 @@ class MEarthquakes extends M\Model_base
 
     public static function exportEarthquakes2Kml($outFileName, $Earthquakes_dbResp)
     {
-        $earthquakes = [];
+        $earthquakes = array();
         foreach ($Earthquakes_dbResp as $eq) {
 
           /*  $_year = $row[1];

@@ -18,11 +18,11 @@ class TDataBase
         $charset = 'utf8';
         //DSN - data saurce name - имя источника данных = link
         $dsn = "mysql:host=$host;dbname=$dbName;charset=$charset";
-        $options = [
-            PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        $options = array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-            PDO::ATTR_EMULATE_PREPARES   => true,
-        ];
+            PDO::ATTR_EMULATE_PREPARES => true,
+        );
 
         //  try {
 

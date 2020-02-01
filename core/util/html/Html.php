@@ -5,8 +5,8 @@ namespace Application;
 class Html
 {
     protected $title;
-    protected $styles = [];
-    protected $scripts = [];
+    protected $styles = array();
+    protected $scripts = array();
 
     protected $page;
     protected $head;
@@ -92,7 +92,7 @@ EOL;
         return '&#'.$UTF_code.';';
     }
 
-    public static function getView_Head($title, $styles = [], $scripts = [])
+    public static function getView_Head($title, $styles = array(), $scripts = array())
     {
         $styles_as_html = '';
         if (($styles)) {

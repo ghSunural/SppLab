@@ -5,7 +5,7 @@ spl_autoload_register('autoload');
 
 function autoload($className)
 {
-    $folders = [
+    $folders = array(
 
         'config',
         'core',
@@ -52,7 +52,7 @@ function autoload($className)
         'pages/tests/models',
         'pages/tests/controllers',
 
-    ];
+    );
 
     //  require end($parts) . ".php";
     //echo "<br>" . "Автолоад " . "<br>";

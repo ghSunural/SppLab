@@ -9,7 +9,7 @@ class MDownloads extends Model_base
 {
     public static function getFileNamesArr($root, $subfolders)
     {
-        $fileNamesArr = [];
+        $fileNamesArr = array();
 
         foreach ($subfolders as $subfolder) {
             $fileNamesArr[$subfolder] = A\Util::getSimpleFilesListWithAddInfo($root.$subfolder);

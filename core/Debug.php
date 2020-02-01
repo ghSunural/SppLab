@@ -43,7 +43,7 @@ class Debug
         $baseOffset = 2;
         $offset += $baseOffset;
         $backtrace = debug_backtrace();
-        $caller = [];
+        $caller = array();
         if (isset($backtrace[$offset])) {
             $backtrace = $backtrace[$offset];
             if (isset($backtrace['class'])) {

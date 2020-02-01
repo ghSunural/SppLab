@@ -8,12 +8,12 @@ class MTable_5_1_temperatureTest extends PHPUnit_Framework_TestCase
 {
     public function testGetAbsSumNegative()
     {
-        $numbers = [
+        $numbers = array(
             0 => -2,
             1 => -1,
             2 => -1,
 
-        ];
+        );
         //   $numbers[0] = -1;
 
         print_r($numbers);

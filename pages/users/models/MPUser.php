@@ -51,7 +51,7 @@ class MPUser
     public static function readAll($link)
     {
         //SELECT GET
-        $users = [];
+        $users = array();
 
         $sql = 'SELECT * FROM '.self::$viewName;
         $stmt = $link->prepare($sql);
