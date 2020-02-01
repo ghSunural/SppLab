@@ -7,7 +7,6 @@ use Throwable;
 
 class TException extends Error implements Throwable
 {
-
     private $user_message_error;
     private $system_message_error;
 
@@ -26,10 +25,4 @@ class TException extends Error implements Throwable
     {
         return $this->user_message_error;
     }
-
 }
-
-
-
-
-?>

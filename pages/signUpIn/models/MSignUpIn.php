@@ -7,10 +7,8 @@ use user\models as U;
 
 class MSignUpIn extends Model_base
 {
-
     public static function auth()
     {
-
         $user = new U\TUser();
         /*
                session_start();
@@ -20,22 +18,20 @@ class MSignUpIn extends Model_base
                $_SESSION['login'] = $user->getLogin();
                $_SESSION['role'] = $user->getRole();
        */
-
     }
 
-
-    function sendMail($to, $subject, $body)
+    public function sendMail($to, $subject, $body)
     {
         //require 'class.phpmailer.php';
-        $from = "from@yourwebsite.com";
+        $from = 'from@yourwebsite.com';
         $mail = new PHPMailer();
         $mail->IsSMTP(true);            // используем протокол SMTP
         $mail->IsHTML(true);
         $mail->SMTPAuth = true;                  // разрешить SMTP аутентификацию
-        $mail->Host = "tls://smtp.yourwebsite.com"; // SMTP хост
+        $mail->Host = 'tls://smtp.yourwebsite.com'; // SMTP хост
         $mail->Port = 465;                    // устанавливаем SMTP порт
-        $mail->Username = "SMTP_Username";  //имя пользователя SMTP
-        $mail->Password = "SMTP_Password";  // SMTP пароль
+        $mail->Username = 'SMTP_Username';  //имя пользователя SMTP
+        $mail->Password = 'SMTP_Password';  // SMTP пароль
         $mail->SetFrom($from, 'From Name');
         $mail->AddReplyTo($from, 'From Name');
         $mail->Subject = $subject;
@@ -45,8 +41,7 @@ class MSignUpIn extends Model_base
         $mail->Send();
     }
 
-
-    function activation()
+    public function activation()
     {
         $msg = '';
         if (!empty($_GET['code']) && isset($_GET['code'])) {
@@ -57,14 +52,13 @@ class MSignUpIn extends Model_base
 
                 if (mysqli_num_rows($count) == 1) {
                     mysqli_query($connection, "UPDATE users SET status='1' WHERE activation='$code'");
-                    $msg = "Ваш аккаунт активирован";
+                    $msg = 'Ваш аккаунт активирован';
                 } else {
-                    $msg = "Ваш аккаунт уже активирован, нет необходимости активировать его снова.";
+                    $msg = 'Ваш аккаунт уже активирован, нет необходимости активировать его снова.';
                 }
             } else {
-                $msg = "Неверный код активации.";
+                $msg = 'Неверный код активации.';
             }
         }
     }
-
 }

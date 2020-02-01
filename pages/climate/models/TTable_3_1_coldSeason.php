@@ -4,7 +4,6 @@ namespace climate\models;
 
 class TTable_3_1_coldSeason
 {
-
     public $theColdestDay098;
     public $theColdestDay092;
     public $theColdestFiveDays098;
@@ -25,9 +24,7 @@ class TTable_3_1_coldSeason
     public $maxAvrWindSpeed;
     public $avrWindSpeed_l8;
 
-
     public function __construct()
     {
-
     }
 }

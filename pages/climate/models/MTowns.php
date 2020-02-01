@@ -1,22 +1,19 @@
 <?php
 
-
 namespace climate\models;
 
 use Application as A;
 use Application\Databases as DB;
 use Application\Models as M;
 
-
 class MTowns extends M\Model_base
 {
-    static function getTowns()
+    public static function getTowns()
     {
-        $towns = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns");
+        $towns = [];
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns');
 
         foreach ($rows as $row) {
-
             $town = new TTown();
             /*
             $town->ID = $row['ID_города'];
@@ -31,13 +28,12 @@ class MTowns extends M\Model_base
         }
 
         return $towns;
-
     }
 
-    static function getTownByID($townID)
+    public static function getTownByID($townID)
     {
-       // $towns = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns", "ID_города = '{$townID}'");
+        // $towns = array();
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns', "ID_города = '{$townID}'");
         $town_as_row = $rows[0];
 
         $town = new TTown();
@@ -48,16 +44,15 @@ class MTowns extends M\Model_base
         return $town;
     }
 
-    static function getRegions()
+    public static function getRegions()
     {
-        $regions = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TRegionsRF");
+        $regions = [];
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TRegionsRF');
         //  $link = A\App::$db_connection->getLink();
         //  $rows = mysqli_query($link, "select * from TRegionsRF");
 
-      // A\Debug::print_array($rows);
+        // A\Debug::print_array($rows);
         foreach ($rows as $row) {
-
             $region = $row[1];
             array_push($regions, $region);
         }
@@ -65,11 +60,10 @@ class MTowns extends M\Model_base
         return $regions;
     }
 
-
     public static function getTownsByRegion($region)
     {
-        $towns = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"VTowns", "Регион = '$region'");
+        $towns = [];
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns', "Регион = '$region'");
         // A\Debug::print_array($rows);
         foreach ($rows as $row) {
 
@@ -86,5 +80,3 @@ class MTowns extends M\Model_base
         return $towns;
     }
 }
-
-?>

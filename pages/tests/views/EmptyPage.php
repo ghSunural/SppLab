@@ -11,7 +11,6 @@
 </table>
   */
 
-
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +29,7 @@
 
 <div id='tbl' class="reportEditable">
 
-    <?= "php " ?>
+    <?= 'php ' ?>
 
 </div>
 

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 $regions = $this->models['regions'];
 
@@ -7,20 +7,20 @@ $regions = $this->models['regions'];
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "SL-Сейсмичность";
-$styles['main-css'] = "css/styles.css";
-$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
-require "core/base_views/VHead.php";
+$title = 'SL-Сейсмичность';
+$styles['main-css'] = 'css/styles.css';
+$scripts['ymaps'] = 'https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink';
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "Сейсмичность";
-    $Header_rightContent = "СП 14.13330.2018 Строительство в сейсмических районах.
-                              Актуализированная редакция СНиП II-7-81*";
-    require "core/base_views/VMinorHeader.php";
+    $Header_leftContent = 'Сейсмичность';
+    $Header_rightContent = 'СП 14.13330.2018 Строительство в сейсмических районах.
+                              Актуализированная редакция СНиП II-7-81*';
+    require 'core/base_views/VMinorHeader.php';
     ?>
 
     <main class="Main block block_wrap">
@@ -48,8 +48,8 @@ require "core/base_views/VHead.php";
                     <?php
                     foreach ($regions as $region) {
                         $this->region = $region;
-                        require "VTowns_by_regions.php";
-                    };
+                        require 'VTowns_by_regions.php';
+                    }
                     ?>
                 </div>
 
@@ -75,7 +75,7 @@ require "core/base_views/VHead.php";
             </section>
         </section>
     </main>
-    <?php require "core/base_views/VSiteFooter.php" ?>
+    <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 </html>

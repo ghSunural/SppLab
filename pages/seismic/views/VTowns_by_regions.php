@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 use seismic\models as M;
 
@@ -23,7 +23,7 @@ foreach ($townsInRegions as $town) {
       </div> 
 EOL;
 }
-echo <<<EOL
+echo <<<'EOL'
 </div>
 </article>
 <br>

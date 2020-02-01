@@ -10,23 +10,23 @@
 EOL;
 */
 
-$favicon_as_html = <<< EOL
+$favicon_as_html = <<< 'EOL'
     <link rel="shortcut icon" href="/resource/site/logo/favicon.ico" type="image/x-icon">
 EOL;
 
-$styles_as_html = "";
+$styles_as_html = '';
 if (isset($styles)) {
     foreach ($styles as $row) {
         $html_string = "<link href=\"{$row}\" rel=\"stylesheet\">";
-        $styles_as_html = $styles_as_html.$html_string . "\n";
+        $styles_as_html = $styles_as_html.$html_string."\n";
     }
 }
 
-$scripts_as_html = "";
+$scripts_as_html = '';
 if (isset($scripts)) {
     foreach ($scripts as $row) {
         $html_string = "<script type=\"text/javascript\" src=\"{$row}\" defer></script>";
-        $scripts_as_html = $scripts_as_html.$html_string . "\n";
+        $scripts_as_html = $scripts_as_html.$html_string."\n";
     }
 }
 ?>

@@ -4,7 +4,6 @@ namespace Application\Views;
 
 class CButtonRef
 {
-
     private $form_action;
     private $form_method;
 
@@ -14,7 +13,6 @@ class CButtonRef
     private $button_css_class;
 
     private $control_as_html;
-
 
     public function __construct($form_action, $form_method,
                                 $button_css_class,
@@ -32,14 +30,10 @@ class CButtonRef
                 </button>
                </form>    
 EOL;
-
     }
 
     public function getControl()
     {
-
         return $this->control_as_html;
     }
 }
-
-

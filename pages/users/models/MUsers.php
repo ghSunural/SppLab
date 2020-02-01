@@ -1,24 +1,17 @@
 <?php
 
-
 namespace user\models;
-
-
-use Application\Databases\ORM;
-use Application\Debug;
 
 class MUsers implements IUsers
 {
-
-
-
-
     /**
-     * Регистрация пользователя
-     * @param string $name <p>Имя</p>
-     * @param string $email <p>E-mail</p>
+     * Регистрация пользователя.
+     *
+     * @param string $name     <p>Имя</p>
+     * @param string $email    <p>E-mail</p>
      * @param string $password <p>Пароль</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
     public static function register($name, $email, $password)
     {
@@ -27,33 +20,33 @@ class MUsers implements IUsers
 
         // Текст запроса к БД
         $sql = 'INSERT INTO user (name, email, password) '
-            . 'VALUES (:name, :email, :password)';
-
-
+            .'VALUES (:name, :email, :password)';
 
         // Получение и возврат результатов. Используется подготовленный запрос
         $result = $db->prepare($sql);
         $result->bindParam(':name', $name, PDO::PARAM_STR);
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->bindParam(':password', $password, PDO::PARAM_STR);
+
         return $result->execute();
     }
 
     /**
-     * Редактирование данных пользователя
-     * @param integer $id <p>id пользователя</p>
-     * @param string $name <p>Имя</p>
+     * Редактирование данных пользователя.
+     *
+     * @param int    $id       <p>id пользователя</p>
+     * @param string $name     <p>Имя</p>
      * @param string $password <p>Пароль</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
 
-
-
-
     /**
-     * Проверяем существует ли пользователь с заданными $email и $password
-     * @param string $email <p>E-mail</p>
+     * Проверяем существует ли пользователь с заданными $email и $password.
+     *
+     * @param string $email    <p>E-mail</p>
      * @param string $password <p>Пароль</p>
+     *
      * @return mixed : integer user id or false
      */
     public static function checkUserData($email, $password)
@@ -77,23 +70,26 @@ class MUsers implements IUsers
             // Если запись существует, возвращаем id пользователя
             return $user['id'];
         }
+
         return false;
     }
 
     /**
-     * Запоминаем пользователя
-     * @param integer $userId <p>id пользователя</p>
+     * Запоминаем пользователя.
+     *
+     * @param int $userId <p>id пользователя</p>
      */
     public static function auth($userRole)
     {
         // Записываем идентификатор пользователя в сессию
-      //  $_SESSION['user'] = $userId;
+        //  $_SESSION['user'] = $userId;
         $_SESSION['userRole'] = $userRole;
     }
 
     /**
      * Возвращает идентификатор пользователя, если он авторизирован.<br/>
-     * Иначе перенаправляет на страницу входа
+     * Иначе перенаправляет на страницу входа.
+     *
      * @return string <p>Идентификатор пользователя</p>
      */
     public static function checkLogged()
@@ -103,79 +99,93 @@ class MUsers implements IUsers
             return $_SESSION['user'];
         }
 
-        header("Location: /user/login");
+        header('Location: /user/login');
     }
 
     /**
      * Проверяет является ли пользователь гостем
-     * @return boolean <p>Результат выполнения метода</p>
-
-    public static function isGuest()
-    {
-        if (isset($_SESSION['user'])) {
-            return false;
-        }
-        return true;
-    }
+     *
+     * @return bool <p>Результат выполнения метода</p>
+     * public static function isGuest()
+     * {
+     * if (isset($_SESSION['user'])) {
+     * return false;
+     * }
+     * return true;
+     * }
      *
      *  */
 
     /**
-     * Проверяет имя: не меньше, чем 2 символа
+     * Проверяет имя: не меньше, чем 2 символа.
+     *
      * @param string $name <p>Имя</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
     public static function checkName($name)
     {
         if (strlen($name) >= 2) {
             return true;
         }
+
         return false;
     }
 
     /**
-     * Проверяет телефон: не меньше, чем 10 символов
+     * Проверяет телефон: не меньше, чем 10 символов.
+     *
      * @param string $phone <p>Телефон</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
     public static function checkPhone($phone)
     {
         if (strlen($phone) >= 10) {
             return true;
         }
+
         return false;
     }
 
     /**
-     * Проверяет имя: не меньше, чем 6 символов
+     * Проверяет имя: не меньше, чем 6 символов.
+     *
      * @param string $password <p>Пароль</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
     public static function checkPassword($password)
     {
         if (strlen($password) >= 6) {
             return true;
         }
+
         return false;
     }
 
     /**
-     * Проверяет email
+     * Проверяет email.
+     *
      * @param string $email <p>E-mail</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
     public static function checkEmail($email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return true;
         }
+
         return false;
     }
 
     /**
      * Проверяет не занят ли email другим пользователем
+     *
      * @param type $email <p>E-mail</p>
-     * @return boolean <p>Результат выполнения метода</p>
+     *
+     * @return bool <p>Результат выполнения метода</p>
      */
     public static function checkEmailExists($email)
     {
@@ -190,14 +200,18 @@ class MUsers implements IUsers
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->execute();
 
-        if ($result->fetchColumn())
+        if ($result->fetchColumn()) {
             return true;
+        }
+
         return false;
     }
 
     /**
-     * Возвращает пользователя с указанным id
-     * @param integer $id <p>id пользователя</p>
+     * Возвращает пользователя с указанным id.
+     *
+     * @param int $id <p>id пользователя</p>
+     *
      * @return array <p>Массив с информацией о пользователе</p>
      */
     public static function getUserById($id)
@@ -218,7 +232,4 @@ class MUsers implements IUsers
 
         return $result->fetch();
     }
-
-
-
 }
