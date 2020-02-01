@@ -10,7 +10,7 @@ class MTowns extends M\Model_base
 {
     public static function getTowns()
     {
-        $towns = [];
+        $towns = array();
         $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns');
 
         foreach ($rows as $row) {
@@ -46,7 +46,7 @@ class MTowns extends M\Model_base
 
     public static function getRegions()
     {
-        $regions = [];
+        $regions = array();
         $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TRegionsRF');
         //  $link = A\App::$db_connection->getLink();
         //  $rows = mysqli_query($link, "select * from TRegionsRF");
@@ -62,7 +62,7 @@ class MTowns extends M\Model_base
 
     public static function getTownsByRegion($region)
     {
-        $towns = [];
+        $towns = array();
         $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns', "Регион = '$region'");
         // A\Debug::print_array($rows);
         foreach ($rows as $row) {

@@ -4,7 +4,7 @@ namespace Util\geo;
 
 class KML
 {
-    public static function getKmlBody($geoPoints = [])
+    public static function getKmlBody($geoPoints = array())
     {
         $kml = self::getKmlOpenTags();
 

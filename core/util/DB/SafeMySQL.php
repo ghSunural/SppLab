@@ -74,22 +74,22 @@ class SafeMySQL
     protected $stats;
     protected $emode;
     protected $exname;
-    protected $defaults = [
-        'host'      => 'localhost',
-        'user'      => 'root',
-        'pass'      => '',
-        'db'        => 'test',
-        'port'      => null,
-        'socket'    => null,
-        'pconnect'  => false,
-        'charset'   => 'utf8',
-        'errmode'   => 'exception', //or 'error'
+    protected $defaults = array(
+        'host' => 'localhost',
+        'user' => 'root',
+        'pass' => '',
+        'db' => 'test',
+        'port' => null,
+        'socket' => null,
+        'pconnect' => false,
+        'charset' => 'utf8',
+        'errmode' => 'exception', //or 'error'
         'exception' => 'Exception', //Exception class name
-    ];
+    );
     const RESULT_ASSOC = MYSQLI_ASSOC;
     const RESULT_NUM = MYSQLI_NUM;
 
-    public function __construct($opt = [])
+    public function __construct($opt = array())
     {
         $opt = array_merge($this->defaults, $opt);
         $this->emode = $opt['errmode'];
@@ -248,7 +248,7 @@ class SafeMySQL
      */
     public function getCol()
     {
-        $ret = [];
+        $ret = array();
         $query = $this->prepareQuery(func_get_args());
         if ($res = $this->rawQuery($query)) {
             while ($row = $this->fetch($res)) {
@@ -274,7 +274,7 @@ class SafeMySQL
      */
     public function getAll()
     {
-        $ret = [];
+        $ret = array();
         $query = $this->prepareQuery(func_get_args());
         if ($res = $this->rawQuery($query)) {
             while ($row = $this->fetch($res)) {
@@ -304,7 +304,7 @@ class SafeMySQL
         $args = func_get_args();
         $index = array_shift($args);
         $query = $this->prepareQuery($args);
-        $ret = [];
+        $ret = array();
         if ($res = $this->rawQuery($query)) {
             while ($row = $this->fetch($res)) {
                 $ret[$row[$index]] = $row;
@@ -332,7 +332,7 @@ class SafeMySQL
         $args = func_get_args();
         $index = array_shift($args);
         $query = $this->prepareQuery($args);
-        $ret = [];
+        $ret = array();
         if ($res = $this->rawQuery($query)) {
             while ($row = $this->fetch($res)) {
                 $key = $row[$index];
@@ -464,11 +464,11 @@ class SafeMySQL
         $start = microtime(true);
         $res = mysqli_query($this->conn, $query);
         $timer = microtime(true) - $start;
-        $this->stats[] = [
+        $this->stats[] = array(
             'query' => $query,
             'start' => $start,
             'timer' => $timer,
-        ];
+        );
         if (!$res) {
             $error = mysqli_error($this->conn);
 

@@ -6,8 +6,8 @@ use user\models as M;
 
 class BaseController
 {
-    public $models = [];
-    public $views = [];
+    public $models = array();
+    public $views = array();
 
     public static function checkAdmin()
     {

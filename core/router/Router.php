@@ -51,7 +51,7 @@ class Router
                     // Создать объект, вызвать метод (т.е. action)
                     $controllerObject = new $controllerName();
 
-                    $result = call_user_func_array([$controllerObject, $actionName], $parameters);
+                    $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
 
                     //должен прекратить поиск если $result != null
                     /* if ($result != null) {

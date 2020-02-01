@@ -15,12 +15,12 @@ class Util
 
     public static function getSimpleFilesList($dirpath)
     {
-        $result = [];
+        $result = array();
 
         $cdir = scandir($dirpath);
         foreach ($cdir as $value) {
             // если это "не точки" и не директория
-            if (!in_array($value, ['.', '..'])
+            if (!in_array($value, array('.', '..'))
                 && !is_dir($dirpath.DIRECTORY_SEPARATOR.$value)) {
                 $result[] = $value;
             }
@@ -40,13 +40,13 @@ class Util
      */
     public static function getSimpleFilesListWithAddInfo($dirpath)
     {
-        $result = [];
+        $result = array();
 
         $cdir = scandir($dirpath);
         $i = 0;
         foreach ($cdir as $value) {
             // если это "не точки" и не директория
-            if (!in_array($value, ['.', '..'])
+            if (!in_array($value, array('.', '..'))
                 && !is_dir($dirpath.DIRECTORY_SEPARATOR.$value)) {
                 $result[$i]['name'] = $value;
                 $result[$i]['size'] = filesize($dirpath.DIRECTORY_SEPARATOR.$value);
@@ -88,18 +88,18 @@ class Util
     /*
         public static function convertStr2Arr($strOrArr)
         {
-    
+
             $arr = array();
-    
+
             if (is_array($strOrArr)) {
                 $arr = $strOrArr;
             } else {
                 array_push($arr, $strOrArr);
             }
-    
+
             return $arr;
-    
-    
+
+
         }
     */
 }

@@ -17,7 +17,7 @@ class ORM
             $fetchMode = PDO::FETCH_BOTH;
         }
 
-        $rowsArray = [];
+        $rowsArray = array();
 
         $statement = $linkedDB->query($sql_body);
         $statement->setFetchMode($fetchMode);
@@ -31,7 +31,7 @@ class ORM
 
     public static function findRows($linkedDB, $table, $expression = null)
     {
-        $rows = [];
+        $rows = array();
         //$rowsArray = array();
 
         $sql = is_null($expression)
@@ -59,7 +59,7 @@ class ORM
 
     public static function getColumnHeaders($linkedDB, $tableName)
     {
-        $columnHeaders = [];
+        $columnHeaders = array();
         $fields = self::sqlQuery($linkedDB, 'describe '.$tableName);
         $i = 0;
         foreach ($fields as $f) {

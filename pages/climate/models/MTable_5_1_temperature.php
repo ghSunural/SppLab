@@ -30,7 +30,7 @@ class MTable_5_1_temperature extends M\Model_base
         return $data;
     }
 
-    public static function getAbsSumNegative($numbers = [])
+    public static function getAbsSumNegative($numbers = array())
     {
         $result = 0;
 

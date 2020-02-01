@@ -106,13 +106,13 @@ class MUsers implements IUsers
      * Проверяет является ли пользователь гостем
      *
      * @return bool <p>Результат выполнения метода</p>
-     * public static function isGuest()
-     * {
-     * if (isset($_SESSION['user'])) {
-     * return false;
-     * }
-     * return true;
-     * }
+     *              public static function isGuest()
+     *              {
+     *              if (isset($_SESSION['user'])) {
+     *              return false;
+     *              }
+     *              return true;
+     *              }
      *
      *  */
 
