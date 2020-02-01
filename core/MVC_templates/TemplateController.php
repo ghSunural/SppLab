@@ -1,18 +1,14 @@
 <?php
 
-
 namespace Application\Controllers;
-
-
 
 class TemplateController extends BaseController
 {
-
     public function actionIndex()
     {
         //$var = ::get;
         // $this->models['var'] = $var;
-        $this->render("views/");
+        $this->render('views/');
     }
 
     public function actionView($ID)
@@ -20,9 +16,6 @@ class TemplateController extends BaseController
         //$var = ::getBy($ID);
         //$this->models['var'] = $var;
 
-        $this->render("views/.php");
+        $this->render('views/.php');
     }
-
 }
-
-?>

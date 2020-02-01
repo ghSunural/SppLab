@@ -6,7 +6,6 @@ $coldSeasonData = $this->models['coldSeasonData'];
 
 $town = $this->models['town'];
 
-
 $theColdestDay098 = $coldSeasonData->theColdestDay098;
 $theColdestDay092 = $coldSeasonData->theColdestDay092;
 $theColdestFiveDays098 = $coldSeasonData->theColdestFiveDays098;
@@ -24,13 +23,12 @@ $duration_l10 = $coldSeasonData->duration_l10;
 $avrTemp_l10 = $coldSeasonData->avrTemp_l10;
 
 $relativeHumidityColdestMonth = $coldSeasonData->relativeHumidityColdestMonth;
-$relativeHumidityColdestMonth15= $coldSeasonData->relativeHumidityColdestMonth15;
+$relativeHumidityColdestMonth15 = $coldSeasonData->relativeHumidityColdestMonth15;
 $precipitation = $coldSeasonData->precipitation;
 
 $wind = $coldSeasonData->wind;
 $maxAvrWindSpeed = $coldSeasonData->maxAvrWindSpeed;
-$avrWindSpeed_l8= $coldSeasonData->avrWindSpeed_l8;
-
+$avrWindSpeed_l8 = $coldSeasonData->avrWindSpeed_l8;
 
 echo <<< EOL
 <input type="button" onclick="jsUtil.printDiv('printableArea')" value="Печать"/>

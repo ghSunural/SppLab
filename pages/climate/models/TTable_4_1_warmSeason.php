@@ -4,7 +4,6 @@ namespace climate\models;
 
 class TTable_4_1_warmSeason
 {
-
     public $barometricPressure;
     public $temperature095;
     public $temperature098;
@@ -20,6 +19,5 @@ class TTable_4_1_warmSeason
 
     public function __construct()
     {
-
     }
 }

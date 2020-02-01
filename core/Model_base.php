@@ -6,6 +6,5 @@ class Model_base
 {
     public static function get_data()
     {
-
     }
 }

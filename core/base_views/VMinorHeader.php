@@ -1,6 +1,5 @@
 <?php
 
-
 ?>
 <header class="block block_wrap Minor-header fl fl-w">
     <div class="H2 Minor-header_left block block_inline main_bkg_color-1 main_text_color-1">

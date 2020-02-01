@@ -6,9 +6,8 @@ use user\models as M;
 
 class BaseController
 {
-
-    public $models = array();
-    public $views = array();
+    public $models = [];
+    public $views = [];
 
     public static function checkAdmin()
     {
@@ -16,18 +15,14 @@ class BaseController
         $userId = M\TUser::checkLogged();
         $user = M\TUser::getById($userId);
 
-        if($user->role ==='admin'){//==
+        if ($user->role === 'admin') {//==
             return true;
         }
-        die("Доступ закрыт");
+        die('Доступ закрыт');
     }
 
     protected function render($view)
     {
-
         require $view;
     }
-
 }
-
-?>

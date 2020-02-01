@@ -8,13 +8,10 @@ use Application\Models as M;
 
 class MSeismic_MSK64 extends M\Model_base
 {
-
-
-    static function getMSK64($townID)
+    public static function getMSK64($townID)
     {
-
         $data = new TTable_seismicMSK();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1,"TSeicmic", "ID = '{$townID}'");
+        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TSeicmic', "ID = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];
@@ -24,13 +21,6 @@ class MSeismic_MSK64 extends M\Model_base
         $data->OSR2015_B = $row[3];
         $data->OSR2015_C = $row[4];
 
-
         return $data;
     }
-
-
-
-
 }
-
-?>

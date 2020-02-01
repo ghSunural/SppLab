@@ -10,19 +10,19 @@ $result = $this->models['result'];
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "Конвертер KML";
-$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
+$title = 'Конвертер KML';
+$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
 //$scripts['geocalcs'] = '/pages/calculators/scripts/geocalcs.js';
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "Калькуляторы";
-    $Header_rightContent = "Конвертер в геоданные";
-    require "core/base_views/VMinorHeader.php";
+    $Header_leftContent = 'Калькуляторы';
+    $Header_rightContent = 'Конвертер в геоданные';
+    require 'core/base_views/VMinorHeader.php';
     ?>
 
     <main class="Main block block_wrap fl fl_nw">
@@ -51,7 +51,7 @@ require "core/base_views/VHead.php";
 
         </section>
     </main>
-    <?php require "core/base_views/VSiteFooter.php" ?>
+    <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 <!--
 <script src="https://cdn.jsdelivr.net/npm/handsontable@7.3.0/dist/handsontable.full.min.js"></script>

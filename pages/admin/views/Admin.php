@@ -1,5 +1,5 @@
 <?php
-$users = $this->models["users"];
+$users = $this->models['users'];
 /*
 $_FILES['image'];
 
@@ -9,32 +9,32 @@ if (is_uploaded_file()) {
 }
 */
 
-
 //'image' name поля
 
 $db_response = $this->models['db_response'];
 $sql_body = $this->models['sql_body'];
 
-use Application\DB_connection;
-use Application\Html; ?>
+use Application\Html;
+
+?>
 
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = "SL-Админ";
+$title = 'SL-Админ';
 //$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
-$styles['main-css'] = "/css/styles.css";
+$styles['main-css'] = '/css/styles.css';
 //$scripts['thisJS'] = A\config::SITE_URL() . "pages/admin/scripts/scripts.js";
 //$scripts['thisJS'] = "/pages/admin/scripts/scripts.js";
-require "core/base_views/VHead.php";
+require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require "core/base_views/VMainToolbar.php" ?>
+<?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = "Админ";
-    $Header_rightContent = "администрирование сайта";
+    $Header_leftContent = 'Админ';
+    $Header_rightContent = 'администрирование сайта';
     //require "core/base_views/VMinorHeader.php";
     ?>
 
@@ -133,7 +133,6 @@ describe TAllEarthquakes;
 
             echo Html::convertRowsArray2HtmlTable($users);
 
-
             ?>
 
 
@@ -167,7 +166,7 @@ describe TAllEarthquakes;
 
         </section>
     </main>
-    <?php require "core/base_views/VSiteFooter.php" ?>
+    <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
 </body>
 <script type="text/javascript" src="/pages/admin/scripts/scripts.js"></script>
