@@ -30,7 +30,7 @@ class Debug
             echo '<pre>';
             echo basename(debug_print_backtrace()).' || '.$caption.': '.$var;
             //echo " || ".$caption . ": " . $var;
-            // echo self::getCaller(1)." || ".$caption . ": " . $var;
+            //echo self::getCaller(1)." || ".$caption . ": " . $var;
             echo '</pre>';
         }
 
