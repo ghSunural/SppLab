@@ -47,9 +47,17 @@ $ git branch branchName
 //перейти на ветку
 $ git checkout branchName
 
-    Перед переключением нужно закоммитить!!!
 
 
+    //FTP
+git config git-ftp.url "ftp://files.000webhost.com/public_html"
+git config git-ftp.user "spplab"
+git config git-ftp.password "Malakhov6503682274"
+
+git ftp init
+
+git commit -m "Add new content"
+git ftp push
 
 
 
