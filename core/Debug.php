@@ -11,7 +11,7 @@ class Debug
         }
 
         if (config::DEBUG_MODE()) {
-            echo $caption.': ';
+            echo $caption . ': ';
             echo '<pre>';
             print_r($array);
             echo '</pre>';
@@ -28,7 +28,7 @@ class Debug
     {
         if (config::DEBUG_MODE()) {
             echo '<pre>';
-            echo basename(debug_print_backtrace()).' || '.$caption.': '.$var;
+            echo basename(debug_print_backtrace()) . ' || ' . $caption . ': ' . $var;
             //echo " || ".$caption . ": " . $var;
             //echo self::getCaller(1)." || ".$caption . ": " . $var;
             echo '</pre>';
@@ -56,4 +56,5 @@ class Debug
 
         return $caller;
     }
+    
 }
