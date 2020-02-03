@@ -54,21 +54,24 @@ class TUser
     public function __toString()
     {
         return
-            'id: '.$this->id.'<br>'.
-            'surname: '.$this->surname.'<br>'.
-            'firstName: '.$this->firstName.'<br>'.
-            'login: '.$this->login.'<br>'.
-            'passwordHash: '.$this->passwordHash.'<br>'.
-            'email: '.$this->email.'<br>'.
-            'role: '.$this->role.'<br>';
+            'id: ' . $this->id . '<br>' .
+            'surname: ' . $this->surname . '<br>' .
+            'firstName: ' . $this->firstName . '<br>' .
+            'login: ' . $this->login . '<br>' .
+            'passwordHash: ' . $this->passwordHash . '<br>' .
+            'email: ' . $this->email . '<br>' .
+            'role: ' . $this->role . '<br>';
     }
 
     public function toArray()
     {
+
+
     }
 
     public function setRole($role)
     {
+
         $this->role = $role;
     }
 
@@ -195,24 +198,11 @@ class TUser
     public static function isLogged()
     {
         return (isset($_SESSION['user'])) ? true : false;
-        /*
-                if (isset($_SESSION['user'])) {
-                    return $_SESSION['user'];
-                }
-
-                return false;
-        */
     }
 
     public static function isGuest()
     {
         return (isset($_SESSION['user'])) ? false : true;
-        /*
-           if (isset($_SESSION['user'])) {
-               return false;
-           }
-           return true;
-        */
     }
 
     private function passwordCrypt($password)

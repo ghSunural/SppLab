@@ -1,6 +1,6 @@
 <?php
 ?>
-<header class="block block_wrap Main_header">
+<header class="block block_wrap fl fl_w Main_header">
     <div class="block block_inline main_bkg_color-1 main_text_color-1 Main_header_left">
         <div class="Main_header_left_top ">
             SPP&nbsp;
@@ -33,7 +33,7 @@
     }
 
     .Main_header_left {
-        width: 48vw;
+       width: 48vw;
     }
 
     .Main_header_right {

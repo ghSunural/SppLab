@@ -5,7 +5,7 @@ namespace Application\Controllers;
 use admin\models as M;
 use Application as A;
 use Application\Databases as DB;
-use Application\DB_connection;
+
 use PDO;
 
 //CRUD
@@ -24,7 +24,7 @@ class AdminController extends BaseController
 
     public function actionIndex2()
     {
-        $this->models['users'] = DB\MPUser::readAll(DB_connection::$link_1);
+        $this->models['users'] = DB\MPUser::readAll(DB\DBManager::getLinkWith(DB\DBManager::$DB1));
 
         // self::checkAdmin();
 
@@ -42,8 +42,8 @@ class AdminController extends BaseController
     {
 
        // $dataBase = A\DB_connection::$DBsite;
-        $dataBase = A\DB_connection::$DBEnterprise;
-        $dataBase->getDumpDB();
+       // $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
+        DB\DBManager::getDumpDB(DB\DBManager::$DB1);
         A\Util::downloadFile('pages/admin/resource/downloads/dump');
     }
 
@@ -53,13 +53,13 @@ class AdminController extends BaseController
         if (isset($_POST['db'])) {
             switch ($_POST['db']) {
                 case 'dbsite':
-                    $link = A\DB_connection::$link_1;
+                    $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
                     break;
                 case 'dbenterprise':
-                    $link = A\DB_connection::$link_2;
+                    $link = DB\DBManager::getLinkWith(DB\DBManager::$DB2);
                     break;
                 default:
-                    $link = A\DB_connection::$link_1;
+                    $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
                     break;
             }
 
@@ -74,7 +74,7 @@ class AdminController extends BaseController
         }
 
         if ($sql_body != '') {
-            $db_response = DB\ORM::sqlQuery($link, $sql_body, PDO::FETCH_NUM);
+            $db_response = DB\ORM::sqlQuery(DB\DBManager::$DB1, $sql_body, PDO::FETCH_NUM);
             $this->models['sql_body'] = $sql_body;
             $this->models['db_response'] = $db_response;
         } else {

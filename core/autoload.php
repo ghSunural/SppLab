@@ -21,7 +21,7 @@ function autoload($className)
         'models',
         'util',
         'util/geo',
-        'tests',
+        'unitTests',
 
         'pages/admin/models',
         'pages/admin/controllers',
@@ -48,6 +48,7 @@ function autoload($className)
         'pages/seismic/controllers',
 
         'pages/users/models',
+        'pages/users/tests',
         'pages/users/controllers',
 
         'pages/tests/models',

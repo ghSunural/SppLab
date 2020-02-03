@@ -49,7 +49,7 @@
         min-height: 4vw;
         width: 96vw;
         z-index: 100;
-        opacity: 0.4;
+        opacity: 0.2;
         justify-content: space-between;
         align-items: center;
         border-bottom: 5px solid #99173C;

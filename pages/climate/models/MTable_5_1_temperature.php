@@ -11,7 +11,7 @@ class MTable_5_1_temperature extends M\Model_base
     public static function getTemperature($townID)
     {
         $data = new TTable_5_1_temperature();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTemperature', "ID_города = '{$townID}'");
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'VTemperature', "ID_города = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];

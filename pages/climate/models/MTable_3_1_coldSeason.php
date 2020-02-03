@@ -11,7 +11,7 @@ class MTable_3_1_coldSeason extends M\Model_base
     public static function getColdSeasonData($townID)
     {
         $data = new TTable_3_1_coldSeason();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TColdSeason', "ID = '{$townID}'");
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'TColdSeason', "ID = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];

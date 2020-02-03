@@ -19,7 +19,7 @@ class MEarthquakes extends M\Model_base
                      and longitude < $maxLong 
                     ";
         // and note !="";
-        return DB\ORM::sqlQuery(A\DB_connection::$link_1, $sql_body, 2);
+        return DB\ORM::sqlQuery(DB\DBManager::$DB1, $sql_body, 2);
     }
 
     public static function exportEarthquakes2Kml($outFileName, $Earthquakes_dbResp)

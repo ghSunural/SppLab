@@ -1,9 +1,9 @@
 <?php
 
 return array(
-    'HOST' => 'localhost',
-    'DATABASE' => 'id10552045_spp_database',
-    'USER' => 'id10552045_malakhovav',
-    'PASSWORD' => 'Malakhov6503',
+    'HOST' => 'db-02.sppural.ru',
+    'DATABASE' => 'spplab',
+    'USER' => 'admin',
+    'PASSWORD' => '_cX&#99A3iTvAZ*pI9LS',
     'charset' => 'utf8',
 );

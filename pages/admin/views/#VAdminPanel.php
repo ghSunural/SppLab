@@ -51,7 +51,7 @@ require 'core/base_views/VHead.php';
                 ТАБЛИЦЫ<br>
                 <?php
 
-                $tableNames = DB\ORM::sqlQuery(A\DB_connection::$link_1, 'show tables');
+                $tableNames = DB\ORM::sqlQuery(DB\DBManager::$DB1, 'show tables');
                 // A\Debug::print_array($tables);
                 foreach ($tableNames as $tableName) {
                     // A\Debug::print_array($table);
@@ -59,7 +59,7 @@ require 'core/base_views/VHead.php';
                     $tableName = $tableName[0];
                     echo $tableName;
 
-                    $columnHeaders = DB\ORM::getColumnHeaders(A\DB_connection::$link_1, $tableName);
+                    $columnHeaders = DB\ORM::getColumnHeaders(DB\DBManager::$DB1, $tableName);
                     //A\Debug::print_array($columnHeaders);
                     // $table = DB\ORM::findRows(A\DB_connection::$link_1, $tableName);
                     echo A\Html::convertRowsArray2HtmlTable($columnHeaders);

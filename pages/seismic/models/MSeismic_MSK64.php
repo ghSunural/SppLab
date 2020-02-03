@@ -11,7 +11,7 @@ class MSeismic_MSK64 extends M\Model_base
     public static function getMSK64($townID)
     {
         $data = new TTable_seismicMSK();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TSeicmic', "ID = '{$townID}'");
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'TSeicmic', "ID = '{$townID}'");
         $row = $rows[0];
 
         $region = $row[0];

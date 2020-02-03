@@ -2,57 +2,30 @@
 
 namespace user\models;
 
-class MUsers implements IUsers
+use Application\Databases\MPUser;
+use Application\DB_connection;
+use Application\TException;
+
+class MUsers
+    //implements IUsers
 {
-    /**
-     * Регистрация пользователя.
-     *
-     * @param string $name     <p>Имя</p>
-     * @param string $email    <p>E-mail</p>
-     * @param string $password <p>Пароль</p>
-     *
-     * @return bool <p>Результат выполнения метода</p>
-     */
-    public static function register($name, $email, $password)
+
+    public static function register(TUser $user)
     {
-        // Соединение с БД
-        $db = Db::getConnection();
 
-        // Текст запроса к БД
-        $sql = 'INSERT INTO user (name, email, password) '
-            .'VALUES (:name, :email, :password)';
+        if (validUserForReg($user)){
+            MPUser::create()
+        }
+        else{
+            throw Throwable;
+        }
 
-        // Получение и возврат результатов. Используется подготовленный запрос
-        $result = $db->prepare($sql);
-        $result->bindParam(':name', $name, PDO::PARAM_STR);
-        $result->bindParam(':email', $email, PDO::PARAM_STR);
-        $result->bindParam(':password', $password, PDO::PARAM_STR);
-
-        return $result->execute();
     }
 
-    /**
-     * Редактирование данных пользователя.
-     *
-     * @param int    $id       <p>id пользователя</p>
-     * @param string $name     <p>Имя</p>
-     * @param string $password <p>Пароль</p>
-     *
-     * @return bool <p>Результат выполнения метода</p>
-     */
-
-    /**
-     * Проверяем существует ли пользователь с заданными $email и $password.
-     *
-     * @param string $email    <p>E-mail</p>
-     * @param string $password <p>Пароль</p>
-     *
-     * @return mixed : integer user id or false
-     */
     public static function checkUserData($email, $password)
     {
         // Соединение с БД
-        $db = Db::getConnection();
+        $db = DB_connection::getConnection();
 
         // Текст запроса к БД
         $sql = 'SELECT * FROM user WHERE email = :email AND password = :password';

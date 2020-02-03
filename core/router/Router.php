@@ -3,6 +3,7 @@
 namespace Application;
 
 use Application as A;
+use Throwable;
 
 class Router
 {
@@ -12,7 +13,7 @@ class Router
     public function __construct()
     {
         //список маршрутов
-        $this->routes = require A\config::SITE_ROOT().'core/router/routesList.php';
+        $this->routes = require A\config::SITE_ROOT() . 'core/router/routesList.php';
     }
 
     private function getURI()
@@ -24,51 +25,51 @@ class Router
 
     public function run()
     {
-        try {
-            // Получить строку запроса
-            $uri = $this->getURI();
+        //  try {
+        // Получить строку запроса
+        $uri = $this->getURI();
 
-            // Проверить наличие такого запроса в routesList.php
-            foreach ($this->routes as $uriPattern => $path) {
+        // Проверить наличие такого запроса в routesList.php
+        foreach ($this->routes as $uriPattern => $path) {
 
-                // Сравниваем $uriPattern и $uri
-                if (preg_match("~$uriPattern~", $uri)) {
+            // Сравниваем $uriPattern и $uri
+            if (preg_match("~$uriPattern~", $uri)) {
 
-                    // Получаем внутренний путь из внешнего согласно правилу.
-                    $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+                // Получаем внутренний путь из внешнего согласно правилу.
+                $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
 
-                    // Определить контроллер, action, параметры
+                // Определить контроллер, action, параметры
 
-                    $segments = explode('/', $internalRoute);
+                $segments = explode('/', $internalRoute);
 
-                    $controllerName = array_shift($segments);
-                    $controllerName = ($this->namespace).ucfirst($controllerName);
+                $controllerName = array_shift($segments);
+                $controllerName = ($this->namespace) . ucfirst($controllerName);
 
-                    $actionName = ucfirst(array_shift($segments));
+                $actionName = ucfirst(array_shift($segments));
 
-                    $parameters = $segments;
+                $parameters = $segments;
 
-                    // Создать объект, вызвать метод (т.е. action)
-                    $controllerObject = new $controllerName();
+                // Создать объект, вызвать метод (т.е. action)
+                $controllerObject = new $controllerName();
 
-                    $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
+                $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
 
-                    //должен прекратить поиск если $result != null
-                    /* if ($result != null) {
-                         break;
-                     }
-                    */
+                //должен прекратить поиск если $result != null
+                /* if ($result != null) {
+                     break;
+                 }
+                */
 
-                    //должен прекратить поиск если $result != null
-                    if ($controllerObject != null) {
-                        break;
-                    }
+                //должен прекратить поиск если $result != null
+                if ($controllerObject != null) {
+                    break;
                 }
             }
-        } catch (Exception $e) {
-            echo 'екм акарек';
-            //  throw $e;
         }
+        //  } catch (Throwable $e) {
+        //     echo 'екм акарек';
+        //  throw $e;
+        // }
     }
 
     /**

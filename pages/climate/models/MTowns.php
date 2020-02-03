@@ -11,7 +11,8 @@ class MTowns extends M\Model_base
     public static function getTowns()
     {
         $towns = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns');
+
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'VTowns');
 
         foreach ($rows as $row) {
             $town = new TTown();
@@ -33,7 +34,7 @@ class MTowns extends M\Model_base
     public static function getTownByID($townID)
     {
         // $towns = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns', "ID_города = '{$townID}'");
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'VTowns', "ID_города = '{$townID}'");
         $town_as_row = $rows[0];
 
         $town = new TTown();
@@ -47,7 +48,7 @@ class MTowns extends M\Model_base
     public static function getRegions()
     {
         $regions = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'TRegionsRF');
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'TRegionsRF');
         //  $link = A\App::$db_connection->getLink();
         //  $rows = mysqli_query($link, "select * from TRegionsRF");
 
@@ -63,7 +64,7 @@ class MTowns extends M\Model_base
     public static function getTownsByRegion($region)
     {
         $towns = array();
-        $rows = DB\ORM::findRows(A\DB_connection::$link_1, 'VTowns', "Регион = '$region'");
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'VTowns', "Регион = '$region'");
         // A\Debug::print_array($rows);
         foreach ($rows as $row) {
 

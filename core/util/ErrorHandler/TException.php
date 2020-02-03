@@ -23,6 +23,6 @@ class TException extends Error implements Throwable
      */
     public function getUserMessage()
     {
-        return $this->user_message_error;
+        return basename(debug_print_backtrace()) .$this->user_message_error;
     }
 }

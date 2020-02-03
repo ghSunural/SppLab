@@ -7,9 +7,10 @@ use PDO;
 
 class ORM
 {
-    public static function sqlQuery($linkedDB, $sql_body, $fetchMode = null)
+    public static function sqlQuery(TDataBase $DB, $sql_body, $fetchMode = null)
     {
 
+        $link = DBManager::getLinkWith($DB);
         //только имена PDO::FETCH_ASSOC = 2
         //только цыфры PDO::FETCH_NUM = 3
         //и цифры и буквы PDO::FETCH_BOTH = 4
@@ -19,7 +20,7 @@ class ORM
 
         $rowsArray = array();
 
-        $statement = $linkedDB->query($sql_body);
+        $statement = $link->query($sql_body);
         $statement->setFetchMode($fetchMode);
 
         while ($row = $statement->fetch()) {
@@ -29,8 +30,9 @@ class ORM
         return $rowsArray;
     }
 
-    public static function findRows($linkedDB, $table, $expression = null)
+    public static function findRows(TDataBase $DB, $table, $expression = null)
     {
+        $link = DBManager::getLinkWith($DB);
         $rows = array();
         //$rowsArray = array();
 
@@ -47,7 +49,7 @@ class ORM
         //  $statement->bindValue(':tableN', $table);
         //  $statement->execute();
         // $statement->execute();
-        $statement = $linkedDB->query($sql);
+        $statement = $link->query($sql);
         $statement->setFetchMode(PDO::FETCH_BOTH);
 
         while ($row = $statement->fetch()) {
@@ -57,10 +59,11 @@ class ORM
         return $rows;
     }
 
-    public static function getColumnHeaders($linkedDB, $tableName)
+    public static function getColumnHeaders(TDataBase $DB, $tableName)
     {
+
         $columnHeaders = array();
-        $fields = self::sqlQuery($linkedDB, 'describe '.$tableName);
+        $fields = self::sqlQuery($DB, 'describe '.$tableName);
         $i = 0;
         foreach ($fields as $f) {
             array_push($columnHeaders, $f[0]);
@@ -70,11 +73,6 @@ class ORM
         return $columnHeaders;
     }
 
-    public static function deleteEntry($table, $key, $value)
-    {
-        $link = A\App::$link_1;
-        mysqli_query($link, "delete from $table where $key = $value");
-    }
 
     public static function VAllEarthquakesQuery()
     {
@@ -101,7 +99,7 @@ where
                         and longitude > 110 
                         and longitude < 120;";
 
-        $table = self::sqlQuery(A\App::$link_1, $sql_body);
+        $table = self::sqlQuery(DBManager::$DB1, $sql_body);
 
         return $table;
     }
