@@ -44,7 +44,7 @@ class SeismicController extends BaseController
             $rangeCoord['minLong'], $rangeCoord['maxLong']
         );
 
-        $arrColumnHeaders = DB\ORM::getColumnHeaders(A\DB_connection::$link_1, 'VAllEarthquakes');
+        $arrColumnHeaders = DB\ORM::getColumnHeaders(DB\DBManager::$DB1, 'VAllEarthquakes');
 
         $this->models['rangeCoord'] = $rangeCoord;
         $this->models['arrColumnHeaders'] = $arrColumnHeaders;

@@ -32,6 +32,7 @@ require 'core/base_views/VHead.php';
                     <li>Георадар</li>
                     <li>Электротомография</li>
                     <li>Сейсморазведка</li>
+                    <li><a href="/pages/geophysics/articles/Velocity.html">Скорости упругих волн</a>></li>
                 </ul>
             </nav>
 
@@ -43,6 +44,10 @@ require 'core/base_views/VHead.php';
             <article>
                 <?= require_once './pages/geophysics/articles/synchronization_systems.php' ?>
             </article>
+
+
+
+            pages/geophysics/articles/Velocity.html
 
 
             <!--

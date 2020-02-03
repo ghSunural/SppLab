@@ -61,7 +61,7 @@ class DBManager
         ini_set('disable_functions', 'system');
         $command = 'mysqldump -u ' . $dataBase->getUser() .
             ' -p ' . $dataBase->getPassword() . ' ' . $dataBase->getDbName() . ' --single-transaction --quick > 
-        pages/admin/resource/downloads/dump.sql';
+        /pages/admin/resource/downloads/dump.sql';
         exec($command);
     }
 }
