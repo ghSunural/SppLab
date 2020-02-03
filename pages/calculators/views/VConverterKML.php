@@ -11,7 +11,7 @@ $result = $this->models['result'];
 <html lang="ru">
 <?php
 $title = 'Конвертер KML';
-$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
+$styles['main-css'] = '/css/styles.css';
 //$scripts['geocalcs'] = '/pages/calculators/scripts/geocalcs.js';
 require 'core/base_views/VHead.php';
 ?>
@@ -55,11 +55,14 @@ require 'core/base_views/VHead.php';
 </div>
 <!--
 <script src="https://cdn.jsdelivr.net/npm/handsontable@7.3.0/dist/handsontable.full.min.js"></script>
+<script src="/js_base/node_modules/handsontable/dist/handsontable.full.min.js"></script>
+
 -->
-<link href="https://cdn.jsdelivr.net/npm/handsontable@7.3.0/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
+<script src="/js_base/node_modules/handsontable/dist/handsontable.full.min.js"></script>
+<link href="/js_base/node_modules/handsontable/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
+
 <script src="/pages/calculators/scripts/kml.js"></script>
 <script src="/pages/calculators/scripts/geo/geocalcs.js"></script>
-<script src="/js_base/node_modules/handsontable/dist/handsontable.full.min.js"></script>
 
 
 </body>

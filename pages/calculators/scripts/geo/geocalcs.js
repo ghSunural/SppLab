@@ -1,6 +1,6 @@
 'use strict';
 
-(function (exports) {
+;(function (exports) {
 
 
         exports.alertshow = function () {
