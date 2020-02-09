@@ -6,6 +6,7 @@ class Util
 {
     public static function redirect()
     {
+
     }
 
     public static function get_web_path()

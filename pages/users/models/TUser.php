@@ -16,14 +16,8 @@ class TUser
     private $email;
     private $role;
 
+
     /*
-('BAN', 0, 'пользователь c запрещенным входом'),
-('GST', 1, 'гость'),
-('UR', 3, 'зарегистрированный пользователь'),
-('UEXT', 5, 'пользователь с раширенными правами'),
-('MDR', 7, 'модератор'),
-('ADM', 9, 'администратор'),
-('DEV', 12, 'разработчик');
 
     private $avatarFile;
 
@@ -160,7 +154,9 @@ class TUser
      */
     public function setEmail($email)
     {
-        $this->email = $email;
+        A\Validator::isEmail($email)
+            ? $this->email = $email
+            : false;
     }
 
     public static function checkName($name)
@@ -172,27 +168,14 @@ class TUser
         return false;
     }
 
-    public static function checkEmail($email)
-    {
-        if (preg_match($email, '/@sppural.ru/')) {
-            return true;
-        }
-
-        return false;
-    }
 
     public static function checkPassword($password)
     {
         if (strlen($password) >= 6) {
             return true;
         } else {
-            throw new TException('Пароль должен составлять более 6-ти символов');
+            throw new A\TError('Пароль должен составлять более 6-ти символов');
         }
-    }
-
-    public static function auth($userId)
-    {
-        $_SESSION['userId'] = $userId;
     }
 
     public static function isLogged()

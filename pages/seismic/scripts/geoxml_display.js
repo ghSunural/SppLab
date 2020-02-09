@@ -9,9 +9,8 @@ function init() {
 
     });
 
-
   //  window.onload(function (e) {
-        ymaps.geoXml.load('http://spplab.000webhostapp.com/resource/content/generated/AllEarthquakes.kml')
+        ymaps.geoXml.load('https://lab.sppural.ru/resource/content/generated/AllEarthquakes.kml')
             .then(onGeoXmlLoad);
     //    e.target.disabled = true;
 

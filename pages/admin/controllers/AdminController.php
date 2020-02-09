@@ -5,6 +5,8 @@ namespace Application\Controllers;
 use admin\models as M;
 use Application as A;
 use Application\Databases as DB;
+use Application\Databases\DBManager;
+
 
 use PDO;
 
@@ -16,24 +18,21 @@ class AdminController extends BaseController
 
     public function actionIndex()
     {
-
-        // self::checkAdmin();
-
+        A\Resolver::isAllowedFor('DEV');
         $this->render($this->view);
     }
 
     public function actionIndex2()
     {
-        $this->models['users'] = DB\MPUser::readAll(DB\DBManager::getLinkWith(DB\DBManager::$DB1));
-
-        // self::checkAdmin();
-
+        A\Resolver::isAllowedFor('DEV');
+        $this->models['users'] =
+            DB\MPUsers::readAll(DBManager::getLinkWith(DBManager::$DB1));
         $this->render('pages/admin/views/Admin.php');
     }
 
     public function actionHeaders()
     {
-        // self::checkAdmin();
+        A\Resolver::isAllowedFor('DEV');
         $this->models['http_headers'] = M\MAdmin::getHttpHeaders();
         $this->render($this->view);
     }
@@ -43,8 +42,10 @@ class AdminController extends BaseController
 
        // $dataBase = A\DB_connection::$DBsite;
        // $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
+
+     //   $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
         DB\DBManager::getDumpDB(DB\DBManager::$DB1);
-        A\Util::downloadFile('pages/admin/resource/downloads/dump');
+        A\Util::downloadFile('pages/admin/resource/downloads/dump.sql');
     }
 
     public function actionSql()

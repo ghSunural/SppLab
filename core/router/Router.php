@@ -13,7 +13,8 @@ class Router
     public function __construct()
     {
         //список маршрутов
-        $this->routes = require A\config::SITE_ROOT() . 'core/router/routesList.php';
+        //A\config::SITE_ROOT() .
+        $this->routes = require 'core/router/routesList.php';
     }
 
     private function getURI()

@@ -47,7 +47,7 @@ require 'core/base_views/VHead.php';
             <div id="example" title="Скопируйте сюда текстовую таблицу"></div>
 
             <input type="button" value = "Экспорт KML" onclick="geocalcs.alertshow()">
-            <input type="button" value = "Сохранить" onclick="geocalcs.saveToFile('#content')">
+            <input type="button" value = "Сохранить" onclick="geocalcs.saveToFile()">
 
         </section>
     </main>

@@ -2,18 +2,26 @@
 
 namespace Application;
 
+use user\models\MUsers;
+
 class Resolver
 {
-    public static function isAllowedFor($lowerAccessLevel)
+    public static function isAllowedFor($lowerAccessRole)
     {
-        if ((isset($_SESSION['role']) && $_SESSION['role'] > $lowerAccessLevel)
-        || $lowerAccessLevel < 2) {
+         $userRole = 1;
+
+        if (isset($_SESSION['userRole'])) {
+            $userRole = MUsers::$roles[$_SESSION['userRole']];
+        }
+
+        $lowerAccessLevel = MUsers::$roles[$lowerAccessRole];
+
+        if (($userRole >= $lowerAccessLevel)|| $lowerAccessLevel < 2) {
             return true;
         } else {
-            //  header('Location: /' );
-            die('доступ запрещен');
-            //  return false;
+            //
+            throw new TError('Доступ запрещен');
         }
-        //  return false;
+
     }
 }

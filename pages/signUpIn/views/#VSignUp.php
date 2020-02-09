@@ -2,7 +2,7 @@
 
 use Application as A;
 
-$user = $this->models['user'];
+//$user = $this->models['user'];
 
 ?>
 
@@ -10,7 +10,7 @@ $user = $this->models['user'];
 <html lang="ru">
 <?php
 $title = 'SL-Регистрация';
-$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
+$styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
 $scripts[] = '';
 require 'core/base_views/VHead.php';
 ?>
@@ -26,16 +26,16 @@ require 'core/base_views/VHead.php';
 
     <main class="Main block block_wrap fl fl_nw">
 
-          <section class="content block block_wrap fl fl_w main_bkg_color-4">
+        <section class="content block block_wrap fl fl_w main_bkg_color-4">
 
             <div class="form form-signin">
                 РЕГИСТРАЦИЯ
                 <form action="/sign/doreg" method="post">
-                   <input class="input"
+                    <input class="input"
                            type="text"
                            name="Surname"
                            placeholder="Фамилия"
-                           value="<?= $user['Surname']?>"
+                           value="<?= 'Петров' ?>"
                            required/>
                     <br>
                     <input class="input"
@@ -43,27 +43,31 @@ require 'core/base_views/VHead.php';
                            name="firstName"
                            title=""
                            placeholder="Имя"
+                           value="<?= 'Иван' ?>"
                            required/>
                     <br>
                     <input class="input"
-                               type="text"
-                               name="login"
-                               title="Будет использоваться в качестве логина"
-                               placeholder="Логин"
-                               required>
+                           type="text"
+                           name="login"
+                           title="Будет использоваться в качестве логина"
+                           placeholder="Логин"
+                           value="<?= 'Tester' ?>"
+                           required>
                     <br>
                     <input class="input"
                            type="text"
                            name="email"
                            title="Может использоваться в качестве логина"
                            placeholder="Электронная почта"
+                           value="<?= 'petroviv@sppural.ru'?>"
                            required>
                     <br>
                     <input class="input"
                            type="password"
-                           name="password_"
+                           name="password"
                            title=""
                            placeholder="Придумайте пароль"
+                           value="<?= 'fiture123'?>"
                            required>
                     <br>
                     <input class="input"
@@ -71,6 +75,7 @@ require 'core/base_views/VHead.php';
                            name="r-password"
                            title=""
                            placeholder="Повторите пароль"
+                           value="<?= 'fiture123'?>"
                            required>
                     <br>
                     <!--
@@ -94,10 +99,11 @@ require 'core/base_views/VHead.php';
                                placeholder="Повторите пароль"
                                checked
                                required>Я принимаю условия
-                        <a href="/signUp/userAgreement" class="block_inline" target="_blank">Пользовательского соглашения</a>
+                        <a href="/signUp/userAgreement" class="block_inline" target="_blank">Пользовательского
+                            соглашения</a>
                         и даю своё согласие Spp-Lab на обработку моей
                         персональной информации
-                       <!-- на условиях, определенных Политикой конфиденциальности.-->
+                        <!-- на условиях, определенных Политикой конфиденциальности.-->
 
                     </div>
                     <input class='main_bkg_color-1 main_text_color-1' type="submit" value="Регистрация">

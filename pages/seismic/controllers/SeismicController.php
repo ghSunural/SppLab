@@ -51,7 +51,7 @@ class SeismicController extends BaseController
         $this->models['arrEarthquakes'] = $earthquakesAsRowsArray;
 
         if (isset($_POST['list'])) {
-            echo 'list';
+          //  echo 'list';
             $this->render('pages/seismic/views/VAllEarthquakes.php');
         } elseif (isset($_POST['export'])) {
             $fileName = 'pages/admin/resource/downloads/AllEarthquakes.kml';
@@ -59,7 +59,7 @@ class SeismicController extends BaseController
             M\MEarthquakes::exportEarthquakes2Kml($fileName, $earthquakesAsRowsArray);
             A\Util::downloadFile($fileName);
         } elseif (isset($_POST['on_map'])) {
-            echo 'on_map';
+          //  echo 'on_map';
             $fileName = 'resource/content/generated/AllEarthquakes.kml';
 
             M\MEarthquakes::exportEarthquakes2Kml($fileName, $earthquakesAsRowsArray);

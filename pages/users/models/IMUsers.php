@@ -2,7 +2,7 @@
 
 namespace user\models;
 
-interface IUsers
+interface IMUsers
 {
     /**
      * Регистрация пользователя.

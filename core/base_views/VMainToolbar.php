@@ -1,4 +1,19 @@
 <?php
+
+($_SESSION['userRole'] == 'DEV')?
+$opacity = 0.1 : $opacity = 0.8;
+
+if($_SESSION['userRole'] == 'GST'){
+     $log_unlog = 'ВХОД';
+     $ref_log_unlog = '/sign/login';
+}
+else{
+    $log_unlog = 'ВЫХОД';
+    $ref_log_unlog = '/sign/unlog';
+}
+
+
+
 ?>
 <nav class="block block_wrap fl fl-w main_bkg_color-3 main_text_color-1 Main_toolbar">
 
@@ -27,7 +42,7 @@
 
     <div class="tb__right">
         <div class="block block_inline" title="Вход и регистрация">
-            <a href="/sign/login" class="t-botton">ВОЙТИ</a>
+            <a href="<?=$ref_log_unlog?>" class="t-botton"><?=$log_unlog?></a>
         </div>
 
     </div>
@@ -49,7 +64,7 @@
         min-height: 4vw;
         width: 96vw;
         z-index: 100;
-        opacity: 0.2;
+        opacity: <?=$opacity?>;
         justify-content: space-between;
         align-items: center;
         border-bottom: 5px solid #99173C;

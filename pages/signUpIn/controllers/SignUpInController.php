@@ -4,6 +4,8 @@ namespace Application\Controllers;
 
 use Application\Debug;
 use signin\models as M;
+use user\models\MUsers;
+use user\models\TUser;
 use user\models\TUserFactory;
 
 class SignUpInController extends BaseController
@@ -17,79 +19,47 @@ class SignUpInController extends BaseController
             case 'reg':
                 $this->render('pages/signUpIn/views/#VSignUp.php');
                 break;
-            case 'auth':
-                self::acnAuth();
-                break;
             default:
                 $this->render('pages/signUpIn/views/#VLogIn.php');
         }
     }
 
-    private function acnAuth()
+    public function acnAuth()
     {
-
-        /*
-        //echo "Авторизация";
-        //Debug::print_array($_REQUEST);
         $user = TUserFactory::createEmptyUser();
-        $_REQUEST['Surname'];
-        // if(){проверка повторного пароля}
-
-        $user['Surname'] = $_REQUEST['Surname'];
-        // Debug::print_array($user);
-
-        if (isset($user['Surname'])) {
-            $user['Surname'] = $_POST["Surname"];
-        } else {
-            $user['Surname'] = '';
+        // FormValid()
+        $user->setLogin($_POST['login']);
+        $user->setPassword($_POST['password']);
+        if (MUsers::auth($user)) {
+            header("Location: /");
         }
 
-
-        $this->models['user'] = $user;
-
-
-        M\MSignUpIn::auth();
-        */
     }
 
     public static function actionRegister()
     {
-        /*
-         echo 'reg';
-         Debug::print_array($_POST);
-         if (!isset($_POST["submit"])) {
-
-             return false;
-         }
-         echo 'reg2';
-        */
-
         $user = TUserFactory::createEmptyUser();
-        // FormValid()
 
         $user->setSurname($_POST['Surname']);
         $user->setFirstName($_POST['firstName']);
         $user->setLogin($_POST['login']);
         $user->setEmail($_POST['email']);
-        $user->setPassword($_POST['password_']);
+        $user->setPassword($_POST['password']);
+        $user->setRole('UEXT');
 
-        Debug::print_array($_POST);
-        echo $user;
-        Debug::print_array($user);
+       // echo $user;
+        MUsers::register($user);
+       // MUsers::auth($user);
 
-        /*
-                if(isset($name)){
-                    echo "<br> имя: ".$name;
-                }
 
-                if(isset($email)){
-                    echo "<br> почта: ".$email;
-                }
 
-                if(isset($password)){
-                    echo "<br> пароль: ".$password;
-                }
-        */
+    }
+
+    public function acnUnlog()
+    {
+        MUsers::unlog();
+        header("Location: /");
+
     }
 
     public function actionUserAgreement()

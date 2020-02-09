@@ -4,8 +4,11 @@ namespace Application\Databases;
 
 use Application\Databases as DB;
 use Application\Debug;
+use Application\TError;
+use Error;
 use PDO;
 use PDOException;
+use Throwable;
 
 class DBManager
 {
@@ -26,8 +29,6 @@ class DBManager
 
     public static function getLinkWith(TDataBase $dataBase)
     {
-
-
         $charset = 'utf8';
         //DSN - data surce name - имя источника данных = link
         // {$dataBase->getHost()}
@@ -39,29 +40,35 @@ class DBManager
             PDO::ATTR_EMULATE_PREPARES => true,
         );
         //link
-
         //  print_r($dsn);
 
         try {
             $link = new PDO($dsn, $dataBase->getUser(), $dataBase->getPassword(), $options);
+            // mysqli_query($link,"SET NAMES utf8");
             return $link;
-        } catch (PDOException $e) {
-            echo 'Подключение не удалось: ' . $e->getMessage();
+        } catch (Throwable $e) {
+            throw new TError('Подключение к БД не удалось');
+            //echo 'Подключение не удалось: ' . $e->getMessage();
         }
 
-        return false;
+        // return false;
     }
 
     public static function getDumpDB(TDataBase $dataBase)
     {
-        //  $fileName =  'pages/admin/resource/downloads/dump'
+        // $fileName =  'pages/admin/resource/downloads/dump'
         // exec('mysqldump -uYourLogin -pYourPassword DBName > /path/to/save/fileDBName.sql');
         // ini_set();
 
-        ini_set('disable_functions', 'system');
-        $command = 'mysqldump -u ' . $dataBase->getUser() .
-            ' -p ' . $dataBase->getPassword() . ' ' . $dataBase->getDbName() . ' --single-transaction --quick > 
-        /pages/admin/resource/downloads/dump.sql';
+        // ini_set('disable_functions', 'system');
+        // echo $dataBase->getUser();
+        // echo $dataBase->getPassword();
+        // echo $dataBase->getDbName();
+        // self::getLinkWith(self::$DB1);
+
+        $command = 'mysqldump -u' . $dataBase->getUser() . ' -p' . $dataBase->getPassword() . ' ' . $dataBase->getDbName() . ' --single-transaction --quick > dump.sql';
+        echo $command;
+
         exec($command);
     }
 }

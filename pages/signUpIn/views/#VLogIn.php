@@ -8,7 +8,7 @@ use Application as A;
 <html lang="ru">
 <?php
 $title = 'SL-Регистрация';
-$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
+$styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
 $scripts[] = '';
 require 'core/base_views/VHead.php';
 ?>
@@ -33,25 +33,30 @@ require 'core/base_views/VHead.php';
                 </div>
                 <br>
 
+
                 <form action="/sign/auth" method="post">
                     <input class="input"
                            type="text"
                            name="login"
                            title="Будет использоваться в качестве логина"
-                           placeholder="Логин или электронная почта"
+                           placeholder="логин или электронная почта"
+                           value=""
                            required>
                     <br>
                     <input class="input"
                            type="password"
-                           name=""
-                           title=""
-                           placeholder="Пароль"
+                           name="password"
+                           title="Введите свой пароль"
+                           placeholder="пароль"
+                           value=""
                            required>
                     <br>
 
                     <input type="submit" class="_input main_text_color-1 main_bkg_color-1" value="Войти">
 
                 </form>
+
+
             </div>
             <?php
             ?>

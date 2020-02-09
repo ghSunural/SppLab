@@ -2,69 +2,69 @@
 
 namespace user\models;
 
-use Application\Databases\MPUser;
-use Application\DB_connection;
-use Application\TException;
+use Application\Databases\DBManager;
+use Application\Databases\MPUsers;
+
+use Application\TError;
+
 
 class MUsers
     //implements IUsers
 {
 
+    public static $roles = array(
+        'BAN' => 0,
+        'GST' => 1,
+        'UEXT' => 3,
+        'UW' => 5,
+        'MDR' => 7,
+        'ADM' => 10,
+        'DEV' => 12
+    );
+
+
     public static function register(TUser $user)
     {
+       // echo $user;
 
-        if (validUserForReg($user)){
-            MPUser::create()
+        MPUsers::add($user);
+        // header("Location: /");
+        /*
+        if (validUserForReg($user)) {
+        } else {
+            throw new TError('Данные не корректны');
         }
-        else{
-            throw Throwable;
-        }
+        */
 
     }
 
-    public static function checkUserData($email, $password)
-    {
-        // Соединение с БД
-        $db = DB_connection::getConnection();
-
-        // Текст запроса к БД
-        $sql = 'SELECT * FROM user WHERE email = :email AND password = :password';
-
-        // Получение результатов. Используется подготовленный запрос
-        $result = $db->prepare($sql);
-        $result->bindParam(':email', $email, PDO::PARAM_INT);
-        $result->bindParam(':password', $password, PDO::PARAM_INT);
-        $result->execute();
-
-        // Обращаемся к записи
-        $user = $result->fetch();
-
-        if ($user) {
-            // Если запись существует, возвращаем id пользователя
-            return $user['id'];
-        }
-
-        return false;
-    }
 
     /**
      * Запоминаем пользователя.
      *
      * @param int $userId <p>id пользователя</p>
      */
-    public static function auth($userRole)
+    public static function auth(TUser $user)
     {
-        // Записываем идентификатор пользователя в сессию
-        //  $_SESSION['user'] = $userId;
-        $_SESSION['userRole'] = $userRole;
+        // echo $user;
+        if (
+            $user->getLogin() == 'ysunural' &&
+            password_verify("Malakhov65", $user->getPasswordHash())
+        ) {
+            // session_start();
+            $_SESSION["userRole"] = 'DEV';           // require 'index.php';
+            return true;
+        } else {
+            throw new TError('Неверный логин или пароль');
+        }
+
     }
 
-    /**
-     * Возвращает идентификатор пользователя, если он авторизирован.<br/>
-     * Иначе перенаправляет на страницу входа.
-     *
-     * @return string <p>Идентификатор пользователя</p>
-     */
+    public static function unlog()
+    {
+        $_SESSION["userRole"] = 'GST';
+    }
+
     public static function checkLogged()
     {
         // Если сессия есть, вернем идентификатор пользователя
@@ -73,6 +73,7 @@ class MUsers
         }
 
         header('Location: /user/login');
+
     }
 
     /**
@@ -180,29 +181,5 @@ class MUsers
         return false;
     }
 
-    /**
-     * Возвращает пользователя с указанным id.
-     *
-     * @param int $id <p>id пользователя</p>
-     *
-     * @return array <p>Массив с информацией о пользователе</p>
-     */
-    public static function getUserById($id)
-    {
-        // Соединение с БД
-        $db = Db::getConnection();
 
-        // Текст запроса к БД
-        $sql = 'SELECT * FROM user WHERE id = :id';
-
-        // Получение и возврат результатов. Используется подготовленный запрос
-        $result = $db->prepare($sql);
-        $result->bindParam(':id', $id, PDO::PARAM_INT);
-
-        // Указываем, что хотим получить данные в виде массива
-        $result->setFetchMode(PDO::FETCH_ASSOC);
-        $result->execute();
-
-        return $result->fetch();
-    }
 }

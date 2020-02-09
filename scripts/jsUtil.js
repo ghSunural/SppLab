@@ -122,6 +122,12 @@
         }
 
 
+        exports.saveToFileVar = function ($varValue) {
+            //console.log();
+            jsUtil.downloadFile("geoData_KML.kml", $varValue);
+        };
+
+
     }(window.jsUtil = {})
 );
 

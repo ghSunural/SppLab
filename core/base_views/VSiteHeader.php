@@ -1,4 +1,6 @@
 <?php
+
+
 ?>
 <header class="block block_wrap fl fl_w Main_header">
     <div class="block block_inline main_bkg_color-1 main_text_color-1 Main_header_left">

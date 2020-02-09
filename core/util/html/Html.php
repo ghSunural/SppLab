@@ -92,6 +92,11 @@ EOL;
         return '&#'.$UTF_code.';';
     }
 
+    public static function alert($message)
+    {
+        echo "<script type='text/javascript'>alert('$message');</script>";
+    }
+
     public static function getView_Head($title, $styles = array(), $scripts = array())
     {
         $styles_as_html = '';

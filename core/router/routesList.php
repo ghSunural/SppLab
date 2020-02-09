@@ -14,8 +14,9 @@ return array(
     'download/(.*?)' => 'SiteController/actionGetFile/$1',
     // 'downloads' => 'SiteController/actionDownloadsDef',
     'sign/(reg|login)' => 'SignUpInController/acnSign/$1',
+    'sign/unlog' => 'SignUpInController/acnUnlog',
     'sign/doreg' => 'SignUpInController/actionRegister',
-    'sign/login' => 'SignUpInController/actionRegister',
+    'sign/auth' => 'SignUpInController/acnAuth',
     'signUp/userAgreement' => 'SignUpInController/actionUserAgreement',
 
     //плюс означает что символ может встертиться любое количество раз, $1 - первая подмаска (распарсит в параметры функции)
