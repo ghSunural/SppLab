@@ -4,7 +4,7 @@
 <?php
 $title = 'SPP-Lab';
 $styles['main-css'] = '/css/styles.css';
-$scripts['ymaps'] = 'https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink';
+
 require 'core/base_views/VHead.php';
 ?>
 
@@ -38,15 +38,39 @@ require 'core/base_views/VSiteHeader.php'
         </div>
 
         <div class="block tablet main_bkg_color-2">
+            <div class="H1 main_text_color-5">Загрузки</div>
+            <hr>
+            <p>
+            <ul>
+                <li><a href="download/refs" target="">Нормативная документация</a></li>
+                <li><a href="download/refs" target="">Бланки для технического отчета</a></li>
+                <li><a href="download/refs" target="">Бланки организационной деятельности</a></li>
+                <li><a href="download/refs" target="">Программное обеспечение</a></li>
+            </ul>
+            </p>
+
+            <hr>
+            <p align="justify" class="H_hint">
+                Ссылки для скачивания
+            </p>
+        </div>
+
+
+        <div class="block tablet main_bkg_color-2">
             <div class="H1 main_text_color-5">
                 Железные дороги
             </div>
             <hr>
+
             <p>
             <ul>
                 <li><a href="railways" target="_parent">Схемы железных дорог</a></li>
-                <li><a href="" target="">Контактные данные представителей</a></li>
             </ul>
+            <hr>
+            <p align="justify" class="H_hint">
+                Для железнодорожников
+            </p>
+
             </p>
         </div>
 
@@ -58,31 +82,33 @@ require 'core/base_views/VSiteHeader.php'
             <hr>
             <p>
             <ul>
-                <li><a href="geophysics" target="">Статьи и советы</a></li>
-                <li><a href="" target="">Программы обработки</a></li>
-                <li><a href="" target="">Скрипты и все прочее</a></li>
+                <li><a href="geophysics/articles" target="">Статьи и советы</a></li>
+                <li><a href="geophysics/programms" target="">Программы обработки</a></li>
             </ul>
             </p>
 
             <hr>
             <p align="justify" class="H_hint">
-                Советы, программы и все то, чего так не хватает
+               Программы, статьи, примеры
             </p>
         </div>
 
         <div class="block tablet main_bkg_color-2">
 
             <div class="H1 main_text_color-5">
-                <a href="calculators" target="">КАЛЬКУЛЯТОРЫ</a>
+               КАЛЬКУЛЯТОРЫ
             </div>
             <hr>
-            <p align="justify" class="H_hint">
-                Сервис вспомогательных вычислений
+
             <ul>
                 <li><a href="calculators/converterKML" target="">Конвертер KML</a></li>
                 <li><a href="calculators/num2str" target="">Число прописью</a></li>
             </ul>
+            <hr>
+            <p align="justify" class="H_hint">
+                Сервис вспомогательных вычислений
             </p>
+
         </div>
 
     </section>

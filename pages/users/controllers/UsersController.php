@@ -10,8 +10,16 @@ namespace Application\Controllers;
 
 //(англ. create), чтение (read), модификация (update), удаление (delete).
 
-class UsersController
+use Application\Databases\DBManager;
+use Application\Databases\MPUsers;
+use Application\Databases\ORM;
+use Application\Html;
+use Application\Resolver;
+
+class UsersController extends BaseController
 {
+
+
     public function actionRegister()
     {
         // Переменные для формы
@@ -121,6 +129,25 @@ class UsersController
         header('Location: /');
     }
 
+
+    public function acnUserManager()
+    {
+
+        Resolver::isAllowedFor('ADM');
+        if (isset($_POST['delete'])) {
+            //  echo 'list';
+            self::actionDelete($_POST['login']);
+
+
+        } elseif (isset($_POST['isWorker'])) {
+            //присвоить статус UW = 3
+            self::acnSetStatus($_POST['login'], 3);
+        }
+
+
+    }
+
+
     public function actionCreate()
     {
     }
@@ -131,9 +158,28 @@ class UsersController
 
     public function actionUpdate()
     {
+
+
+
     }
 
-    public function actionDelete()
+    public function acnSetStatus($login, $status)
     {
+         //UW = 4
+        $sql_body = "update TUsers set ref_role_id = $status where login = \"$login\"";
+        echo $sql_body;
+        ORM::sqlQuery(DBManager::$DB1, $sql_body);
+    }
+
+
+
+
+
+    public static function actionDelete($login)
+    {
+       MPUsers::delete($login);
+        Html::alert("Пользователь " .$login. " успешно удален");
+        //require "pages/users/views/VUsers.php";
+
     }
 }

@@ -36,57 +36,14 @@ require 'core/base_views/VHead.php';
     $Header_leftContent = 'Админ';
     $Header_rightContent = 'администрирование сайта';
     //require "core/base_views/VMinorHeader.php";
+    require "core/base_views/RibbonTools.php";
     ?>
+
+
 
     <main class="Main block block_wrap ">
 
 
-        <section class="menu main_bkg_color-1 fl fl_w">
-            <div class="menu_item">
-                <a href="#home" class="item_header">Главная</a>
-            </div>
-            <div class="menu_item drop_item">
-                <a href="javascript:void(0)" class="item_header item_droped">Git</a>
-                <div class="subitems_block">
-                    <div class="menu_subitem">
-                        <a href="#">Hint</a>
-                    </div>
-                </div>
-            </div>
-            <div class="menu_item drop_item">
-                <a href="javascript:void(0)" class="item_header item_droped">Базы данных</a>
-                <div class="subitems_block">
-                    <div class="menu_subitem">
-                        <a href="#">СУБД</a>
-                    </div>
-                    <div class="menu_subitem">
-                        <a href="#">MySQL</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <br>
-        <br>
-        <br>
-
-        <section class="tab main_bkg_color-1 fl fl_w">
-
-            <div class="tab_item">
-                <a href="javascript:void(0)" class="tab_header">Git</a>
-                <div class="block tab_layout">
-                    текст 1
-                </div>
-            </div>
-            <div class="tab_item drop_item">
-                <a href="javascript:void(0)" class="tab_header">Базы данных</a>
-                <div class="tab_layout">
-                    текст 2
-                </div>
-            </div>
-        </section>
-
-        <br>
         <br>
 
 
@@ -136,33 +93,6 @@ describe TAllEarthquakes;
             ?>
 
 
-            <hr>
-            <ul class="tabs">
-                <li><a href="#one">1</a></li>
-                <li><a href="#two">2</a></li>
-                <li><a href="#three">3</a></li>
-                <li><a href="#four">4</a></li>
-                <li><a href="#five">5</a></li>
-            </ul>
-            <div class="tabs-content">
-                <ul>
-                    <li id="one">
-                        <div>Содержимое 1-й вкладки</div>
-                    </li>
-                    <li id="two">
-                        <div>Содержимое 2-й вкладки</div>
-                    </li>
-                    <li id="three">
-                        <div>Содержимое 3-й вкладки</div>
-                    </li>
-                    <li id="four">
-                        <div>Содержимое 4-й вкладки</div>
-                    </li>
-                    <li id="five">
-                        <div>Содержимое 5-й вкладки</div>
-                    </li>
-                </ul>
-            </div>
 
         </section>
     </main>

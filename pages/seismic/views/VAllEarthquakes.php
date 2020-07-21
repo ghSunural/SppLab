@@ -36,66 +36,82 @@ require 'core/base_views/VHead.php';
     ?>
     <script src="/pages/seismic/scripts/geoxml_display.js" type="text/javascript"></script>
     <main class="Main block block_wrap">
-        <section class="content block block_wrap main_bkg_color-4">
-            <section class="block block_wrap main_bkg_color-4">
+        <section class="content block  main_bkg_color-4">
+            <section class="block main_bkg_color-4">
 
                 <div class="block block_box bb">
                     <H3>Фильтры</H3>
 
-                    <div class="block block_inline bb">
-                        <img class="" src="/pages/seismic/resource/site/earth.webp"
-                             width="50px">
-                        <form id="limits" action="/seismic/getEarthquakes" method="post" class=" block_inline bb ">
-                            <p>
-                                <input name="params[minLat]"
-                                       title="Минимальная широта"
-                                       type="number"
-                                       class="_input"
-                                       step="0.01"
-                                       placeholder="34.06"
-                                       min="34.06"
-                                       value="<?= $rangeCoord['minLat']; ?>"
-                            </p>
-                            <p>
-                                <input name="params[maxLat]"
-                                       title="Максимальная широта"
-                                       type="number"
-                                       class="_input"
-                                       step="0.01"
-                                       placeholder="87.5"
-                                       max="87.5"
-                                       value="<?= $rangeCoord['maxLat']; ?>"
-                            </p>
-                            <p>
-                                <input name="params[minLong]"
-                                       title="Минимальная долгота"
-                                       type="number"
-                                       class="_input"
-                                       step="0.01"
-                                       placeholder="-179"
-                                       min="-179"
-                                       value="<?= $rangeCoord['minLong'] ?>"
-                            </p>
-                            <p>
-                                <input name="params[maxLong]"
-                                       title="Максимальная долгота"
-                                       type="number"
-                                       class="_input"
-                                       step="0.01"
-                                       placeholder="186.14"
-                                       max="186.14"
-                                       value="<?= $rangeCoord['maxLong']; ?>"
-                            </p>
+                    <div class="block">
+                        <img class="" src="/pages/seismic/resource/site/earth.webp" width="50px">
 
-                            <p>
+                        <form id="limits" action="/seismic/getEarthquakes" method="post" class="">
+
+
+                                <div class="block">
+                                  <!--  <label for="#maxLat">Север</label><br> -->
+                                    <input
+                                            id="#maxLat"
+                                            name="params[maxLat]"
+                                            title="Максимальная широта"
+                                            type="number"
+                                            class="_input"
+                                            step="0.01"
+                                            placeholder="87.5"
+                                            max="87.5"
+                                            value="<?= $rangeCoord['maxLat']; ?>"
+                                </div>
+
+                                <div class="block ">
+                                  <!--  <label for="#minLat">Запад</label> -->
+                                    <input
+                                            id="#minLong"
+                                            name="params[minLong]"
+                                            title="Минимальная долгота"
+                                            type="number"
+                                            class="_input"
+                                            step="0.01"
+                                            placeholder="-179"
+                                            min="-179"
+                                            value="<?= $rangeCoord['minLong'] ?>"
+                                </div>
+                                <div class="block">
+                                    <!--  <label for="#maxLat">Восток</label><br> -->
+                                    <input
+                                            id="#maxLong"
+                                            name="params[maxLong]"
+                                            title="Максимальная долгота"
+                                            type="number"
+                                            class="_input"
+                                            step="0.01"
+                                            placeholder="186.14"
+                                            max="186.14"
+                                            value="<?= $rangeCoord['maxLong']; ?>"
+                                </div>
+                                <div class="block">
+                               <!--     <label for="#minLat">Юг</label><br> -->
+                                    <input
+                                            id="#minLat"
+                                            name="params[minLat]"
+                                            title="Минимальная широта"
+                                            type="number"
+                                            class="_input"
+                                            step="0.01"
+                                            placeholder="34.06"
+                                            min="34.06"
+                                            value="<?= $rangeCoord['minLat']; ?>"
+                                </div>
+
+
+                            <div>
                                 <input name="year"
                                        type="number"
                                        class="_input"
                                        step="1"
                                        placeholder="год"
                                        value="">
-                            </p>
-                            <p>
+                            </div>
+                            <div>
                                 <input name="month"
                                        type="number"
                                        class="_input"
@@ -104,8 +120,8 @@ require 'core/base_views/VHead.php';
                                        step="1"
                                        placeholder="месяц"
                                        value="">
-                            </p>
-                            <p>
+                            </div>
+                            <div>
                                 <input name="day"
                                        type="number"
                                        class="_input"
@@ -114,24 +130,32 @@ require 'core/base_views/VHead.php';
                                        step="1"
                                        placeholder="день"
                                        value="">
-                            </p>
+                            </div>
 
                         </form>
 
                     </div>
-                    <div class="block">
-                        <input type="submit" name="list" form="limits"
-                               title="Список землетрясений в диапазоне указанных координат"
-                               value="Список" class='main_bkg_color-1 main_text_color-1'>
 
-                        <input type="submit" name="on_map" form="limits" value="На карте" class="load-kml main_bkg_color-1 main_text_color-1"/>
-                        <br>
-                        <input type="submit" name="export" form="limits" title="Экспорт геоданных в kml"
-                               value="Экспорт в kml" class='main_bkg_color-1 main_text_color-1'>
-                    </div>
+
+
 
                 </div>
-                <div id="map" class="block_box bb">
+
+                <div class="block">
+                    <input type="submit" name="list" form="limits"
+                           title="Список землетрясений в диапазоне указанных координат"
+                           value="Список" class='main_bkg_color-1 main_text_color-1'>
+
+                    <input type="submit" name="on_map" form="limits" value="На карте"
+                           class="load-kml main_bkg_color-1 main_text_color-1"/>
+
+                    <input type="submit" name="export" form="limits" title="Экспорт геоданных в kml"
+                           value="Экспорт в kml" class='main_bkg_color-1 main_text_color-1'>
+                </div>
+
+
+
+                <div id="map" class="bb">
                     <!--карта-->
                 </div>
                 <div class="block block_box bb contenteditable">
@@ -141,11 +165,6 @@ require 'core/base_views/VHead.php';
                 </div>
                 <br>
             </section>
-
-
-
-
-
 
 
         </section>

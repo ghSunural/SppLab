@@ -35,7 +35,7 @@ require 'core/base_views/VHead.php';
                            type="text"
                            name="Surname"
                            placeholder="Фамилия"
-                           value="<?= 'Петров' ?>"
+                           value=""
                            required/>
                     <br>
                     <input class="input"
@@ -43,7 +43,7 @@ require 'core/base_views/VHead.php';
                            name="firstName"
                            title=""
                            placeholder="Имя"
-                           value="<?= 'Иван' ?>"
+                           value=""
                            required/>
                     <br>
                     <input class="input"
@@ -51,7 +51,7 @@ require 'core/base_views/VHead.php';
                            name="login"
                            title="Будет использоваться в качестве логина"
                            placeholder="Логин"
-                           value="<?= 'Tester' ?>"
+                           value=""
                            required>
                     <br>
                     <input class="input"
@@ -59,7 +59,7 @@ require 'core/base_views/VHead.php';
                            name="email"
                            title="Может использоваться в качестве логина"
                            placeholder="Электронная почта"
-                           value="<?= 'petroviv@sppural.ru'?>"
+                           value=""
                            required>
                     <br>
                     <input class="input"
@@ -67,7 +67,7 @@ require 'core/base_views/VHead.php';
                            name="password"
                            title=""
                            placeholder="Придумайте пароль"
-                           value="<?= 'fiture123'?>"
+                           value=""
                            required>
                     <br>
                     <input class="input"
@@ -75,7 +75,7 @@ require 'core/base_views/VHead.php';
                            name="r-password"
                            title=""
                            placeholder="Повторите пароль"
-                           value="<?= 'fiture123'?>"
+                           value=""
                            required>
                     <br>
                     <!--

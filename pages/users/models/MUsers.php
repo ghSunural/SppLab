@@ -5,6 +5,8 @@ namespace user\models;
 use Application\Databases\DBManager;
 use Application\Databases\MPUsers;
 
+use Application\Databases\ORM;
+use Application\Debug;
 use Application\TError;
 
 
@@ -25,7 +27,7 @@ class MUsers
 
     public static function register(TUser $user)
     {
-       // echo $user;
+        // echo $user;
 
         MPUsers::add($user);
         // header("Location: /");
@@ -44,15 +46,38 @@ class MUsers
      *
      * @param int $userId <p>id пользователя</p>
      */
-    public static function auth(TUser $user)
+    public static function auth($checked_login, $password)
     {
-        // echo $user;
-        if (
-            $user->getLogin() == 'ysunural' &&
-            password_verify("Malakhov65", $user->getPasswordHash())
-        ) {
+        echo "авторизация";
+
+        //  $user->getLogin() == 'ysunural' &&
+        //  password_verify("Malakhov65", $user->getPasswordHash())
+
+        $userFromDB = MPUsers::read($checked_login);
+        Debug::print_array($userFromDB);
+        echo "Роль ".$userFromDB['ref_role_id'];
+
+        $ref_role_id = $userFromDB['ref_role_id'];
+        $ref_role_id = $userFromDB['ref_role_id'];
+        $sql = "select roleAcronym from TRolesList where ID =  \"$ref_role_id\"";
+        echo $sql;
+        $roleAcronym = (ORM::sqlQuery(DBManager::$DB1, $sql));
+        Debug::print_array($roleAcronym);
+       // echo $roleAcronym[$ref_role_id];
+
+        //$sql_body = "select roleAcronym from TRolesList where ID =  \"$ref_role_id\"";
+        //echo $sql_body;
+        //$roleAcronym = ORM::sqlQuery(DBManager::$DB1, $sql_body);
+
+
+        if (password_verify($password, $userFromDB['passwordHash'])) {
+
             // session_start();
-            $_SESSION["userRole"] = 'DEV';           // require 'index.php';
+           // echo "roleAcronym  = ". $roleAcronym;
+          // $roleAcronym = "UEXT";
+          // $_SESSION["userRole"] = $roleAcronym;
+         $_SESSION["userRole"] = 'DEV';
+            echo "конец авторизации";// require 'index.php';
             return true;
         } else {
             throw new TError('Неверный логин или пароль');

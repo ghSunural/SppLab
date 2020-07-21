@@ -11,7 +11,9 @@ return array(
     'my-tests' => 'TestsController/actionIndex',
 
     //(.*) - любые символы
+    'download/refs' => 'DownloadsController/acnIndex',
     'download/(.*?)' => 'SiteController/actionGetFile/$1',
+
     // 'downloads' => 'SiteController/actionDownloadsDef',
     'sign/(reg|login)' => 'SignUpInController/acnSign/$1',
     'sign/unlog' => 'SignUpInController/acnUnlog',
@@ -34,7 +36,11 @@ return array(
     'seismic' => 'SeismicController/actionIndex',
     // 'calculators/num2str' => 'CalculatorController/actionNum2str',
 
-    'geophysics' => 'GeophysicsController/actionIndex',
+    'geophysics/articles' => 'GeophysicsController/actionIndex',
+
+
+
+
     'calculators/num2str' => 'CalculatorController/actionNum2strNum',
     'calculators/converterKML' => 'CalculatorController/actionConverterKML',
 
@@ -45,9 +51,17 @@ return array(
 
     'admin/httpheaders' => 'AdminController/actionHeaders',
     'admin/sql' => 'AdminController/actionSql',
+    'admin/users' => 'AdminController/acnShowUsers',
     'admin/dump' => 'AdminController/actionDump',
+    'admin/errlog' => 'AdminController/acnErrorsLog',
     'admin' => 'AdminController/actionIndex',
     'admin2' => 'AdminController/actionIndex2',
+
+
+    'users' => 'UsersController/acnUserManager',
+
+
+
 
     //'calculators/num2str/([0-9]+)' => 'Num2strController/actionIndex/$1',
     '' => 'SiteController/actionIndex', // actionIndex в SiteController

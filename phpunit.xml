@@ -5,8 +5,7 @@
         <file>tests/IntlFormatterTest.php</file>-->
         <testsuite name="Application Test Suite">
             <directory>unitTests</directory>
-            <file>core/Stack2Test.php</file>
-            <file>core/Validator.php</file>
+            <file>core/util/ValidatorTest.php</file>
         </testsuite>
     </testsuites>
 </phpunit>

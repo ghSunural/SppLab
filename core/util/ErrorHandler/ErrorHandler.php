@@ -9,39 +9,81 @@ class ErrorHandler
 {
     public static $user_error_message;
     public static $system_error_message;
+    public static $error_file;
+    public static $error_line;
+    public static $error_trace = array();
 
-    public static function alert_error(Throwable $e)
+    public static function alert_error(TError $e)
     {
 
-        $message = ($e->getUserMessage());
-        Html::alert($message);
+        Html::alert($e->getMessage());
+       // self::redirect($e);
+        /*
+        if($e->getUserMessage() == 'Доступ запрещен'){
+
+            header ("Location: /sign/reg");
+        }else{
+            header ("Location: /");
+        }
+        */
         //echo "<script type='text/javascript'>alert('$message');</script>";
 
+    }
+
+    public static function redirect(TError $e){
+        if($e->getMessage() == 'Доступ запрещен'){
+            require 'pages/signUpIn/views/#VLogIn.php';
+          //  header ("Location: /sign/login");
+        }else{
+            require 'core/base_views/site_view.php';
+        }
     }
 
 
     public static function handle_error(Throwable $e)
     {
-        error_log($e->getMessage() . "\n", 3, 'core/util/ErrorHandler/errors.log');
 
-      //  is_null($e->getMessage())         ?
-            self::$user_error_message = '';
-           // : $e->getUserMessage();
-      //  self::$system_error_message = $e->getSystemMessage();
+     //   self::$user_error_message = 'Ошибочка вышла...';
+        self::$system_error_message = $e->getMessage();
+        self::$error_file = $e->getFile();
+        self::$error_line = $e->getLine();
+        self::$error_trace = $e->getTraceAsString();
 
-        if (self::$user_error_message === 'Доступ запрещен') {
-            Html::alert(self::$user_error_message);
-            // echo "<script type='text/javascript'>alert('$e->getUserMessage()');</script>";
-            // echo "<script type='text/javascript'>alert(\"."self::$user_error_message"."\");</script>";
-            header('Location: /sign/login');
-            //  require 'pages/signUpIn/views/#VLogIn.php';
-            //  return;
-        }
+        error_log(
+            "<br><br><b style='color:red;'>Ошибка</b>: "
+            . self::$system_error_message.
+            "<br>&nbsp; файл: ".self::$error_file  .
+            "<br>&nbsp; строка: ". self::$error_line,
+            3, 'core/util/ErrorHandler/errors.html');
+
+
+
         require 'core/util/ErrorHandler/#VShowError.php';
+
     }
 
-    public static function displayErr()
+    public static function displayError()
     {
+
+        if ($_SESSION["userRole"] == 'DEV') {
+            echo "<h2>Аааа! вот что случилось!</h2>";
+          //  echo "Ошибка: ".self::$user_error_message;
+          //  echo '<br>';
+            echo "Ошибка: ".self::$system_error_message;
+            echo '<hr>';
+            echo "Файл: ".self::$error_file;
+            echo '<br>';
+            echo "Строка: ".self::$error_line;
+            echo '<br>';
+            echo '<hr>';
+            echo( "Трассировка: ".self::$error_trace);
+           /* echo "<h3>Трассировка</h3>";
+             Debug::print_array(debug_backtrace());
+            basename(print_r(debug_backtrace()));*/
+        }
+        else{
+
+        }
 
 
     }

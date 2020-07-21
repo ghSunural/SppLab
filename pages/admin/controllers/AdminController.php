@@ -26,9 +26,27 @@ class AdminController extends BaseController
     {
         A\Resolver::isAllowedFor('DEV');
         $this->models['users'] =
-            DB\MPUsers::readAll(DBManager::getLinkWith(DBManager::$DB1));
+            DB\MPUsers::readAll();
         $this->render('pages/admin/views/Admin.php');
     }
+
+    public function acnShowUsers()
+    {
+        A\Resolver::isAllowedFor('ADM');
+
+        //TUsers
+        $arrColumnHeaders = DB\ORM::getColumnHeaders(DB\DBManager::$DB1, 'VUsers');
+        //$users = DB\MPUsers::readAll();
+        $sql_body = "select * from VUsers";
+        $users = DB\ORM::sqlQuery(DB\DBManager::$DB1, $sql_body, PDO::FETCH_NUM);
+
+        $this->models['arrColumnHeaders'] = $arrColumnHeaders;
+        $this->models['users'] = $users;
+
+        $this->render('pages/users/views/VUsers.php');
+    }
+
+
 
     public function actionHeaders()
     {
@@ -37,16 +55,25 @@ class AdminController extends BaseController
         $this->render($this->view);
     }
 
-    public static function actionDump()
+    public function actionDump()
     {
 
-       // $dataBase = A\DB_connection::$DBsite;
-       // $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
+        require "core/util/ErrorHandler/errors.html";
+      //  echo "дамп";
+        // $dataBase = A\DB_connection::$DBsite;
+        // $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
 
-     //   $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
-        DB\DBManager::getDumpDB(DB\DBManager::$DB1);
-        A\Util::downloadFile('pages/admin/resource/downloads/dump.sql');
+        //   $link = DB\DBManager::getLinkWith(DB\DBManager::$DB1);
+      //  DB\DBManager::getDumpDB(DB\DBManager::$DB1);
+      //  A\Util::downloadFile('pages/admin/resource/downloads/dump.sql');
     }
+
+    public function acnErrorsLog()
+    {
+
+        require "core/util/ErrorHandler/errors.html";
+    }
+
 
     public function actionSql()
     {

@@ -26,13 +26,14 @@ class SignUpInController extends BaseController
 
     public function acnAuth()
     {
-        $user = TUserFactory::createEmptyUser();
+       // $user = TUserFactory::createEmptyUser();
         // FormValid()
-        $user->setLogin($_POST['login']);
-        $user->setPassword($_POST['password']);
-        if (MUsers::auth($user)) {
+       // $user->setLogin($_POST['login']);
+       // $user->setPassword($_POST['password']);
+        if (MUsers::auth($_POST['login'], $_POST['password'])) {
             header("Location: /");
         }
+        echo $_POST['login'];
 
     }
 
@@ -58,7 +59,7 @@ class SignUpInController extends BaseController
     public function acnUnlog()
     {
         MUsers::unlog();
-        header("Location: /");
+        header("Location: /sign/login");
 
     }
 

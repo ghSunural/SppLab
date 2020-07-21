@@ -35,9 +35,9 @@ html {
 .content {
 
     justify-content: center;
-    align-items: center;
-/* min-height: 90 vh;
- max-width: 98 vw; */
+    /* align-items: center; */
+ /* min-height: 90 vh;
+  max-width: 98 vw; */
     min-width: 96vw;
     padding: 10px 10px;
 }

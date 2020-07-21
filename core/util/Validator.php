@@ -4,12 +4,14 @@ namespace Application;
 
 
 use Application\TError;
+use Error;
+use phpDocumentor\Reflection\Types\Boolean;
 
 
 class Validator
 {
 
-    public static function isName($var)
+    public static function isName($var): bool
     {
         // /u unicode
         $regExp = '/^([а-яА-ЯЁёa-zA-Z]+)$/u';
@@ -18,14 +20,14 @@ class Validator
     }
 
 
-    public static function isNumber($var)
+    public static function isNumber($var): bool
     {
         $regExp = '|^[\d]+$|';
         return (preg_match($regExp, $var))
             ? true : false;
     }
 
-    public static function isEmail($var)
+    public static function isEmail($var): bool
     {
         //  $regExp = "/.+@.+\..+/ui";
         $regExp = "/\A[^@]+@([^@\.]+\.)+[^@\.]+\z/";
@@ -48,7 +50,7 @@ class Validator
         if (preg_match($regExp, $var)) {
             return true;
         } else {
-            throw new TError('не почта', '');
+            throw new Error('не почта');
         }
 
     }

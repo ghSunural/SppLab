@@ -3,7 +3,7 @@
 <header class="Footer block block_wrap fl fl-nw">
     <div class="left block block_inline main_bkg_color-2 main_text_color-2">
         <div class="left_top block">
-            &copy; Малахов Александр, 2019 &#9993; <a href="mailto:ysunural@yandex.ru">Написать письмо</a>
+            &copy; Малахов Александр, 2020<a href="mailto:ysunural@yandex.ru" class="letter">&#9993;</a>
         </div>
 
     </div>
@@ -50,6 +50,10 @@
         font-weight: bold;
         align-items: center;
         padding-left: 10px;
+    }
+
+    .letter{
+        font-size: 1.5em;
     }
 
     .animated {

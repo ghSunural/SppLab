@@ -35,8 +35,10 @@ class MPUsers
 
 
         $sql = "SELECT ID FROM `TRolesList` WHERE roleAcronym = 'UEXT'";
-        $ref_role_id = (ORM::sqlQuery(DBManager::$DB1, $sql))[0]['ID'];
-
+       // echo $sql."<br>";
+        $ref_role_id = 2;
+            //ORM::sqlQuery(DBManager::$DB1, $sql, PDO::FETCH_ASSOC);
+       // A\Debug::print_array(ORM::sqlQuery(DBManager::$DB1, $sql, PDO::FETCH_ASSOC), "sql query");
 
         $query = 'INSERT INTO ' . self::$tableName . '
                    (surname, firstName, login, passwordHash, email, ref_role_id)
@@ -66,19 +68,24 @@ class MPUsers
         //SELECT GET
 
 
-        $sql = 'SELECT * FROM ' . self::$viewName . ' WHERE login =  ' . $login;
+        $sql = 'SELECT * FROM ' . self::$tableName . ' WHERE login =  ' . '"'.$login.'"';
+       // echo $sql;
         $stmt = $link->prepare($sql);
         // $stmt->bindParam(':login', $login);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
 
         //$user = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $user = $stmt->fetch();
 
-        while ($user = $stmt->fetch()) {
-            array_push($users, $user);
-        }
+
+     // while ($user = $stmt->fetch()) {
+        //   array_push($users, $user);
+     //  }
 
 
         // A\Debug::print_array($rows);
+        A\Debug::print_array($user);
         return $user;
     }
 
@@ -101,7 +108,7 @@ class MPUsers
       //  A\Debug::print_array($user);
 
         $userObj = TUserFactory::createEmptyUser();
-        $userObj->setSurname = $res->surname;
+        $userObj->setSurname = $res->Surname;
        /* $userObj->setFirstName = ($user['surname']);
         $userObj->setLogin = ($user['surname']);
         $userObj->setEmail = ($user['surname']);
@@ -123,13 +130,15 @@ class MPUsers
 
     public static function delete($login)
     {
+
         $link = DBManager::getLinkWith(DBManager::$DB1);
         //DELETE DELETE
-        $sql = 'DELETE FROM ' . self::$tableName . 'WHERE login =  :login';
+        $sql = 'DELETE FROM ' . self::$tableName . ' WHERE login =  :login';
         $stmt = $link->prepare($sql);
         $stmt->bindParam(':login', $login);
 
         $stmt->execute();
+
     }
 
 

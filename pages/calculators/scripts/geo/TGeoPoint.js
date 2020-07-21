@@ -1,47 +1,76 @@
 'use strict';
 
-(function (exports) {
 
-    function TGeoPoint() {
+;(function (exports) {
 
-        var name;
-        var description;
-        var lat;
-        var long;
-        var alt;
 
-        this.atrr = {};
 
-        TGeoPoint.prototype.toKml = function () {
+    exports.TGeoPoint = function ($lat, $long, $alt, $name, $description) {
 
-            var $kml = "<Placemark>\n<name>\n${this.name}\n</name>";
-            console.log($kml);
-            return $kml;
+        this.lat = $lat;
+        this.long = $long;
+        this.alt = $alt;
+        this.name = $name;
+        this.description = $description;
+
+        this.getName = function () {
+            return this.name;
         };
 
-    }
+        this.getDescription = function () {
+            return this.description;
+        };
 
-    exports.TGeoPoint = TGeoPoint;
+        this.getLat = function () {
+            return this.lat;
+        };
+
+        this.getLong = function () {
+            return this.long;
+        };
+
+        this.getAlt = function () {
+            return this.alt;
+        };
 
 
-}(window.kml = {}));
+        this.toKmlPlacemark = function () {
 
-
-/*
-<IconStyle>
-<Icon>
-<href></href>
-</Icon>
-</IconStyle>
+            return `
+<Placemark>
+<name>
+    ${this.getName()}
+</name>
 <description>
-{$this->getDescription()}
+    ${this.getDescription()}
 </description>
 <Point>
-<coordinates>{$this->getLong()}, {$this->getLat()}, {$this->getAlt()}</coordinates>
+    <coordinates>${this.getLong()}, ${this.getLat()}, ${this.getAlt()}</coordinates>
 </Point>
-</Placemark>
-";
-}
+</Placemark>`;
+        };
 
-*/
+        this.toGpxWayPoint = function () {
+
+            return `
+<wpt lat="${this.getLat()}" lon="${this.getLong()}"><name>${this.getName()}</name></wpt>
+`;
+        };
+
+
+
+
+
+
+
+
+
+
+
+    };
+
+    //exports.TGeoPoint = this.TGeoPoint();
+
+
+}(window.geo = {}));
 

@@ -1,17 +1,17 @@
 <?php
 
-($_SESSION['userRole'] == 'DEV')?
-$opacity = 0.1 : $opacity = 0.8;
+echo $_SESSION["userRole"];
 
-if($_SESSION['userRole'] == 'GST'){
-     $log_unlog = 'ВХОД';
-     $ref_log_unlog = '/sign/login';
-}
-else{
+($_SESSION['userRole'] == 'DEV') ?
+    $opacity = 0.1 : $opacity = 0.8;
+
+if ($_SESSION['userRole'] == 'GST') {
+    $log_unlog = 'ВХОД';
+    $ref_log_unlog = '/sign/login';
+} else {
     $log_unlog = 'ВЫХОД';
     $ref_log_unlog = '/sign/unlog';
 }
-
 
 
 ?>
@@ -35,7 +35,7 @@ else{
 
 
     <div class="search">
-        <i class="fa fa-search" onclick="jsUtil.searchpage()"></i>
+        <i class="fa fa-search ico" onclick="jsUtil.searchpage()"></i>
         <input type="search" id="search" placeholder="Поиск..."/>
     </div>
 
@@ -69,6 +69,10 @@ else{
         align-items: center;
         border-bottom: 5px solid #99173C;
         margin: 0;
+    }
+
+    .ico{
+        font-size: 2em;
     }
 
     .t-botton {
@@ -112,13 +116,16 @@ else{
     .search {
         border: 1px solid #ccc;
         display: inline-block;
-        border-radius: 3px;
-        font-size: 20px;
+        border-radius: 10px;
+        font-size: 70%;
+        height: 65%;
     }
 
     [type='search'] {
         border: none;
         outline: none;
+        height: 100%;
+
     }
 
     .fa .fa-search {

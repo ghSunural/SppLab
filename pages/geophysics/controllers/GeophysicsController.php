@@ -8,4 +8,6 @@ class GeophysicsController extends BaseController
     {
         $this->render('pages/geophysics/views/#VGeophysics.php');
     }
+
+
 }

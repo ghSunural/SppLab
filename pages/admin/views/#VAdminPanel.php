@@ -145,7 +145,7 @@ echo (float) $a;
     <a href="/admin/dump">Создать дамп БД</a>
 </div>
 <div class="block block_box bb">
-    <a href="/core/util/ErrorHandler/errors.log" target="_blank">Просмотр лога</a>
+    <a href="/admin/errlog" target="">Просмотр лога</a>  <br>
     //echo file_get_contents($filename);
 </div>
 
@@ -165,7 +165,7 @@ die('Not a valid URL');
             <li><a href="https://ru.000webhost.com/vhod-v-cpanel"><span class="fa fa-globe fa-fw fa-1x"></span>управление
                     сайтом</a></li>
             <li><a href=""><span class="fa fa-book  fa-fw fa-1x"></span> Категории</a></li>
-            <li><a href=""><span class="fa fa-user-secret fa-fw fa-2x"></span> Пользователи</a></li>
+            <li><a href="admin/users"><span class="fa fa-user-secret fa-fw fa-2x"></span> Пользователи</a></li>
             <li><a href=""><span class="fa fa-cog fa-fw fa-1x"></span> Настройки</a></li>
             <li><a href="#database"><span class="fa fa-database fa-fw fa-1x"></span> База данных</a></li>
 

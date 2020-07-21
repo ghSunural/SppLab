@@ -41,9 +41,7 @@ require 'core/base_views/VHead.php';
         <section class="content content_with_sideBar block block_wrap  main_bkg_color-4">
 
 
-            <?php require 'core/base_views/Slider.php' ?>
-
-            <?php
+            <?php //require 'core/base_views/Slider.php' ?>      <?php
 
             $openDialog_header = 'Карта';
             $openDialog_htmlContent = <<< 'EOL'

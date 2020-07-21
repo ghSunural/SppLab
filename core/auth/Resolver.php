@@ -2,6 +2,7 @@
 
 namespace Application;
 
+use Error;
 use user\models\MUsers;
 
 class Resolver
@@ -19,8 +20,13 @@ class Resolver
         if (($userRole >= $lowerAccessLevel)|| $lowerAccessLevel < 2) {
             return true;
         } else {
-            //
-            throw new TError('Доступ запрещен');
+
+            Html::alert('Доступ запрещен');
+            header('Location: https://lab.sppural.ru/sign/login');
+           // require_once 'core/autoload.php';
+            //throw new TError('Доступ запрещен');
+           // return false;
+
         }
 
     }

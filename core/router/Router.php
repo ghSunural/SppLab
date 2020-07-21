@@ -3,6 +3,7 @@
 namespace Application;
 
 use Application as A;
+use PHPUnit\Framework\Warning;
 use Throwable;
 
 class Router
@@ -26,7 +27,7 @@ class Router
 
     public function run()
     {
-        //  try {
+        // try {
         // Получить строку запроса
         $uri = $this->getURI();
 
@@ -53,7 +54,22 @@ class Router
                 // Создать объект, вызвать метод (т.е. action)
                 $controllerObject = new $controllerName();
 
+                //   if(method_exists($controllerObject, $actionName)){
                 $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
+                //  $controllerObject->actionName($parameters);
+                // }
+                //else{
+                //    require "core/base_views/404_NotFound.html";
+                //  header("Location: /");
+                // }
+
+
+                // Вызываем функцию foobar() с 2 аргументами
+                // call_user_func_array("foobar", array("one", "two"));
+
+                // Вызываем метод $foo->bar() с 2 аргументами
+                // $foo = new foo;
+                // call_user_func_array(array($foo, "bar"), array("three", "four"));
 
                 //должен прекратить поиск если $result != null
                 /* if ($result != null) {
@@ -67,10 +83,6 @@ class Router
                 }
             }
         }
-        //  } catch (Throwable $e) {
-        //     echo 'екм акарек';
-        //  throw $e;
-        // }
     }
 
     /**

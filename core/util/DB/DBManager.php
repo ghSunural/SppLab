@@ -42,14 +42,14 @@ class DBManager
         //link
         //  print_r($dsn);
 
-        try {
+    //    try {
             $link = new PDO($dsn, $dataBase->getUser(), $dataBase->getPassword(), $options);
             // mysqli_query($link,"SET NAMES utf8");
             return $link;
-        } catch (Throwable $e) {
-            throw new TError('Подключение к БД не удалось');
+      //  } catch (Throwable $e) {
+       //     throw new TError('Подключение к БД не удалось');
             //echo 'Подключение не удалось: ' . $e->getMessage();
-        }
+       // }
 
         // return false;
     }

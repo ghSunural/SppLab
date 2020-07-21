@@ -18,16 +18,34 @@ class ORM
             $fetchMode = PDO::FETCH_BOTH;
         }
 
-        $rowsArray = array();
 
         $statement = $link->query($sql_body);
         $statement->setFetchMode($fetchMode);
 
-        while ($row = $statement->fetch()) {
-            array_push($rowsArray, $row);
+       // echo is_array($statement->fetch())."<br>";
+      //  A\Debug::print_array($statement->fetch());
+        $count = $statement->rowCount();
+      //  A\Debug::print_var('количество строк', $count);
+        $rowsArray = array();
+        if ($count > 1) {
+            echo "Массив";
+
+            while ($row = $statement->fetch()) {
+                array_push($rowsArray, $row);
+            }
+         //  A\Debug::print_array($rowsArray);
+            //$rowsArray = $statement->fetch();
+
+        } else {
+           echo "Не массив";
+            array_push($rowsArray, $statement->fetch());
+          //  A\Debug::print_array($rowsArray);
+
         }
 
         return $rowsArray;
+
+
     }
 
     public static function findRows(TDataBase $DB, $table, $expression = null)
@@ -63,7 +81,7 @@ class ORM
     {
 
         $columnHeaders = array();
-        $fields = self::sqlQuery($DB, 'describe '.$tableName);
+        $fields = self::sqlQuery($DB, 'describe ' . $tableName);
         $i = 0;
         foreach ($fields as $f) {
             array_push($columnHeaders, $f[0]);
@@ -72,7 +90,6 @@ class ORM
 
         return $columnHeaders;
     }
-
 
     public static function VAllEarthquakesQuery()
     {
@@ -104,36 +121,5 @@ where
         return $table;
     }
 
-    /*
-        static function getMainPhoto($link, $article)
-        {
 
-            return mysqli_query($link, "select * from v_article_to_photo where article=" . $article . " and main_marker=1;");
-            // select * from v_article_to_photo where article=19030102;
-        }
-
-        static function getPhoto($link, $article)
-        {
-
-            return mysqli_query($link, "select * from v_article_to_photo where article=" . $article);
-            // select * from v_article_to_photo where article=19030102;
-        }
-
-        static function getGeneralData($link, $article)
-        {
-
-            return mysqli_query($link, "select * from TCatalog where article=" . $article);
-            // select * from v_article_to_photo where article=19030102;
-        }
-
-
-        static function select($link, $fields, $table)
-
-        {
-            return mysqli_query($link, "SELECT {$fields} FROM {$table}");
-            //  return mysqli_query($link, "SELECT * FROM
-            //  ttable WHERE `column` LIKE '%{$needle}%'");
-        }
-
-    */
 }
