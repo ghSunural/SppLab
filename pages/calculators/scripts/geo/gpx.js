@@ -1,55 +1,47 @@
 'use strict';
 ;(function (exports) {
 
-    /*        $coordinatesLine  =  ${this.getLong()}, ${this.getLat()}, ${this.getAlt()}
-        for (let $geoPoint of $geoPoints) {
-            $kml += ($geoPoint.toKml());        }     */
 
+    exports.getGpxPointsBody = function ($geoPoints) {
 
-    exports.getKmlPointsBody = function($geoPoints) {
-
-        let $kml = getKmlOpenTags();
+        let $gpx = getGpxOpenTags();
 
         for (let $geoPoint of $geoPoints) {
 
-            $kml += ($geoPoint.toKml());
+            $gpx += ($geoPoint.toGpx());
         }
 
-        $kml += (getCloseTagKml());
+        $gpx += (getCloseTagGpx());
 
-        return $kml;
+        return $gpx;
     };
 
 
-    exports.getKmlLinesBody =  function($geoLines)  {
+    exports.getGpxLinesBody = function ($geoLines) {
 
-        let $kml = getKmlOpenTags();
-
+        let $gpx = getGpxOpenTags();
         for (let $geoLine of $geoLines) {
-
-            $kml += ($geoLine.toKml());
+            $gpx += ($geoLine.toGpx());
         }
+        $gpx += (getCloseTagGpx());
 
-        $kml += (getCloseTagKml());
+        return $gpx;
+    }
 
-        return $kml;
-    };
 
     //private functions
-    function getKmlOpenTags() {
+    function getGpxOpenTags() {
 
-        return `
-<?xml version="1.0" encoding="UTF-8"?>
+        return `<?xml version="1.0" encoding="UTF-8"?>
 <gpx
 xmlns="http://www.topografix.com/GPX/1/1"
 version="1.1"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">   
-`;
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">`;
 
     }
 
-    function getCloseTagKml() {
+    function getCloseTagGpx() {
 
         return '\n</gpx>';
     }

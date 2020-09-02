@@ -9,7 +9,7 @@ class Resolver
 {
     public static function isAllowedFor($lowerAccessRole)
     {
-         $userRole = 1;
+        $userRole = 1;
 
         if (isset($_SESSION['userRole'])) {
             $userRole = MUsers::$roles[$_SESSION['userRole']];
@@ -17,15 +17,15 @@ class Resolver
 
         $lowerAccessLevel = MUsers::$roles[$lowerAccessRole];
 
-        if (($userRole >= $lowerAccessLevel)|| $lowerAccessLevel < 2) {
+        if (($userRole >= $lowerAccessLevel) || $lowerAccessLevel < 2) {
             return true;
         } else {
 
             Html::alert('Доступ запрещен');
             header('Location: https://lab.sppural.ru/sign/login');
-           // require_once 'core/autoload.php';
+            // require_once 'core/autoload.php';
             //throw new TError('Доступ запрещен');
-           // return false;
+            // return false;
 
         }
 

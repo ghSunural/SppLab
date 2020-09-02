@@ -43,18 +43,20 @@ require 'core/base_views/VHead.php';
             <div id="maps" class="block block_wrap">
 
                 <div class="block block_box resizable_2 resize-tl">
-                    <img class="" src="/pages/seismic/resource/content/OSR-2015-A.png"
-                         title="ОСР-2015-A" alt="ОСР-2015-A" width=400px height="">
+                    <img class="" src="/pages/seismic/resource/content/OSR-2016-A.jpg"
+                         title="ОСР-2016-A" alt="ОСР-2015-A" width=400px height="">
                 </div>
                 <div class="block block_box resizable_2 resize-lc">
-                    <img class="" src="/pages/seismic/resource/content/OSR-2015-B.png"
-                         title="ОСР-2015-B" alt="ОСР-2015-B" width=400px height="">
+                    <img class="" src="/pages/seismic/resource/content/OSR-2016-B.jpg"
+                         title="ОСР-2016-B" alt="ОСР-2015-B" width=400px height="">
                 </div>
                 <div class="block block_box resizable_2 resize-bl">
-                    <img class="" src="/pages/seismic/resource/content/OSR-2015-C.png"
-                         title="ОСР-2015-C" alt="ОСР-2015-C" width=400px height="">
+                    <img class="" src="/pages/seismic/resource/content/OSR-2016-C.jpg"
+                         title="ОСР-2016-C" alt="ОСР-2015-C" width=400px height="">
                 </div>
 
+                <iframe src="https://www.google.com/maps/d/embed?mid=1fvvLEiH06jiUxjwDy-JPxsQ6PXzRJwRc"
+                        width="640" height="480"></iframe>
 
             </div>
 

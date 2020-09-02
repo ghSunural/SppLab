@@ -39,8 +39,8 @@ if (isset($scripts)) {
     <?= $styles_as_html ?>
     <script src="/js_base/JQuery.js"></script>
     <script src="/scripts/jsUtil.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=369c0410-04f2-44bc-8b5e-db38533c045b&lang=ru_RU&load=Geolink"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=369c0410-04f2-44bc-8b5e-db38533c045b" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=f13867bc-41fa-453c-a94e-c32f6d41be35&lang=ru_RU&load=Geolink"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=f13867bc-41fa-453c-a94e-c32f6d41be35" type="text/javascript"></script>
 
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>

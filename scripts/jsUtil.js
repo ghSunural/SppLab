@@ -1,6 +1,11 @@
 'use strict';
 
 (function (exports) {
+
+        let arr_EN = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+            'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+
         exports.pushHtml = function (id, innerText) {
             document.getElementById(id).innerHTML = innerText;
         };
@@ -134,6 +139,8 @@
             //console.log();
             jsUtil.downloadFile("geoData_KML.kml", $varValue);
         };
+
+        
 
 
         // element – Required. Specify the element ID to export content from.

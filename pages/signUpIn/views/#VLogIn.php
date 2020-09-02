@@ -80,8 +80,9 @@ require 'core/base_views/VHead.php';
     }
 
     .form-signin {
-        width: 50vw;
+        width: 500px;
         min-width: 320px;
+        border-radius: 20px;
     }
 
 </style>>

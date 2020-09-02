@@ -3,16 +3,28 @@
 
 ;(function (exports) {
 
-    exports.TGeoLine = function($coordList, $name, $description) {
+    exports.TGeoLine = function ($points, $name, $description, $styleId) {
 
+        /*
+        this.coordList = [{
+            lat: "",
+            long: "",
+            alt: ""
+        }];
+        */
 
-
-        //this.lat = $lat;
-        //this.long = $long;
-        //this.alt = $alt;
-        this.coordList  = $coordList;
+        this.points = $points;
         this.name = $name;
         this.description = $description;
+
+        this.styleId = $styleId;
+
+
+        this.getStyleId = function () {
+
+            return this.styleId;
+        };
+
 
         this.getName = function () {
             return this.name;
@@ -22,12 +34,32 @@
             return this.description;
         };
 
-        this.getCoordList = function () {
+        function getCoordListKml($points) {
 
+            let $coordList = "";
 
-            return this.coordList;
-        };
+            for (let $point of $points) {
 
+                let $coordString = $point.long + "," + $point.lat + "," + $point.alt;
+                $coordList += '\n        ' + $coordString;
+
+            }
+
+            return $coordList.trim();
+        }
+
+        function getCoordListGpx($points) {
+
+            let $coordList = "";
+
+            for (let $point of $points) {
+
+                let $coordString = `<rtept lon="${$point.long}" lat="${$point.lat}"/>`;
+                $coordList += '\n        ' + $coordString;
+            }
+
+            return $coordList.trim();
+        }
 
 
         this.toKml = function () {
@@ -40,12 +72,21 @@
 <description>
     ${this.getDescription()}
 </description>
+<styleUrl>#${this.getStyleId()}</styleUrl>
 <LineString>
     <coordinates>    
-        ${this.getCoordList()}  
+        ${getCoordListKml(this.points)}  
     </coordinates>
 </LineString>
 </Placemark>`;
+        };
+
+        this.toGpx = function () {
+
+            return `
+<rte>
+        ${getCoordListGpx(this.points)} 
+</rte>`
         };
     };
 

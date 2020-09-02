@@ -5,9 +5,9 @@ namespace climate\views;
 $seismic = $this->models['seismic'];
 $town = $this->models['town'];
 
-$OSR2015_A = $seismic->OSR2015_A;
-$OSR2015_B = $seismic->OSR2015_B;
-$OSR2015_C = $seismic->OSR2015_C;
+$OSR_A = $seismic->OSR_A;
+$OSR_B = $seismic->OSR_B;
+$OSR_C = $seismic->OSR_C;
 
 echo <<< EOL
 <input type="button" onclick="printDiv('printableArea')" value="Печать"/>
@@ -38,13 +38,13 @@ echo <<< EOL
     </tr>
     <tr>
         <td align="center" nowrap>
-            {$OSR2015_A}
+            {$OSR_A}
         </td>
         <td align="center" nowrap>
-           {$OSR2015_B}
+           {$OSR_B}
         </td>
         <td align="center" nowrap>
-            {$OSR2015_C}
+            {$OSR_C}
         </td>
     </tr>   
 

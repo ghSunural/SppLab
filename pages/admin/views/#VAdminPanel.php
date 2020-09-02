@@ -22,7 +22,7 @@ $sql_body = $this->models['sql_body'];
 <!DOCTYPE html>
 <html lang="ru">
 <?php
-$title = 'SL-Админ';
+$title = 'SL-Разработчик';
 //$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
 $styles['main-css'] = '/css/styles.css';
 //$scripts['thisJS'] = A\config::SITE_URL() . "pages/admin/scripts/scripts.js";
@@ -42,7 +42,7 @@ require 'core/base_views/VHead.php';
     <main class="Main block block_wrap fl fl_w">
 
 
-        <section class="content block block_wrap  main_bkg_color-4">
+        <section class="content content_with_sideBar block block_wrap  main_bkg_color-4">
             <br>
 
             <section name="database">

@@ -33,6 +33,10 @@ $avrWindSpeed_l8 = $coldSeasonData->avrWindSpeed_l8;
 echo <<< EOL
 <input type="button" onclick="jsUtil.printDiv('printableArea')" value="Печать"/>
 
+
+
+<div class="div-button" onclick="jsUtil.export2Doc('printableArea', 'Отчет')">Экспорт в MS Word</div>
+
 <div  id="printableArea" class="block block_wrap report-layout">
 
 <table class="bkg_color_report" border="1" 

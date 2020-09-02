@@ -1,6 +1,6 @@
 <?php
 
-echo $_SESSION["userRole"];
+//echo $_SESSION["userRole"];
 
 ($_SESSION['userRole'] == 'DEV') ?
     $opacity = 0.1 : $opacity = 0.8;

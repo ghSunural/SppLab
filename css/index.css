@@ -36,8 +36,8 @@ html {
 
     justify-content: center;
     /* align-items: center; */
- /* min-height: 90 vh;
-  max-width: 98 vw; */
+    /* min-height: 90 vh;
+     max-width: 98 vw; */
     min-width: 96vw;
     padding: 10px 10px;
 }
@@ -47,6 +47,7 @@ html {
     margin-left: 20vw;
     border-left: 2px solid #99173C;
     justify-content: flex-start;
+    padding: 20px;
 }
 
 .content_with_rightSideBar {
@@ -59,7 +60,7 @@ html {
     position: fixed;
     margin-top: 40px;
     /* background: linear-gradient(to right, #555152 90%, #EFFFCD 90%);*/
-    max-width: 400px;
+   /* max-width: 400px;*/
     width: 20vw;
     /* padding-right: 0;*/
 }
@@ -110,9 +111,6 @@ html {
     margin-top: 4px;
 
 }
-
-
-
 
 
 

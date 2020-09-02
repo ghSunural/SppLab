@@ -7,14 +7,7 @@ kml.hot.beforeChange = function(){
 ;(function (exports) {
 
 
-
-
-
-
     exports.alertshow = function () {
-
-
-
 
 
         let colLitera = 'Z';
@@ -29,7 +22,6 @@ kml.hot.beforeChange = function(){
         $test = kml.hot.getColHeader(kml.hot.countCols() - 1);
         $test = kml.hot.getDataAtCell(0, 0);
 
-
         /*
         for (let $geoPoint of $geoPoints) {
 
@@ -40,14 +32,10 @@ kml.hot.beforeChange = function(){
        alert($test);
 
         //alert(num);
-
-
         // alert(kml.hot.getDataAtCell(0, 0));
         // console.log(kml.hot.getDataAtCell(1, 1));
 
     };
-
-
 
 
 

@@ -38,6 +38,6 @@ class CalculatorController extends BaseController
 
     public function actionConverterKML()
     {
-        $this->render('pages/calculators/views/VConverterKML.php');
+        $this->render('pages/calculators/views/VConverterGeo.php');
     }
 }

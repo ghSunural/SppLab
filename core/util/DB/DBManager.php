@@ -14,11 +14,13 @@ class DBManager
 {
     public static $DB1;
     public static $DB2;
+    public static $DB3;
 
     public static function initDBs()
     {
         self::$DB1 = self::getDB(require 'db_site_consts.php');
-        self::$DB2 = self::getDB(require 'db_staff_consts.php');
+        self::$DB2 = self::getDB(require 'db_east2016_consts.php');
+        self::$DB3 = self::getDB(require 'db_staff_consts.php');
     }
 
     private static function getDB($consts = array())

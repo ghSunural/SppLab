@@ -11,10 +11,12 @@ id10552045_spp_database
 
 drop database test;
 
+truncate table TTest;
+
 //Список столбцов
 SELECT COLUMN_NAME
-FROM information_schema.COLUMNS
-WHERE TABLE_SCHEMA = DATABASE()
+ FROM information_schema.COLUMNS
+ WHERE TABLE_SCHEMA = DATABASE()
 AND TABLE_NAME = 'TAllEarthquakes'
 ORDER BY ORDINAL_POSITION
 

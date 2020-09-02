@@ -50,7 +50,7 @@ class MTowns extends M\Model_base
     public static function getRegions()
     {
         $regions = array();
-        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'TRegionsRF');
+        $rows = DB\ORM::findRows(DB\DBManager::$DB1, 'TRegionsRF_seism');
         //  $link = A\App::$db_connection->getLink();
         //  $rows = mysqli_query($link, "select * from TRegionsRF");
 

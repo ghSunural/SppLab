@@ -155,7 +155,7 @@ require 'core/base_views/VHead.php';
 
 
 
-                <div id="map" class="bb">
+                <div id="map______" class="bb">
                     <!--карта-->
                 </div>
                 <div class="block block_box bb contenteditable">

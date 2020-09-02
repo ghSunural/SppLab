@@ -23,7 +23,6 @@ require 'core/base_views/VHead.php';
      <div class="">
          <span class="ymaps-geolink">г {$town->locality} ({$town->region})</span>
      </div>
-
 EOL;
     require 'core/base_views/VMinorHeader.php';
     ?>

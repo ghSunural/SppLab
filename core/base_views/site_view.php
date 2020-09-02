@@ -101,7 +101,7 @@ require 'core/base_views/VSiteHeader.php'
             <hr>
 
             <ul>
-                <li><a href="calculators/converterKML" target="">Конвертер KML</a></li>
+                <li><a href="calculators/converterGeo" target="">Конвертер в геоданные</a></li>
                 <li><a href="calculators/num2str" target="">Число прописью</a></li>
             </ul>
             <hr>

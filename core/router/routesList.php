@@ -42,7 +42,7 @@ return array(
 
 
     'calculators/num2str' => 'CalculatorController/actionNum2strNum',
-    'calculators/converterKML' => 'CalculatorController/actionConverterKML',
+    'calculators/converterGeo' => 'CalculatorController/actionConverterKML',
 
     //'calculators/num2str?number=([0-9]+)' => 'CalculatorController/actionNum2strNum',
     'calculators' => 'CalculatorController/actionIndex',
@@ -54,6 +54,8 @@ return array(
     'admin/users' => 'AdminController/acnShowUsers',
     'admin/dump' => 'AdminController/actionDump',
     'admin/errlog' => 'AdminController/acnErrorsLog',
+
+    'dev' => 'AdminController/actionIndex',
     'admin' => 'AdminController/actionIndex',
     'admin2' => 'AdminController/actionIndex2',
 

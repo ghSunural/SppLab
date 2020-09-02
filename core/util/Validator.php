@@ -69,11 +69,9 @@ class Validator
     public static function isPhone($var)
     {
 
-        //укв русского и латинского алфавита, знака "_" (подчерк), пробела и цифр
         $regExp = "/^\d{10}$/u";
         return (preg_match($regExp, $var))
             ? true : false;
     }
-
 
 }
