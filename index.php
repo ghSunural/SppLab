@@ -8,6 +8,7 @@ use Throwable;
 
 ini_set('display_errors', false);
 //phpinfo(); //- все о пхп Loaded php.ini: /etc/php.ini
+
 try {
     require_once 'core/autoload.php';
 
@@ -21,7 +22,7 @@ try {
     } else {
         $_SESSION["userRole"] = 'GST';
      //  $_SESSION["userRole"] = 'DEV';
-       ini_set('display_errors', true);
+       ini_set('display_errors', false);
        error_reporting(E_ALL);
     }
 

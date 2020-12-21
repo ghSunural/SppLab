@@ -28,6 +28,7 @@ require 'core/base_views/VSiteHeader.php'
             <ul>
                 <li><a href="climate" target="">Строительная климатология</a></li>
                 <li><a href="seismic" target="">Сейсмичность</a></li>
+                <li><a href="geocolumn" target="">Геологические колонки</a></li>
             </ul>
             </p>
 
@@ -89,19 +90,36 @@ require 'core/base_views/VSiteHeader.php'
 
             <hr>
             <p align="justify" class="H_hint">
-               Программы, статьи, примеры
+                Программы, статьи, примеры
             </p>
         </div>
 
         <div class="block tablet main_bkg_color-2">
 
             <div class="H1 main_text_color-5">
-               КАЛЬКУЛЯТОРЫ
+                Геоданные
             </div>
             <hr>
 
             <ul>
                 <li><a href="calculators/converterGeo" target="">Конвертер в геоданные</a></li>
+                <li><a href="calculators/photoGps" target="">Фото с координатами</a></li>
+            </ul>
+            <hr>
+            <p align="justify" class="H_hint">
+                Работ с данными, имеющими географические координаты
+            </p>
+
+        </div>
+
+        <div class="block tablet main_bkg_color-2">
+
+            <div class="H1 main_text_color-5">
+                КАЛЬКУЛЯТОРЫ
+            </div>
+            <hr>
+
+            <ul>
                 <li><a href="calculators/num2str" target="">Число прописью</a></li>
             </ul>
             <hr>

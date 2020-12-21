@@ -19,7 +19,7 @@ foreach ($townsInRegions as $town) {
     // echo "<a href=\"climate/".$town->ID.">\""{$town->locality}</a>;
     echo <<<EOL
       <div class='item block'>
-            <a href="seismic/{$town->ID}" target="_blank" class='main_text_color-2 H5'>{$town->locality}</a>
+            <a href="seismic/{$town->ID}" target="" class='main_text_color-2 H5 selected'>{$town->locality}</a>
       </div> 
 EOL;
 }
@@ -28,6 +28,13 @@ echo <<<'EOL'
 </article>
 <br>
 <br>
+
+<style>
+ .selected:hover{ 
+   background-color: #DCE9BE;
+}
+</style>
+
 EOL;
 
 ?>

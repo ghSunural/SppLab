@@ -82,6 +82,8 @@
 
 
         function doSearch(text) {
+
+
             var sel;
             if (window.find && window.getSelection) {
                 sel = window.getSelection();
@@ -90,10 +92,10 @@
                 }
 
                 window.find(text);
+                //if (!window.find(text)) {
+                //      alert('По вашему запросу ничего не найдено! - 1');
 
-                if (!window.find(text)) {
-                    alert("По вашему запросу нечего не найдено!");
-                }
+                // }else {window.find(text);}
 
 
             } else if (document.selection && document.body.createTextRange) {
@@ -115,9 +117,49 @@
 
         }
 
+
+        var lastResFind = ""; // последний удачный результат
+        var copy_page = ""; // копия страницы в ихсодном виде
+        function TrimStr(s) {
+            s = s.replace(/^\s+/g, '');
+            return s.replace(/\s+$/g, '');
+        }
+
+        function FindOnPage(inputId) {//ищет текст на странице, в параметр передается ID поля для ввода
+            var obj = window.document.getElementById(inputId);
+            var textToFind;
+
+            if (obj) {
+                textToFind = TrimStr(obj.value);//обрезаем пробелы
+            } else {
+                alert("Введенная фраза не найдена");
+                return;
+            }
+            if (textToFind == "") {
+                alert("Вы ничего не ввели");
+                return;
+            }
+
+            if (document.body.innerHTML.indexOf(textToFind) == "-1")
+                alert("Ничего не найдено, проверьте правильность ввода!");
+
+            if (copy_page.length > 0)
+                document.body.innerHTML = copy_page;
+            else copy_page = document.body.innerHTML;
+
+
+            document.body.innerHTML = document.body.innerHTML.replace(eval("/name=" + lastResFind + "/gi"), " ");//стираем предыдущие якори для скрола
+            document.body.innerHTML = document.body.innerHTML.replace(eval("/" + textToFind + "/gi"), "<a name=" + textToFind + " style='background:red'>" + textToFind + "</a>"); //Заменяем найденный текст ссылками с якорем;
+            lastResFind = textToFind; // сохраняем фразу для поиска, чтобы в дальнейшем по ней стереть все ссылки
+            window.location = '#' + textToFind;//перемещаем скрол к последнему найденному совпадению
+        }
+
+
         exports.searchpage = function () {
 
             doSearch(document.getElementById("search").value);
+           // FindOnPage("search");
+
 
         };
 
@@ -179,8 +221,29 @@
                 downloadLink.click();
             }
 
-            document.body.removeChild(downloadLink);
+             document.body.removeChild(downloadLink);
+         }
+
+        function downloadURI(uri, name) {
+            var link = document.createElement("a");
+            link.download = name;
+            link.href = uri;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            // delete link;
         }
+
+
+        $("#btn-Convert-Html2Image").on('click', function () {
+            html2canvas(element, {
+                onrendered: function (canvas) {
+                    var imgageData = canvas.toDataURL("image/png");
+                    var newData = imgageData.replace(/^data:image\/png/, "data:application/octet-stream");
+                    downloadURI(newData, "your_pic_name.png");
+                }
+            });
+        });
 
 
     }(window.jsUtil = {})

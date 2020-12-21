@@ -37,11 +37,24 @@ if (isset($scripts)) {
     <title><?= $title ?></title>
     <?= $favicon_as_html ?>
     <?= $styles_as_html ?>
-    <script src="/js_base/JQuery.js"></script>
+    <script src="/js_vendor/JQuery.js"></script>
     <script src="/scripts/jsUtil.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f13867bc-41fa-453c-a94e-c32f6d41be35&lang=ru_RU&load=Geolink"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=f13867bc-41fa-453c-a94e-c32f6d41be35" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a1859766-8675-4a34-97d0-54224e39220a&lang=ru_RU&load=Geolink"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a1859766-8675-4a34-97d0-54224e39220a" type="text/javascript"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
+        ym(70644331, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/70644331" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>

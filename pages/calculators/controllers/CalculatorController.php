@@ -40,4 +40,11 @@ class CalculatorController extends BaseController
     {
         $this->render('pages/calculators/views/VConverterGeo.php');
     }
+
+    public function actionPhotoGeo()
+    {
+        $this->render('pages/calculators/views/VPhotoGps.php');
+    }
+
+
 }

@@ -12,6 +12,7 @@ $styles['main-css'] = 'css/styles.css';
 require 'core/base_views/VHead.php';
 ?>
 
+
 <body class="block block_wrap">
 <?php require 'core/base_views/VMainToolbar.php' ?>
 

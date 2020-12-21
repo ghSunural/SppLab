@@ -33,13 +33,13 @@ $avrWindSpeed_l8 = $coldSeasonData->avrWindSpeed_l8;
 echo <<< EOL
 <input type="button" onclick="jsUtil.printDiv('printableArea')" value="Печать"/>
 
-
+<input id="#btn-Convert-Html2Image" type="button" value="экспорт в картинку"/>
 
 <div class="div-button" onclick="jsUtil.export2Doc('printableArea', 'Отчет')">Экспорт в MS Word</div>
 
 <div  id="printableArea" class="block block_wrap report-layout">
 
-<table class="bkg_color_report" border="1" 
+<table  name = 'what' class="bkg_color_report" border="1" 
            style="
            width: 170mm;
            border-collapse: collapse;
@@ -225,11 +225,13 @@ echo <<< EOL
             Средняя скорость ветра, м/с, за период со средней суточной температурой воздуха ≤ 8 ºС
         </td>
         <td align="center">
-            {$avrWindSpeed_l8}
+            {$avrWindSpeed_l8}              
         </td>
-    </tr>
-
+    </tr> 
+ 
 </table>
+
+         
 
 </div>
 

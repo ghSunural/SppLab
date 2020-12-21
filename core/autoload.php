@@ -54,6 +54,9 @@ function autoload($className)
         'pages/tests/models',
         'pages/tests/controllers',
 
+        'pages/geographics/models',
+        'pages/geographics/controllers',
+
     );
 
     //  require end($parts) . ".php";

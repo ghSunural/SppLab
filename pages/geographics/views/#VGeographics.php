@@ -8,7 +8,7 @@ use Application as A;
 <html lang="ru">
 <?php
 $title = 'SL-Геофизика';
-$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
+$styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
 $scripts[] = '';
 require 'core/base_views/VHead.php';
 ?>
@@ -17,7 +17,7 @@ require 'core/base_views/VHead.php';
 <?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = 'ИНЖЕНЕРНАЯ ГЕОФИЗИКА';
+    $Header_leftContent = 'Генератор графики';
     $Header_rightContent = '';
     require 'core/base_views/VMinorHeader.php';
     ?>
@@ -30,9 +30,6 @@ require 'core/base_views/VHead.php';
                 <ul>
                     Обработка геофизических данных
                     <li>Георадар</li>
-                    <li>Электротомография</li>
-                    <li>Сейсморазведка</li>
-                    <li><a href="/pages/geophysics/articles/Velocity.html">Скорости упругих волн</a></li>
                 </ul>
             </nav>
 
@@ -41,13 +38,10 @@ require 'core/base_views/VHead.php';
 
         <section class="content content_with_sideBar block block_wrap fl fl_w main_bkg_color-4">
 
-            <article>
-                <?= require_once './pages/geophysics/articles/synchronization_systems.php' ?>
-            </article>
 
-
-
-            pages/geophysics/articles/Velocity.html
+            <div>
+                <a href="/pages/geographics/views/templates/geocolumn.html">Показать колонку</a>
+            </div>
 
 
             <!--

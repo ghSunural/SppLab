@@ -38,11 +38,13 @@ return array(
 
     'geophysics/articles' => 'GeophysicsController/actionIndex',
 
-
+    'geocolumn' => 'GeographicsController/actionIndex',
 
 
     'calculators/num2str' => 'CalculatorController/actionNum2strNum',
+
     'calculators/converterGeo' => 'CalculatorController/actionConverterKML',
+    'calculators/photoGps' => 'CalculatorController/actionPhotoGeo',
 
     //'calculators/num2str?number=([0-9]+)' => 'CalculatorController/actionNum2strNum',
     'calculators' => 'CalculatorController/actionIndex',

@@ -52,7 +52,9 @@
 
 
             //https://planetcalc.ru/73/
-            let $R_EARTH = 6371.008;
+            let $R_EARTH = 6371.008; //6 367 444.6571 по WGS
+
+
             let $S = $radius / $R_EARTH;
 
             let sin_l1 = Math.sin(toRad($lat1));

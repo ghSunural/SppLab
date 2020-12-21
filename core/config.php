@@ -9,7 +9,7 @@ class config
 {
     public static function SITE_ROOT()
     {
-        return $_SERVER['DOCUMENT_ROOT'] . DIRECTORY_SEPARATOR;
+        return $_SERVER['DOCUMENT_ROOT'].DIRECTORY_SEPARATOR;
     }
 
     public static function SITE_URL()
@@ -27,11 +27,9 @@ class config
     public static function DEBUG_MODE()
     {
 
-        return true;
+        return false;
 
     }
-
-
 
 
 }

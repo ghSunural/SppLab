@@ -70,7 +70,9 @@
     ${this.getName()}
 </name>
 <description>
+    <![CDATA[
     ${this.getDescription()}
+    ]]>
 </description>
 <styleUrl>#${this.getStyleId()}</styleUrl>
 <LineString>

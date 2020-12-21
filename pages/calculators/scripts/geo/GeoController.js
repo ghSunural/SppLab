@@ -457,6 +457,7 @@
 
         //alert('добавить стиль');
         this.$settings.$styles.push(new styles.TStyle());
+        Vue.methods.addForm();
         console.log(this.$settings.$styles);
 
     };

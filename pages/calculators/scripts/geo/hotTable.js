@@ -52,6 +52,8 @@
     exports.clearTable = function () {
 
         hotTable.hot.clear();
+
+
         //hotTable.hot.deleteRows(container);
     };
 
