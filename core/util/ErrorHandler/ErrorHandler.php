@@ -8,6 +8,7 @@ use Throwable;
 class ErrorHandler
 {
     public static $user_error_message;
+    public static $error_time;
     public static $system_error_message;
     public static $error_file;
     public static $error_line;
@@ -49,12 +50,20 @@ class ErrorHandler
         self::$error_line = $e->getLine();
         self::$error_trace = $e->getTraceAsString();
 
-        error_log(
-            "<br><br><b style='color:red;'>Ошибка</b>: "
-            . self::$system_error_message.
+
+       // self::$error_time = date('m/d/Y h:i:s a', time());
+        self::$error_time = '--code_stub--';
+
+       // "<br>&nbsp; Дата и время: ". self::$error_time.
+
+       /* $err_message="<br><br><b style='color:red;'>Ошибка</b>: ".
+            self::$system_error_message.
             "<br>&nbsp; файл: ".self::$error_file  .
-            "<br>&nbsp; строка: ". self::$error_line,
-            3, 'core/util/ErrorHandler/errors.html');
+            "<br>&nbsp; строка: ". self::$error_line;*/
+
+
+
+        error_log('stub',3, 'core/util/ErrorHandler/errors.html');
 
 
 

@@ -85,6 +85,7 @@ require 'core/base_views/VSiteHeader.php'
             <ul>
                 <li><a href="geophysics/articles" target="">Статьи и советы</a></li>
                 <li><a href="geophysics/programms" target="">Программы обработки</a></li>
+                <li><a href="/" target="">Англо-русский словарь геофизических терминов</a></li>
             </ul>
             </p>
 

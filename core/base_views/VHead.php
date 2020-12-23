@@ -38,6 +38,7 @@ if (isset($scripts)) {
     <?= $favicon_as_html ?>
     <?= $styles_as_html ?>
     <script src="/js_vendor/JQuery.js"></script>
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
     <script src="/scripts/jsUtil.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=a1859766-8675-4a34-97d0-54224e39220a&lang=ru_RU&load=Geolink"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a1859766-8675-4a34-97d0-54224e39220a" type="text/javascript"></script>

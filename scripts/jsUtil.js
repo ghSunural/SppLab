@@ -156,11 +156,8 @@
 
 
         exports.searchpage = function () {
-
             doSearch(document.getElementById("search").value);
            // FindOnPage("search");
-
-
         };
 
 
@@ -188,7 +185,7 @@
         // element – Required. Specify the element ID to export content from.
         //  filename – Optional. Specify the file name of the word document.
 
-         exports.export2Doc = function(element, filename = '2222222222222222') {
+         exports.export2Doc = function(element, filename = '') {
             var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
             var postHtml = "</body></html>";
             var html = preHtml + document.getElementById(element).innerHTML + postHtml;
@@ -244,6 +241,40 @@
                 }
             });
         });
+
+
+        /**
+         * must be included in the file
+         * <script src="/scripts/jsUtil.js"></script>
+         */
+        exports.export2Pdf = function(element, filename = ''){
+            alert('pdf');
+
+            //import { jsPDF } from "jspdf";
+
+// Default export is a4 paper, portrait, using millimeters for units
+            const doc = new jsPDF();
+
+            doc.text("Hello world!", 10, 10);
+            doc.save("a4.pdf");
+
+            //var doc = new jsPDF();
+            var specialElementHandlers = {
+                '#editor': function (element, renderer) {
+                    return true;
+                }
+            };
+
+                doc.fromHTML($('#'+element).html(), 15, 15, {
+                    'width': 190,
+                    'elementHandlers': specialElementHandlers
+                });
+                doc.save('sample-page.pdf');
+
+
+            alert('pdf2');
+
+        }
 
 
     }(window.jsUtil = {})

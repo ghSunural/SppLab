@@ -33,13 +33,15 @@ $avrWindSpeed_l8 = $coldSeasonData->avrWindSpeed_l8;
 echo <<< EOL
 <input type="button" onclick="jsUtil.printDiv('printableArea')" value="Печать"/>
 
-<input id="#btn-Convert-Html2Image" type="button" value="экспорт в картинку"/>
+<div class="div-button"  onClick="jsGraphUtil.html2jpg('cold_season')" >Сохранить картинку</div>
 
 <div class="div-button" onclick="jsUtil.export2Doc('printableArea', 'Отчет')">Экспорт в MS Word</div>
 
+<div class="div-button" onclick="jsUtil.export2Pdf('cold_season', 'Отчет')">Экспорт в Pdf</div>
+
 <div  id="printableArea" class="block block_wrap report-layout">
 
-<table  name = 'what' class="bkg_color_report" border="1" 
+<table  id="cold_season" name='cold_season' class="bkg_color_report" border="1" 
            style="
            width: 170mm;
            border-collapse: collapse;

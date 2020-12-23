@@ -26,6 +26,11 @@ git add filename.ext
 //добавить все недобавеленные файлы
 git add .
 
+//Восстановление удалённого файла
+//Если вы случайно удалили файл, его можно быстро восстановить:
+git checkout myfile.txt
+
+
 git commit -m "first commit можно на русском"
 //создать удаленный репозиторий
 git remote add origin https://github.com/you_repository/you_project
@@ -56,7 +61,6 @@ git config git-ftp.user "spplab"
 git config git-ftp.password "Malakhov6503682274"
 
 git ftp init
-
 git commit -m "Add new content"
 git ftp push
 
@@ -96,17 +100,22 @@ git remote rename, это изменит сокращённое имя, испо
 $ git remote rename oldName newName
 
 
+// РАБОТА НАД ОТДЕЛЬНОЙ ВЕТКОЙ
 
-$ git checkout -b iss53 – создать ветку и сразу перейти на нее переключиться на ветку iss53 (ошибка 53)
+//создать ветку
+$ git branch branchName
+//перейти на ветку
+$ git checkout branchName
+
+//или
+//создать ветку и сразу перейти на нее переключиться на ветку iss53 (ошибка 53)
+$ git checkout -b iss53
 
 $ git checkout master – переключиться на ветку / убедится что на ветке мастера
 
 перейти на ту ветку, в которую вы хотите слить свои изменения, и выполнить команду git merge:
 $ git checkout master
 $ git merge iss53
-
-
-
 
 
 </pre>

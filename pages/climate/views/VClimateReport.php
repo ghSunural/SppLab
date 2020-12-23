@@ -64,7 +64,9 @@ EOL;
 
     <?php require 'core/base_views/VSiteFooter.php' ?>
 </div>
-
+<script src="/scripts/jsGraphUtil.js"></script>
+<script src="/js_vendor/node_modules/jspdf/dist/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.2.0/jspdf.umd.min.js"></script>
 
 </body>
 
