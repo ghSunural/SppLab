@@ -24,7 +24,7 @@
     </div>
 </header>
 <style type="text/css">
-    .Main_header {
+    .logo {
         display: flex;
         top: 8vh;
         /*background: linear-gradient(to right bottom, #ffffff 10%, #3c7839) ;*/
@@ -34,11 +34,11 @@
         min-width: 96vw;
     }
 
-    .Main_header_left {
+    .logo_left {
        width: 48vw;
     }
 
-    .Main_header_right {
+    .logo_right {
         width: 48vw;
     }
 

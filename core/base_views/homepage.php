@@ -17,41 +17,24 @@ require 'core/base_views/VMainToolbar.php'
 
 <main class="Main block block_wrap fl fl_nw">
 
-    <div class="homepage block block_wrap">
-
-
-
-    </div>
 
     <section class="content block block_wrap fl fl_w">
 
         <div class="darkened main_bkg_color-1">
-            <div class="home_title">SPP LAB</div>
-            <img src=""
-                 alt="">
 
 
-            <header class="block block_wrap fl fl_w Main_header">
-                <div class="block block_inline main_bkg_color-1 main_text_color-1 Main_header_left">
-                    <div class="Main_header_left_top ">
-                        SPP&nbsp;
-                    </div>
-                    <div class="Main_header_left_bottom ">
-                        Инженерные изыскания для строительства
-                    </div>
+
+        <div class="block block_wrap fl fl_w logo">
+            <div class="block block_inline main_bkg_color-1 main_text_color-1 logo_left">
+                <div class="Main_header_left_top ">
+                    SPP&nbsp;
                 </div>
+            </div>
+            <div class="main_bkg_color-2 main_text_color-2 logo_right">
+                &nbsp;LAB
+            </div>
+        </div>
 
-                <div class="main_bkg_color-2 main_text_color-2 Main_header_right">
-                    <div class="Main_header_right_top"> &nbsp;
-                        <div class="block_inline">
-                            OOO &#171;СпецПроектПуть&#187;
-                        </div> &nbsp;
-                    </div>
-                    <div class="Main_header_right_bottom">
-                        &nbsp;LAB
-                    </div>
-                </div>
-            </header>
         </div>
 
         <div class="block tablet main_bkg_color-2">
@@ -174,13 +157,15 @@ require 'core/base_views/VSiteFooter.php'
 <style>
     .darkened {
         position: relative;
+        top: 8vh;
+
     }
 
     .darkened::before {
         height: 75vh;
         content: '';
         position: absolute;
-        top: 0;
+        top: 8vh;
         left: 0;
         right: 0;
         bottom: 0;
@@ -209,24 +194,38 @@ require 'core/base_views/VSiteFooter.php'
 
 
 <style type="text/css">
-    .Main_header {
+    .logo {
         display: flex;
         vertical-align: center;
 
         /*background: linear-gradient(to right bottom, #ffffff 10%, #3c7839) ;*/
-        height: 30vh;
+        height: 32vh;
         justify-content: center;
-        border-bottom: 2px #99173C solid;
-        min-width: 75vw;
+        border: 5px #99173C solid;
+
         z-index: 2;
+        border-radius: 300px;
+        opacity: 90%;
     }
 
-    .Main_header_left {
-        width: 25vw;
+    .logo_left {
+        width: 25vh;
+        border-bottom-left-radius: 300px;
+        border-top-left-radius: 300px;
     }
 
-    .Main_header_right {
-        width: 25vw;
+    .logo_right {
+        width: 25vh;
+        border-bottom-right-radius: 300px;
+        border-top-right-radius: 300px;
+
+
+        align-items: center;
+        justify-content: flex-start;
+        vertical-align: center;
+        height: 30vh;
+        font-size: 10vh;
+        font-weight: bold;
     }
 
     .Main_header_left_top {
@@ -240,11 +239,7 @@ require 'core/base_views/VSiteFooter.php'
     }
 
     .Main_header_left_bottom {
-        font-size: 2vh;
-        font-weight: bold;
-        font-style: italic;
-        text-align: center;
-        vertical-align: center;
+
     }
 
     .Main_header_right_top {
