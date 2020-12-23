@@ -36,7 +36,7 @@ class ErrorHandler
             require 'pages/signUpIn/views/#VLogIn.php';
           //  header ("Location: /sign/login");
         }else{
-            require 'core/base_views/site_view.php';
+            require 'core/base_views/homepage.php';
         }
     }
 

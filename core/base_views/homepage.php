@@ -13,13 +13,46 @@ require 'core/base_views/VHead.php';
 <?php
 require 'core/base_views/VMainToolbar.php'
 ?>
-<?php
-require 'core/base_views/VSiteHeader.php'
-?>
+
 
 <main class="Main block block_wrap fl fl_nw">
 
-    <section class="content block block_wrap fl fl_w main_bkg_color-4">
+    <div class="homepage block block_wrap">
+
+
+
+    </div>
+
+    <section class="content block block_wrap fl fl_w">
+
+        <div class="darkened main_bkg_color-1">
+            <div class="home_title">SPP LAB</div>
+            <img src=""
+                 alt="">
+
+
+            <header class="block block_wrap fl fl_w Main_header">
+                <div class="block block_inline main_bkg_color-1 main_text_color-1 Main_header_left">
+                    <div class="Main_header_left_top ">
+                        SPP&nbsp;
+                    </div>
+                    <div class="Main_header_left_bottom ">
+                        Инженерные изыскания для строительства
+                    </div>
+                </div>
+
+                <div class="main_bkg_color-2 main_text_color-2 Main_header_right">
+                    <div class="Main_header_right_top"> &nbsp;
+                        <div class="block_inline">
+                            OOO &#171;СпецПроектПуть&#187;
+                        </div> &nbsp;
+                    </div>
+                    <div class="Main_header_right_bottom">
+                        &nbsp;LAB
+                    </div>
+                </div>
+            </header>
+        </div>
 
         <div class="block tablet main_bkg_color-2">
             <div class="H1 main_text_color-5">Для технического отчета</div>
@@ -138,3 +171,116 @@ require 'core/base_views/VSiteFooter.php'
 </body>
 </html>
 
+<style>
+    .darkened {
+        position: relative;
+    }
+
+    .darkened::before {
+        height: 75vh;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:   #2E2633;
+        opacity: 90%;
+        z-index: 1;
+    }
+     img {
+
+         z-index: 0;
+         width: 96vw;
+     }
+
+    .home_title{
+        position: relative;
+
+        display: inline-block;
+        align-items: center;
+        justify-content: stretch;
+        height: 10vh;
+        font-size: 10vh;
+        font-weight: bold;
+    }
+
+</style>
+
+
+<style type="text/css">
+    .Main_header {
+        display: flex;
+        vertical-align: center;
+
+        /*background: linear-gradient(to right bottom, #ffffff 10%, #3c7839) ;*/
+        height: 30vh;
+        justify-content: center;
+        border-bottom: 2px #99173C solid;
+        min-width: 75vw;
+        z-index: 2;
+    }
+
+    .Main_header_left {
+        width: 25vw;
+    }
+
+    .Main_header_right {
+        width: 25vw;
+    }
+
+    .Main_header_left_top {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 10vh;
+        font-size: 10vh;
+        font-weight: bold;
+
+    }
+
+    .Main_header_left_bottom {
+        font-size: 2vh;
+        font-weight: bold;
+        font-style: italic;
+        text-align: center;
+        vertical-align: center;
+    }
+
+    .Main_header_right_top {
+        font-size: 2vh;
+        font-weight: bold;
+        height: 30%;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+
+
+    }
+
+    .Main_header_right_bottom {
+
+        /*
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-weight: bold;
+        height: 25vh;
+        */
+
+        display: flex;
+
+        justify-content: flex-start;
+        height: 10vh;
+        font-size: 10vh;
+        font-weight: bold;
+
+    }
+
+    .animated {
+        /* transition-timing-function */
+        /*  transition-delay */
+    }
+</style>

@@ -9,7 +9,7 @@ class SiteController extends BaseController
     //$this - этот экземпляр контроллера
     public function actionIndex()
     {
-        $this->render('core/base_views/site_view.php');
+        $this->render('core/base_views/homepage.php');
     }
 
     public function actionGetFile($filename)
