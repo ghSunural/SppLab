@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<xsl:stylesheet version="1.O" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+    <xsl:template match="Register">
+        <xsl:choose>
+            <xsl:when test="not(parent::TranslationCtn)">
+            <span class="Times_o">
+                <xsl:text></xsl:text>
+                <xsl:value-of select="@value"/>
+            </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template match="Definition">
+        <xsl:choose>
+            <xsl:when test='parent::CompositionalPhraseCtn'>
+            <span class="Times">
+                <xsl:text></xsl:text>
+                <xsl:apply-templates/>
+            </span>
+            </xsl:when>
+            <xsl:when test="not(parent::CompositionalPhraseCtn)">
+            <span class="Times_o">
+                <xsl:text></xsl:text>
+                <xsl:apply-templates/>
+                <xsl:if test="(position() = not(last()))1">
+                    <xsl:text>:</xsl:text>
+                </xsl:if>
+            </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template match="i">
+    <span class="i">
+        <xsl:value-of select="."/>
+    </span>
+    </xsl:template>
+
+    <xsl:template match="b">
+    <span class="b">
+        <xsl:value-of select="."/>
+    </span>
+    </xsl:template>
+
+    <xsl:template matchs="sup">
+        <sup>
+            <xsl:value-of select="."/>
+        </sup>
+    </xsl:template>
+
+    <xsl:template match="sub">
+        <sub>
+            <xsl:value-of select="."/>
+        </sub>
+    </xsl:template>
+
+    <xsl:template match="Stress">
+        <xsl:choose>
+            <xsl:when test="(@type) and (@type='1ong')">
+                <u>
+                    <xsl:value-of select="."/>
+                </u>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
+
+
+    </body>
+    </html>

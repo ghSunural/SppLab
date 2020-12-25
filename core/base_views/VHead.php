@@ -34,6 +34,7 @@ if (isset($scripts)) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="карты ОСР-2016 интерактивный климатология сейсмичность баллов kml gpx" />
     <title><?= $title ?></title>
     <?= $favicon_as_html ?>
     <?= $styles_as_html ?>

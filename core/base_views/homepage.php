@@ -8,6 +8,8 @@ $styles['main-css'] = '/css/styles.css';
 require 'core/base_views/VHead.php';
 ?>
 
+<meta name="description" content="Инструменты геолога и геофзика для составления технического отчета.">
+
 <body class="block block_wrap">
 
 <?php
@@ -20,7 +22,7 @@ require 'core/base_views/VMainToolbar.php'
 
     <section class="content block block_wrap fl fl_w">
 
-        <div class="darkened main_bkg_color-1">
+        <div  class="darkened main_bkg_color-1">
 
 
 
