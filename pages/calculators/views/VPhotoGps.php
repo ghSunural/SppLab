@@ -5,8 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="ru" />
     <title>Фото: подробная информация</title>
+    <script src="/scripts/module2.js" type="module"></script>
 </head>
 <body>
+
+<button onclick="module2.s()">fgfgd</button>
+
 <script type="text/javascript">
     // РћР±СЂР°Р±РѕС‚РєР° РІС‹Р±СЂР°РЅРЅРѕРіРѕ С„Р°Р№Р»Р°
     function file_selected() {
