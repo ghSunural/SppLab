@@ -14,7 +14,7 @@ try {
 
     session_start();
     //echo $_SESSION["userRole"];
-
+   // $_SESSION["userRole"] = 'DEV';
     if (isset($_SESSION["userRole"]) && $_SESSION["userRole"] == 'DEV') {
         // Users.isAdmin($curUser)
         ini_set('display_errors', true);

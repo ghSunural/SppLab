@@ -6,6 +6,7 @@ use Application\Databases as DB;
 use Application\Debug;
 use Application\TError;
 use Error;
+use Exception;
 use PDO;
 use PDOException;
 use Throwable;
@@ -44,16 +45,16 @@ class DBManager
         //link
         //  print_r($dsn);
 
-    //    try {
+     try {
             $link = new PDO($dsn, $dataBase->getUser(), $dataBase->getPassword(), $options);
             // mysqli_query($link,"SET NAMES utf8");
             return $link;
-      //  } catch (Throwable $e) {
-       //     throw new TError('Подключение к БД не удалось');
-            //echo 'Подключение не удалось: ' . $e->getMessage();
-       // }
+       } catch (Throwable $e) {
+          throw new Exception('Подключение к БД не удалось!!! '. $e->getMessage());
+          //   echo 'Подключение не удалось: ' . $e->getMessage();
+        }
 
-        // return false;
+       // return false;
     }
 
     public static function getDumpDB(TDataBase $dataBase)
