@@ -23,8 +23,8 @@ $sql_body = $this->models['sql_body'];
 <html lang="ru">
 <?php
 $title = 'SL-Разработчик';
-//$styles['main-css'] = A\config::SITE_URL() . "css/styles.css";
-$styles['main-css'] = '/css/styles.css';
+//$styles['main-styles'] = A\config::SITE_URL() . "styles/styles.styles";
+$styles['main-styles'] = '/styles/styles.styles';
 //$scripts['thisJS'] = A\config::SITE_URL() . "pages/admin/scripts/scripts.js";
 //$scripts['thisJS'] = "/pages/admin/scripts/scripts.js";
 require 'core/base_views/VHead.php';

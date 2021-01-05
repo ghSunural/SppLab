@@ -1,3 +1,5 @@
+@import url("index.css");
+
 @import url("fonts.css");
 
 @import url("layout.css");
@@ -22,7 +24,7 @@
 @import url("modalDialog.css");
 @import url("tests.css");
 
-@import url("index.css");
+
 @import url("specific.css");
 
 

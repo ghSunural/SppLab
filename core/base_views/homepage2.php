@@ -6,7 +6,7 @@
 
 <?php
 $title = 'SPP-Lab';
-$styles['main-css'] = '/css/styles.css';
+$styles['main-styles'] = '/styles/styles.styles';
 
 require 'core/base_views/VHead.php';
 ?>

@@ -63,7 +63,7 @@ EOL;
 
 <?php
 $title = 'Конвертер в геоданные';
-$styles['main-css'] = '/css/styles.css';
+$styles['main-styles'] = '/styles/styles.styles';
 
 
 require 'core/base_views/VHead.php';

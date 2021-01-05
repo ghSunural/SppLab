@@ -8,7 +8,7 @@ use Application as A;
 <html lang="ru">
 <?php
 $title = 'SL-Геофизика';
-$styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
+$styles['main-styles'] = A\config::SITE_URL() . 'styles/styles.styles';
 $scripts[] = '';
 require 'core/base_views/VHead.php';
 ?>

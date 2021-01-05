@@ -6,7 +6,7 @@
 <html lang="ru">
 <?php
 $title = 'Железные дороги';
-$styles['main-css'] = 'css/styles.css';
+$styles['main-styles'] = 'styles/styles.styles';
 $scripts['ymaps'] = 'https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink';
 require 'core/base_views/VHead.php';
 ?>

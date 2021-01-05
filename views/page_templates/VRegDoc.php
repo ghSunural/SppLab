@@ -4,7 +4,7 @@ use Application as A;
 use Application\Views as V;
 
 $regions = $this->models['regions'];
-$styles[0] = A\config::SITE_URL() . 'css/styles.css';
+$styles[0] = A\config::SITE_URL() . 'styles/styles.styles';
 $head_as_html = V\Html::getView_Head('Spp-Lab', $styles);
 ?>
 

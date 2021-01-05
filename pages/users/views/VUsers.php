@@ -13,7 +13,7 @@ $tableAsHtml = A\Html::convertRowsArray2HtmlTable($users, $arrColumnHeaders);
 <html lang="ru">
 <?php
 $title = 'Пользователи';
-$styles['main-css'] = '/css/styles.css';
+$styles['main-styles'] = '/styles/styles.styles';
 
 require 'core/base_views/VHead.php';
 ?>

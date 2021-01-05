@@ -116,7 +116,7 @@
     };
 
     /*
-     * css-line-break 1.1.1 <https://github.com/niklasvh/css-line-break#readme>
+     * styles-line-break 1.1.1 <https://github.com/niklasvh/css-line-break#readme>
      * Copyright (c) 2019 Niklas von Hertzen <https://hertzen.com>
      * Released under MIT License
      */
@@ -4171,7 +4171,7 @@
                         return isLengthPercentage(value_1) ? value_1 : ZERO_LENGTH;
                 }
         }
-        throw new Error("Attempting to parse unsupported css format type " + descriptor.format);
+        throw new Error("Attempting to parse unsupported styles format type " + descriptor.format);
     };
 
     var ElementContainer = /** @class */ (function () {

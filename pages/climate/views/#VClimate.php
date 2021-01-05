@@ -7,7 +7,7 @@ $regions = $this->models['regions'];
 <html lang="ru">
 <?php
 $title = 'SL-Климат';
-$styles['main-css'] = 'css/styles.css';
+$styles['main-styles'] = 'styles/styles.styles';
 
 require 'core/base_views/VHead.php';
 ?>

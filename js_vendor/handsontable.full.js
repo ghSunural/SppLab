@@ -60216,19 +60216,19 @@ module.exports = store;
 /* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 405 */
@@ -62802,7 +62802,7 @@ function (_Overlay) {
       return (0, _element.getScrollLeft)(this.mainTableScrollableElement, this.wot.rootWindow);
     }
     /**
-     * Adds css classes to hide the header border's header (cell-selection border hiding issue).
+     * Adds styles classes to hide the header border's header (cell-selection border hiding issue).
      *
      * @param {Number} position Header X position if trimming container is window or scroll top if not.
      */
@@ -63285,7 +63285,7 @@ function (_Overlay) {
       this.wot.wtTable.wot.wtOverlays.leftOverlay.refresh();
     }
     /**
-     * Adds css classes to hide the header border's header (cell-selection border hiding issue).
+     * Adds styles classes to hide the header border's header (cell-selection border hiding issue).
      *
      * @param {Number} position Header Y position if trimming container is window or scroll top if not.
      */
@@ -63317,7 +63317,7 @@ function (_Overlay) {
 
           this.redrawAllSelectionsBorders();
         }
-      } // nasty workaround for double border in the header, TODO: find a pure-css solution
+      } // nasty workaround for double border in the header, TODO: find a pure-styles solution
 
 
       if (this.wot.getSetting('rowHeaders').length === 0) {
@@ -63958,7 +63958,7 @@ function (_Overlay) {
       return (0, _element.getScrollTop)(this.mainTableScrollableElement, this.wot.rootWindow);
     }
     /**
-     * Adds css classes to hide the header border's header (cell-selection border hiding issue)
+     * Adds styles classes to hide the header border's header (cell-selection border hiding issue)
      *
      * @param {Number} position Header Y position if trimming container is window or scroll top if not
      */
@@ -63979,7 +63979,7 @@ function (_Overlay) {
         if (!previousState && position || previousState && !position) {
           this.wot.wtOverlays.adjustElementsSize();
         }
-      } // nasty workaround for double border in the header, TODO: find a pure-css solution
+      } // nasty workaround for double border in the header, TODO: find a pure-styles solution
 
 
       if (this.wot.getSetting('rowHeaders').length === 0) {
@@ -66543,7 +66543,7 @@ exports.default = _default;
 /* 453 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 454 */
@@ -78701,7 +78701,7 @@ exports.default = _default;
 /* 530 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 531 */
@@ -80198,7 +80198,7 @@ exports.default = _default;
 /* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 546 */
@@ -80289,7 +80289,7 @@ _pluginHooks.default.getSingleton().register('afterCopy');
 var ROWS_LIMIT = 1000;
 var COLUMNS_LIMIT = 1000;
 var privatePool = new WeakMap();
-var META_HEAD = ['<meta name="generator" content="Handsontable"/>', '<style type="text/css">td{white-space:normal}br{mso-data-placement:same-cell}</style>'].join('');
+var META_HEAD = ['<meta name="generator" content="Handsontable"/>', '<style type="text/styles">td{white-space:normal}br{mso-data-placement:same-cell}</style>'].join('');
 /**
  * @description
  * This plugin enables the copy/paste functionality in the Handsontable. The functionality works for API, Context Menu,
@@ -81352,7 +81352,7 @@ collection('WeakSet', function (init) {
 /* 553 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 554 */
@@ -83217,7 +83217,7 @@ function unfreezeColumnItem(manualColumnFreezePlugin) {
 /* 565 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 566 */
@@ -84322,7 +84322,7 @@ exports.default = _default;
 /* 570 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 571 */
@@ -86122,7 +86122,7 @@ exports.default = _default;
 /* 576 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 577 */
@@ -89126,7 +89126,7 @@ function toggleMergeItem(plugin) {
 /* 583 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 584 */
@@ -95492,7 +95492,7 @@ exports.default = _default;
 /* 603 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 604 */
@@ -96719,7 +96719,7 @@ function getClassedToRemove(htmlElement) {
 /* 613 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 614 */
@@ -101003,7 +101003,7 @@ exports.default = _default;
 /* 646 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 647 */
@@ -105798,7 +105798,7 @@ exports.default = _default;
 /* 663 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 664 */
@@ -106982,7 +106982,7 @@ exports.default = _default;
 /* 667 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 668 */
@@ -109234,7 +109234,7 @@ exports.default = _default;
 /* 672 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 673 */
@@ -110241,7 +110241,7 @@ function showColumnItem(hiddenColumnsPlugin) {
 /* 676 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 677 */
@@ -111260,7 +111260,7 @@ function showRowItem(hiddenRowsPlugin) {
 /* 680 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// extracted by mini-css-extract-plugin
+// extracted by mini-styles-extract-plugin
 
 /***/ }),
 /* 681 */

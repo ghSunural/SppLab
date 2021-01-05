@@ -3,7 +3,7 @@
 
 <?php
 $title = 'SPP-Lab';
-$styles['main-css'] = '/css/styles.css';
+$styles['main-styles'] = '/styles/styles.styles';
 
 require 'core/base_views/VHead.php';
 ?>
@@ -20,7 +20,7 @@ require 'core/base_views/VMainToolbar.php'
 <main class="Main block block_wrap fl fl_nw">
 
 
-    <section class="content block block_wrap fl fl_w">
+    <section class="content block_wrap fl fl_w">
 
         <div  class="darkened main_bkg_color-1">
 
@@ -29,7 +29,7 @@ require 'core/base_views/VMainToolbar.php'
         <div class="block block_wrap fl fl_w logo">
             <div class="block block_inline main_bkg_color-1 main_text_color-1 logo_left">
                 <div class="Main_header_left_top ">
-                    SPP&nbsp;
+                    SsPP&nbsp;
                 </div>
             </div>
             <div class="main_bkg_color-2 main_text_color-2 logo_right">
