@@ -134,6 +134,11 @@ class UsersController extends BaseController
     {
 
         Resolver::isAllowedFor('ADM');
+        echo urldecode(("php://input"));
+        echo http_get_request_headers();
+
+        //htmlspecialchars против XSS атак
+
         if (isset($_POST['delete'])) {
             //  echo 'list';
             self::actionDelete($_POST['login']);

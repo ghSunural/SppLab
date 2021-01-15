@@ -9,7 +9,7 @@ function autoload($className)
 
         'config',
         'core',
-        'core',
+        'core/API',
         'core/auth',
         'core/base_controllers',
         'core/base_views',

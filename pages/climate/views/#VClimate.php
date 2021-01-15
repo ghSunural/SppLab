@@ -23,6 +23,7 @@ $Header_rightContent = 'СП 131.13330.2018 "СНиП 23-01-99* Строител
     .'<br>'.'СП 22.13330.2016 Основания зданий и сооружений.
     Актуализированная редакция СНиП 2.02.01-83* (с Изменениями №1, 2)';
 require 'core/base_views/VMinorHeader.php';
+require 'core/base_views/VBreadCrumbs.php';
 ?>
 
 <main class="Main block block_wrap fl fl_nw">

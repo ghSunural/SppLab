@@ -28,6 +28,7 @@ require 'core/base_views/VHead.php';
      </div>
 EOL;
     require 'core/base_views/VMinorHeader.php';
+    require 'core/base_views/VBreadCrumbs.php';
     ?>
 
     <main class="Main block block_wrap fl fl_nw">

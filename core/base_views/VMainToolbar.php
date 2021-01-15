@@ -19,7 +19,8 @@ if ($_SESSION['userRole'] == 'GST') {
 
     <div class="tb__left">
         <div class="block block_inline">
-            <a href="/" class="t-botton">ГЛАВНАЯ</a>
+           <!-- <img src="/resource/site/logo/favicon.ico" height="5px" alt=""> -->
+            <a href="/" class="t-botton fa fa-home"></a>
         </div>
 
 

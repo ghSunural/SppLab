@@ -21,6 +21,7 @@ require 'core/base_views/VHead.php';
     $Header_rightContent = 'СП 14.13330.2018 Строительство в сейсмических районах.
                               Актуализированная редакция СНиП II-7-81*';
     require 'core/base_views/VMinorHeader.php';
+    require 'core/base_views/VBreadCrumbs.php';
     ?>
 
     <main class="Main block block_wrap">
@@ -44,15 +45,15 @@ require 'core/base_views/VHead.php';
 
                 <div class="block block_box resizable_2 resize-tl">
                     <img class="" src="/pages/seismic/resource/content/OSR-2016-A.jpg"
-                         title="ОСР-2016-A" alt="ОСР-2015-A" width=400px height="">
+                         title="ОСР-2016-A" alt="ОСР-2016-A" width=400px height="">
                 </div>
                 <div class="block block_box resizable_2 resize-lc">
                     <img class="" src="/pages/seismic/resource/content/OSR-2016-B.jpg"
-                         title="ОСР-2016-B" alt="ОСР-2015-B" width=400px height="">
+                         title="ОСР-2016-B" alt="ОСР-2016-B" width=400px height="">
                 </div>
                 <div class="block block_box resizable_2 resize-bl">
                     <img class="" src="/pages/seismic/resource/content/OSR-2016-C.jpg"
-                         title="ОСР-2016-C" alt="ОСР-2015-C" width=400px height="">
+                         title="ОСР-2016-C" alt="ОСР-2016-C" width=400px height="">
                 </div>
 
                 <iframe src="https://www.google.com/maps/d/embed?mid=1fvvLEiH06jiUxjwDy-JPxsQ6PXzRJwRc"
@@ -67,7 +68,7 @@ require 'core/base_views/VHead.php';
                 <ul>
                     <li><a href="#tables">Таблицы</a></li>
                     <li><a href="#maps">Карты</a></li>
-                    <li><a href="/seismic/allEarthquakes">Каталог известных землятресений</a></li>
+                    <li><a href="/seismic/earthquakes">Каталог известных землятресений</a></li>
                     Полезные ссылки
                     <li><a href="http://neotec.ginras.ru/database.html" target="_blank">База данных разломов</a></li>
                     <li><a href="http://eqru.gsras.ru/stations/index.php" target="_blank">Сейсмические станции России</a></li>

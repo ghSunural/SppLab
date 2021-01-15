@@ -9,13 +9,17 @@ $town = $this->models['town'];
 <html lang="ru">
 <?php
 $title = 'SL-Отчет';
-$styles['main-css'] = A\config::SITE_URL().'css/styles.css';
+$styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
 
 require 'core/base_views/VHead.php';
 ?>
 
 <body class="block block_wrap">
-<?php require 'core/base_views/VMainToolbar.php' ?>
+<?php
+require 'core/base_views/VMainToolbar.php';
+
+
+?>
 <div class="page block block_wrap">
     <?php
     $Header_leftContent = 'Отчет. Сейсмичность';
@@ -25,6 +29,7 @@ require 'core/base_views/VHead.php';
      </div>
 EOL;
     require 'core/base_views/VMinorHeader.php';
+    require 'core/base_views/VBreadCrumbs.php';
     ?>
 
     <main class="Main block block_wrap fl fl_nw">
@@ -43,7 +48,14 @@ EOL;
                     ?>
                 </nav>
             </section>
+
+            <section class="fa fa-sticky-note"> * - Населенные пункты, по территории которых проходит граница зон разной балльности,
+                отнесены к более сейсмоопасной зоне.
+            </section>
         </section>
+
+
+
     </main>
 
     <?php require 'core/base_views/VSiteFooter.php' ?>

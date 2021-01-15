@@ -6,6 +6,9 @@
     "require": {
         "components/jquery": "3.4.*",
       "ext-mbstring": "*",
-      "ext-pdo": "*"
+      "ext-pdo": "*",
+      "ext-http": "*",
+      "ext-json": "*",
+      "ext-apache": "*"
     }
 }

@@ -21,8 +21,10 @@ class BaseController
         die('Доступ закрыт');
     }
 
-    protected function render($view)
+    protected function render($view, $content = '')
     {
         require $view;
+
+      //  render(request, template_name, context=None, content_type=None, status=None, using=None)
     }
 }

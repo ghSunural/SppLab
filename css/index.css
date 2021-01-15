@@ -9,7 +9,7 @@ html {
     font: 16px 'site-font', serif;
     width: 96vw;
     margin: 0 auto;
-
+    scroll-behavior: smooth;
 }
 
 .Main {

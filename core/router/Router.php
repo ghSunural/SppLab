@@ -34,15 +34,29 @@ class Router
         // Проверить наличие такого запроса в routesList.php
         foreach ($this->routes as $uriPattern => $path) {
 
+            /*
+             Нарпример:
+            uri seismic/1
+            ему соответствует:
+            - uriPattern seismic/([0-9]+), что является ключом
+            для path SeismicController/actionView/$1
+             */
+
             // Сравниваем $uriPattern и $uri
             if (preg_match("~$uriPattern~", $uri)) {
 
                 // Получаем внутренний путь из внешнего согласно правилу.
+                //preg_replace — Выполняет поиск и замену по регулярному выражению
+                //preg_replace ($pattern , $replacement , $subject)
+                //uri заменяется на path если uri похожа на uriPattern
                 $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+                Debug::print_var('$internalRoute', $internalRoute);
 
                 // Определить контроллер, action, параметры
 
                 $segments = explode('/', $internalRoute);
+                print_r($segments);
+
 
                 $controllerName = array_shift($segments);
                 $controllerName = ($this->namespace) . ucfirst($controllerName);

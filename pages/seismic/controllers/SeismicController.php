@@ -8,26 +8,41 @@ use seismic\models as M;
 
 class SeismicController extends BaseController
 {
-    public function actionIndex()
+    public function actionIndex($page_description)
     {
+        // var_dump($args);
+        //    echo $args['page_description']['title'];
+
+        $this->page_description = $page_description;
         $regions = M\MTowns::getRegions();
         $this->models['regions'] = $regions;
-        $this->render('pages/seismic/views/#VSeismic.php');
+
+        $this->render($page_description['view-templates'][0]);
     }
 
-    public function actionView($ID)
+    public function actionView($page_description)
     {
         A\Resolver::isAllowedFor(1);
 
+      // var_dump($page_description);
+        //echo $page_description['title'];
+        $ID = $page_description['params'][0];
+        //   echo $ID;
+        //* echo $page_description['title'];
         $town = M\MTowns::getTownsByID($ID);
         $this->models['town'] = $town;
         $this->models['seismic'] = M\MSeismic_MSK64::getMSK64($ID);
-        $this->render('pages/seismic/views/VSeismicReport.php');
+
+        $page_description['title'] = $town->locality;
+
+        $this->page_description = $page_description;
+        $this->render($page_description['view-templates'][0]);
     }
 
-    public function actionEarthquakes()
+    public function actionEarthquakes($page_description)
     {
-        $this->render('pages/seismic/views/VAllEarthquakes.php');
+        $this->page_description = $page_description;
+        $this->render($page_description['view-templates'][0]);
     }
 
     public function switchAction()
@@ -61,9 +76,7 @@ class SeismicController extends BaseController
         } elseif (isset($_POST['on_map'])) {
           //  echo 'on_map';
             $fileName = 'resource/content/generated/AllEarthquakes.kml';
-
             M\MEarthquakes::exportEarthquakes2Kml($fileName, $earthquakesAsRowsArray);
-
             //  echo file_get_contents('pages/admin/resource/downloads/AllEarthquakes.kml');
             $this->render('pages/seismic/views/VAllEarthquakes.php');
 

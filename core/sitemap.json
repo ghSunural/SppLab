@@ -1,0 +1,77 @@
+{
+  "climate/([0-9]+)": {
+    "id": "4",
+    "title": "отчет",
+    "parent_page": "climate",
+    "controller": "ClimateController",
+    "action": "actionView",
+    "view-templates": [
+      "pages/climate/views/VClimateReport.php"
+    ],
+    "params": ""
+  },
+  "climate": {
+    "id": "4",
+    "title": "климат",
+    "parent_page": "",
+    "controller": "ClimateController",
+    "action": "actionIndex",
+    "view-templates": [
+      "pages/climate/views/#VClimate.php"
+    ],
+    "params": ""
+  },
+  "seismic/([0-9]+)": {
+    "id": "4",
+    "title": "отчет",
+    "parent_page": "seismic",
+    "controller": "SeismicController",
+    "action": "actionView",
+    "view-templates": [
+      "pages/seismic/views/VSeismicReport.php"
+    ],
+    "params": ""
+  },
+  "seismic/earthquakes": {
+    "id": "3",
+    "title": "Каталог землетрясений",
+    "parent_page": "seismic",
+    "controller": "SeismicController",
+    "action": "actionEarthquakes",
+    "view": "pages/seismic/views/VAllEarthquakes.php",
+    "params": ""
+  },
+  "seismic": {
+    "id": "2",
+    "title": "сейсмичность",
+    "parent_page": "",
+    "controller": "SeismicController",
+    "action": "actionIndex",
+    "view-templates": [
+      "pages/seismic/views/#VSeismic.php"
+    ],
+    "params": ""
+  },
+  "admin": {
+    "id": "",
+    "title": "Админка",
+    "parent_page": "",
+    "controller": "SeismicController",
+    "action": "actionIndex",
+    "view-templates": [
+      "pages/seismic/views/#VSeismic.php"
+    ],
+    "params": ""
+  },
+  "": {
+    "id": "1",
+    "title": "главная",
+    "parent_page": "",
+    "controller": "SiteController",
+    "action": "actionIndex",
+    "view-templates": [
+      "core/base_views/site_view.php"
+    ],
+    "params": ""
+  }
+}

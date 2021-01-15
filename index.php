@@ -14,7 +14,7 @@ try {
 
     session_start();
     //echo $_SESSION["userRole"];
-   // $_SESSION["userRole"] = 'DEV';
+   $_SESSION["userRole"] = 'DEV';
     if (isset($_SESSION["userRole"]) && $_SESSION["userRole"] == 'DEV') {
         // Users.isAdmin($curUser)
         ini_set('display_errors', true);
@@ -27,7 +27,7 @@ try {
     }
 
     DB\DBManager::initDBs();
-    (new Router())->run();
+    (new Router2())->run();
 
 } catch (TError $e) {
     //   if (isset($_SESSION["userRole"]) && $_SESSION["userRole"] == 'DEV') {
