@@ -345,21 +345,21 @@ require 'core/base_views/VHead.php';
 <script src="/js_vendor/node_modules/handsontable/dist/handsontable.full.min.js"></script>
 <link href="/js_vendor/node_modules/handsontable/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
 
-<script src="/pages/calculators/scripts/geo/onload.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoPoint.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoLine.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoPolygon.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoCircle.js"></script>
-<script src="/pages/calculators/scripts/geo/TStyle.js"></script>
-<script src="/pages/calculators/scripts/geo/hotTable.js"></script>
-<script src="/pages/calculators/scripts/geo/kml.js"></script>
-<script src="/pages/calculators/scripts/geo/gpx.js"></script>
+<script src="/pages/geolocation/scripts/geo/onload.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoPoint.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoLine.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoPolygon.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoCircle.js"></script>
+<script src="/pages/geolocation/scripts/geo/TStyle.js"></script>
+<script src="/pages/geolocation/scripts/geo/hotTable.js"></script>
+<script src="/pages/geolocation/scripts/geo/kml.js"></script>
+<script src="/pages/geolocation/scripts/geo/gpx.js"></script>
 
-<script src="/pages/calculators/scripts/geo/GeoController.js"></script>
+<script src="/pages/geolocation/scripts/geo/GeoController.js"></script>
 <script src="https://unpkg.com/vue"></script>
-<script src="/pages/calculators/scripts/geo/Vue.js"></script>
+<script src="/pages/geolocation/scripts/geo/Vue.js"></script>
 
-<script src="/pages/calculators/scripts/geo/tests.js"></script>
+<script src="/pages/geolocation/scripts/geo/tests.js"></script>
 
 
 </body>

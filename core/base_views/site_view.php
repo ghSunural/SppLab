@@ -19,6 +19,13 @@ require 'core/base_views/VSiteHeader.php'
 
 <main class="Main block block_wrap fl fl_nw">
 
+
+    <aside class="pages-catalog">
+
+
+
+    </aside>
+
     <section class="content block block_wrap fl fl_w main_bkg_color-4">
 
         <div class="block tablet main_bkg_color-2">
@@ -103,8 +110,8 @@ require 'core/base_views/VSiteHeader.php'
             <hr>
 
             <ul>
-                <li><a href="calculators/converterGeo" target="">Конвертер в геоданные</a></li>
-                <li><a href="calculators/photoGps" target="">Фото с координатами</a></li>
+                <li><a href="geolocation/convert2geo" target="">Конвертер в геоданные</a></li>
+                <li><a href="geolocation/photo-with-location" target="">Фото с координатами</a></li>
             </ul>
             <hr>
             <p align="justify" class="H_hint">

@@ -27,7 +27,7 @@ class config
     public static function DEBUG_MODE()
     {
 
-        return true;
+        return false;
     }
 
 

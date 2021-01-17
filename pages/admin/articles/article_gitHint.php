@@ -130,7 +130,7 @@ $ git merge iss53
 </script>
 
 
-<style type="text/css">
+<style>
 
 
 

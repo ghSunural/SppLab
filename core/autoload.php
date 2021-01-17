@@ -38,6 +38,9 @@ function autoload($className)
         'pages/calculators/models',
         'pages/calculators/controllers',
 
+        'pages/geolocation/models',
+        'pages/geolocation/controllers',
+
         'pages/downloads/models',
         'pages/downloads/controllers',
 

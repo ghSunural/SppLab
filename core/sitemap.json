@@ -52,11 +52,57 @@
     ],
     "params": ""
   },
+  "geolocation/convert2geo": {
+    "id": "2",
+    "title": "конвертировать",
+    "parent_page": "",
+    "controller": "GeoLocationController",
+    "action": "acnConvert2geo_formats",
+    "view-templates": [
+      "pages/geolocation/views/VConverterGeo.php",
+      "pages/geolocation/views/VGps.php"
+
+    ],
+    "params": ""
+  },
+  "geolocation/gps": {
+    "id": "2",
+    "title": "местоположение",
+    "parent_page": "",
+    "controller": "GeoLocationController",
+    "action": "acnGps",
+    "view-templates": [
+      "pages/geolocation/views/VGps.php"
+    ],
+    "params": ""
+  },
+  "geolocation/photo-with-location": {
+    "id": "2",
+    "title": "местоположение",
+    "parent_page": "",
+    "controller": "GeoLocationController",
+    "action": "acnPhotoGeo",
+    "view-templates": [
+      "pages/geolocation/views/VPhotoGps.php"
+    ],
+    "params": ""
+  },
+  "admin2": {
+    "id": "",
+    "title": "Админка",
+    "parent_page": "",
+    "controller": "AdminController",
+    "action": "actionIndex2",
+    "view-templates": [
+      "pages/seismic/views/#VSeismic.php"
+    ],
+    "params": ""
+  },
   "admin": {
     "id": "",
     "title": "Админка",
     "parent_page": "",
-    "controller": "SeismicController",
+    "controller": "AdminController",
     "action": "actionIndex",
     "view-templates": [
       "pages/seismic/views/#VSeismic.php"

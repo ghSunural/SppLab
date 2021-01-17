@@ -62,7 +62,7 @@ EOL;
 <html lang="ru">
 
 <?php
-$title = 'Фото с привязкой местопложения';
+$title = 'Конвертер в геоданные';
 $styles['main-css'] = '/css/styles.css';
 
 
@@ -75,8 +75,8 @@ require 'core/base_views/VHead.php';
 <?php require 'core/base_views/VMainToolbar.php' ?>
 <div class="page block block_wrap">
     <?php
-    $Header_leftContent = 'Геоданные';
-    $Header_rightContent = 'Фото с привязкой местопложения';
+    $Header_leftContent = 'Калькуляторы';
+    $Header_rightContent = 'Конвертер в геоданные';
     // require 'core/base_views/VMinorHeader.php';
     ?>
 
@@ -109,26 +109,31 @@ require 'core/base_views/VHead.php';
 
         <div id="splitter" class="main_bkg_color-5"></div>
 
-
-
-
-
-
-
         <section id="panel" class="block block_wrap content_with_sideBar main_bkg_color-4">
+
+
+            <fieldset class="block_inline">
+                <legend>Тип метки</legend>
+                <input id="#point" name="typePlacemark" type="radio" value="point"
+                       onclick="GeoController.setTypePlacemark(this)" checked>
+                <label for="#point">Точка</label><br>
+                <input id="#line" name="typePlacemark" type="radio" value="line"
+                       onclick="GeoController.setTypePlacemark(this)">
+                <label for="#line">Линия</label><br>
+                <input id="#polygon" name="typePlacemark" type="radio" value="polygon"
+                       onclick="GeoController.setTypePlacemark(this)">
+                <label for="#polygon">Полигон</label>
+                <br>
+
+            </fieldset>
+
+
             <!--
             <input class="main_text_color-1 main_bkg_color-1" type="button"
                    title="Тесты" value="Тест" onclick="tests.alertshow()">
             <input class="main_text_color-1 main_bkg_color-1" type="button"
                    title="Обновить описание колонок" value="Обновить" onclick="kmlController.redrawDescription()">
 -->
-            <br>
-
-            <div>
-                <input type="file" name="uploaded_file" id="uploaded_file"
-                       onchange="file_selected();" accept="image/*,image/jpeg" />
-            </div>
-
             <br>
 
             <fieldset class="block_inline">
@@ -340,21 +345,21 @@ require 'core/base_views/VHead.php';
 <script src="/js_vendor/node_modules/handsontable/dist/handsontable.full.min.js"></script>
 <link href="/js_vendor/node_modules/handsontable/dist/handsontable.full.min.css" rel="stylesheet" media="screen">
 
-<script src="/pages/calculators/scripts/geo/onload.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoPoint.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoLine.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoPolygon.js"></script>
-<script src="/pages/calculators/scripts/geo/TGeoCircle.js"></script>
-<script src="/pages/calculators/scripts/geo/TStyle.js"></script>
-<script src="/pages/calculators/scripts/geo/hotTable.js"></script>
-<script src="/pages/calculators/scripts/geo/kml.js"></script>
-<script src="/pages/calculators/scripts/geo/gpx.js"></script>
+<script src="/pages/geolocation/scripts/geo/onload.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoPoint.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoLine.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoPolygon.js"></script>
+<script src="/pages/geolocation/scripts/geo/TGeoCircle.js"></script>
+<script src="/pages/geolocation/scripts/geo/TStyle.js"></script>
+<script src="/pages/geolocation/scripts/geo/hotTable.js"></script>
+<script src="/pages/geolocation/scripts/geo/kml.js"></script>
+<script src="/pages/geolocation/scripts/geo/gpx.js"></script>
 
-<script src="/pages/calculators/scripts/geo/GeoController.js"></script>
+<script src="/pages/geolocation/scripts/geo/GeoController.js"></script>
 <script src="https://unpkg.com/vue"></script>
-<script src="/pages/calculators/scripts/geo/Vue.js"></script>
+<script src="/pages/geolocation/scripts/geo/Vue.js"></script>
 
-<script src="/pages/calculators/scripts/geo/tests.js"></script>
+<script src="/pages/geolocation/scripts/geo/tests.js"></script>
 
 
 </body>
@@ -584,79 +589,6 @@ require 'core/base_views/VHead.php';
     }
 
 </style>
-
-
-
-<script type="text/javascript">
-    // Обработка выбранного файла
-    function file_selected() {
-        try {
-            var file = document.getElementById('uploaded_file').files[0];
-            if (file) {
-                // Предварительная проверка на JPEG
-                if (/\.(jpe?g)$/i.test(file.name)) {
-                    // Старые версии Firefox 3.6 - 7.0
-                    if (typeof file.getAsBinary=='function') {
-                        // Содержимое файла находится в file.getAsBinary()
-                        // -- вызвать парсер
-                    }
-                    else if (typeof file.getAsDataURL=='function') {
-                        // Содержимое файла находится в file.getAsDataURL()
-                        // в виде закодированной base64 строки
-                        // -- декодировать и вызвать парсер
-                    }
-                    // Браузеры с поддержкой HTML5
-                    else {
-                        if (typeof FileReader!='undefined') {
-                            var reader = new FileReader();
-
-                            reader.onloadend = function(evt) {
-                                if (evt.target.readyState == FileReader.DONE) {
-                                    // Данные пришли в base64
-                                    if (evt.target.result.substr(0,5)=='data:') {
-                                        // Содержимое файла находится в evt.target.result
-                                        // в виде закодированной base64 строки
-                                        // -- декодировать и вызвать парсер
-                                    }
-                                    // Двоичные данные
-                                    else {
-                                        // Содержимое файла находится в evt.target.result
-                                        // -- вызвать парсер
-                                    }
-                                }
-                            };
-
-                            var blob;
-                            if (file.slice) {
-                                blob = file.slice(0, file.size);
-                            }
-                            else if (file.webkitSlice) {
-                                blob = file.webkitSlice(0, file.size);
-                            }
-                            else if (file.mozSlice) {
-                                blob = file.mozSlice(0, file.size);
-                            }
-
-                            // Если поддерживается бинарное чтение, то использовать его
-                            if (typeof file.getAsBinary=='function') {
-                                reader.readAsBinaryString(blob);
-                            }
-                            // Использовать чтение в base64
-                            else {
-                                reader.readAsDataURL(blob);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        catch(e) {
-            // Браузер не поддерживает работу с содержимым файлов
-        }
-    }
-</script>
-
-
 
 
 
