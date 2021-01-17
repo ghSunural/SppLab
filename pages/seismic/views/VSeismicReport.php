@@ -9,7 +9,11 @@ $town = $this->models['town'];
 <html lang="ru">
 <?php
 $title = 'SL-Отчет';
+<<<<<<< HEAD
 $styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
+=======
+$styles['main-styles'] = A\config::SITE_URL().'styles/styles.styles';
+>>>>>>> new_design
 
 require 'core/base_views/VHead.php';
 ?>

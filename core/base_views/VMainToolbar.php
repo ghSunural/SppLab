@@ -80,7 +80,7 @@ if ($_SESSION['userRole'] == 'GST') {
 
         color: #DCE9BE;
         font-weight: bold;
-        font-size: 3vw;
+        font-size: 1vw;
         max-font-size: 3vh;
         margin-left: 15px;
     }

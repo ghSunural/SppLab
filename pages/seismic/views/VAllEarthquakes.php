@@ -13,7 +13,7 @@ $tableAsHtml = A\Html::convertRowsArray2HtmlTable($arrEarthquakes, $arrColumnHea
 <html lang="ru">
 <?php
 $title = 'Каталог';
-$styles['main-css'] = '/css/styles.css';
+$styles['main-styles'] = '/styles/styles.styles';
 //$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU&load=Geolink";
 //$scripts['ymaps2'] = "https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=369c0410-04f2-44bc-8b5e-db38533c045b";
 

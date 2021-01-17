@@ -8,7 +8,7 @@ $regions = $this->models['regions'];
 <html lang="ru">
 <?php
 $title = 'SL-Сейсмичность';
-$styles['main-css'] = 'css/styles.css';
+$styles['main-styles'] = 'styles/styles.styles';
 //$scripts['ymaps'] = "https://api-maps.yandex.ru/2.1/?apikey=369c0410-04f2-44bc-8b5e-db38533c045b&lang=ru_RU&load=Geolink";
 require 'core/base_views/VHead.php';
 ?>
