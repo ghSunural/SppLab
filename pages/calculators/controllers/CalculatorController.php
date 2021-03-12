@@ -11,9 +11,24 @@ class CalculatorController extends BaseController
         $this->render('pages/calculators/views/#VCalculators.php');
     }
 
-    public function actionNum2str()
+    public function acnNum2str($page_description)
     {
-        $this->render('pages/calculators/views/VCalculatorsNum2str.php');
+
+        if (isset($_POST['number'])) {
+            $num = $_POST['number'];
+        } else {
+            $num = '';
+        }
+
+        if ($num != '') {
+            $result = M\MCalculators::num2str($num);
+            $this->models['num'] = $num;
+            $this->models['result'] = $result;
+        } else {
+            $this->models['num'] = '';
+            $this->models['result'] = '';
+        }
+        $this->render($page_description['view-templates'][0]);
     }
 
     public function actionNum2strNum()

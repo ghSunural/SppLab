@@ -12,7 +12,7 @@ class ErrorHandler
     public static $system_error_message;
     public static $error_file;
     public static $error_line;
-    public static $error_trace = array();
+    public static $error_trace = [];
 
     public static function alert_error(TError $e)
     {
@@ -36,7 +36,7 @@ class ErrorHandler
             require 'pages/signUpIn/views/#VLogIn.php';
           //  header ("Location: /sign/login");
         }else{
-            require 'core/base_views/homepage.php';
+            require 'core/base_views/404_NotFound.php';
         }
     }
 

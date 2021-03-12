@@ -10,14 +10,14 @@ displayBreadCrumbs($sitemap, $tree_nodes_names);
 
 function displayBreadCrumbs($sitemap, $tree_nodes_names)
 {
-    echo "<ol class=\"breadcrumbs main_text_color-2\">";
+    echo "<ol class=\"breadcrumb main_text_color-2\">";
     foreach ($tree_nodes_names as $node_name) {
         //echo $sitemap[$node_name]['title'] . ' >> ';
         //  echo $node_name . ' >> ';
        echo $li = <<< EOL
-        <li class="breadcrumbs-item" >
+        <li class="breadcrumb-item" >
         <a href="/{$node_name}">{$sitemap[$node_name]['title']}</a>
-        </li> >>
+        </li>
 EOL;
     }
     echo "</ol>";
@@ -47,21 +47,20 @@ function getTree($sitemap, $node_name)
 
 <style>
 
-    .breadcrumbs {
-        display: inline; /* Отображать как строчный элемент */
-        margin-right: 5px; /* Отступ слева */
-        padding: 3px; /* Поля вокруг текста */
-        font-weight: bold;
-        text-transform: capitalize;
+    .breadcrumb {
+        text-transform: lowercase;
     }
 
     .breadcrumbs-item {
         display: inline;
-        font-size: 1.2em;
+        font-size: .8rem;
+        letter-spacing: 5px;
+        font-weight: bold;
     }
 
     .breadcrumbs-item:hover {
-        font-size: 1.3em;
+        background-color: var(--main-color-dark);
+        color:  var(--main-color-light);
         transition-delay: 0.5s;
     }
 

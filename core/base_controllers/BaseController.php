@@ -27,4 +27,8 @@ class BaseController
 
       //  render(request, template_name, context=None, content_type=None, status=None, using=None)
     }
+
+    public function acnNotFound($page_description){
+        require 'core/base_views/404_NotFound.php';
+    }
 }

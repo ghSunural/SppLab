@@ -9,11 +9,9 @@ $town = $this->models['town'];
 <html lang="ru">
 <?php
 $title = 'SL-Отчет';
-<<<<<<< HEAD
-$styles['main-css'] = A\config::SITE_URL() . 'css/styles.css';
-=======
-$styles['main-styles'] = A\config::SITE_URL().'styles/styles.styles';
->>>>>>> new_design
+
+$styles['main-styles'] = A\config::SITE_URL().'styles/styles.css';
+
 
 require 'core/base_views/VHead.php';
 ?>
@@ -32,7 +30,7 @@ require 'core/base_views/VMainToolbar.php';
          <span class="ymaps-geolink">г {$town->locality} ({$town->region})</span>
      </div>
 EOL;
-    require 'core/base_views/VMinorHeader.php';
+   // require 'core/base_views/VMinorHeader.php';
     require 'core/base_views/VBreadCrumbs.php';
     ?>
 

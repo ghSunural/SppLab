@@ -6,6 +6,8 @@
         <testsuite name="Application Test Suite">
             <directory>unitTests</directory>
             <file>core/util/ValidatorTest.php</file>
+            <directory>pages/vector-best/phpTests</directory>
+            <directory>pages/vector-best/models</directory>
         </testsuite>
     </testsuites>
 </phpunit>

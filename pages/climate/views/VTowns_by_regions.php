@@ -12,7 +12,7 @@ echo <<<EOL
         <span class="ymaps-geolink">{$region}</span>
     </div>
     <br>     
-    <div class="block panel_mini_sub main_text_color-1">
+    <div class="block panel_mini_sub text-dark">
 EOL;
 foreach ($townsInRegions as $town) {
     // echо "<span class=\"ymaps-geolink\">."карта"."</span>"

@@ -16,15 +16,17 @@ class DBManager
     public static $DB1;
     public static $DB2;
     public static $DB3;
+    public static $DB4;
 
     public static function initDBs()
     {
         self::$DB1 = self::getDB(require 'db_site_consts.php');
         self::$DB2 = self::getDB(require 'db_east2016_consts.php');
         self::$DB3 = self::getDB(require 'db_staff_consts.php');
+        self::$DB4 = self::getDB(require 'db_vector_consts.php');
     }
 
-    private static function getDB($consts = array())
+    private static function getDB($consts = [])
     {
 
         return new TDataBase($consts['HOST'], $consts['DATABASE'], $consts['USER'], $consts['PASSWORD']);
@@ -37,11 +39,12 @@ class DBManager
         // {$dataBase->getHost()}
         $dsn = "mysql:host={$dataBase->getHost()};dbname={$dataBase->getDbName()};charset=$charset";
 
-        $options = array(
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        $options = [
+           // PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => true,
-        );
+        ];
         //link
         //  print_r($dsn);
 

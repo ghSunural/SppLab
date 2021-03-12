@@ -9,7 +9,7 @@ $town = $this->models['town'];
 <?php
 $title = 'SL-Отчет';
 $styles = array(
-    'main-styles' => A\config::SITE_URL().'styles/styles.styles',
+    'main-styles' => A\config::SITE_URL().'/styles/styles.css',
 );
 
 $scripts['thisJS'] = A\config::SITE_URL().'pages/climate/scripts/scripts.js';

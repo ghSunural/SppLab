@@ -12,9 +12,18 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 100%;
+    /*font-size: 100%;*/
     vertical-align: baseline;
     background: transparent;
+    font: 100% 'site-font', serif;
+
+}
+
+
+
+
+#div3 {
+    background-color: var(--main-color-light);
 
 }
 
@@ -27,26 +36,24 @@ html {
     /*font: 12px 'site-font' , serif;*/
     /*letter-spacing: 2px;*/
     /*font: 12px 'Rubik One', sans-serif;*/
-    font: 16px 'site-font', serif;
+
     width: 96vw;
     margin: 0 auto;
     scroll-behavior: smooth;
 }
-
+/*
 header {
-    height: 100vh;
+ height: 100vh;
     background-color: #eee;
-    background-image: url(https://pictures.s3.yandex.net/frontend-developer/free-course/cover.jpg);
+  background-image:
+ url(https://pictures.s3.yandex.net/frontend-developer/free-course/cover.jpg);
+
     background-size: cover;
     background-position: center;
     text-align: center;
 }
 
-body, h1, h2, h3, h4, p, a {
-    margin: 0;
-    font-size: 100%;
-    font-weight: normal;
-}
+*/
 
 * {
     box-sizing: border-box;
@@ -69,7 +76,8 @@ img {
 
 /*для того чтобы не было пробелов между inline block*/
 .content {
-    font-size: 0;
+    background-color: var(--main-color-medium);
+    /*font-size: 0;*/
 }
 
 

@@ -1,4 +1,27 @@
 {
+  "downloads": {
+    "id": "4",
+    "title": "Диплом",
+    "parent_page": "homepage",
+    "controller": "MapCntr",
+    "action": "acnIndex",
+    "view-templates": [
+      "pages/downloads/views/#DownlodsRefs.php",
+      "pages/downloads/views/#VDownloads.php"
+    ],
+    "params": ""
+  },
+  "create-map": {
+    "id": "4",
+    "title": "Диплом",
+    "parent_page": "homepage",
+    "controller": "MapCntr",
+    "action": "acnIndex",
+    "view-templates": [
+      "pages/mapCreator/views/templates/#VMapCreator.php"
+    ],
+    "params": ""
+  },
   "climate/([0-9]+)": {
     "id": "4",
     "title": "отчет",
@@ -12,8 +35,8 @@
   },
   "climate": {
     "id": "4",
-    "title": "климат",
-    "parent_page": "",
+    "title": "Строительная климатология",
+    "parent_page": "homepage",
     "controller": "ClimateController",
     "action": "actionIndex",
     "view-templates": [
@@ -23,7 +46,7 @@
   },
   "seismic/([0-9]+)": {
     "id": "4",
-    "title": "отчет",
+    "title": "Сейсмическая интенсивность",
     "parent_page": "seismic",
     "controller": "SeismicController",
     "action": "actionView",
@@ -37,14 +60,16 @@
     "title": "Каталог землетрясений",
     "parent_page": "seismic",
     "controller": "SeismicController",
-    "action": "actionEarthquakes",
-    "view": "pages/seismic/views/VAllEarthquakes.php",
+    "action": "acnEarthquakes",
+    "view-templates": [
+      "pages/seismic/views/VAllEarthquakes.php"
+    ],
     "params": ""
   },
   "seismic": {
     "id": "2",
-    "title": "сейсмичность",
-    "parent_page": "",
+    "title": "Сейсмичность",
+    "parent_page": "homepage",
     "controller": "SeismicController",
     "action": "actionIndex",
     "view-templates": [
@@ -54,31 +79,29 @@
   },
   "geolocation/convert2geo": {
     "id": "2",
-    "title": "конвертировать",
-    "parent_page": "",
+    "title": "Конвертировать в геоданные",
+    "parent_page": "homepage",
     "controller": "GeoLocationController",
     "action": "acnConvert2geo_formats",
     "view-templates": [
-      "pages/geolocation/views/VConverterGeo.php",
-      "pages/geolocation/views/VGps.php"
-
+      "pages/geolocation/views/templates/VConverterGeo.php"
     ],
     "params": ""
   },
   "geolocation/gps": {
     "id": "2",
-    "title": "местоположение",
+    "title": "Мое местоположение",
     "parent_page": "",
     "controller": "GeoLocationController",
     "action": "acnGps",
     "view-templates": [
-      "pages/geolocation/views/VGps.php"
+      "pages/geolocation/views/templates/GeoEar.html"
     ],
     "params": ""
   },
   "geolocation/photo-with-location": {
     "id": "2",
-    "title": "местоположение",
+    "title": "Фото с координатами",
     "parent_page": "",
     "controller": "GeoLocationController",
     "action": "acnPhotoGeo",
@@ -87,10 +110,90 @@
     ],
     "params": ""
   },
+  "calculators/num2str": {
+    "id": "3",
+    "title": "Число прописью",
+    "parent_page": "homepage",
+    "controller": "CalculatorController",
+    "action": "acnNum2str",
+    "view-templates": [
+      "pages/calculators/views/VCalculatorsNum2str.php"
+    ],
+    "params": ""
+  },
+  "single": {
+    "id": "3",
+    "title": "Проект страницы",
+    "parent_page": "2-1",
+    "controller": "adminController",
+    "action": "single_project",
+    "view-templates": [
+      "template/spplab/single.php"
+    ],
+    "params": ""
+  },
+  "vector-best/inspect/do": {
+    "id": "3",
+    "title": "Вектор-Бот",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnDoInspection",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php"
+    ],
+    "params": ""
+  },
+  "vector-best/inspect/report": {
+    "id": "3",
+    "title": "Вектор-Бот",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnGetInspectionResults",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php"
+    ],
+    "params": ""
+  },
+
+  "vector-best/admin": {
+    "id": "3",
+    "title": "Вектор-Бест",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnAdmin",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php",
+      "pages/vector-best/views/templates/VAdmin.php"
+    ],
+    "params": ""
+  },
+  "vector-best/test": {
+    "id": "3",
+    "title": "Вектор-Бест",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnTest",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php",
+      "pages/vector-best/views/templates/VAdmin.php"
+    ],
+    "params": ""
+  },
+  "vector-best": {
+    "id": "3",
+    "title": "Вектор-Бест",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnIndex",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php"
+    ],
+    "params": ""
+  },
   "admin2": {
-    "id": "",
+    "id": "2-1",
     "title": "Админка",
-    "parent_page": "",
+    "parent_page": "homepage",
     "controller": "AdminController",
     "action": "actionIndex2",
     "view-templates": [
@@ -99,9 +202,9 @@
     "params": ""
   },
   "admin": {
-    "id": "",
+    "id": "2",
     "title": "Админка",
-    "parent_page": "",
+    "parent_page": "homepage",
     "controller": "AdminController",
     "action": "actionIndex",
     "view-templates": [
@@ -109,14 +212,29 @@
     ],
     "params": ""
   },
-  "": {
+  "404NotFound": {
+    "id": "2",
+    "title": "NotFound",
+    "parent_page": "homepage",
+    "controller": "BaseContorller",
+    "action": "acnNotFound",
+    "view-templates": [
+      "core/base_views/404_NotFound.php"
+    ],
+    "params": ""
+  },
+  "homepage": {
     "id": "1",
     "title": "главная",
     "parent_page": "",
     "controller": "SiteController",
     "action": "actionIndex",
     "view-templates": [
-      "core/base_views/site_view.php"
+      "template/spplab/index.php",
+      "core/base_views/homepage/views/homepage_a.php",
+      "core/base_views/homepage/site_view.php",
+      "core/base_views/homepage/homepage.php",
+      "core/base_views/homepage/homepage2.php"
     ],
     "params": ""
   }

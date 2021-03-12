@@ -3,10 +3,7 @@ serif - с засечками
 */
 @font-face {
     font-family: 'site-font';
-
-    /*
-    src: url('/fonts/Play-Regular.ttf');
-*/
+    /* src: url('/fonts/Play-Regular.ttf');*/
     src: url('/fonts/Play-Regular.ttf');
     /*CentarRegular.otf*/
     font-weight: normal;

@@ -1,0 +1,132 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+
+}
+
+body,h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-color-dark: #555152;
+    --main-color-light: #DCE9BE;
+    --main-color-medium: #99173C;
+}
+
+.title {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.box {
+    min-height: 150px;
+}
+
+.menu {
+    background-color: var(--main-color-dark);
+    color: var(--main-color-light);
+}
+
+.content-top {
+    background-color: #099DD9;
+}
+
+.content-bottom {
+    background-color: #0C8542;
+}
+
+.lime {
+    background-color: rgb(179, 210, 52);
+}
+
+.seafoam {
+    background-color: rgb(77, 190, 161);
+}
+
+.right-side-bar {
+    background-color: #EC1D3B;
+}
+
+.orange {
+    background-color: #F79420;
+}
+/*
+These are the responsive styles. Throw some breakpoints in here!
+*/
+
+/*телефон*/
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.box {
+    width: 100%;
+}
+
+.header{
+}
+
+h1:after {
+    content: "телефон";
+}
+
+
+/*для планшет*/
+@media screen and (min-width:480px) {
+    h1:after {
+        content: "планшет...";
+    }
+    .header{
+        width:100%;
+        order:-1;
+    }
+    .menu{
+        width: 50%;
+    }
+    .inner-container{
+        width: 50%;
+    }
+}
+
+
+/*для десктоп*/
+@media screen and (min-width:600px) {
+
+    h1:after {
+        content: "десктоп";
+    }
+    .header{
+        width:100%;
+        order:-1;
+    }
+    .menu{
+        width:25%;
+        order:-1;
+    }
+    .inner-container{
+        width:50%;
+    }
+    .right-side-bar{
+        width: 25%;
+        order: 1;
+    }
+
+}

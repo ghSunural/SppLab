@@ -9,6 +9,15 @@ class Util
 
     }
 
+    public static function saveToFile($fileName, $content)
+    {
+
+        file_put_contents($fileName, json_encode($content));
+        return true;
+    }
+
+
+
     public static function get_web_path()
     {
         return $_SERVER['DOCUMENT_ROOT'];

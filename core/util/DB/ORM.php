@@ -26,7 +26,7 @@ class ORM
       //  A\Debug::print_array($statement->fetch());
         $count = $statement->rowCount();
       //  A\Debug::print_var('количество строк', $count);
-        $rowsArray = array();
+        $rowsArray = [];
         if ($count > 1) {
             echo "Массив";
 
@@ -51,7 +51,7 @@ class ORM
     public static function findRows(TDataBase $DB, $table, $expression = null)
     {
         $link = DBManager::getLinkWith($DB);
-        $rows = array();
+        $rows = [];
         //$rowsArray = array();
 
         $sql = is_null($expression)
@@ -80,7 +80,7 @@ class ORM
     public static function getColumnHeaders(TDataBase $DB, $tableName)
     {
 
-        $columnHeaders = array();
+        $columnHeaders = [];
         $fields = self::sqlQuery($DB, 'describe ' . $tableName);
         $i = 0;
         foreach ($fields as $f) {

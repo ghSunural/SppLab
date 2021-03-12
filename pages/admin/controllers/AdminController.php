@@ -30,6 +30,13 @@ class AdminController extends BaseController
         $this->render('pages/admin/views/Admin.php');
     }
 
+    public function single_project($page_description)
+    {
+        $this->page_description = $page_description;
+        // echo $page_description['title'];
+        $this->render($page_description['view-templates'][0]);
+    }
+
     public function acnShowUsers()
     {
         A\Resolver::isAllowedFor('ADM');

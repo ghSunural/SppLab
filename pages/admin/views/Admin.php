@@ -210,7 +210,7 @@ describe TAllEarthquakes;
     dropbtn = item_droped - не нужен
 
     */
-    .menu {
+    .content-top {
         margin: 0;
         padding: 0;
         overflow: hidden;

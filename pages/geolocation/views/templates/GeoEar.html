@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>GPS</title>
+</head>
+<body class="wrapper">
+<h1 class="app-name">GeoEar</h1>
+<h2 class="app-goal">местоположение <br> без интернета!</h2>
+<div class="data">Широта: <span class="lat">...</span></div>
+<div class="data">Долгота: <span class="lng">...</span></div>
+<div class="data">Точность: <span class="acc">...</span></div>
+
+
+<br>
+<div class="data">итерация(5 сек.): <span class="iteration">...</span></div>
+<br>
+<br>
+<button class="button" onclick="start()" value="Запустить">Старт</button>
+
+</body>
+
+
+</html>
+
+<script>
+
+    // document.write('Начало<br>');
+
+    /*
+    if (navigator.geolocation) {
+
+        // Геолокация доступна
+        alert('Геолокация доступна');
+
+    } else {
+
+        // Геолокация не доступна
+        alert('Геолокация не доступна');
+    }
+    */
+
+
+    var options = {
+        enableHighAccuracy: true,
+        timeout: 5000,
+        maximumAge: 0
+    };
+
+    let Itr = 0;
+    let vLat = document.querySelector('.lat');
+    let vLng = document.querySelector('.lng');
+    let vAcc = document.querySelector('.acc');
+    let vItr = document.querySelector('.iteration');
+
+    let success = function (position) {
+
+        // document.write('success<br>');
+        vLat.innerHTML = '';
+        vLng.innerHTML = '';
+        vAcc.innerHTML = '';
+        vItr.innerHTML = '';
+        vLat.innerHTML = position.coords.latitude.toFixed(5);
+        vLng.innerHTML = position.coords.longitude.toFixed(5);
+        vAcc.innerHTML = "&#177;" + position.coords.accuracy.toFixed(0);
+
+        vItr.innerHTML = Itr;
+        Itr++;
+        //document.write("\nlat " + position.coords.latitude.toFixed(5) + '<br>');
+        // document.write("\nlng " + position.coords.longitude.toFixed(5) + '<br>');
+
+    }
+
+    let error = function (err) {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
+    };
+
+    online = window.navigator.onLine;
+    window.addEventListener("offline",
+        function (e) {
+            alert("offline");
+        })
+
+    function start() {
+
+       // alert("процесс пошел");
+      // alert(online);
+
+        if (navigator.geolocation) {
+
+            // Геолокация доступна
+            alert('Геолокация доступна');
+
+        } else {
+
+            // Геолокация не доступна
+            alert('Геолокация не доступна :(');
+        }
+
+                setInterval(function () {
+                    // document.write('Начало цикла<br>');
+                    /// call your function here
+                    navigator.geolocation.getCurrentPosition(success, error, options);
+                    // document.write('\Конец цикла<br>');
+
+                }, 5000);
+
+           //     alert("процесс закончен");
+    }
+
+    // let whatID = navigator.geolocation.watchPosition(success, error, options);
+    //  navigator.geolocation.getAccurateCurrentPosition(onSuccess, onError, onProgress, {desiredAccuracy:20, maxWait:15000});
+
+    /*
+
+        if (navigator.geolocation) {
+
+            // Геолокация доступна
+            alert('Геолокация доступна');
+
+        } else {
+
+            // Геолокация не доступна
+            alert('Геолокация не доступна');
+        }
+
+        let vLat = document.querySelector('.lat');
+        let vLng = document.querySelector('.lng');
+        let vAcc = document.querySelector('.acc');
+
+        navigator.geolocation.watchPosition(function (position) {
+
+
+            if (navigator.geolocation) {
+
+                // Геолокация доступна
+                alert('Геолокация доступна');
+
+            } else {
+
+                // Геолокация не доступна
+                alert('Геолокация не доступна');
+            }
+
+
+
+            vLat.innerHTML = '';
+            vLng.innerHTML = '';
+            vAcc.innerHTML = '';
+
+            vLat.innerHTML = position.coords.latitude.toFixed(5);
+            vLng.innerHTML = position.coords.longitude.toFixed(5);
+            vAcc.innerHTML = position.coords.accuracy.toFixed(5);
+            // alert(position.coords.latitude, position.coords.longitude);
+
+            if (navigator.geolocation) {
+
+                // Геолокация доступна
+                alert('Геолокация доступна');
+
+            } else {
+
+                // Геолокация не доступна
+                alert('Геолокация не доступна');
+            }
+
+        });
+
+
+     */
+
+    // document.write('Конец<br>');
+
+</script>
+
+<style>
+
+
+    html {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+
+    }
+
+    .wrapper {
+        width: 98vw;
+        /*   background-color: #0c5460;
+           border: 1px #ff9041 solid;*/
+        margin: 0 auto;
+    }
+
+
+    .data {
+        color: #0d0cb5;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .acc {
+        color: #b50c50;
+    }
+
+    .app-name {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .app-goal {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .button {
+        margin: 0 auto;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+
+</style>
+

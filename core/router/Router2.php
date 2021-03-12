@@ -9,6 +9,7 @@ class Router2
     private $routes;
     private $sitemap;
     private $uri;
+    private $isFind = false;
 
     public function __construct()
     {
@@ -22,17 +23,24 @@ class Router2
     public function run()
     {
 
+        if ($this->uri == '') {
+            require('template/spplab/index.php');
+            //$this->isFind = true;
+            return;
+        }
+
         foreach ($this->sitemap as $uriPattern => $page_description) {
 
-            // var_dump($this->sitemap);
-            /*  var_dump($description);
-              Debug::print_var('$uri', $this->uri);
-              Debug::print_var('$uriPattern', $uriPattern);
-              Debug::print_var('description - controller', $description['controller']);
-              Debug::print_var('description - action', $description['action']);
-            */
-
             if (preg_match("~$uriPattern~", $this->uri)) {
+
+
+                // var_dump($this->sitemap);
+                /*  var_dump($description);
+                  Debug::print_var('$uri', $this->uri);
+                  Debug::print_var('$uriPattern', $uriPattern);
+                  Debug::print_var('description - controller', $description['controller']);
+                  Debug::print_var('description - action', $description['action']);
+                */
 
 
                 $page_description['uri'] = $this->uri;
@@ -54,13 +62,13 @@ class Router2
                 //$args = array($page_description);
                 //Debug::print_array('$params', $params);
                 //var_dump($page_description);
-                $args = array();
+                $args = [];
                 $args['uripattern'] = $uriPattern;
 
-                echo '<br>';
+
                 //$args['description'] = $page_description;
                 $args = array_merge($args, $page_description);
-                $args_ = array();
+                $args_ = [];
                 array_push($args_, $args);
 
                 //Debug::print_array('$args', $args);
@@ -68,11 +76,19 @@ class Router2
                 $result = call_user_func_array(array($controllerObject, $actionName), $args_);
 
                 if ($controllerObject != null) {
+                    $this->isFind = true;
                     break;
                 }
             }
 
         }
-    }
 
+        if ($this->isFind == false) {
+           //header('Location: /404NotFound');
+            header('HTTP/1.1 404 Not Found');
+            require('core/base_views/404_NotFound.php');
+        }
+
+    }
 }
+

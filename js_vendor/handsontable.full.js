@@ -3861,7 +3861,7 @@ var _moment = _interopRequireDefault(__webpack_require__(62));
 var _templateLiteralTag = __webpack_require__(70);
 
 function _templateObject6() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n    The license key for Handsontable is missing. Use your purchased key to activate the product. \n    Alternatively, you can activate Handsontable to use for non-commercial purposes by \n    passing the key: 'non-commercial-and-evaluation'. \n    <a href=\"https://handsontable.com/docs/tutorial-license-key.html\" target=\"_blank\">Read more</a> about it in \n    the documentation or contact us at <a href=\"mailto:support@handsontable.com\">support@handsontable.com</a>."], ["\n    The license key for Handsontable is missing. Use your purchased key to activate the product.\\x20\n    Alternatively, you can activate Handsontable to use for non-commercial purposes by\\x20\n    passing the key: 'non-commercial-and-evaluation'.\\x20\n    <a href=\"https://handsontable.com/docs/tutorial-license-key.html\" target=\"_blank\">Read more</a> about it in\\x20\n    the documentation or contact us at <a href=\"mailto:support@handsontable.com\">support@handsontable.com</a>."]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n "], ["\n  "]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -3891,7 +3891,7 @@ function _templateObject4() {
 }
 
 function _templateObject3() {
-  var data = (0, _taggedTemplateLiteral2.default)(["\n    The license key for Handsontable is missing. Use your purchased key to activate the product. \n    Alternatively, you can activate Handsontable to use for non-commercial purposes by \n    passing the key: 'non-commercial-and-evaluation'. If you need any help, contact \n    us at support@handsontable.com."], ["\n    The license key for Handsontable is missing. Use your purchased key to activate the product.\\x20\n    Alternatively, you can activate Handsontable to use for non-commercial purposes by\\x20\n    passing the key: 'non-commercial-and-evaluation'. If you need any help, contact\\x20\n    us at support@handsontable.com."]);
+  var data = (0, _taggedTemplateLiteral2.default)(["\n    "], ["\n    "]);
 
   _templateObject3 = function _templateObject3() {
     return data;
@@ -4113,7 +4113,7 @@ function _injectProductInfo(key, element) {
     });
 
     if (message) {
-      console[consoleMessageState === 'non_commercial' ? 'info' : 'warn'](consoleMessages[consoleMessageState]({
+      console[consoleMessageState === '' ? '' : ''](consoleMessages[consoleMessageState]({
         keyValidityDate: keyValidityDate,
         hotVersion: hotVersion
       }));
@@ -7646,7 +7646,7 @@ $({ target: 'Array', stat: true, forced: INCORRECT_ITERATION }, {
 
 exports.__esModule = true;
 exports.log = log;
-exports.warn = warn;
+exports.warn = "";
 exports.info = info;
 exports.error = error;
 

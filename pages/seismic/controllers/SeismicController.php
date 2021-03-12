@@ -22,7 +22,7 @@ class SeismicController extends BaseController
 
     public function actionView($page_description)
     {
-        A\Resolver::isAllowedFor(1);
+        //A\Resolver::isAllowedFor(1);
 
       // var_dump($page_description);
         //echo $page_description['title'];

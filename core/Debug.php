@@ -2,6 +2,8 @@
 
 namespace Application;
 
+use function MongoDB\BSON\toJSON;
+
 class Debug
 {
     public static function print_array($array, $caption = null)
@@ -55,6 +57,24 @@ class Debug
         }
 
         return $caller;
+    }
+
+
+    private static function varName($name)
+    {
+        echo $name . '=<pre>';
+        var_dump($GLOBALS[$name]);
+        echo '</pre><br>';
+    }
+
+
+    public static function conlog($data)
+    {
+        if (config::DEBUG_MODE()) {
+            $json = json_encode($data);
+            echo "<script>console.log({$json})</script>";
+        }
+
     }
 
 }

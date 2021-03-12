@@ -1,6 +1,6 @@
 <?php
 
-namespace climate\views;
+//namespace climate\views;
 
 $seismic = $this->models['seismic'];
 $town = $this->models['town'];

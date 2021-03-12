@@ -3,6 +3,7 @@
 
 
 
+
     var data = [
         []
     ];
@@ -23,30 +24,29 @@
 
     exports.hot = new Handsontable(container, {
 
+
+
         minCols: 15,
         minRows: 1,
         rowHeaderWidth: 100,
         colWidths: 100,
         data: data,
         rowHeaders: true,
-
-
         height: 200,
-
         colHeaders:  true,
-
        /* fixedRowsTop: 1,*/
-
         filters: true,
         dropdownMenu: true,
         manualColumnResize: true,
         manualRowResize: true,
         manualColumnMove: true,
         manualRowMove: true,
-        licenseKey: 'non-commercial-and-evaluation'
-
-
     });
+
+    exports.hot.onresize = function (){
+
+        alert('изменился размер');
+    }
 
 
     exports.clearTable = function () {

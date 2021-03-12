@@ -34,9 +34,12 @@ if (isset($scripts)) {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1 minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="keywords" content="карты ОСР-2016 интерактивный климатология сейсмичность баллов kml gpx" />
+    <meta name="keywords" content="спп лаб spp lab техническиий отчет
+    изыскания карты ОСР-2016 интерактивный климатология сейсмичность баллов kml gpx" />
     <title><?= $title ?></title>
     <?= $favicon_as_html ?>
+
+    <link rel="stylesheet" href="/template/spplab/css/bootstrap.min.css">
     <?= $styles_as_html ?>
     <script src="/js_vendor/JQuery.js"></script>
     <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>

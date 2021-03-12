@@ -231,8 +231,9 @@
             // delete link;
         }
 
-
-        $("#btn-Convert-Html2Image").on('click', function () {
+//let id_button = '#btn-Convert-Html2Image';
+        let id_button = '';
+        $("id_button").on('click', function () {
             html2canvas(element, {
                 onrendered: function (canvas) {
                     var imgageData = canvas.toDataURL("image/png");

@@ -8,7 +8,7 @@ use Application as A;
 <html lang="ru">
 <?php
 $title = 'SL-Геофизика';
-$styles['main-styles'] = A\config::SITE_URL() . 'styles/styles.styles';
+$styles['main-styles'] = A\config::SITE_URL() . 'styles/styles.css';
 $scripts[] = '';
 require 'core/base_views/VHead.php';
 ?>
@@ -45,19 +45,19 @@ require 'core/base_views/VHead.php';
                 <div class="H1">ССЫЛКИ ДЛЯ СКАЧИВАНИЯ</div>
                 <div class="H2">Программы</div>
                 <div>
-                    <div class="block_inline"><a href="/download/GeoSemDem_exe">GeoSemDem.exe</a></div>
+                    <div class="block_inline"><a href="resource/content/download/programs/GeoSemDem_v3_2021E.exe" download>GeoSemDem.exe</a></div>
                     <div class="block_inline">
                         Программа для вспомогательной обработки радарограмм в формате GPR и GPR2
                     </div>
                 </div>
                 <div>
-                    <div class="block_inline"><a href="/download/Sodales_exe">Sodales.exe</a></div>
+                    <div class="block_inline"><a href="resource/content/download/programs/Sodales.exe">Sodales.exe</a></div>
                     <div class="block_inline">
                         Программа для построения геологических разрезов по цифровым данным
                     </div>
                 </div>
                 <div>
-                    <div class="block_inline"><a href="/download/Effingo_xlam">Effingo.xlam</a></div>
+                    <div class="block_inline"><a href="resource/content/download/programs/Effingo.xlam" download>Effingo.xlam</a></div>
                     <div class="block_inline">
                         Надстройка Excel с полезными функциями
                     </div>
@@ -65,16 +65,16 @@ require 'core/base_views/VHead.php';
 
                 <br>
                 <div class="H2">Примеры входных данных</div>
-                <div class=""><a href="/download/Layers_DigitalModel_xls">Данные для построения геологических
+                <div class=""><a href="resource/content/download/examples/Layers_DigitalModel.xls">Данные для построения геологических
                         слоев</a></div>
-                <div class=""><a href="/download/Hole_DigitalModel_xls">Данные для построения горных выработок</a>
+                <div class=""><a href="resource/content/download/examples/Hole_DigitalModel.xls">Данные для построения горных выработок</a>
                 </div>
 
                 <br>
                 <br>
                 <div class="H2">Бланки</div>
 
-                <div class=""><a href="/download/LayersDescription_xls">Ведомость описания горных выработок</a></div>
+                <div class=""><a href="resource/content/download/examples/Hole_DigitalModel.xls">Ведомость описания горных выработок</a></div>
                 <br>
                 <div class="">OpenOfficeDraw</div>
 

@@ -1,0 +1,2981 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DOCTIPEDictionarySYSTEM"XmLexV09.dtd"-->
+<?xml-stylesheet type="text/xsl" href="Dictionary_StyleSheets.xslt"?>
+
+<Dictionary version="XmLex_V00">
+
+
+    <DictionaryEntry identifier="D_1" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>acquisition</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>сбор данных</Translation>
+            </TranslationCtn>
+            <SynonymBlock>
+                <Synonym>data acquisition</Synonym>
+            </SynonymBlock>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>acquisition protocol</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>протокол измерений</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>контролируемая компьютером последовательность конфигураций</Definition>
+                        <Source>Everett 2013: 87</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>computer-controlled multi-electrode acquisition</MultiWordUnit>
+                <SenseGroup>
+                    <Translation>измерения многоэлектродными установками, управляемые компьютером</Translation>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_2" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>anisotropy</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>от латинского <ForeignText xml-lang="latin">anisos</ForeignText> неравный и <ForeignText
+                    xml-lang="latin">tropos
+            </ForeignText> поворот
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>анизотропия</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>вариация физических характеристик среды в зависимости от направления в пространстве
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity anisotropy coefficient</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>коэффициент анизотропии удельного сопротивления</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>величина, численно равная корню квадратному из отношения удельного сопротивлений,
+                            полученного путём измерения перпендикулярно к пласту, к удельному сопротивлению, полученному
+                            при
+                            измерениях вдоль пласта
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>paradox of anisotropy</MultiWordUnit>
+                <SenseGroup>
+                    <Translation>парадокс анизотропии</Translation>
+                    <DefinitionCtn>
+                        <Definition>явление, при котором поперечное кажущееся удельное сопротивление пород равно
+                            истинному
+                            продольному сопротивлению
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>apparent anisotropy</MultiWordUnit>
+                <SenseGroup>
+                    <Translation>кужущаяся анизотропия</Translation>
+                    <DefinitionCtn>
+                        <Definition>анизотропия горных пород, установленная только по результатам полевых измерений и
+                            обусловленная, прежде всего, макроскопической неоднородностью (слоистостью, трещиноватостью,
+                            вкраплениями зерен минераловлов с различными физическими свойствами и др.)
+                        </Definition>
+                        <Source>ВСЕГЕИ. Словари, справочники. URL: https://vsegei.ru/ru/public/sprav/geodictionary
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_3" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>anomaly</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>от греческого через латинский an- – не + <ForeignText xml-lang="latin">homalos</ForeignText>–
+                равный
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>аномалия</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>отклонение измеренного геофизического поля Земли от нормального поля, обусловленное
+                    различием физических свойств горных пород и неоднородностью их состава и строения
+                </Definition>
+                <Source>ГОСТ 54363-2011 URL: http://docs.cntd.ru/document/1200086151</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_4" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>aquifer</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>от латинского <ForeignText xml-lang="latin">aqui</ForeignText>- (вода) + <ForeignText
+                    xml-lang="latin">-fer
+            </ForeignText> (нести)
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>гидгогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>водоносный горизонт</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>однородные или близкие по фациально-литологическому составу и гидрогеологическим свойствам
+                    пласты горных пород в пределах гидрогеологических бассейнов
+                </Definition>
+                <Source>Маккавеев 1960: 29</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_5" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>Archie's Law</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>закон Арчи</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>формулы устанавливающая эмпирическую зависимость между коэффициентом удельного сопротивления
+                    пород ρ, пористостью kп, насыщенностью kв и удельным сопротивлением зернистых пород
+                </Definition>
+                <Source>Шерифф 1984:20</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_6" sourceLanguage="en">
+        <HeadwordCtn>
+            <Headword>arrangement of electrodes</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SeeCtn>
+                <See>
+                    <Ptr xlink-href="D_7">array</Ptr>
+                </See>
+            </SeeCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_7" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>array</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>от французского arei – готовиться;</Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>электродная установка</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>совокупность расположенных определенным образом питающих
+                    и приемных электродов называется электроразведочной установкой
+                </Definition>
+                <Source>Бобачёв и др. 2013: 5</Source>
+            </DefinitionCtn>
+            <SynonymBlock>
+                <SynonymCtn>
+                    <Synonym>arrangement of electrodes</Synonym>
+                </SynonymCtn>
+                <SynonymCtn>
+                    <Synonym>configuration</Synonym>
+                </SynonymCtn>
+                <SynonymCtn>
+                    <Synonym>electrode array</Synonym>
+                </SynonymCtn>
+                <SynonymCtn>
+                    <Synonym>electrode configuration</Synonym>
+                </SynonymCtn>
+            </SynonymBlock>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>bottom-towed electrode array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>буксируемый электрод</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>электрод, буксируемый за судном при электроразведке на море</Definition>
+                        <Source>Англо-русский словарь нефте-газовой промышленности URL:
+                            https://eng-rus-oil-dict.slovaronline.com/131700-towed%20electrod
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>dipole-dipole electrode array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>дипольная установка</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>установка, в которой один диполь (объединённая пара электродов) используется как
+                            питающий, а второй как измерительный
+                        </Definition>
+                        <Source>Шерифф 1984: 24</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>four electrode array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>установка
+                            <Symbol>AMNB</Symbol>
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>совокупность заземлений
+                            <Symbol>AMNB</Symbol>
+                        </Definition>
+                        <Source>Доброхотова 2009: 12</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>gradient array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>установка срединного градиента</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>четырёхэлектродная установка, в которой два электрода фиксированы, а измерительные
+                            располагаются вдоль профилей в пределах квадрата, сторона которого не превышает AB/3
+                        </Definition>
+                        <Source>Доброхотова 2009: 16</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>linear array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>линейная установка</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>overlapping array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>установка с перекрытием</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>pole-dipole array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>трёхэлектродная дипольная установка</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>установка, в которой пара измерительных электродов перемещается по профилю, от
+                            одного фиксированного токового электрода (полюса), при этом второй токовый электрод отнесён
+                            от первого в "бесконечность", так что его влиянием на измерения можно пренебречь
+                        </Definition>
+                        <Source>~Шерифф 1984: 24</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>pole-pole array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>полюсная электродная установка</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>двухточечная установка, в которой разносы между токовым и измерительным электродами
+                            при последовательном измерении на профиле увеличиваются, а второй токовый и второй
+                            измерительный электроды удалена на большое расстояние от первых электродов, настолько, чтобы
+                            их влиянием можно было пренебречь
+                        </Definition>
+                        <Source>~Шерифф 1984: 24</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>Schlumberger array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>установка Шлюмберже</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>четырёхэлектродная симметрисная установка AMNB, состоящая из приёмных электродов MN
+                            расположенных на одной оси с питающей линией, между электродами питающей линии AB, причём
+                            центры линий находятся в одной точке
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>square electrode array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>квадратная электродная установка</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>установка, в которой питающие электроды и приёмные электродырасполагаются в форме
+                            квадрата со стороной а и обеспечивают большую чуствительность к анизотропии, чем линейные
+                            установки
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>well-to-well array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>установка скважина-скважина</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>Использование мониторинговых скважин с обсадными трубами в качестве длинных
+                            электродов в конфигурации двухэлектродной осевой установки
+                        </Definition>
+                        <Source>Everett 2013: 72</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>Wenner array</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>установка Веннера</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>установка, состоящая из четырёх равноотстоящих электродов, расположенных на прямой с
+                            приёмными электродами, расположенными между питающими электродами
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+
+
+
+    <DictionaryEntry identifier="D_8" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>
+                <InternationalScientificTerm>
+                    azimuth
+                </InternationalScientificTerm>
+            </Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <LinguisticComment>
+            <Etymology>
+                через французский
+                <ForeignText>azimut</ForeignText>
+                от арабского
+                <ForeignText>as-samt–</ForeignText>
+                путь, направление;
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геогр.</SubjectField>
+            <TranslationCtn>
+                <Translation>азимут</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>горизонтальный угол, отсчитываемый по часовой стрелке по направлению на истинный север
+                </Definition>
+                <Source>Шерифф 1984:21</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>azimuthal survey</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>азимутальные исследования</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>серия измерений при разной ориентации установки (в разных азимутах)относительно
+                            одной точки записи (центра вращения)
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_9" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>body</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <SenseGroup>
+            <SubjectField>геолог.</SubjectField>
+            <TranslationCtn>
+                <Translation>геологическое тело</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>conductive body</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>проводящее тело</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_10" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>borehole</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гор.</SubjectField>
+            <TranslationCtn>
+                <Translation>буровая скважина</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>цилиндрическая горная выработка, имеющая диаметр во много раз меньше глубины</Definition>
+                <Source>Воздвиженский 1979: 5</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>borehole data
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>данные бурения</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_11" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>conductivity</Headword>
+        </HeadwordCtn>
+
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>электропроводность</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>физическая величина, характеризующая способность тела проводить электрический ток и обратная
+                    величина электрического
+                </Definition>
+
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>electrical conductivity</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>электрическая проводимость</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>longitudinal conductivity</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>продольная электропроводность</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>проводимость этого пласта в направлении, параллельном напластованию
+                        </Definition>
+                        <Source>Иванов 2017: 27</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_12" sourceLanguage="en">
+        <HeadwordCtn>
+            <Headword>arrangement of electrodes</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SeeCtn>
+                <See>
+                    <Ptr xlink-href="D_7">array</Ptr>
+                </See>
+            </SeeCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_13" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>contour</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <LinguisticComment>
+            <Etymology>интернационализм, от итальянского и латинского <InternationalScientificTerm>contornare
+            </InternationalScientificTerm> – идти по кругу
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>контур</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>линия, соединяющая точки равных значений некоторой величины, или ограничивающая область с
+                    постоянным значением на карте или диаграмме
+                </Definition>
+                <Source>Шерифф 1984: 55</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_14" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>current</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>ток</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>поток электричества, возникающий в результате упорядоченного направленного движения
+                    электрически заряженных частиц
+                </Definition>
+                <Source>Lexico URL: https://www.lexico.com/definition/current</Source>
+            </DefinitionCtn>
+
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>current density
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>плотность тока</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>величина тока, приходящаяся на единицу поперечного сечения, определяемая скоростью и
+                            плотностью носителей зарядов
+                        </Definition>
+                        <Source>Шерифф 1984: 63</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>electrical current</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>электрический ток</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>magnitude of current</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>величина тока</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_15" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>current injection</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>пропускание тока</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>электрический ток в исследуемой среде электроразведочной питающей линией</Definition>
+                <Source>~ОСТ 41-07-277-87: URL: http://www.geoekonomica.ru/gnssn/other/ost41-04-277-87.htm</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_16" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>current streamlines</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <DefinitionCtn>
+                <Definition>векторные линии электрического поля, по которым движуться электрические заряды</Definition>
+                <Source>Альпин 1985: 8</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_17" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>data</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <LinguisticComment>
+            <Etymology>интернационализм, от Латинского причастия прошедшего времени <ForeignText xml-lang="latin">dare,
+            </ForeignText> буквально - что-то дано
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>данные</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>data acquisition</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>сбор данных</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>нахождение значений физических величин опытным путём с помощью специальных
+                            технических средств (цифровых или, реже, аналоговых приборов)
+                        </Definition>
+                        <Source>Спаский 1986:2</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>data quality</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>качество данных
+                        </Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>data recording
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>запись данных</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>interpreted data
+            </MultiWordUnit>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>интерпретируемые данные
+                    </Translation>
+                </TranslationCtn>
+            </SenseGroup>
+        </MultiWordUnitCtn>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>multi-electrode resistivity data
+            </MultiWordUnit>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>данные измерений удельного сопротивления многоэлектродной установкой
+                    </Translation>
+                </TranslationCtn>
+            </SenseGroup>
+        </MultiWordUnitCtn>
+
+
+    </DictionaryEntry>
+
+    <DictionaryEntry identifier="D_18" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>dataset
+            </Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+
+        <SenseGroup>
+            <TranslationCtn>
+                <Translation>набор данных</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>simulated dataset
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>смоделированный набор данных</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>представление физической системы различными средствами (например, при помощи
+                            компьютера, модели или иными средствами), имитирующими поведение
+                        </Definition>
+                        <Source>Белоусов 2009: URL: https://www.geokniga.org/books/5232</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_19" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>depth</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>глубинность</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>максимальная глубина, выше которой горные породы оказывают влияние на результаты
+                    электроразведочных измерений
+                </Definition>
+                <Source>Марченко 2013: 24</Source>
+            </DefinitionCtn>
+            <SynonymBlock>
+                <SynonymCtn>
+                    <Synonym>
+                    </Synonym>
+                </SynonymCtn>
+            </SynonymBlock>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>depth of penetration</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>глубина проникновения</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_20" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>electrical field
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>электрическое поле</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>различные физические поля Земли (естественные и искусственно создаваемые), обусловленные
+                    взаимодействием нейтральных или заряженных материальных тел, элементарных частиц и квантов энергии
+                </Definition>
+                <Source>Электрические свойства URL: https://helpiks.org/8-23825.html</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_21" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>electrical properties
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>электрические свойства</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>совокупность свойств, характеризующих способность веществ и
+                    материалов проводить электрический ток в электрическом поле
+                </Definition>
+                <Source>Электрические свойства URL: https://helpiks.org/8-23825.html</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_22" sourceLanguage="en">
+        <HeadwordCtn>
+            <Headword>electrical resistivity</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SeeCtn>
+                <See>
+                    <Ptr xlink-href="D_73">resistivity</Ptr>
+                </See>
+            </SeeCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_23" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>electrical-resistivity tomography
+            </Headword>
+        </HeadwordCtn>
+
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>томография методом удельного сопротивления</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>модификация метода сопротивлений, сочетающая в себе элементы зондирования и профилирования,
+                    использующая многоэлектродный способ измерения, управляемый компьютером
+                </Definition>
+                <Source>~Марченко 2013: 23</Source>
+            </DefinitionCtn>
+            <SynonymBlock>
+                <SynonymCtn>
+                    <Synonym>computer-controlled multi-electrode acquisition</Synonym>
+                </SynonymCtn>
+                <SynonymCtn>
+                    <Synonym>resistivity imaging</Synonym>
+                </SynonymCtn>
+            </SynonymBlock>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_24" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>electrode</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>       
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>электрод</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>устройство для осуществления гальванического контакта проводов со средой
+                    проводники (металлические), отличающиеся большой удельной электропроводностью по сравнению с горными
+                    породами (пространственной части электрической цепи) и имеющие площади соприкосновения с ними,
+                    большие по сравнению с поперечным сечением провода (линейной части электрической цепи)
+                </Definition>
+                <Source>Иванов 2019: 14</Source>
+            </DefinitionCtn>            
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>current electrode
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>питающий электрод</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>электроды, между которыми пропускается электрический ток при исследованиях методом
+                            сопротивления
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>electrode configuration
+                </MultiWordUnit>
+                <SenseGroup>
+                    <SeeCtn>
+                        <See>
+                            <Ptr xlink-href="D_7">array</Ptr>
+                        </See>
+                    </SeeCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>grounded electrode
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>заземление
+                        </Translation>
+                    </TranslationCtn>                    
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>electrode configuration
+                </MultiWordUnit>
+                <SenseGroup>
+                    <SeeCtn>
+                        <See>
+                            <Ptr xlink-href="D_24">current electrode</Ptr>
+                        </See>
+                    </SeeCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>laying out of electrode
+            </MultiWordUnit>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>размотка
+                    </Translation>
+                </TranslationCtn>                
+            </SenseGroup>
+        </MultiWordUnitCtn>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>potential electrodes
+            </MultiWordUnit>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>приёмные электроды
+                    </Translation>
+                </TranslationCtn>
+                <DefinitionCtn>
+                    <Definition>пара заземлённых электродов, служащих для измерения разности потенциалов, возникшей
+                        между
+                        ними при пропускании постоянного тока посредством питающих электродов
+                    </Definition>
+                    <Source>Иванов 2019: 14</Source>
+                </DefinitionCtn>
+            </SenseGroup>
+        </MultiWordUnitCtn>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>remote electrode
+            </MultiWordUnit>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>бесконечность
+                    </Translation>
+                </TranslationCtn>
+                <DefinitionCtn>
+                    <Definition>один электрод из пары, удалённый на такое расстояние от первого, что его влиянием
+                        на параметры создаваемого электрического поля можно принебречь
+                    </Definition>                    
+                </DefinitionCtn>
+            </SenseGroup>
+        </MultiWordUnitCtn>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_25" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>equipotential</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <SenseGroup>
+            <TranslationCtn>
+                <Translation>эквипотэнциальная поверхность</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>поверхность, на которой скалярное поле имеет постоянное значение</Definition>
+                <Source>Ладынин 2009: 88
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_26" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>exploration
+            </Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <NormativeStatusCtn>
+            <NormativeStatus value="standardizedTerm"/>
+            <Source>ГОСТ Р 54363-2011</Source>
+        </NormativeStatusCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>геофизическая разведка</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>геофизические исследования, включающие измерение физических полей Земли, обработку и
+                    интерпретацию результатов измерений, выполняемых для изучения геологического строения недр, поиска,
+                    разведки и разработки месторождений полезных ископаемых
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>electrical exploration
+            </MultiWordUnit>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+            </NormativeStatusCtn>
+            <Source>ГОСТ Р 54363-201</Source>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>электроразведка</Translation>
+                </TranslationCtn>
+                <DefinitionCtn>
+                    <Definition>геофизическая разведка, основанная на изучении естественных или искусственно
+                        возбуждаемых электрических и электромагнитных полей в земной коре
+                    </Definition>
+                </DefinitionCtn>
+            </SenseGroup>
+        </MultiWordUnitCtn>
+
+    </DictionaryEntry>
+    <DictionaryEntry indentifier="D_27" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>falt</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>разлом</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>крупная дизъюнктивная дислокация земной коры</Definition>
+                <Source>Словари и справочники. URL:
+                    https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=86979
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_28" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>fracturing</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>трещиноватость</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>Явление разделения горных пород земной коры трещинами различной протяжённости, формы и
+                    пространственной ориентации
+                </Definition>
+                <Source>Горная энциклопедия URL: http://www.mining-enc.ru/t/treschinovatost-</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_29" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>general rule of thumb</Headword>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>в 1782 г. предположительно судья Френсис Буллер вынес юридическое решение, по
+                которому муж мог наказывать жену палкой, не толще большого пальца, отсюда "правило большого пальца"
+            </Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>общенауч.</SubjectField>
+            <TranslationCtn>
+                <Translation>общее эмпирическое правило</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_30" sourceLanguage="en">
+        <HeadwordCtn>
+            <Headword>geophysical exploration
+            </Headword>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+            <SeeCtn>
+                <See>
+                    <Ptr xlink-href="D_26">exploration</Ptr>
+                </See>
+            </SeeCtn>
+        </HeadwordCtn>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_31" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>geophysical interpretation</Headword>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>геофизическая интерпретация</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>определение параметров (физических и физико-механических свойств) пород и пространственного
+                    их распределения в исследуемом массиве по измеренным параметрам изучаемого поля, а также путем
+                    использования соответствующих аналитических или корреляционных связей
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_32" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>geophysics</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>геофизика</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_33" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>near- surface applied geophysics
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>приповерхностная разведочная неофизика</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_34" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>graben</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>грабен</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>вытянутый блок земной коры, лежащий между двумя разломами и смещенный вниз относительно
+                    блоков с обеих сторон, как в рифовой долине
+                </Definition>
+                <Source>Lexico URL: https://www.lexico.com/definition/graben]</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_35" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>ground-penetration radar
+            </Headword>
+            <AbbreviatedForm>GPR</AbbreviatedForm>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>георадарный метод</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>метод электроразведки, основанный на излучении в геологическую среду широкополосных
+                    наносекундных импульсов электромагнитных волн и регистрации сигналов, отраженных от границ раздела
+                    слоев геологической среды, имеющих различные электрофизические свойства
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_36" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>groundwater
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>грунтовые воды</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>подземные воды первого от поверхности постоянно существующего водоносного горизонта,
+                    расположенного на первом водоупорном слое
+                </Definition>
+                <Source>Маккавеев 1960: 57</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_37" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>groundwater infiltration
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>инфильтрация грунтовых вод</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>проникновение атмосферной и поверхностной воды в горную породу и в почву по капиллярным и
+                    субкапиллярным порам, трещинам, пустотам и движение ее к зеркалу подземных вод
+                </Definition>
+                <Source>ВСЕГЕИ URL: https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=48928
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_38" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>halfspace
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>полупространство</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>ограниченная плоскостью область, верхняя поверхность которой уходит в бесконечность,
+                    совпадающая
+                    с модельной поверхностью Земли
+                </Definition>
+                <Source>~Белоусов 2009</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>uniform halfspace
+            </MultiWordUnit>
+        </MultiWordUnitCtn>
+        <SenseGroup>
+            <TranslationCtn>
+                <Translation>однородное полупространство</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_39" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>heterogeneity
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>неоднородность</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_40" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>homogeneity
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>однородность</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>имеющий однородные физические свойства по всему объёму материала.</Definition>
+                <Source>Гусев 1982: 192</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_41" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>hydraulic conductivity
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>гидропроводность</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>относительная легкость, с которой жидкости (грунтовые воды) протекают через среду (в данном
+                    случае геологическую формацию или горную породу), которая сильно отличается от внутренней
+                    проницаемости тем, что, хотя она и описывает водопропускающие свойства среды, на нее, однако, не
+                    влияют температура, давление или жидкость, проходящая через геологическую формацию
+                </Definition>
+                <Source>Salako Adebayo O, Adepelumi Abraham A URL:
+                    https://www.intechopen.com/books/aquifers-matrix-and-fluids/aquifer-classification-and-characterization
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_42" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>impedance
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>импеданс</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>сопротивление в волновых электродинамических процессах; включает активное сопротивление току
+                    проводимости и реактивное сопротивление токам смещения; волновое сопротивление
+                </Definition>
+                <Source>Ладынин 2009: 34</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_43" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>injection
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SeeCtn>
+                <See>
+                    <Ptr xlink-href="D_15">current injection</Ptr>
+                </See>
+            </SeeCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_44" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>interpretation
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SeeCtn>
+                <See>
+                    <Ptr xlink-href="D_31">geophysical interpretation</Ptr>
+                </See>
+            </SeeCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_45" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>inversion
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>от латинского invertere, буквально - вывернуть наизнанку</Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>инверсия</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>определение распределения в пространстве физических параметров среды по наблюденному
+                    физическому полю методом обратного автоматического числового моделирования
+                </Definition>
+                <Source>Dahlin 2001</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_46" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>investigation</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>общенауч.</SubjectField>
+            <TranslationCtn>
+                <Translation>исследования</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_47" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>iteration
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <LinguisticComment>
+            <Etymology>от латинского глагола iterare -повторять</Etymology>
+        </LinguisticComment>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>итерация</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>п
+                    роцедура и результат повторной операции при решении задачи методом последовательных приближений
+                </Definition>
+                <Source>Ладынин 2009: 37</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_48" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>lateral
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>боковой каротаж</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>вид бокового электрического каротажа скважин градиент-зондом, при котором постоянный ток
+                    пропускают между электродом A в скважине и удалённым электродом, а разность потенциалов измеряют
+                    между измерительными электродами зонда M и N
+                </Definition>
+                <Source>Шерифф 1984: 168
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_49" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>layer
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>пласт</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>uniform layer
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>однородный пласт</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>единица текстуры толщ, образованная более или менее однотипной породой, отличающейся
+                            петрографическими, гранулометрическими и другими литологическими особенностями от смежных
+                            слоёв.
+                        </Definition>
+                        <Source>Геологический словарь Т.2 1978: 242</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>layer interface
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>кровля пласта</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>поверхность, ограничивающая пласт (слой) сверху при его нормальном залегании
+                            (стратиграфически верхняя поверхность пласта).
+                        </Definition>
+                        <Source>Англо-русский геологический словарь URL:
+                            https://eng-rus-geology-dict.slovaronline.com/32346-layer%20interfaces
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>layred medium
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>слоистая среда</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>внутренняя текстура слоя горных пород, выражающаяся в чередовании
+                            первичногоризонтальных, наклонных и изогнутых
+                        </Definition>
+                        <Source>Геологический словарь 1973, Т.2: 243
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_50" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>measurement
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>измерения</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitCtn>
+            <MultiWordUnit>geoelectrical measurement
+            </MultiWordUnit>
+            <SenseGroup>
+                <TranslationCtn>
+                    <Translation>геоэлектрические измерения</Translation>
+                </TranslationCtn>
+            </SenseGroup>
+        </MultiWordUnitCtn>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_51" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>method
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>общенауч.</SubjectField>
+            <TranslationCtn>
+                <Translation>метод</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>equipotential method
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardizedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>эквипотенциальный метод
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>модификация метода сопротивлений, основанная на площадных измерениях с помощью
+                            перемещаемого электрода потенциального поля, возникающего при пропускании тока между двумя
+                            стационарными электродами
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>induce polarisation method
+                    <AbbreviatedForm>(IP)</AbbreviatedForm>
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardizedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>метод вызванной поляризации</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>метод электроразведки, основанный на измерении вторичного электрического поля,
+                            возникающего в горных породах под действием электрического тока
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity method
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardizedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>метод сопротивлений</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>метод электроразведки, основанный на изучении удельного электрического сопротивления
+                            горных пород при искусственном воздействии на геологическую среду электрическими токами
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_52" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>model</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>модель</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>результат математического описания электрических свойств горных геоэлектрического разреза
+                </Definition>
+                <Source>Марченко 2013: 26</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>
+                    <AbbreviatedForm>1D model</AbbreviatedForm>
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>1D модель</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>совокупность принятых при решении прямой или обратной задачи упрощений и допущений
+                        </Definition>
+                        <Source>Доброхотова 2009: 7</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>
+                    <AbbreviatedForm>2D model</AbbreviatedForm>
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>2D модель</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>модели тел (полей), свойства которых зависят от двух пространственных координат
+                        </Definition>
+                        <Source>Доброхотова 2009: 7</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>
+                    <AbbreviatedForm>3D subsurface model</AbbreviatedForm>
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>3D приповерхностная модель</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>совокупность принятых при решении прямой или обратной задачи упрощений и допущений с
+                            учётом влияния пород в трёхмерном пространстве
+                        </Definition>
+                        <Source>Доброхотова 2009: 7</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>depth model</MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>глубинная модель</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>model parameter
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>параметры модели</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>геометрия и физические свойства тела (положение в плане и по глубине, форма,
+                            размеры, вид и коэффициенты зависимости физических свойств от координат)
+                        </Definition>
+                        <Source>Ладынин 2009: 60</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity model
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>модель удельного сопротивления</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_53" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>modification
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>поправка</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>слагаемое, необходимое для приведения данных измерений к стандартным условиям
+                </Definition>
+                <Source>Ладынин 2009: 63</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_54" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>near-surface electrical resistivity distribution
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>приповерхностное распределение удельного сопротивления
+                </Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_55" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>near-surfaсe zone
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>приповерхностные зоны
+                </Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_56" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>noise
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>помехи</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>влияние вмещающих пород на результаты измерения, ошибки измерения, ошибки преобразования
+                    информации при ее регистрации, трансляции и обработке и т.д.
+                </Definition>
+                <Source>Спасский URL:
+                    https://www.studmed.ru/view/spasskiy-ba-lekcii-po-teorii-obrabotki-geofizicheskih-dannyh_8786d529063.html?page=3
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>signal-to-noise
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>соотношение сигнал-помеха</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>(S/N) отношение энергии полезного сигнала ко всей оставшейся энергии (noise).
+                        </Definition>
+                        <Source>Шерифф 1994: 268</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_57" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>original sediment
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>первичная осадочная порода
+                </Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>горная порода, образующаяся в результате переотложения продуктов выветривания и разрушения
+                    разлагающихся горных пород, химикого и механического выпадения осадков из воды, жизнедеятельности
+                    организмов, или всех трёх процессов одновременно
+                </Definition>
+                <Source>Геологический словарь Т. 2 1973: 118</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_58" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>outcrop
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>обнажение</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>выход горных пород на дневную поверхность</Definition>
+                <Source>Геологический словарь Т. 2 1973: 118</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_59" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>permeability
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>водопроницаемость</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>физическое свойство горных пород, заключающееся в способности пропускать при перепаде
+                    давления газы и жидкости благодаря наличию в ней сообщающихся пор, трещин и других пустот пустот
+                </Definition>
+                <Source>Словари, справочники URL:
+                    https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=83906
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_60" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>physical properties</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>физические свойства</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>физические свойства - это характерные качества, присущие веществам (твердым, жидким,
+                    газообразным), например: плотность, упругость, электро- и теплопроводность, намагниченность,
+                    радиоактивность и др
+                </Definition>
+                <Source>Жуков URL:
+                    https://cyberleninka.ru/article/n/dinamika-fiziko-mehanicheskih-svoystv-gornyh-porod-dinamicheskaya-petrofizika
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_61" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>plot</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>общенауч.</SubjectField>
+            <TranslationCtn>
+                <Translation>график</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>polar plot</MultiWordUnit>
+                <SenseGroup>
+                    <SubjectField>общенауч.</SubjectField>
+                    <TranslationCtn>
+                        <Translation>график в полярных координатах</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_62" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>point sink</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>точечный приёмник</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_63" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>point source</Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>точечный источник</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>электрод стержневой формы рассматривается как точечный источник, если поле изучается от него
+                    на расстояниях, в пять или более раз превышающих длину заземлённой части электрода
+                </Definition>
+                <Source>Хасанов 2009: 23</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_64" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>polar axes</Headword>
+        </HeadwordCtn>
+        <SenseGroup>            
+            <SubjectField>общенауч.</SubjectField>
+            <TranslationCtn>
+                <Translation>полярные координаты</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_65" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>pore</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>пора</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>пустоты в горных породах, в которых вода и нефть могут удерживаться капилярными силами
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>pore fluid
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>поровая жидкость</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>pore space
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>поровое пространство</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>общий объем пор, сложенный из отдельных поровых пространств
+                        </Definition>
+                        <Source>Зеливянская 2015: 6</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>pore water
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>поровая вода</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_66" sourceLanguage="en" targetLanguage="ru">
+
+        <HeadwordCtn>
+            <Headword>porosity</Headword>
+        </HeadwordCtn>
+        <PartOfSpeech value="noun"/>
+        <SenseGroup>
+            <SubjectField>петроф.</SubjectField>
+            <TranslationCtn>
+                <Translation>пористость</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>свойство пород содержать разные, не заполненные твёрдой фазой объёмы Vпор в определённом
+                    сухом объёме Vс, называется пористостью
+                </Definition>
+                <Source>Зеливянская 2015: 6</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>effective porosity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>эффективная пористость</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>пористость, включающая только поровое пространство, заполненное жидкостью
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>interconnected porosity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>открытая пористость
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>пористость, определяемая объёмом сообщающихся между собой пор
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>intergranular porosity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>межзерновая пористость
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>пористость, образующаяся между зёрнами осадочной (терригенной, карбонатной) породы,
+                            морфология и объём которой определяется взаиморасположенем слагающих пород зерен и цемента
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>primary porosity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>первичная пористость
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>пористость, которая формируется в конечные стадии седиментации или которая
+                            существовала в осадочных частицах во время их осаждения
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>secondary porosity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>вторичная пористость
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>вторичные (эпигенетические, новые) поры – каверны, трещины, каналы в теле пород
+                            образующиеся при их растворении, выветривании, кристаллизации, перекристаллизации,
+                            доломитизации известняков, тектонических и биохимических процессах
+                        </Definition>
+                        <Source>Зеливянская 2015: 6</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+
+        </MultiWordUnitBlock>
+
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_67" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>problem</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>задача геофизики</Translation>
+                <FalseFriend>проблема</FalseFriend>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>forward problem
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>прямая задача геофизики</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>задача построения физического поля по заданной геоэлектрической модели
+                        </Definition>
+                        <Source>Марченко 2013: 24</Source>
+                    </DefinitionCtn>
+                    <SynonymBlock>
+                        <SynonymCtn>
+                            <Synonym>direct problem</Synonym>
+                        </SynonymCtn>
+                    </SynonymBlock>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>inverse problem
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>обратная задача геофизики</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>задача построения геоэлектрической модели по полученным данным геофизических
+                            исследований
+                        </Definition>
+                        <Source>Марченко 2013: 24</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_68" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>profiling</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>профилирование</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>continuous resistivity profiling
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>непрерывное электропрофилирование</Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>dipole electrical profiling
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardizedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>дипольное электрическое профилирование</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>разновидность электрического профилирования при использовании питающих и приемных
+                            электродов в виде двух диполей
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>electrical profiling
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardizedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>электрическое профилирование</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>метод электроразведки, основанный на изучении электрического поля при фиксированном
+                            взаимном расположении питающих и приемных электродов, перемещаемых вдоль профиля
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_69" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>pseudosection
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>псевдоразрез</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>двумерная модель кажущихся параметров
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity pseudosection
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>разрез кажущегосф удельного сопротивления</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>геоэлектрическая двумерная модель кажущихся параметров, полученных в результате
+                            геоэлектрических измерений
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_70" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>ratio</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>мат.</SubjectField>
+            <TranslationCtn>
+                <Translation>коэффициент</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_71" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>reading</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>счтиывание данных</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_72" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>reflection coefficient</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>коэффициент отражения</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>отношение амплитуды смещения, вызванного приходом отражённой волны, к амплитуде смещения
+                    падающей волны
+                </Definition>
+                <Source>Шерифф 1984; 247</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_73" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>resistivity
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>электрическое удельное сопротивление</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>это сопротивление единичного объема горной породы (1 м3) электрическому току, протекающему
+                    параллельно двум его граням, измеряемое в Омах метр (Ом м3)
+                </Definition>
+                <Source>Иванов 2017: 10</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>apparent resistivity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>кажущееся удлеьное сопротивление</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>интегральное удельное сопротивление горных пород в зоне действия электроразведочной
+                            установки
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>lateral resistivity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>горизонтальное удельное сопротивление</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>продольное сопротивление однородного одиночного пласта – это сопротивление данного
+                            пласта перпендикулярно напластованию.
+                        </Definition>
+                        <Source>Иванов 2017: 27</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity imaging
+                </MultiWordUnit>
+                <SenseGroup>
+                    <SeeCtn>
+                        <See>
+                            <Ptr xlink-href="D_1">computer-controlled multi-electrode acquisition</Ptr>
+                        </See>
+                    </SeeCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity section
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardizedTerm"/>
+                </NormativeStatusCtn>
+                <Source>ГОСТ Р 54363-2011</Source>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>разрез удельного сопротивления</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>сечение геологической среды, показывающее распределение в ней параметра
+                            геофизического поля
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>resistivity sounding curve
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>кривая вертикальногоо электрического зондирования</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>график зависимости удельного кажущегося сопротивления от разноса, построенный на
+                            билогарифмическои бланке.
+                        </Definition>
+                        <Source>Электроразведка: пособие по электроразведочной практике для студентов геофизических
+                            специальностей.2005: 120
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+                <MultiWordUnit>uniform resistivity
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>однородное удельное сопротивление
+                        </Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_74" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>resolution
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>разрешение</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>количество деталей геоэлектрического разреза, устойчиво проявляющихся в электрическом поле
+                    и, минимальные размеры объекта, обнаруживаемого данным методом при данных условиях
+                </Definition>
+                <Source>Бобачев 2013: 22</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_75" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>rock formation
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>формация горных пород</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>основная литостратиграфическая единица местной классификации пород, представленная телом
+                    горных пород (обычно осадочным слоем или слоями, но, возможно, и изверженными и метаморфическими
+                    породами), для которого в целом характерны: определенная степень внутренней литологической
+                    однородности или отчетливые особенности литологии (напр., определенный химический состав, структура
+                    и текстура или общий характер ископаемой фауны); преимущественно (но не обязательно) пластообразная
+                    форма
+                </Definition>
+                <Source>Белоусов 2009</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>sedimentery formation
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>осадочная формация</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>геологические формации, возникающие в процессе накопления осадков и их диагенеза
+                        </Definition>
+                        <Source>ВСЕГИ URL: https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=818
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_76" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>roll off
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>коса</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>многожильный кабель, соединяющий несколько приёмных диполей (8-24), применяемых в методе
+                    электротомографии
+                </Definition>
+                <Source>Северо-Запад ООО URL: http://nw-geo.ru/geophysics/tech/tomography/</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_77" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>root-mean-square value
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>мат.</SubjectField>
+            <TranslationCtn>
+                <Translation>среднеквадратическое значение</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_78" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>secondary diagenetic processe
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>вторичный диагенетический процесс</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_79" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>section
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>разрез</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>двумерная модель геоэлектрических эффективных параметров</Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_80" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>semi-conductor
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>физ.</SubjectField>
+            <TranslationCtn>
+                <Translation>полупроводник</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>вещество( (например, германий, кремний), проводимость которого при нормальной температуре
+                    занимает промежуточное значение между проводимостью металла и изолятора и обладает анизотропией.
+                </Definition>
+                <Source>~Шерифф 1984: 265</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_81" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>sensitive function
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>функция чуствительности
+                </Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>Величина возмущения при измерении напряжения, вызванного малым возмущением в распределении
+                    приповерхностного сопротивления.
+                </Definition>
+                <Source>Everett 2013: 78</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_82" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>separation
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>разнос электроразведочной установки</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>геометрический фактор, используемый при построении кривых зондирования, принимаемый равным
+                    AB/2 для установки Шлюмберже, AB/3 для установки Веннера, OO' - расстоянию между центрами диполей
+                    для дипольных установок
+                </Definition>
+                <Source>~Марченко 2013: 24</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_83" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>siliclastic rock unit
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>терригенные породы
+                </Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>породы, образующиеся за счет накопления, уплотнения, обезвоживания и цементации продуктов
+                    физического выветривания (механического дробления)коренных пород
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_84" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>site
+            </Headword>
+            <PartOfSpeech value="noun"/>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>полигон</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>совокупность пунктов или площадь, на которой проведено детальное изучение одного или
+                    нескольких параметров геофизических полей, характеризующих структуру и свойства геологической среды
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_85" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>sounding
+            </Headword>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>зондирование</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>геофизические исследования в точке или локальной зоне для изучения изменения физических
+                    свойств геологической среды с глубиной
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>vertical electrical sounding
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardisedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>вертикальное электрическое зондирование</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>разновидность метода электрического зондирования, при котором центры питающих и
+                            приемных линий располагаются на прямолинейном профиле, разнос электродов при измерениях
+                            последовательно увеличивается, а направление разноса обеих линий совпадает с направлением
+                            профиля
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>dipole electrical sounding
+                </MultiWordUnit>
+                <NormativeStatusCtn>
+                    <NormativeStatus value="standardisedTerm"/>
+                    <Source>ГОСТ Р 54363-2011</Source>
+                </NormativeStatusCtn>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>дипольное электрическое зондирование</Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>разновидность метода электрического зондирования, при котором расстояние между
+                            приемным и питающим диполем последовательно увеличивается при измерениях на профиле
+                        </Definition>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_86" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>spacing
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>расстояние между электродами</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_87" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>spatial sensitivity
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>пространственная чустительность
+                </Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>Отношение минимального регистрируемого отклика измерительной системы к измеряемой величине.
+                </Definition>
+                <Source>Ладынин 2009: 34</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_88" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>structure</Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>структура недр</Translation>
+            </TranslationCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>Ears resistivity structure
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>геоэлектрическое стороение земли
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>распределение в изучаемом массиве соответствующих свойств, изучаемых данным методом
+                            геофизики, — удельных электрических сопротивлений
+                        </Definition>
+                        <Source>Свод правил 2004 URL:
+                            https://lentisiz.ru/wp-content/uploads/2019/01/6_SP-11-105-97_6-IGI-dlya-stroitelstva.
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>subbottom resistivity structure
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>глубинная структура удельного сопротивления
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>разновидность разреза по удельному сопротивлению, в котором отражающие горизонты
+                            залегают ниже дна океана
+                        </Definition>
+                        <Source>Белоусов 2009
+                        </Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_89" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>subsurface
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+           <SubjectField>геол.</SubjectField>
+            <TranslationCtn>
+                <Translation>приповерхностные зоны</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>горные породы или почвы, лежащие вблизи земной поверхности, но не обнажающиеся</Definition>
+                <Source>Белоусов 2009</Source>
+            </DefinitionCtn>
+            <SynonymBlock>
+                <SynonymCtn>
+                    <Synonym>near-surface zone</Synonym>
+                </SynonymCtn>
+            </SynonymBlock>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_90" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>survey
+            </Headword>
+            <PartOfSpeech value="noun"/>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>геофизическая съёмка</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>полевые геофизические исследования, проводимые для составления геофизических карт и
+                    выявления перспектив территорий в отношении полезных ископаемых
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+        <MultiWordUnitBlock>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>geoelectrical survey
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>геоэлектрические полевые исследования
+                        </Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>field survey
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>полевые работы
+                        </Translation>
+                    </TranslationCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+            <MultiWordUnitCtn>
+                <MultiWordUnit>shallow water survey
+                </MultiWordUnit>
+                <SenseGroup>
+                    <TranslationCtn>
+                        <Translation>шельфовые геофизические исследования
+                        </Translation>
+                    </TranslationCtn>
+                    <DefinitionCtn>
+                        <Definition>геофизические исследования на мелководье, в акватории, где обычные суда не могу
+                            проводить
+                            измерений из-за малой глубины моря, рифов и других препятствий
+                        </Definition>
+                        <Source>Шерифф 1994: 265</Source>
+                    </DefinitionCtn>
+                </SenseGroup>
+            </MultiWordUnitCtn>
+        </MultiWordUnitBlock>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_91" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>transmissivity
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>проницаемость горной породы
+                </Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>фильтрующий параметр горной породы, характеризующий её способность пропускать через себя
+                    жидкости и газы при перепаде давления
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_92" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>vadose zone
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>зона аэрации
+                </Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>Проникновение по порам и трещинам в поверхностные горизонты осад. п. воздуха, что
+                    активизирует процессы окисления.
+                </Definition>
+                <Source>ВСЕГЕИ URL: https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=42587
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_93" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>vector
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>мат.</SubjectField>
+            <TranslationCtn>
+                <Translation>вектор</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>величина, характеризуемая числовым значением (модулем) и направлением.
+                </Definition>
+                <Source>Ладынин 2009: 12</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_94" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>vertical electrical sounding
+            </Headword>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 54363-2011</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>вертикальное электрическое зондирование</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>разновидность метода электрического зондирования, при котором центры питающих и приемных
+                    линий располагаются на прямолинейном профиле, разнос электродов при измерениях последовательно
+                    увеличивается, а направление разноса обеих линий совпадает с направлением профиля.
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_95" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>voltage
+            </Headword>
+            <PartOfSpeech value="noun"/>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>напряжение</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>определяется как работа, проделанная электрическим полем Е для перемещения одиночного заряда
+                    из бесконечности в точку Р
+                </Definition>
+                <Source>Mark E. Everett 2013: 74</Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_96" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>water table
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>уровень грунтовых вод</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>верхняя часть уровня воды в водоносном горизонте
+                </Definition>
+                <Source>Salako Adebayo O and Adepelumi Abraham A URL:
+                    https://www.intechopen.com/books/aquifers-matrix-and-fluids/
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_97" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>water-bearing stratum
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>гидрогеол.</SubjectField>
+            <TranslationCtn>
+                <Translation>водонесущий горизонт</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>водопроницаемый пласт горных пород, заполненный (насыщенный) водами и способный их
+                    отдавать
+                </Definition>
+                <Source>ВСЕГЕИ URL: https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=44403
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_98" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>well logging
+            </Headword>
+            <NormativeStatusCtn>
+                <NormativeStatus value="standardizedTerm"/>
+                <Source>ГОСТ Р 53795-2010</Source>
+            </NormativeStatusCtn>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>геоф.</SubjectField>
+            <TranslationCtn>
+                <Translation>каротаж скважин</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>Геофизические исследования в скважинах с целью изучения вскрытого скважиной
+                    геологического разреза и выявления полезных ископаемых.
+                </Definition>
+            </DefinitionCtn>
+        </SenseGroup>
+
+    </DictionaryEntry>
+    <DictionaryEntry identifier="D_99" sourceLanguage="en" targetLanguage="ru">
+        <HeadwordCtn>
+            <Headword>wettability
+            </Headword>
+        </HeadwordCtn>
+        <SenseGroup>
+            <SubjectField>физ.</SubjectField>
+            <TranslationCtn>
+                <Translation>смачивание</Translation>
+            </TranslationCtn>
+            <DefinitionCtn>
+                <Definition>Проявление молекулярных сил на границе жидкость – твердое тело.
+                </Definition>
+                <Source>Словари и справочники URL:
+                    https://vsegei.ru/ru/public/sprav/geodictionary/article.php?ELEMENT_ID=89041
+                </Source>
+            </DefinitionCtn>
+        </SenseGroup>
+    </DictionaryEntry>
+</Dictionary>
+
+
+
+
+
+
+

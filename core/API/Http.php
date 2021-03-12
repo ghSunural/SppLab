@@ -32,12 +32,20 @@ class Http
     //    echo "$name: $value\n"."<br>";
     //  }
 
-
-    public function getHttpAnswer()
+    public function sendHttpRequest()
     {
 
-        $user_id = 210700286;
 
+        $data = "";
+    //    header('Transfer-Encoding: chunked');
+     //   header('Content-Type: application/json; charset=UTF-8');
+        echo json_encode($data);
+    }
+
+
+    public function getHttpResponse($request)
+    {
+        $user_id = 210700286;
         $info = file_get_contents('https://api.vk.com/method/users.get.json?user_ids=' . $user_id . '&fields=bdate&v=5.68');
         $info = json_decode($info, true);
         print_r($info);

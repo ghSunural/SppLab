@@ -13,6 +13,8 @@ function autoload($className)
         'core/auth',
         'core/base_controllers',
         'core/base_views',
+        'core/base_views/homepage/controllers',
+        'core/base_views/homepage/views',
         'core/router',
         'core/util',
         'core/util/DB',
@@ -59,6 +61,14 @@ function autoload($className)
 
         'pages/geographics/models',
         'pages/geographics/controllers',
+
+        'pages/mapCreator/models',
+        'pages/mapCreator/controllers',
+
+        'pages/vector-best/models',
+        'pages/vector-best/controllers',
+        'pages/vector-best/phpTests',
+
 
     );
 

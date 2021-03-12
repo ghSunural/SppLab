@@ -11,7 +11,7 @@ $result = $this->models['result'];
 <html lang="ru">
 <?php
 $title = 'SL-Число прописью';
-$styles['main-styles'] = A\config::SITE_URL().'styles/styles.styles';
+$styles['main-styles'] = A\config::SITE_URL().'styles/styles.css';
 $scripts[] = '';
 require 'core/base_views/VHead.php';
 ?>

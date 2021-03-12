@@ -7,14 +7,18 @@ use Error;
 use Throwable;
 
 ini_set('display_errors', false);
+ini_set('max_execution_time', 600);
 //phpinfo(); //- все о пхп Loaded php.ini: /etc/php.ini
 
 try {
-    require_once 'core/autoload.php';
+    require 'core/autoload.php';
 
     session_start();
     //echo $_SESSION["userRole"];
-   $_SESSION["userRole"] = 'DEV';
+
+$_SESSION["userRole"] = 'DEV';
+
+
     if (isset($_SESSION["userRole"]) && $_SESSION["userRole"] == 'DEV') {
         // Users.isAdmin($curUser)
         ini_set('display_errors', true);

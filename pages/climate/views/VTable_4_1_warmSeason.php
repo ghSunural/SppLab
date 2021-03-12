@@ -20,13 +20,14 @@ $minAvrWindSpeed = $warmSeasonData->minAvrWindSpeed;
 
 echo <<< EOL
 <div class="block block_wrap report-layout">
-<table  border="1" bordercolor="black"     
+<table       
            style="
+           border: 1px black solid;
            width: 170mm;
            border-collapse: collapse;
            padding: 5px;
            ">
-    <caption>Таблица – Климатические параметры теплого периода года</caption>
+    <div class="caption">Таблица – Климатические параметры теплого периода года</div>
     <tr>
         <td>
             Метеостанция
@@ -135,4 +136,14 @@ echo <<< EOL
 
 </table>
 </div>
+
+<style>
+ td {
+border: 1px black solid;
+ }
+
+
+</style>
+
 EOL;
+

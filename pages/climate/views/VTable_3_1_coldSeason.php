@@ -46,7 +46,9 @@ echo <<< EOL
            width: 170mm;
            border-collapse: collapse;
            ">
-    <caption><span text-align="left" >Таблица   – Климатические параметры холодного периода года</span></caption>
+    
+    <span text-align="left" >Таблица   – Климатические параметры холодного периода года</span>
+  
     <tr>
         <td colspan="3">
             Метеостанция

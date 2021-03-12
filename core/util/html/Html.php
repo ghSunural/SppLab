@@ -15,6 +15,9 @@ class Html
     protected $footer;
     protected $sidebar;
 
+
+
+
     public static function convertRowsArray2HtmlTable($rowsArray, $columnHeaders = null)
     {
         $tableAsHtml = <<< 'EOL'
@@ -29,7 +32,7 @@ EOL;
             $tableAsHtml .= "<tr> \n";
 
             foreach ($columnHeaders as $cell) {
-                $tableAsHtml .= "<th style='word-wrap: break-word; padding: 1px;'>".$cell."</th> \n";
+                $tableAsHtml .= "<th style='word-wrap: break-word; padding: 1px;'>" . $cell . "</th> \n";
             }
 
             $tableAsHtml .= "</tr> \n";
@@ -46,7 +49,7 @@ EOL;
                 $tableAsHtml .= self::getTR($TR);
             } else {
                 //$row = Util::convertStr2Arr($row);
-                $row = (array) $row;
+                $row = (array)$row;
                 // Debug::print_array($row);
                 $TR = '';
                 foreach ($row as $cell) {
@@ -67,12 +70,14 @@ EOL;
         return "<tr>\n$TDs\n</tr>";
     }
 
+
     private static function getTD($cellContent)
     {
         return "\n<td width=auto align=\"center\" style=\"word-wrap: break-word;\">\n$cellContent\n </td>";
     }
 
-    public static function convertRow2HtmlList($row, $columnHeaders = null)
+    public
+    static function convertRow2HtmlList($row, $columnHeaders = null)
     {
         $listAsHtml = <<< 'EOL'
          <table  border="1" bordercolor="black" 
@@ -87,23 +92,26 @@ EOL;
         return $listAsHtml;
     }
 
-    public function getView_UTF($UTF_code)
+    public
+    function getView_UTF($UTF_code)
     {
-        return '&#'.$UTF_code.';';
+        return '&#' . $UTF_code . ';';
     }
 
-    public static function alert($message)
+    public
+    static function alert($message)
     {
         echo "<script type='text/javascript'>alert('$message');</script>";
     }
 
-    public static function getView_Head($title, $styles = array(), $scripts = array())
+    public
+    static function getView_Head($title, $styles = array(), $scripts = array())
     {
         $styles_as_html = '';
         if (($styles)) {
             foreach ($styles as $row) {
                 $html_string = "<link href=\"{$row}\" rel=\"stylesheet\">";
-                $styles_as_html .= $html_string."\n";
+                $styles_as_html .= $html_string . "\n";
             }
         }
 
@@ -111,7 +119,7 @@ EOL;
         if (($scripts)) {
             foreach ($scripts as $row) {
                 $html_string = "<script type=\"text/javascript\" src=\"{$row}\" async></script>";
-                $scripts_as_html .= $html_string."\n";
+                $scripts_as_html .= $html_string . "\n";
             }
         }
 
