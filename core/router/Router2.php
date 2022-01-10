@@ -73,7 +73,7 @@ class Router2
 
                 //Debug::print_array('$args', $args);
                 // Передаваемые в функцию параметры в виде индексированного массива.
-                $result = call_user_func_array(array($controllerObject, $actionName), $args_);
+                $result = call_user_func_array([$controllerObject, $actionName], $args_);
 
                 if ($controllerObject != null) {
                     $this->isFind = true;

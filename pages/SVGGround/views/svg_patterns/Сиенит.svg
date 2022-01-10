@@ -1,0 +1,21 @@
+<pattern
+        id="Сиенит"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="41.001581"
+        height="41.001577">
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-opacity:1"
+            d="M 25.500795,5.5008025 35.500798,15.500805
+            M 35.500798,5.5008025 25.500795,15.500805
+            M 30.500796,3.500805 V 17.50081
+            M 5.5007901,25.500808 15.500793,35.500795
+            M 15.500793,25.500808 5.5007901,35.500795
+            M 10.500791,23.500806 V 37.500808"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

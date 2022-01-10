@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!--   <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+       <meta http-equiv="Pragma" content="no-cache"> -->
+    <title>Штриховки</title>
+    <link href="/scripts/rainbow.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<div class="page">
+
+    <h1 class="h1"><a href="https://docs.cntd.ru/document/1200108745" target="_blank">ГОСТ 21.302-2013. Условные
+        графические обозначения в документации по инженерно-геологическим
+        изысканиям</a></h1>
+
+    <div class="">
+        Доступных штриховок:
+        <div id="countPatterns" class="countPatterns">
+            <!-- packs widh js -->
+        </div>
+    </div>
+
+    <a href="/pages/SVGGround/resource/downloads/Patterns.svg"
+       rel="noopener" download="#Patterns.svg" title="Файл со встроенными шаблонами Incscape">&#128190; Файл svg со
+        встроенными штриховками Incscape</a>
+    <br><a href="/pages/SVGGround/resource/downloads/Бланк_4A4_сУсловнымиОбоз.odg"
+           rel="noopener" download="#Бланк_4A4_сУсловнымиОбоз.odg" title="Файл с условными обозначениями по ГОСТ Р 21.101-2020. Формат .odg">
+    &#128190; Бланк для оформления A4&#215;4 (LibreOffice/OpenOffice)</a>
+    <br><a href="/pages/SVGGround/resource/downloads/Бланк_4A4_Штриховки.svg"
+           rel="noopener" download="#Бланк_4A4_Штриховки.svg" title="Файл со встроенными штриховками по ГОСТ Р 21.101-2020. Формат .svg">
+    &#128190; Бланк для оформления со встроенными штриховками A4&#215;4 (SVG)</a>
+    <br><a href="/pages/SVGGround/resource/downloads/Бланк_4A4_сУсловнымиОбоз.svg"
+           rel="noopener" download="#Бланк_4A4_сУсловнымиОбоз.svg" title="Файл с условными обозначениями по ГОСТ Р 21.101-2020. Формат .svg">
+    &#128190; Бланк для оформления со встроенными штриховками и условными обозначениями  A4&#215;4 (SVG)</a>
+
+
+
+    <br><a href="https://inkscape.org/ru/release/inkscape-1.1/windows/64-bit/exe/dl/" title="сайт Incscape">Дистибутив
+    Incscape (векторный редактор svg)</a>
+
+    <div id="demo" class="td demo">
+        <!-- packs widh js -->
+    </div>
+
+    <hr>
+
+    <h1 class="h1">Все штриховки (заключить в теги  &ltdefs&gt&lt/defs&gt исходного файла svg)</h1>
+
+    <div class="defs_report">
+        &ltdefs&gt
+        <pre>
+             <!-- packs widh js -->
+    <textarea id="svg_collection" class="svg_collection">
+
+    </textarea>
+    </pre>
+        &lt/defs&gt
+    </div>
+</div>
+
+
+<input id="js-btn-test" type="button" value="Построить"> <br>
+<input id="js-btn-collect" type="button" value="Собрать коллекцию"> <br>
+</body>
+
+<script src="/template/spplab/js/jquery-3.3.1.min.js"></script>
+<script src="/scripts/rainbow-custom.min.js" defer></script>
+<script type="module" src="/pages/SVGGround/scripts/js-svg-index.js"></script>
+
+
+</html>
+
+
+<svg class="pattern">
+    <defs id="defs_patterns">
+        <!-- packs widh js -->
+    </defs>
+</svg>
+
+<style>
+
+    :root {
+        --main-color-vdark: #004C79;
+        --main-color-dark: #3C8AB8;
+        --main-color-medium: #849FBB;
+        --main-color-light: #E8F4FA;
+        --main-color-separator: #cf2756;
+        --site-font: site-font;
+    }
+
+    .page {
+        width: 75vw;
+        margin: 0 auto;
+        border: 2px #ff9041 solid;
+        padding: 12px;
+
+    }
+
+    .h1 {
+        font-size: 16px;
+    }
+
+    .demo {
+
+    }
+
+
+    /*
+        .pattern {
+            display: none;
+            height: 0;
+            margin: 0;
+            padding: 0;
+            border: 1px #ff0000 solid;
+        }
+        */
+
+    .table {
+
+    }
+
+    .tr {
+
+    }
+
+    .td {
+
+
+    }
+
+
+    .wp_item {
+
+    }
+
+    .svg-for-test {
+
+    }
+
+    .defs_report {
+
+    }
+
+    .countPatterns {
+        display: inline-block;
+        font: bold 1.2rem Play;
+        color: var(--main-color-separator);
+    }
+
+    .svg_collection {
+        width: 85%;
+        height: 250px;
+        margin: 0 auto;
+
+    }
+
+</style>
+
+
+

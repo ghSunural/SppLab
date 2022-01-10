@@ -18,19 +18,22 @@ class MPVector extends M\Model_base
 
     //crud
     //create <-> insert
-    public static function create($medicalDevice)
+    public static function create($enterprise_code, $medicalDevice)
     {
+        // echo "<br> create";
+
+        // A\Debug::print_array($medicalDevice);
 
         $link = DBManager::getLinkWith(DBManager::$DB4);
 
-        $ref_audited_enterprise = 1;
+        $ref_audited_enterprise = VDB::readEnterprise($enterprise_code)['ID'];
 
         $DT_RowId = $medicalDevice["DT_RowId"];
         $register_id_uniq = $medicalDevice["register_id_uniq"];
         $registration_certificate = $medicalDevice["registration_certificate"];
 
-       // $href_registration_certificate = Http::getRegCertificateHref($register_id_uniq);
-        $href_registration_certificate = "";
+        $href_registration_certificate = Http::getRegCertificateHref($DT_RowId);
+        // $href_registration_certificate = "";
 
         $registration_date = $medicalDevice["registration_date"];
         $validity_period = $medicalDevice["validity_period"];
@@ -51,11 +54,11 @@ class MPVector extends M\Model_base
         $address = $medicalDevice["address"];
         $swap = $medicalDevice["swap"];
 
-
+        //1 - added 2- removed 3 - modify
         $ref_action = 1;
 
-       $checkDate = date('Y-m-d');
-       // $checkDate = date("Y")."-".date("m")."-".(date("d") - 5);
+        $checkDate = date('Y-m-d');
+        // $checkDate = date("Y")."-".date("m")."-".(date("d") - 5);
         //  echo  $checkDate;
         $isRemoved = false;
 
@@ -172,14 +175,16 @@ class MPVector extends M\Model_base
     {
         $link = DBManager::getLinkWith(DBManager::$DB4);
 
-        $ref_audited_enterprise = $options["enterprise_code"] + 1;
-       // echo  $ref_audited_enterprise;
-        $query = "select DT_RowId from TMedicalDevices where ref_audited_enterprise = :ref_audited_enterprise";
+        //  $ref_audited_enterprise = $options["enterprise_code"];
+        // echo  $ref_audited_enterprise;
+        //$query = "select DT_RowId from TMedicalDevices where ref_audited_enterprise = :ref_audited_enterprise";
 
-      //  echo $query;
+        //  echo $query;
+        $code = $options["enterprise_code"];
+        $query = "select DT_RowId from VMedDev where code = :code";
 
         $stmt = $link->prepare($query);
-        $stmt->bindParam(':ref_audited_enterprise', $ref_audited_enterprise);
+        $stmt->bindParam(':code', $code);
         //  $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
         $columnNumber = 0;
@@ -190,30 +195,63 @@ class MPVector extends M\Model_base
     public static function updateEntry($options = [])
     {
 
-        $ref_audited_enterprise = $options["enterprise_code"]+1;
+        $ref_audited_enterprise = $options["enterprise_code"];
         $DT_RowId = $options["entryKey"];
 
+
+        //2 - modified
         $ref_action = 2;
-
-
     }
 
     public static function readChanges($options = [])
     {
         $link = DBManager::getLinkWith(DBManager::$DB4);
 
-        $enterprises_code = $options["code"] + 1;
+        $enterprises_code = $options["code"];
         $dstart = $options['period']['start'];
         $dend = $options['period']['end'];
 
-        $query = "select * from TMedicalDevices where ref_audited_enterprise = $enterprises_code and checkDate>=\"$dstart\" and checkDate<=\"$dend\"";
+        //$query = "select * from VMedDev where code = \"$enterprises_code\" and checkDate>=\"$dstart\" and checkDate<=\"$dend\"";
+
+        $query = "select * from VMedDev where code = \"$enterprises_code\"  and str_to_date(registration_date, '%d.%m.%Y')>=\"$dstart\"and str_to_date(registration_date, '%d.%m.%Y')<=\"$dend\"";
+
+
+        //   $queryCount = "select count(*) as 'count' from TMedicalDevices where ref_audited_enterprise = $enterprises_code and checkDate>=\"$dstart\" and checkDate<=\"$dend\"";
+        // A\Debug::print_array($enterprise_name, $code."---------");
+        $stmt = $link->prepare($query);
+
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->execute();;
+
+        // A\Debug::print_array($stmt->fetchAll(), "readChanges");
+        return [
+            "response" => $stmt->fetchAll(),
+            "count" => $stmt->rowCount()
+        ];
+
+
+    }
+
+
+    public static function readAllEnterprises()
+    {
+
+        $link = DBManager::getLinkWith(DBManager::$DB4);
+
+        // $query = "select * from :table";
+        $query = "select * from TAuditedEnterprises";
 
         $stmt = $link->prepare($query);
+
+        // $ent = "TAuditedEnterprises";
+
+        //  $stmt->bindParam(':table', $ent);
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
 
         return $stmt->fetchAll();
+
     }
 
 
@@ -223,26 +261,53 @@ class MPVector extends M\Model_base
         $link = DBManager::getLinkWith(DBManager::$DB4);
 
 
-        $query = "select title from TAuditedEnterprises where code=$code;";
+        $query = "select * from TAuditedEnterprises where code = \"$code\"";
 
+        // echo $query;
 
         $stmt = $link->prepare($query);
 
-        $stmt->setFetchMode(PDO::FETCH_COLUMN, 0);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
 
-        return $stmt->fetchAll();
+        // A\Debug::print_array($stmt->fetchAll()[0], "stmt");
+
+        //0 - так как результат - одна строка
+        return $stmt->fetchAll()[0];
 
     }
 
 
-    public static function readAddedCount($code)
+    public static function updateHref($dt, $href)
     {
 
         $link = DBManager::getLinkWith(DBManager::$DB4);
 
 
-        $query = "select title from TAuditedEnterprises where code=$code;";
+        //  $query = "select title from TAuditedEnterprises where code= $code";
+        // $query =  "update TMedicalDevices set href_registration_certificate =\"$href\" where DT_RowId = \"$dt\"";
+
+        $query = "update TMedicalDevices set href_registration_certificate =\"$href\" where (DT_RowId = \"$dt\")";
+
+        $stmt = $link->prepare($query);
+
+        //$stmt->setFetchMode(PDO::FETCH_COLUMN, 0);
+        $stmt->execute();
+        //  echo "$dt <br>";
+        //   echo "$href <br>";
+
+        //return $stmt->fetchAll();
+
+    }
+
+
+    public static function ______updateHref($id)
+    {
+
+        $link = DBManager::getLinkWith(DBManager::$DB4);
+
+
+        $query = "select title from TAuditedEnterprises where code= $code";
 
 
         $stmt = $link->prepare($query);
@@ -255,8 +320,52 @@ class MPVector extends M\Model_base
     }
 
 
+    public static function read_DT_RowIds()
+    {
 
 
+        $link = DBManager::getLinkWith(DBManager::$DB4);
+
+
+        //$query = "call sql_getDT_RowId";
+
+        $query = "call sql_getDT_RowId_hrefnull";
+
+        // echo $query;
+
+        $stmt = $link->prepare($query);
+
+        $stmt->setFetchMode(PDO::FETCH_COLUMN, 0);
+        $stmt->execute();
+
+        // A\Debug::print_array($stmt->fetchAll()[0], "stmt");
+
+        //0 - так как результат - одна строка
+        return $stmt->fetchAll();
+
+    }
+
+
+    public static function createLogNow()
+    {
+
+        $link = DBManager::getLinkWith(DBManager::$DB4);
+        $query = "call sql_logNow";
+        $stmt = $link->prepare($query);
+        $stmt->execute();
+    }
+
+
+    public static function readLastUpdate()
+    {
+
+        $link = DBManager::getLinkWith(DBManager::$DB4);
+        $query = "call sql_readLastUpdate";
+        $stmt = $link->prepare($query);
+        $stmt->setFetchMode(PDO::FETCH_COLUMN, 0);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 
 }
 

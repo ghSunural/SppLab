@@ -7,7 +7,7 @@ use Error;
 use Throwable;
 
 ini_set('display_errors', false);
-ini_set('max_execution_time', 600);
+ini_set('max_execution_time', 800);
 //phpinfo(); //- все о пхп Loaded php.ini: /etc/php.ini
 
 try {

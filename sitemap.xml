@@ -6,6 +6,12 @@
    <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://lab.sppural.ru/pages/SVGGround/views/svg_grounds.html</loc>
+        <lastmod>2021-08-06T18:54:13+04:00</lastmod>
+        <changefreq>always</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
         <loc>https://lab.sppural.ru/climate</loc>
         <lastmod>2020-09-18T18:54:13+04:00</lastmod>
         <changefreq>always</changefreq>

@@ -1,0 +1,18 @@
+<pattern
+        id="СупесьМерзлая"
+        patternUnits="userSpaceOnUse"
+        width="25"
+        height="15"
+        patternTransform="scale(1) rotate(115) translate(0,0) skewX(15)">
+    <path
+            style="fill:none;
+            stroke:#0000ff;
+            stroke-width:2px;
+            stroke-linecap:butt;
+            stroke-miterlimit:10;
+            stroke-dasharray:12, 4;
+            stroke-dashoffset:0;
+            stroke-opacity:1"
+            d="M 0,5.0 H 25"
+            />
+</pattern>

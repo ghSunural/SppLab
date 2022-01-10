@@ -1,0 +1,21 @@
+<pattern
+        id="Бетон"
+        patternTransform="scale(0.5) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="19.068092"
+        height="40.519667">
+    <path
+            style="
+            fill:none;
+            stroke:#000000;
+            stroke-width:1;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-miterlimit:4;
+            stroke-dasharray:10.1745, 5.08724, 2.54362, 5.08724;
+            stroke-dashoffset:0;
+            stroke-opacity:1"
+            d="M 1.1607964,39.999999 19.068092,0"
+            vector-effect="non-scaling-stroke"
+    />
+</pattern>

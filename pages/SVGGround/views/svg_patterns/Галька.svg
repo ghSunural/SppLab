@@ -1,0 +1,25 @@
+<pattern
+        id="Галька"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="30.623633"
+        height="33.350895">
+    <ellipse
+            style="fill:none;fill-rule:evenodd;
+            stroke:#000000;
+            stroke-width:1.5;
+            stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+            cx="23.003794"
+            cy="8.6097612"
+            rx="6.990716"
+            ry="2.996021"/>
+    <ellipse
+            style="fill:none;fill-rule:evenodd;
+            stroke:#000000;
+            stroke-width:1.5;
+            stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+            cx="7.5217061"
+            cy="24.928726"
+            rx="6.990716"
+            ry="2.996021"/>
+</pattern>

@@ -1,0 +1,13 @@
+<pattern
+        id="Мергель"
+        patternTransform="scale(0.1) rotate(0) translate(2.26,33.54) skewX(-15)"
+        patternUnits="userSpaceOnUse"
+        width="795.48"
+        height="532.92">
+    <path
+            d="M 0.2,131.34 H 795.48 M 0.14,263.89 H 795.41 M 0.07,396.43 H 795.34 M 0,528.98 H 795.28 M 0.27,532.92 v -3.94 m 0,-132.55 V 263.89 m 0,-132.55 V 0 M 132.82,528.98 V 396.43 m 0,-132.54 V 131.34 m 132.54,401.58 v -3.94 m 0,-132.55 V 263.89 m 0,-132.55 V 0 M 397.91,528.98 V 396.43 m 0,-132.54 V 131.34 m 132.54,401.58 v -3.94 m 0,-132.55 V 263.89 m 0,-132.55 V 0 M 663,528.98 V 396.43 m 0,-132.54 V 131.34"
+            fill="none"
+            stroke="#000000"
+            stroke-width="3"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

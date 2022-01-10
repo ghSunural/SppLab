@@ -1,0 +1,29 @@
+<pattern
+        id="Щебень"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="43.02596"
+        height="52">
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-opacity:1"
+            d="M 27.45103,0.31590102 21.954523,9.6542254 H 36.002135 L 30.377764,0.25677409
+            M 21.954523,35.408195 H 36.002135 L 28.978333,23.701845 Z
+            M 14.930714,14.336765 H 0.88309405 l 7.02380975,11.70635 z
+            M 14.930714,40.090738 H 0.88309405 l 7.02380975,11.70635 z"
+            vector-effect="non-scaling-stroke"/>
+
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-opacity:1"
+            d="m 27.53972,51.785076 1.438613,-2.329262 1.399431,2.299703 z"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

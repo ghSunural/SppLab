@@ -2,6 +2,7 @@
 
 namespace Application\Controllers;
 
+
 use vbest\models\CMailer as M;
 use vbest\models\MVectorBot as VB;
 use vbest\models\MHttp as Http;
@@ -14,41 +15,28 @@ use vbest\models\TMedicalDevice;
 class VectorBestCntr extends BaseController
 {
 
-    /**
-     * @param $page_description
-     */
+
     public function acnIndex($page_description)
     {
 
-
-        //$jsonResp = MZ::getJsonData_RZN($options);
-        // echo $jsonResp;
-
-
-        // MZ::compareData();
-        //
-        // $sourceArr = A\TestsSets::getTestSet('suite_full_source');
-        //  $rows = MZ::readData($sourceArr);
-
-
-        // $this->models['rows'] = $rows;
         $this->render($page_description['view-templates'][0]);
+        //список предприятий рендерится js после загрузки страницы
     }
 
 
     public function acnGetInspectionResults($page_description)
     {
-
+        //A\Debug::conlog('backend acnGetInspectionResults');
         $request_body = json_decode(file_get_contents("php://input"), true);
 
-        $enterprises_codes = $request_body ["enterprises_codes"];
+        $request_enterprises_codes = $request_body ["enterprises_codes"];
+        // A\Debug::print_array($request_enterprises_codes, "request_enterprises_codes");
 
         $report = [];
-        $enterprises = [];
-        $medDevs = [];
 
-        foreach ($enterprises_codes as $code) {
-            //  $response[$code] = VDB::readChanges([]);
+        foreach ($request_enterprises_codes as $code) {
+
+
             $options = [
                 "code" => $code,
                 "period" => [
@@ -57,40 +45,58 @@ class VectorBestCntr extends BaseController
                 ]
             ];
 
-            $enterprise_name = VDB::readEnterprise($code);
+            // A\Debug::print_array( $options,"options");
 
-            $enterprises[$enterprise_name[0]] = VDB::readChanges($options);
-            array_push($report, $enterprises);
+            $enterprise_name = VDB::readEnterprise($code)['title'];
+            //  echo  "<br>  enterprise_name ".$enterprise_name."<br>";
+            // A\Debug::print_array($enterprise_name, $code."---------");
+
+
+            $r = VDB::readChanges($options);
+            // A\Debug::print_array($r);
+
+
+            $report[$enterprise_name] = $r['response'];
+
+
+
+
+            // $report[$enterprise_name]['count'] = $r['count'];
 
         }
 
+        // A\Debug::print_array($enterprises, "репорт");
 
-        $response = $report;
-        //   A\Debug::print_array($medDevs);
         http_response_code(200);
         header('Content-Type: application/json; charset=UTF-8');
-        echo json_encode($response, JSON_PRETTY_PRINT, 10);
+        echo json_encode($report, JSON_PRETTY_PRINT, 10);
     }
 
 
-    public function acnDoInspection($page_description)
+    public static function acnDoInspection()
     {
-
-        /*
+        echo "acnDoInspection \n";
+        // $this->render($page_description['view-templates'][1]);
 
         $results = [];
 
-        $codes = [1];
+        $enterprises = array_slice(VDB::readAllEnterprises(), 0);
+      //  $enterprises = array_slice(VDB::readAllEnterprises(), 3);
+        // A\Debug::print_array($enterprises);
+        //VB::inspect('0_');
 
-        foreach ($codes as $code) {
-            $results[$code] = VB::inspect($code);
+        foreach ($enterprises as $enterprise) {
+            $code = $enterprise['code'];
+            echo $code.'<br>';
+            VB::inspect($code);
+           // VB::inspect("9_");
         }
-        */
 
-        //A\Debug::print_array($results, "Вектор");
+        VDB::createLogNow();
 
+        //  header("Location: /vector-best");
+        // $this->render($page_description['view-templates'][0]);
 
-        $results[0] = VB::inspect(0);
 
     }
 
@@ -99,19 +105,59 @@ class VectorBestCntr extends BaseController
     {
 
         //Adm::acnCreateBaseTable();
-        //  Adm::test();
+        //Adm::test();
+    }
+
+    public function acnGetEnterprisesList()
+    {
+        $enterprises = VDB::readAllEnterprises();
+        http_response_code(200);
+        header('Content-Type: application/json; charset=UTF-8');
+        echo json_encode($enterprises, JSON_PRETTY_PRINT, 10);
+    }
+
+    public static function acnUpdateRegCertificateHrefs()
+    {
+
+      echo("acnUpdateRegCertificateHref \n");
+
+        // $register_id_uniq_arr = VDB::readRegisterId();
+
+        $DT_RowIds_arr = VDB::read_DT_RowIds();
+
+
+        //A\Debug::print_array($DT_RowIds_arr);
+        // echo "$DT_RowIds_arr[0] <br>";
+        //echo Http::getRegCertificateHref($DT_RowIds_arr[0]);
+
+        foreach ($DT_RowIds_arr as $dt) {
+          //  echo "$dt <br>";
+            $href = Http::getRegCertificateHref($dt);
+            VDB::updateHref($dt, $href);
+        }
+
+
+        // Http::getRegCertificateHref($register_id_uniq);
+    }
+
+
+    public function acnGetLastUpdate()
+    {
+
+        $lastUpdate_date['date'] = VDB::readLastUpdate()[0];
+
+        // A\Debug::print_array($lastUpdate_date);
+
+        http_response_code(200);
+        header('Content-Type: application/json; charset=UTF-8');
+        echo json_encode($lastUpdate_date, JSON_PRETTY_PRINT, 10);
     }
 
 
     public function acnMail($page_description)
     {
-        if (isset($_POST['button_send_message'])) {
-            echo 'Отправить почту';
-        }
-        $options =
-            ['message' => 'Отчет об изменениях на сайте \r\n добавлено записей:'];
-        M::sendMail($options);
+      //  $addedKeys = ['fff', 'ggg'];
+     // VB::sendMail($addedKeys);
+     // VB::log($addedKeys);
     }
-
-
 }

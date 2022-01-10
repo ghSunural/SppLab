@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
-    "@svgdotjs/svg.js": "^3.0.16"
+    "@svgdotjs/svg.js": "^3.0.16",
+    "admin-lte": "3.1"
   }
 }

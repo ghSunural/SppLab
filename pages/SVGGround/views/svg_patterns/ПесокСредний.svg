@@ -1,0 +1,76 @@
+<pattern
+        patternUnits="userSpaceOnUse"
+        width="17.000004"
+        height="2.0000044"
+        patternTransform="scale(0.8) rotate(20) translate(0,0)"
+        id="ПесокСредний_безМетки">
+    <path
+            style="fill:none;
+                 stroke:#000000;
+                 stroke-width:0.566929;
+                 stroke-linecap:butt;
+                 stroke-linejoin:miter;
+                 stroke-miterlimit:4;
+                 stroke-dasharray:0.566929, 1.13386;
+                 stroke-dashoffset:0;
+                 stroke-opacity:1"
+            d="M 1.1922213e-6,1.0000018 H 17"/>
+</pattern>
+
+<pattern
+id="ПесокСредний"
+patternUnits="userSpaceOnUse"
+width="46.358207"
+height="28.058269"
+patternTransform="scale(4) translate(885.39233,183.11373)">
+<rect
+        style="fill:url(#ПесокСредний_безМетки);fill-opacity:1;stroke:#000000;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0.0480002;paint-order:stroke fill markers"
+        id="rect887"
+        width="46.358204"
+        height="28.058266"
+        x="1.8897638e-06"
+        y="1.8897638e-06"
+        ry="0.083223656"/>
+<g
+        transform="matrix(3.7795276,0,0,3.7795276,-268.67382,-329.32831)">
+    <ellipse
+            style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.147933;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+            id="path2262-6"
+            cx="74.668419"
+            cy="92.575485"
+            rx="1"
+            ry="1"/>
+    <text
+            xml:space="preserve"
+            style="font-style:normal;font-weight:normal;font-size:1.09348px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0273372"
+            x="71.69722"
+            y="96.252396"
+            id="text2266-97"
+            transform="scale(1.0357864,0.96545002)"><tspan
+             sodipodi:role="line"
+             x="71.69722"
+             y="96.252396"
+             style="stroke-width:0.0273372">С</tspan></text>
+</g>
+<g
+        transform="matrix(3.7795276,0,0,3.7795276,-247.12511,-343.3838)">
+    <ellipse
+            style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.147933;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+            id="path2262-6-1"
+            cx="74.668419"
+            cy="92.575485"
+            rx="1"
+            ry="1"/>
+    <text
+            xml:space="preserve"
+            style="font-style:normal;font-weight:normal;font-size:1.09348px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0273372"
+            x="71.69722"
+            y="96.252396"
+            transform="scale(1.0357864,0.96545002)"><tspan
+             sodipodi:role="line"
+             id="tspan2264-2-3"
+             x="71.69722"
+             y="96.252396"
+             style="stroke-width:0.0273372">С</tspan></text>
+</g>
+</pattern>

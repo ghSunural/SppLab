@@ -1,0 +1,18 @@
+<pattern
+        id="Лесс"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="14.68896"
+        height="20.377959">
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-opacity:1"
+            d="M 0.49999935,1.5222994 V 9.5223007
+            M 0.49999935,12.188965 V 20.18897
+            M 7.4999905,6.8556361 V 14.855634"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

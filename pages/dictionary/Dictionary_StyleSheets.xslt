@@ -121,7 +121,7 @@
                     .Arial_b_blue {
                     font-family: Arial, sans-serif;
                     font-weight: bold;
-                    color: #0000ff;
+                    color: #8000ff;
                     }
 
                     .Arial_bo {
@@ -255,11 +255,6 @@
             <xsl:apply-templates/>
         </span>
     </xsl:template>
-
-
-
-
-
 
 
     <xsl:template match="SenseGroup">

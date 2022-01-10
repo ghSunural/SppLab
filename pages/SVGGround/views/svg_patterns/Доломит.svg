@@ -1,0 +1,20 @@
+<pattern
+        id="Доломит"
+        patternTransform="scale(0.6) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="80.234311"
+        height="40.000025">
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 42.501074,10.000025 V 30
+            M 0.00108012,10.000025 80.233231,9.8212535
+            M 0.00108012,30 H 80.081408
+            M 2.5010864,0 V 10.000025
+            M 77.501086,0 V 10.000025
+            M 37.501061,10.000025 V 30
+            M 77.501086,40.000025 V 30
+            M 2.5010864,30 v 9.999987"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

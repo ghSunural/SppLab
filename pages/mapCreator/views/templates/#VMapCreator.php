@@ -39,9 +39,11 @@
             <div id="js-edit-table" class="ht" title="Скопируйте сюда текстовую таблицу">
             </div>
         </section>
+
         <section class="section chart-section">
             <div id="js-plotly" class="js-plotly"></div>
         </section>
+
         <section id="js-console" class="section js-console">
 
         </section>
@@ -145,14 +147,10 @@
 
     .section {
         border: 1px #1a56e9 solid;
-        resize: horizontal;
+        resize: both;
         padding: 5px;
         min-height: 50px;
     }
-
-
-
-
 
     .menu-section {
         grid-area: m;
@@ -203,7 +201,7 @@
 
     .chart-section {
         grid-area: chart;
-        width: 50vw;
+        max-width: 250px;
     }
 
     .js-console {
@@ -216,7 +214,7 @@
         border: 1px var(--main-color-dark) solid;
         margin: auto;
         height: 100%;
-
+        max-width: 250px;
     }
 
 

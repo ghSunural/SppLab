@@ -17,7 +17,7 @@ class MVectorAdmin extends M\Model_base
         $message = "acnAdmin1\r\n";
         file_put_contents($file, $message, FILE_APPEND | LOCK_EX);
         A\Debug::conlog('acnAdmin');
-         $sourceArr = A\TestsSets::getTestSet('suite_full_source')['data'];
+        $sourceArr = A\TestsSets::getTestSet('suite_full_source')['data'];
         //$sourceArr = A\TestsSets::getTestSet('source_checkadd');
 
         // A\Debug::print_array($sourceArr);
@@ -38,14 +38,17 @@ class MVectorAdmin extends M\Model_base
     }
 
 
-
-
     public static function test()
     {
-
 
 
     }
 
 
+
+
+
+
 }
+
+?>

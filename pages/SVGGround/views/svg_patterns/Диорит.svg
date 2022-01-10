@@ -1,0 +1,13 @@
+<pattern
+        id="Диорит"
+        patternTransform="scale(1.5) rotate(45) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="56.5327"
+        height="80.18497">
+    <path
+            d="m 27.1938,4.71619 h 9.43379 M 0,18.86751 h 8.32764 m 47.16746,0 h 1.0376 M 27.1938,33.0175 h 9.43379 M 0,47.16747 h 8.32764 m 47.16746,0 h 1.0376 M 27.1938,61.31746 h 9.43379 M 0,75.46877 h 8.32764 m 47.16746,0 h 1.0376 m -52.92262,4.7162 v -9.43375 m 0,-18.8662 v -9.43376 m 0,-18.86755 v -9.43376 m 28.30131,51.88507 v -9.43377 m 0,-18.86754 v -9.43376 m 0,-18.8662 V 0"
+            fill="none"
+            stroke="#000000"
+            stroke-width="3"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

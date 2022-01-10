@@ -1,0 +1,17 @@
+<pattern
+        id="Глыбы"
+        patternTransform="scale(0.8) rotate(0) translate(0,-10)"
+        patternUnits="userSpaceOnUse"
+        width="67.732581"
+        height="101.37882">
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m 30.70443,36.229623 3.2143,-14.821429 19.82143,-0.178582 9.821404,15 -9.107149,13.035711 -11.964284,-2.857141 z"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m 3.7141439,83.251735 3.2142992,-14.821429 19.8214299,-0.178583 9.821405,15 -9.10715,13.035712 -11.964283,-2.857142 z"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

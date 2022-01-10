@@ -1,0 +1,54 @@
+/*.changed_enterprises {
+    font-weight: bold;
+}
+
+.product-row {
+
+    padding: 10px;
+    margin-bottom: 10px;
+    background: var(--main-color-light);
+}
+
+
+.item-header {
+
+}
+
+.title {
+    color: var(--main-color-vdark);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.date {
+    background: rgba(15, 204, 33, 0.5);
+
+}
+
+.date:before {
+    content: "+ ";
+
+}
+
+.cert {
+    font-weight: bold;
+}
+
+.js-report-as-table
+{
+    border-collapse: collapse;
+}
+
+.cells_report-as-table{
+    vertical-align: top;
+    text-overflow: ellipsis;
+    border: 1px solid #000000;
+    font-size: .5rem;
+}
+
+*/
+
+
+
+
+

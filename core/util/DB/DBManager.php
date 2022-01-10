@@ -20,10 +20,11 @@ class DBManager
 
     public static function initDBs()
     {
+       // echo 'initDBS';
         self::$DB1 = self::getDB(require 'db_site_consts.php');
         self::$DB2 = self::getDB(require 'db_east2016_consts.php');
         self::$DB3 = self::getDB(require 'db_staff_consts.php');
-        self::$DB4 = self::getDB(require 'db_vector_consts.php');
+        self::$DB4 = self::getDB(require '/usr/share/nginx/html/core/util/DB/db_vector_consts.php');
     }
 
     private static function getDB($consts = [])
@@ -40,7 +41,7 @@ class DBManager
         $dsn = "mysql:host={$dataBase->getHost()};dbname={$dataBase->getDbName()};charset=$charset";
 
         $options = [
-           // PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            // PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_SILENT,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             PDO::ATTR_EMULATE_PREPARES => true,
@@ -48,16 +49,16 @@ class DBManager
         //link
         //  print_r($dsn);
 
-     try {
+        try {
             $link = new PDO($dsn, $dataBase->getUser(), $dataBase->getPassword(), $options);
             // mysqli_query($link,"SET NAMES utf8");
             return $link;
-       } catch (Throwable $e) {
-          throw new Exception('Подключение к БД не удалось!!! '. $e->getMessage());
-          //   echo 'Подключение не удалось: ' . $e->getMessage();
+        } catch (Throwable $e) {
+            throw new Exception('Подключение к БД не удалось!!! ' . $e->getMessage());
+            //   echo 'Подключение не удалось: ' . $e->getMessage();
         }
 
-       // return false;
+        // return false;
     }
 
     public static function getDumpDB(TDataBase $dataBase)

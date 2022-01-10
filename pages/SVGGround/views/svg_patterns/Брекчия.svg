@@ -1,0 +1,29 @@
+<pattern
+        id="Брекчия"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="19.468867"
+        height="30.688972">
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 0.188976,30.188972 H 19.279899"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m 11.098091,24.734426 2.727269,-5.454546 2.72727,5.454546 h -5.454539"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 2.9162453,8.3707879 5.6435524,2.916238 8.3707839,8.3707879 H 2.9162453"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 0.188976,13.825334 H 19.279899"
+            vector-effect="non-scaling-stroke"/>
+
+</pattern>

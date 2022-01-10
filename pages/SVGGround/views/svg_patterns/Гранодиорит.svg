@@ -1,0 +1,19 @@
+<pattern
+        id="Гранодиорит" patternTransform="scale(1) rotate(0) translate(0,0)"
+
+        patternUnits="userSpaceOnUse"
+        width="63.394004"
+        height="63.394015">
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:3px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-opacity:1"
+            d="M 26.697005,36.697004 56.697001,6.6970073
+            M 26.697005,6.6970073 56.697001,36.697004
+            M 11.697001,41.697001 V 61.697002
+            M 1.6970022,51.697 H 21.697004"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

@@ -1,0 +1,19 @@
+<pattern
+        id="ГранитПорфир"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="63.394004"
+        height="63.394015">
+    <path
+            style="fill:none;
+            stroke:#000000;
+            stroke-width:3px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;stroke-opacity:1"
+            d="M 41.696976,42.910278 V 0.4838528
+            M 20.483773,21.69706 H 62.91018
+            M 11.696976,41.69705 V 61.697062
+            M 1.696989,51.697037 H 21.696964"
+            vector-effect="non-scaling-stroke"/>
+
+</pattern>

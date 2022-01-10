@@ -71,14 +71,16 @@
                 <li><a href="#section-railways" class="nav-link icon-directions_railway"> Железные дороги</a></li>
                 <li><a href="#section-downloads" class="nav-link icon-download"> Загрузки</a></li>
                 <li><a href="#section-articles" class="nav-link icon-library_books"> Статьи</a></li>
+                <li><a href="/pages/SVGGround/views/svg_grounds.html"
+                       class="nav-link icon-book"> грунты SVG</a></li>
                 <li><a href="/pages/geophysics/articles/DictionaryGeophysics.html"
                        class="nav-link icon-book"> Англо-русский глоссарий
                         геофизческих терминов</a></li>
                 <li><a href="calculators/num2str" class="nav-link icon-calculator"> Число прописью</a></li>
                 <li><a href="/create-map" class="nav-link"> Итерактивная карта</a></li>
-                <li><a href="/vector-best" class="nav-link"> vb</a></li>
+                <li><a href="/mdbot" class="nav-link"> mdbot</a></li>
 
-                <li><a href="#section-contacts" class="nav-link icon-sign-in"> вход</a></li>
+            <!--    <li><a href="#section-contacts" class="nav-link icon-sign-in"> вход</a></li>-->
                 <!--  <li><a href="/single" class="nav-link">проект стр</a></li> -->
             </ul>
             <!--      <ul class="social js-clone-nav">
@@ -99,9 +101,7 @@
                     <h1 class="heading text-uppercase logo-name" data-aos="fade-up">SPP-LAB</h1>
                     <p class="lead text-white mb-5" data-aos="fade-up" data-aos-delay="100">СпецПректПуть. Инструменты
                         изыскателя</p>
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        <a href="#section-contact" class="btn btn-primary btn-md smoothscroll icon-arrow-circle-down"></a>
-                    </p>
+
                 </div>
             </div>
         </section>
@@ -378,6 +378,7 @@
                                                     обслуживает железнодорожную инфраструктуру Урала и Западной Сибири.
                                                     Дорога обеспечивает пропуск поездов из центральных и северо-западных
                                                     районов европейской части России в Сибирь,
+                                                    районов европейской части России ыв Сибирь,
                                                     в Казахстан, на Дальний Восток. Управление дороги находится в
                                                     Екатеринбурге. &rdquo;</p>
                                             </blockquote>
@@ -405,13 +406,11 @@
 
                                 <div class="col-md-12 mb-4" data-aos="fade-up">
                                     <h3 class="sub-heading text-light" data-aos="fade-up">
-                                        <a href="/downloads" class = "text-light" >Перейти на страницу скачивания</a> <br>
+                                        <a href="/downloads" class="text-light">Перейти на страницу скачивания</a> <br>
                                     </h3>
                                     <div class="d-md-flex d-block blog-entry align-items-start">
 
                                         <div>
-
-
 
 
                                             <div class="meta mb-3 text-light">
@@ -576,6 +575,7 @@
 
 
             <!--КОНТАКТЫ-->
+            <!--
             <section class="site-section text-dark" id="section-contacts">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -631,6 +631,7 @@
                     </div>
                 </div>
             </section>
+            -->
 
             <div class="row justify-content-center ">
                 <footer class="col-md-12 text-center py-5 site-footer">

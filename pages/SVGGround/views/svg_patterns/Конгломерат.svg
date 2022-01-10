@@ -1,0 +1,100 @@
+<pattern
+        id="Конгломерат"
+        patternTransform="scale(0.8) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="190.00001"
+        height="50.730677">
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 7.5590551e-6,25.230675 H 190.00001"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 0,50.230677 H 189.99999"
+            vector-effect="non-scaling-stroke"/>
+    <g
+            id="g965-9"
+            transform="matrix(3.7795276,0,0,3.7795276,-125,-69.769323)">
+        <path
+                style="fill:none;stroke:#000000;stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="M 36.5125,25.135417 39.952083,31.75"
+                vector-effect="non-scaling-stroke"/>
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="m 36.5125,31.75 3.439583,-6.614584"
+                vector-effect="non-scaling-stroke"/>
+    </g>
+    <g
+            id="g965-5-7-0"
+            transform="matrix(3.7795276,0,0,3.7795276,-30.999995,-69.769323)">
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2px;
+                stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="M 36.5125,25.135417 39.952083,31.75"
+                vector-effect="non-scaling-stroke"/>
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2px;
+                stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="m 36.5125,31.75 3.439583,-6.614584"
+                vector-effect="non-scaling-stroke"/>
+    </g>
+    <g
+
+            transform="matrix(3.7795276,0,0,3.7795276,-79.999997,-94.769321)">
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2px;
+                stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="M 36.5125,25.135417 39.952083,31.75"
+                vector-effect="non-scaling-stroke"/>
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2px;
+                stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="m 36.5125,31.75 3.439583,-6.614584"
+                vector-effect="non-scaling-stroke"/>
+    </g>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m 52.000003,38.230677 12.999998,-6.999998 13.000003,6.999998 -12.999999,6.999999 z"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;
+            stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m 100,11.230677 13,-6.9999984 13,6.9999984 -12.99999,6.999999 z"
+            vector-effect="non-scaling-stroke"/>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="M 7.0000025,12.230676 20.000001,5.2306773 33.000004,12.230676 20.000005,19.230675 Z"
+            vector-effect="non-scaling-stroke"/>
+    <g
+            id="g965-5-0-8"
+            transform="matrix(3.7795276,0,0,3.7795276,19.000003,-94.769321)">
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2x;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="M 36.5125,25.135417 39.952083,31.75"
+                vector-effect="non-scaling-stroke"/>
+        <path
+                style="fill:none;stroke:#000000;
+                stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                d="m 36.5125,31.75 3.439583,-6.614584"
+                vector-effect="non-scaling-stroke"/>
+    </g>
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:2px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+            d="m 151,37.230675 13,-6.999999 12,6.999999 -11.99999,6.999999 z"
+            vector-effect="non-scaling-stroke"/>
+</pattern>

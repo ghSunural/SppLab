@@ -139,7 +139,32 @@
     "controller": "VectorBestCntr",
     "action": "acnDoInspection",
     "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php",
+      "pages/geolocation/views/templates/VConverterGeo.php"
+    ],
+    "params": ""
+  },
+  "vector-best/update-hrefs/do": {
+    "id": "3",
+    "title": "Вектор-Бот",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnUpdateRegCertificateHrefs",
+    "view-templates": [
       "pages/vector-best/views/templates/#VVectorBest.php"
+
+    ],
+    "params": ""
+  },
+  "vector-best/last-update": {
+    "id": "3",
+    "title": "Вектор-Бот",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnGetLastUpdate",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php"
+
     ],
     "params": ""
   },
@@ -154,7 +179,17 @@
     ],
     "params": ""
   },
-
+  "vector-best/enterprises": {
+    "id": "3",
+    "title": "Вектор-Бот",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnGetEnterprisesList",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php"
+    ],
+    "params": ""
+  },
   "vector-best/admin": {
     "id": "3",
     "title": "Вектор-Бест",
@@ -167,6 +202,21 @@
     ],
     "params": ""
   },
+
+
+  "vector-best/mail": {
+    "id": "3",
+    "title": "Вектор-Бест",
+    "parent_page": "1",
+    "controller": "VectorBestCntr",
+    "action": "acnMail",
+    "view-templates": [
+      "pages/vector-best/views/templates/#VVectorBest.php"
+    ],
+    "params": ""
+  },
+
+
   "vector-best/test": {
     "id": "3",
     "title": "Вектор-Бест",
@@ -179,9 +229,9 @@
     ],
     "params": ""
   },
-  "vector-best": {
+  "mdbot": {
     "id": "3",
-    "title": "Вектор-Бест",
+    "title": "MD-Bot",
     "parent_page": "1",
     "controller": "VectorBestCntr",
     "action": "acnIndex",
@@ -230,6 +280,7 @@
     "controller": "SiteController",
     "action": "actionIndex",
     "view-templates": [
+      "template/spplab/adminLTE/homepage.html",
       "template/spplab/index.php",
       "core/base_views/homepage/views/homepage_a.php",
       "core/base_views/homepage/site_view.php",

@@ -43,7 +43,7 @@ Content-Type: application/json
 Authorization: Token 1848aa5c202ad73d9507232574e2638d673ccdbd
 X-Secret: fd18a85ba70bb70f26f43c72376556f9ae75051f
 
-[ "Баюновские Ключи Алтайский край" ]
+[ "Торжок" ]
 
 ### GET request with a header
 GET https://roszdravnadzor.gov.ru/services/misearch?id=2942&table_name=med_products&fancybox=true HTTP/1.1

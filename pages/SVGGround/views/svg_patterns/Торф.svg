@@ -1,0 +1,27 @@
+<pattern
+        id="Торф"
+        patternTransform="scale(1) rotate(0) translate(0,0)"
+        patternUnits="userSpaceOnUse"
+        width="32.727273"
+        height="32.727273">
+    <path
+            style="fill:none;stroke:#000000;
+            stroke-width:1px;
+            stroke-linecap:butt;
+            stroke-linejoin:miter;
+            stroke-opacity:1"
+
+            d="M 16.363631,19.090927 H 32.727273
+            M 16.363631,24.545465 H 32.727269
+            M 16.363631,30.000004 H 32.727269
+            M 24.545454,0 V 16.36362
+            M 19.090908,0 V 16.36362
+            M 30,0 V 16.36362
+            M 0,2.7272731 H 16.363635
+            M 0,8.1818117 H 16.363635
+            M 0,13.63635 H 16.363635
+            M 13.636365,16.363657 V 32.727273
+            M 8.1818154,16.363657 V 32.727273
+            M 2.7272731,16.363657 V 32.727273"
+            vector-effect="non-scaling-stroke"/>
+</pattern>
