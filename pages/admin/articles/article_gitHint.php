@@ -9,9 +9,11 @@
 git config --list – проверка настроек
 
 //предварительные настройки
-git config --global user.name "ghSunural"
+git config --global usergit config --global user.name "ghSunural"
 git config --global user.email ysunural@yandex.ru
 git config --global core.quotepath off 
+
+user.name = email
 //Для unicode
 
 $ git init //создать репозиторий из существующей папки
